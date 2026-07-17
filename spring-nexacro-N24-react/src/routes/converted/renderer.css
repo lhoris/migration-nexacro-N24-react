@@ -1,0 +1,238 @@
+/* work-card는 기본 640px 폭 제한 — 이 화면은 카탈로그 테이블(9컬럼)이 필요해 넓혀야 한다 */
+.work-card:has(.rdr-card, .rdr-section) {
+  max-width: 1200px;
+}
+
+.rdr-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.rdr-section {
+  margin-top: 28px;
+}
+
+.rdr-heading {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--accent);
+}
+
+.rdr-table-scroll {
+  overflow-x: auto;
+}
+
+.rdr-cell-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12.5px;
+}
+
+.rdr-cell-table th,
+.rdr-cell-table td {
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.rdr-cell-table th {
+  background: var(--accent-bg);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.rdr-cell-table td {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.rdr-num {
+  text-align: right;
+}
+
+.rdr-num-input {
+  text-align: right;
+  width: 70px;
+}
+
+.rdr-mono {
+  font-family: var(--font-mono);
+}
+
+.rdr-pre {
+  white-space: pre-line;
+}
+
+.rdr-input {
+  width: 100%;
+  min-width: 90px;
+  padding: 4px 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12.5px;
+}
+
+.rdr-textarea {
+  width: 140px;
+  min-height: 40px;
+  padding: 4px 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12.5px;
+  resize: vertical;
+}
+
+.rdr-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 5px 12px;
+  font-size: 12.5px;
+  cursor: default;
+}
+
+/* 원본은 라디오 2개가 헤더처럼 병합된 하나의 영역 안에 딱 붙어 보인다 — 별도 테두리나
+   넓은 간격을 주면 "안 합쳐진" 것처럼 보인다는 피드백을 반영해 간격을 좁히고 테두리를 없앴다. */
+.rdr-radio-pair {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.rdr-cell-image {
+  height: 20px;
+  display: block;
+}
+
+.rdr-progress {
+  position: relative;
+  width: 90px;
+  height: 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.rdr-progress-bar {
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+}
+
+/* 이전엔 mix-blend-mode로 대비를 맞추려 했는데 진행률에 따라 숫자가 잘 안 보인다는
+   피드백이 있었다 — 항상 채워진 파란 막대 위에 고정폭 라벨을 흰 글자로 얹어 진행률과
+   무관하게 잘 보이게 했다(원본 스크린샷도 흰 글자 고정). */
+.rdr-progress-label {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+.rdr-none-cell {
+  background: var(--paper) !important;
+}
+
+.rdr-radio-group {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.rdr-radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rdr-grid-mount {
+  margin-top: 4px;
+}
+
+/* 헤드 Control 섹션의 라이브 컨트롤 툴바 — 바로 아래 Tabulator 그리드와 하나로 이어져
+   보이도록 아래쪽 여백/테두리를 없앤다 */
+.rdr-head-toolbar {
+  margin-bottom: -1px;
+}
+
+/* Tabulator "Radio" 컬럼(tickCross 값을 라디오 점 모양으로만 표현) */
+.rdr-radio-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.rdr-radio-dot.checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* 원본 grid::renderer_desc.xfdl — work.xfdl에서 divMain 바로 아래에 붙는 설명 영역 */
+.rdr-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rdr-desc-block:not(:first-child) {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.rdr-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.rdr-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}
+
+.rdr-desc-images {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.rdr-desc-image {
+  max-width: 280px;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+}

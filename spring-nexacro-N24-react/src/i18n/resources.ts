@@ -57,6 +57,26 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     company: "회사",
     approval: "승인",
 
+    // -- 실제 Nexacro stringresource (grid::renderer.xfdl / renderer_desc.xfdl) --
+    "grid.renderer": "다양한 그리드 표현",
+    "grid.cell.display.type": "셀 표시 유형",
+    "grid.cell.display.type.desc":
+      "셀은 그리드를 구성하는 오브젝트 중 하나로 그리드와 별도의 속성으로 갖습니다. Dataset의 컬럼을 바인딩해 사용할 수도 있고, 셀의 displaytype, edittype 속성을 설정하면 Button, Combo, CheckBox, Image, ProgressBar, Edit 등의 컴포넌트 형태로 표현하거나 Tree 형태로도 표현할 수 있습니다.\n\n그리드 컴포넌트의 각 셀 별로 'displaytype' 속성 설정에 따라 버튼, 이미지 등 다양한 표현이 가능합니다.\n'displaytype'은 셀이 편집상태가 아닐 때 바인드 된 데이터가 화면에 표시되는 형식을 설정하는 속성으로 기본 19가지 형식을 제공하고 별도로 설정하지 않으면 바인드 된 데이터 형식에 맞게 자동으로 표시되는 'normal'로 적용됩니다.",
+    "grid.tree.grouping": "트리 그룹핑",
+    "grid.tree.grouping.collapse": "접기",
+    "grid.tree.grouping.expand": "펼치기",
+    "grid.tree.grouping.desc":
+      "셀의 'displaytype' 속성을 'treeitemcontol'로 설정하면 셀 영역이 Tree 컨트롤 형태로 표시되고, 바인드 된 데이터는 컨트롤에 텍스트로 표시됩니다.\n셀의 Tree 관련 속성(treelevel, treestate 등)을 설정하고 'edittype'을 'tree'로 설정하면 셀에 표시된 트리버튼을 클릭하여 트리가 Collapse/Expand 가 가능하게 합니다.\n바인드된 데이타셋의 'keystring' 속성을 통해 컬럼을 그룹핑하면 그리드에 소계를 함께 표시할 수 있습니다.",
+    "grid.multi.format": "멀티 포맷",
+    "grid.multi.format.desc":
+      "같은 데이터를 다양한 관점에서 살펴보거나 사용 권한에 따라 데이터 일부를 감추어야 하는 경우 하나의 Grid에서 여러 Format을 사용해 데이터를 처리할 수 있습니다.",
+    "grid.multi.format.editor.desc":
+      "그리드를 편집하는 Grid Contents Editor에서 새로 Format을 추가하거나 기존 Format을 복사한 후 일부 항목을 수정할 수 있습니다.\nGrid에서 Format을 적용할 때는 'formatid' 속성값을 지정해 원하는 Format을 선택합니다.",
+    "grid.expression": "표현식",
+    "grid.expression.desc":
+      "A와 B 컬럼에 숫자 값을 입력하면 셀의 expr 속성을 통해 A+B, A*B 결과값이 옆에 있는 셀에 표시됩니다. 간단한 표현식은 expr 속성에 바로 표현할 수 있고, 표현식이 길어지거나 복잡할 경우 사용자 함수를 정의해서 호출할 수 있습니다.\n보여지는 텍스트 값 외에 displaytype이나 cssclass 등 셀의 속성들 별로 expr을 적용할 수도 있습니다. C 컬럼의 콤보에서 값을 선택하면 선택한 값에 따라 옆의 컬럼이 Edit 또는 Combo로 변환됩니다.",
+    "grid.cell.head.display.type": "헤드 Control 표시 유형",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -146,6 +166,25 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     address: "Address",
     company: "Company",
     approval: "Approval",
+
+    "grid.renderer": "Renderer",
+    "grid.cell.display.type": "Cell display type",
+    "grid.cell.display.type.desc":
+      "A cell is one of the objects that make up the grid and has a separate property from the grid. You can bind columns in Dataset and use them, or you can set the displaytype and edittype properties of the cell to express them in components such as Button, Combo, CheckBox, Image, ProgressBar, Edit, or Tree.\n\nDepending on the 'displaytype' property setting for each cell of the grid component, various expressions such as buttons and images are possible.\n'displaytype' is a property that sets the format in which the bounded data is displayed on the screen when the cell is not in editing, providing 19 default formats and, if not set separately, is automatically displayed for the bound data type.",
+    "grid.tree.grouping": "Tree grouping",
+    "grid.tree.grouping.collapse": "Collapse",
+    "grid.tree.grouping.expand": "Expand",
+    "grid.tree.grouping.desc":
+      "If the cell's 'displaytype' property is set to 'treetitemcontol', the cell area is displayed in the form of a tree control, and the bound data is displayed in text on the control.\nIf you set the tree-related properties of a cell (treelevel, treastate, etc.) and set 'editttype' to 'tree', click the tree button displayed in the cell to enable the tree to Collapse/Expand.\nYou can group columns through the 'keystring' property of a bound dataset to display subtotals together in the grid.",
+    "grid.multi.format": "Multi format",
+    "grid.multi.format.desc":
+      "If you need to look at the same data from various perspectives or hide some of the data according to permissions, you can use multiple formats in a grid to process the data.",
+    "grid.multi.format.editor.desc":
+      "In the Grid Contents Editor, where you edit the grid, you can add a new Format, copy an existing Format, and then modify some of the items.\nWhen you apply Format in Grid, specify the 'formatid' property value to select the desired Format.",
+    "grid.expression": "Expression",
+    "grid.expression.desc":
+      "When you enter numeric values in the A and B columns, the cell's expr property displays the A+B, A*B results in the next cell. A simple expression can be expressed directly in an expr property, if the expression is long or complicated.\nYou can call by defining a user function.\nIn addition to the displayed text values, you can also apply extpr to each cell's properties, such as displaytype or cssclass. Selecting a value from the combo in the C column converts the next column to Edit or Combo, depending on the selected value.",
+    "grid.cell.head.display.type": "Head control display type",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

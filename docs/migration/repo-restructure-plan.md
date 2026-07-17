@@ -98,15 +98,41 @@
   `/`(React Host Shell)와 `/nexacro/**`(레거시 Nexacro, 게이트웨이 프록시)이 한 포트에서 공존하는
   것을 사용자가 브라우저로 직접 확인함. 확인 후 세 서비스(nginx/Tomcat) 모두 정상 종료 및 임시
   배포물 정리.
-- **`v2-hybrid-pilot` 커밋 및 태그 완료(2026-07-18).** 커밋 `1f4124a`("[pilot] React Host Shell +
-  메뉴 1개(정렬,필터,찾기) 전환 완료", 78 files). 스테이징 전 `node_modules/`·`dist/`·`logs/`·
-  `.DS_Store` 매치 0건 확인 후 커밋.
+- **`v2-hybrid-pilot` 커밋 및 태그 완료, push까지 완료(2026-07-18).** 커밋 `65489ef`
+  ("[pilot] React Host Shell + 메뉴 1개(정렬,필터,찾기) 전환 완료", 78 files, 문서 갱신
+  포함해 amend됨). 스테이징 전 `node_modules/`·`dist/`·`logs/`·`.DS_Store` 매치 0건 확인 후
+  커밋.
+- **Playwright MCP 연동(2026-07-18).** `claude mcp add playwright -- npx -y
+  @playwright/mcp@latest`로 등록, 세션 재시작 후 도구 로드 확인. 이후 화면 전환마다
+  "변환 → Playwright로 원본과 실측 대조 → 차이나면 수정 → 재검증" 사이클을 표준 워크플로우로
+  적용하기로 함(`conversion-playbook.md` 4번 섹션, `[[feedback_screen_conversion_workflow]]`
+  메모리에도 기록).
+- **menu_id 10200("다양한 표현", grid::renderer.xfdl) React 전환 완료(2026-07-18).**
+  `spring-nexacro-N24-react/src/routes/converted/Renderer.tsx` + `rendererRealData.ts`.
+  Playwright로 원본을 실제로 클릭까지 해보며 여러 라운드 수정함 — 주요 교훈:
+  - 스크린샷 하나에 실제 렌더링값이 박혀 있어 그것만 봐도 확정 가능했던 사례(Mask 컬럼
+    "12345*****" 마스킹 방식)가 있었고, 그걸 놓치고 하드코딩했다가 재대조로 잡음.
+  - 텍스트 대조만으론 부족하고 **실제 클릭**해봐야 편집 가능 여부(Checkbox/Combo/
+    MultiCombo/Calendar/Radio는 행별 편집 가능, Mask/Edit/TextArea는 원본도 읽기 전용)를
+    확정할 수 있었음 — 이후 사용자가 UX 관점 피드백(체크박스 사용성, 편집모드 전환 어색함)을
+    또 줘서 Tabulator 기본 tickCross → toggle 스위치 → 최종적으로 순수 네이티브
+    `<input type="checkbox">` + `cellClick`으로 3번 갈아엎음.
+  - 처음엔 "행이 몇 개 안 되니 테이블이 낫다"고 판단해 5개 섹션을 전부 일반 테이블로
+    구현했다가, 사용자가 "그리드 기능인데 왜 테이블이냐"고 지적 — 헤드 Control/트리
+    그룹핑/멀티 포맷/표현식 4개 섹션을 Tabulator로 다시 작성(트리는 `dataTree` 기능으로
+    행별 개별 +/- 지원). 셀 표시 유형 섹션만 예외로 테이블 유지(원본 자체가 1개 데이터
+    행을 서로 다른 위젯 17개로 보여주는 카탈로그라 Tabulator 행 모델과 안 맞음).
+  - Tabulator `editor:"date"`에 `format` 파라미터를 주면 luxon.js가 필요한데 미설치라
+    조용히 깨지는 버그가 있었음(캘린더 컬럼이 이렇게 안 열렸었음) — `format` 제거로 해결.
+  - Radio 값을 문자열 "0"/"1"로 저장했다가 둘 다 truthy라 전부 checked로 보이는 버그도
+    발견해 boolean으로 수정.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **아직 커밋 전** — 사용자가 "다 된 것 같다"고 확인(2026-07-18), 커밋 여부는 다음에 확인.
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
 1. ~~`spring-nexacro-N24/` 복사본 최종 검토~~ — 완료(빌드·실행 확인까지 마침).
-2. ~~`v2-hybrid-pilot` 커밋 및 태그~~ — 완료(2026-07-18, 커밋 `1f4124a`). **아직 push는 안 함** —
-   push 여부는 사용자 확인 후 진행.
-3. 화면 전환 39개 남음(1/40 완료: 정렬·필터·찾기).
+2. ~~`v2-hybrid-pilot` 커밋 및 태그~~ — 완료(2026-07-18, 커밋 `65489ef`, push까지 완료).
+3. menu_id 10200 화면 전환 완료(2/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 38개 남음.
 4. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
    저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
    커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고

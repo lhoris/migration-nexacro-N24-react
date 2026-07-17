@@ -6,6 +6,7 @@ import { Footer } from "./shell/Footer";
 import { MegaMenu } from "./shell/MegaMenu";
 import { WorkArea } from "./routes/WorkArea";
 import { SortFilterFind } from "./routes/converted/SortFilterFind";
+import { Renderer } from "./routes/converted/Renderer";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -13,6 +14,7 @@ import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarg
 const CONVERTED_SCREENS: Record<string, ComponentType> = {
   home: Home,
   "10100": SortFilterFind,
+  "10200": Renderer,
 };
 
 export default function App() {

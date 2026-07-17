@@ -1,0 +1,105 @@
+:root {
+  --paper: #f3f5f7;
+  --surface: #ffffff;
+  --ink: #161b22;
+  --muted: #5a6472;
+  --line: #d8dee6;
+
+  --accent: #2f6690;
+  --accent-bg: #e7eef3;
+
+  --legacy: #a8571f;
+  --legacy-bg: #f5e8dc;
+
+  --target: #17805f;
+  --target-bg: #e1f1ea;
+
+  --font-kr: "Pretendard Variable", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR",
+    -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "SF Mono", "Roboto Mono", Consolas, "D2Coding", monospace;
+
+  --gnb-height: 56px;
+  --lnb-width: 220px;
+  --footer-height: 44px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #10141b;
+    --surface: #171c24;
+    --ink: #e7ecf1;
+    --muted: #8b96a5;
+    --line: #2a313c;
+
+    --accent: #6fa8d8;
+    --accent-bg: #17222b;
+
+    --legacy: #e0985a;
+    --legacy-bg: #2a2015;
+
+    --target: #4fc79e;
+    --target-bg: #14261f;
+  }
+}
+
+/* ThemeContext(btnTheme 대응)의 명시적 토글은 OS의 prefers-color-scheme보다 우선한다 —
+   위 미디어쿼리는 최초 방문(저장된 선택 없음)에만 쓰이는 기본값이고, 사용자가 직접
+   고르면 아래 [data-theme] 쪽이 양방향으로 이긴다. */
+:root[data-theme="dark"] {
+  --paper: #10141b;
+  --surface: #171c24;
+  --ink: #e7ecf1;
+  --muted: #8b96a5;
+  --line: #2a313c;
+
+  --accent: #6fa8d8;
+  --accent-bg: #17222b;
+
+  --legacy: #e0985a;
+  --legacy-bg: #2a2015;
+
+  --target: #4fc79e;
+  --target-bg: #14261f;
+}
+
+:root[data-theme="light"] {
+  --paper: #f3f5f7;
+  --surface: #ffffff;
+  --ink: #161b22;
+  --muted: #5a6472;
+  --line: #d8dee6;
+
+  --accent: #2f6690;
+  --accent-bg: #e7eef3;
+
+  --legacy: #a8571f;
+  --legacy-bg: #f5e8dc;
+
+  --target: #17805f;
+  --target-bg: #e1f1ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-kr);
+  font-size: 14px;
+  /* 한글은 라틴보다 글자가 조밀해 기본 line-height(~1.2)로는 문단이 답답해 보인다.
+     Pretendard 권장값에 가까운 1.6으로 올려 문장형 설명(sff-desc-body 등)의 가독성을 확보한다. */
+  line-height: 1.6;
+  letter-spacing: -0.1px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "tnum" 1;
+}

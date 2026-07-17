@@ -85,14 +85,27 @@
   원본 프로젝트 임포트", 4909 files). 스테이징 전 `git diff --cached --name-only`로
   `target/`·`*.war`·`*.class`·`.DS_Store`·`spring-nexacro-N24-react` 매치 0건 확인 후 커밋 —
   React 소스와 빌드 산출물이 섞이지 않았음을 커밋 전에 검증함.
-  - author/committer identity를 `lhoris <lhoris@naver.com>`(GitHub 로그인 계정)으로 정정 완료
-    (2026-07-18) — git 전역/로컬 config는 건드리지 않고, `--author` 플래그와
-    `GIT_COMMITTER_NAME`/`GIT_COMMITTER_EMAIL` 환경변수로 이 커밋에만 적용. 이후 다른 커밋도
-    같은 방식으로 identity를 명시해야 함(전역 git config 미설정 상태 유지 중).
+  - author/committer identity를 `lhoris <lhoris@naver.com>`(GitHub 로그인 계정, GitHub도 이
+    이메일로 로그인 중)으로 정정 완료(2026-07-18). 이후 사용자 지시로 이 저장소 **로컬** git
+    config(`user.name=lhoris`, `user.email=lhoris@naver.com`)를 설정, 이후 커밋부터는 별도
+    플래그 없이 자동 적용됨(전역 config는 안 건드림).
+  - `gh` CLI 설치 및 웹 로그인(`gh auth login --web`, device code 방식)으로 `lhoris` 계정 인증,
+    `gh auth setup-git`으로 git credential helper 연결 완료. `git push -u origin main` +
+    `git push origin v1-baseline`으로 GitHub(`github.com/lhoris/migration-nexacro-N24-react`)에
+    푸시 완료(2026-07-18).
+- 하이브리드 게이트웨이 로컬 통합 테스트(2026-07-18): Tomcat(:8080, ROOT 컨텍스트로 Nexacro war
+  배포) + React 앱 `npm install && npm run build` + `gateway.nginx.conf`로 nginx(:3000) 기동 —
+  `/`(React Host Shell)와 `/nexacro/**`(레거시 Nexacro, 게이트웨이 프록시)이 한 포트에서 공존하는
+  것을 사용자가 브라우저로 직접 확인함. 확인 후 세 서비스(nginx/Tomcat) 모두 정상 종료 및 임시
+  배포물 정리.
+- **`v2-hybrid-pilot` 커밋 및 태그 완료(2026-07-18).** 커밋 `1f4124a`("[pilot] React Host Shell +
+  메뉴 1개(정렬,필터,찾기) 전환 완료", 78 files). 스테이징 전 `node_modules/`·`dist/`·`logs/`·
+  `.DS_Store` 매치 0건 확인 후 커밋.
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
 1. ~~`spring-nexacro-N24/` 복사본 최종 검토~~ — 완료(빌드·실행 확인까지 마침).
-2. `v2-hybrid-pilot` 커밋 및 태그 아직 안 함(React 앱).
+2. ~~`v2-hybrid-pilot` 커밋 및 태그~~ — 완료(2026-07-18, 커밋 `1f4124a`). **아직 push는 안 함** —
+   push 여부는 사용자 확인 후 진행.
 3. 화면 전환 39개 남음(1/40 완료: 정렬·필터·찾기).
 4. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
    저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
@@ -130,9 +143,11 @@
 
 1. ~~사용자의 `spring-nexacro-N24/` 복사본 최종 검토~~ — 완료(빌드·Tomcat 실행 확인, 2026-07-18).
 2. ~~`spring-nexacro-N24-react/`를 우산 저장소로 복사~~ — 완료(2026-07-18).
-3. ~~`spring-nexacro-N24/` 커밋 → `git tag v1-baseline`~~ — 완료(2026-07-18, 커밋 `06c9807`).
-4. React 앱 커밋 → `git tag v2-hybrid-pilot`.
-5. `git push`로 GitHub 원격 저장소에 반영(사용자 확인 후에만).
+3. ~~`spring-nexacro-N24/` 커밋 → `git tag v1-baseline`~~ — 완료(2026-07-18, push까지 완료).
+4. ~~React 앱 커밋 → `git tag v2-hybrid-pilot`~~ — 커밋 완료(2026-07-18, 커밋 `1f4124a`),
+   **push는 아직**(사용자 확인 대기).
+5. `git push`로 GitHub 원격 저장소에 반영(사용자 확인 후에만) — v1-baseline은 push 완료,
+   v2-hybrid-pilot push 남음.
 6. 이후 화면 전환은 화면(또는 작은 배치) 단위로 통상적인 커밋을 이어간다 — 스쿼시하지 않는다.
    `docs/migration/conversion-playbook.md`의 절차를 따른다.
 7. 메뉴 40개 전부 전환 완료 시점에 `git tag v3-hybrid-complete`.

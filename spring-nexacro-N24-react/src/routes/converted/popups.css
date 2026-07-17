@@ -1,0 +1,215 @@
+.popup-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  min-width: 280px;
+  max-width: 90vw;
+}
+
+.popup-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.popup-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.popup-icon-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ---- Multi Sort popup ---- */
+.sort-popup {
+  width: 360px;
+}
+
+.sort-popup-toolbar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.sort-popup-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.sort-popup-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sort-popup-table td {
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sort-popup-table select {
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.sort-popup-table tr.selected td {
+  background: var(--accent-bg);
+}
+
+/* ---- Column Filter popup (엑셀 자동필터 스타일) ---- */
+.filter-popup {
+  width: 300px;
+}
+
+.filter-popup-op-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.filter-popup-op-row select,
+.filter-popup-op-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.filter-popup-list {
+  max-height: 280px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.filter-popup-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+}
+
+.filter-popup-item:last-child {
+  border-bottom: none;
+}
+
+.filter-popup-item.select-all {
+  font-weight: 700;
+  background: var(--paper);
+}
+
+.filter-popup-item label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+/* ---- header filter icon (실제 Nexacro grd_filter_init/apply.png 사용) ----
+   .tabulator-col-title는 overflow:hidden이라 라벨 옆에 인라인으로 넣으면 긴 라벨에서
+   잘린다. 그래서 클리핑 안 되는 .tabulator-col-content의 형제로 심고, 오른쪽 끝에
+   절대위치시켜 라벨 길이와 무관하게 항상 클릭 가능하게 한다. */
+.filter-grid-mount .tabulator-col.has-filter-icon .tabulator-col-content {
+  position: relative;
+  padding-right: 20px !important;
+}
+
+.grid-filter-icon-btn {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.grid-filter-icon-btn img {
+  height: 12px;
+  width: auto;
+  display: block;
+  /* grd_filter_init.png는 원본의 보라색 헤더 배경 위에서 보이도록 만든 밝은 아이콘이라
+     우리의 밝은 헤더 배경 위에서는 사실상 안 보인다 — 어둡게 보정한다.
+     grd_filter_apply.png(필터 적용됨, 노란색)는 원래도 잘 보이니 그대로 둔다. */
+  filter: brightness(0.3);
+}
+
+.grid-filter-icon-btn.active img {
+  filter: none;
+}
+
+.grid-filter-icon-btn:hover {
+  background: var(--paper);
+  border-radius: 3px;
+}
+
+/* ---- Find highlight ---- */
+.tabulator .find-hit {
+  outline: 2px solid #f2a900;
+  outline-offset: -2px;
+  background: rgba(242, 169, 0, 0.25) !important;
+}

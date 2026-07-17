@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="arrangement" width="920" height="500" titletext="Arrangement" onload="arrangement_onload" ontimer="arrangement_ontimer" ondragmove="arrangement_ondragmove">
+    <Layouts>
+      <Layout height="500" width="920">
+        <Static id="Static00_00" taborder="1" text="TEXT(&quot;comp.arrangement.title&quot;,&quot;편리한 컴포넌트 정렬&quot;)" left="20" top="20" width="220" height="40" cssclass="sta_WF_pageTitle" messageid="comp.arrangement.title" fittocontents="width"/>
+        <Div id="Div00" taborder="0" top="80" width="880" height="175" text="" left="20" cssclass="div_WF_panel">
+          <Layouts>
+            <Layout>
+              <Edit id="Edit00" taborder="2" left="158" top="60" width="517" height="36" canchange="Div00_Edit00_canchange"/>
+              <Static id="Static02" taborder="1" text="Name " left="38" top="62" width="107" height="32" cssclass="sta_WF_labelTxt01"/>
+              <Static id="Static06" taborder="0" text="Customer Infomation" left="20" top="10" width="188" height="30" cssclass="sta_WF_compTitle02"/>
+              <Div id="divContact" taborder="3" text="Div00" left="38" top="103" width="728" height="43" url="comp::arrangement_phone.xfdl"/>
+              <Button id="btn_coustomer_add" taborder="4" text="Add" left="680" top="109" width="70" height="36" cssclass="btn_WF_basic01" onclick="Div00_btn_coustomer_add_onclick"/>
+            </Layout>
+            <Layout name="Layout0"/>
+          </Layouts>
+        </Div>
+        <Div id="Div01" taborder="2" top="Div00:20" width="880" height="200" text="" left="20" cssclass="div_WF_panel">
+          <Layouts>
+            <Layout>
+              <Static id="Static06" taborder="0" text="Familly Infomation" left="20" top="10" width="268" height="30" cssclass="sta_WF_compTitle02"/>
+              <Div id="divFamilly" taborder="1" text="Div00" left="38" top="50" width="728" height="130" url="comp::arrangement_familly.xfdl"/>
+              <Button id="btn_add" taborder="2" text="Add" left="680" top="66" width="70" height="36" cssclass="btn_WF_basic01" onclick="Div00_btn_familly_add_onclick"/>
+            </Layout>
+            <Layout name="Layout0"/>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/************************************************************************************************
+ * FORM 변수 선언 영역
+ ************************************************************************************************/
+
+
+/************************************************************************************************
+ * FORM EVENT 영역(onload, onbeforeclose)
+ ************************************************************************************************/
+/**
+ * @description 화면 load시 초기설정 event
+*/
+this.arrangement_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+	
+}
+
+/************************************************************************************************
+ * CALLBACK 콜백 처리부분(Transaction, Popup)
+ ************************************************************************************************/
+
+ 
+ /************************************************************************************************
+ * CRUD 및 TRANSACTION 서비스 호출 처리
+ ************************************************************************************************/
+
+/************************************************************************************************
+ * 사용자 FUNCTION 영역
+ ************************************************************************************************/
+/**
+* Customer Infomation 부분
+*/
+
+this.Div00_btn_coustomer_add_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.addContact();
+};
+
+this.contacts = ["divContact"];
+this.getSequenceId = 0;
+
+this.addContact = function()
+{
+	this.getSequenceId++;
+	let id = "divContact" + this.getSequenceId;
+
+	let objDiv = new Div(id, 38, this.contacts[this.contacts.length-1] + ":-1", null, 45, 10, null);
+	objDiv.async = false;
+	objDiv.formscrollbartype = "none";
+	objDiv.border = "0px none";
+	objDiv.url = "comp::arrangement_phone.xfdl";
+	let nTabOrder = nexacro.toNumber(this.Div00.form.components[this.contacts[this.contacts.length-1]].taborder);
+	let nIdx = this.Div00.insertChild(nTabOrder+1, id, objDiv);
+	objDiv.taborder = nIdx;
+	objDiv.show();
+
+	this.Div00.form.components[id].form.btn_del.visible = true;
+	
+	this.contacts.push(id);
+	this.Div00.form.resetScroll();
+	
+	this.Div00.height = nexacro.toNumber(this.Div00.height) + 45; 
+	this.height = nexacro.toNumber(this.height) + 45;
+	this.resetScroll();
+
+//	//frame resize
+// 	var p = this.parent.parent;
+// 	p["mainPageOnLoad"].call(p, this.getOffsetHeight());
+// 	
+// 	var p = this.parent.parent;
+// 	p["descPageOnLoad"].call(p, this.getOffsetHeight());
+		
+};
+
+this.deleteContact = function(id)
+{
+	let idx = this.contacts.indexOf(id);
+	if (idx > 0 && idx < this.contacts.length-1) {
+		this.Div00.form.components[this.contacts[idx+1]].top = this.contacts[idx-1] + ":-1";
+	}
+	
+	idx = this.contacts.indexOf(id) 
+	if (idx > -1) this.contacts.splice(idx, 1)
+	
+	let objDelete = this.Div00.removeChild(id);
+	objDelete.destroy();
+	objDelete = null;
+	this.Div00.form.resetScroll();
+	
+	this.Div00.height = nexacro.toNumber(this.Div00.height) - 45;
+	this.height = nexacro.toNumber(this.height) - 45;
+	this.resetScroll();
+	
+// 	//frame resize
+// 	var p = this.parent.parent;
+// 	p["mainPageOnLoad"].call(p, this.getOffsetHeight());
+// 	
+// 	var p = this.parent.parent;
+// 	p["descPageOnLoad"].call(p, this.getOffsetHeight());
+};
+
+
+/**
+* Familly Infomation 부분
+*/
+this.Div00_btn_familly_add_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.addFamilly();
+};
+
+this.Familly = ["divFamilly"];
+this.getSequenceId = 0;
+
+this.addFamilly = function()
+{
+	this.getSequenceId++;
+	let id = "divFamilly" + this.getSequenceId;
+	
+	let objDiv = new Div(id, 38, this.Familly[this.Familly.length-1] + ":-1", null, 125, 10, null);
+	objDiv.async = false;
+	objDiv.formscrollbartype = "none";
+	objDiv.border = "0px none";
+	objDiv.url = "comp::arrangement_familly.xfdl";
+	let nTabOrder = nexacro.toNumber(this.Div01.form.components[this.Familly[this.Familly.length-1]].taborder);
+	let nIdx = this.Div01.insertChild(nTabOrder+1, id, objDiv);
+	objDiv.taborder = nIdx;
+	objDiv.show();
+
+	this.Div01.form.components[id].form.btn_del.visible = true;
+	
+	this.Familly.push(id);
+	this.Div01.form.resetScroll();
+	
+	this.Div01.height = nexacro.toNumber(this.Div01.height) + 125;
+	this.height = nexacro.toNumber(this.height) + 125;
+	this.resetScroll();
+	
+// 	//frame resize
+// 	var p = this.parent.parent;
+// 	p["mainPageOnLoad"].call(p, this.getOffsetHeight());
+// 	
+// 	var p = this.parent.parent;
+// 	p["descPageOnLoad"].call(p, this.getOffsetHeight());
+};
+
+this.deleteFamilly = function(id)
+{
+	let idx = this.Familly.indexOf(id);
+	if (idx > 0 && idx < this.Familly.length-1) {
+		this.Div01.form.components[this.Familly[idx+1]].top = this.Familly[idx-1] + ":-1";
+	}
+	
+	idx = this.Familly.indexOf(id) 
+	if (idx > -1) this.Familly.splice(idx, 1)
+	
+	let objDelete = this.Div01.removeChild(id);
+	objDelete.destroy();
+	objDelete = null;
+	this.Div01.form.resetScroll();
+	
+	this.Div01.height = nexacro.toNumber(this.Div01.height) - 110;
+	this.height = nexacro.toNumber(this.height) - 110;
+	this.resetScroll();
+	
+// 	//frame resize
+// 	var p = this.parent.parent;
+// 	p["mainPageOnLoad"].call(p, this.getOffsetHeight());
+// 	
+// 	var p = this.parent.parent;
+// 	p["descPageOnLoad"].call(p, this.getOffsetHeight());
+};
+
+
+/************************************************************************************************
+ * 각 COMPONENT 별 EVENT 영역
+ ************************************************************************************************/
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <EnumInfo id="PivotTotalPosition">
+    <Enum name="none" description=""/>
+    <Enum name="first" description=""/>
+    <Enum name="last" description=""/>
+  </EnumInfo>
+</MetaInfo>

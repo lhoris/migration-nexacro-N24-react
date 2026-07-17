@@ -1,0 +1,3174 @@
+﻿
+html, body
+{
+  position:absolute;
+  width:100%;
+  height:100%;
+  font:12pt Verdana;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+  -ms-user-select:none;
+}
+
+div, header, nav, section, article, aside, footer
+{
+  position:absolute;
+  box-sizing:border-box;
+  overflow:hidden;
+  background-origin:padding-box;
+  background-repeat:no-repeat;
+  white-space : pre;
+  -moz-user-select:-moz-none;
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-appearance:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  outline:none;
+}
+
+table
+{
+  position:absolute;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
+input
+{
+  position:absolute;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
+input::-webkit-inner-spin-button 
+{
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+img
+{
+  position:absolute;
+  box-sizing:border-box;
+}
+
+label
+{
+  position:absolute;
+  text-align:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+i
+{
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+.shake {
+  animation: shake 0.2s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+textarea::-webkit-scrollbar { display: none; }
+
+
+.nexacontainer
+{
+  position:absolute;
+  overflow:hidden auto;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+}
+.nexacontainer.withvscroll
+{
+  right:14px;
+}
+.nexacontainer.withhscroll
+{
+  bottom:14px;
+}
+.nexacontainer.withbothscroll
+{
+  right:14px;
+  bottom:14px;
+}
+
+.nexalefttop
+{
+  left:0px;
+  top:0px;
+  background-repeat:no-repeat;
+  background-position:left top;
+  font-size:1px;
+}
+.nexaleftbottom
+{
+  left:0px;
+  bottom:0px;
+  background-repeat:no-repeat;
+  background-position:left bottom;
+  font-size:1px;
+}
+.nexarightbottom
+{
+  right:0px;
+  bottom:0px;
+  background-repeat:no-repeat;
+  background-position:right bottom;
+  font-size:1px;
+}
+.nexarighttop
+{
+  right:0px;
+  top:0px;
+  background-repeat:no-repeat;
+  background-position:right top;
+}
+.nexaedge
+{
+  width:100%;
+  height:100%;
+}
+.nexamodaloverlay
+{
+  width:100%;
+  height:100%;
+}
+.nexainnercontainer
+{
+  
+}
+
+.nexatransform
+{
+  
+}
+
+.nexacontentsbox
+{
+  position:relative;
+  display:table-cell;
+  background-position:left center;
+  background-repeat:no-repeat;
+  vertical-align:middle;
+}
+.nexacontentsboxflex
+{
+  display: -webkit-flex;
+  display: flex;
+  background-position:left center;
+  background-repeat:no-repeat;
+  align-items : center;
+}
+.nexatextitem
+{
+  position:relative;
+  vertical-align:middle;
+  white-space:inherit;
+  word-wrap:inherit;
+  word-break:inherit;
+  text-decoration:inherit;
+}
+.nexaiconitem
+{
+  position:relative;
+  vertical-align:middle;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+.nexainput
+{
+  font:inherit;
+  color:inherit;
+  cursor:inherit;
+  letter-spacing:inherit;
+  word-spacing:inherit;
+  border:none;
+  outline:none;
+  background:transparent;
+  padding : 0px;  
+}
+
+.nexatextarea
+{
+  font:inherit;
+  color:inherit;
+  cursor:inherit;
+  line-height : inherit;
+  letter-spacing:inherit;
+  word-spacing:inherit;
+  white-space:pre;
+  word-wrap:normal;
+  border:none;
+  outline:none;
+  resize:none;
+  background:transparent;
+  padding : 0px;
+}
+
+.nexaleftalign
+{
+  text-align:left;
+  justify-content:flex-start;
+}
+
+.nexarightalign
+{
+  text-align:right;
+  justify-content:flex-end;
+}
+
+.nexacenteralign
+{
+  text-align:center;
+  justify-content:center;
+}
+
+.nexamap div *
+{
+  overflow:visible;
+}
+
+.ProgressBar,.ProgressBarControl
+{
+
+}
+
+.celltreeline
+{
+  border : 1px dotted #999999;
+}
+
+.Edit, .MaskEdit, .TextArea, .EditControl, .MaskEditControl, .TextAreaControl
+{
+  cursor:text;
+}
+.Button .nexacontentsbox, .ButtonControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.FileDownload  .nexacontentsbox, .FileDownloadControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.IconTextControl .nexacontentsbox, .IconControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.DatePickerDayItemControl .nexacontentsbox, .DatePickerWeekItemControl .nexacontentsbox, .DatepickerYearItemControl .nexacontentsbox, .TitleBarButtonControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.Sketch .nexacontentsbox
+{
+   text-align:center;
+}
+
+.MainFrame, .VScrollBarControl, .HScrollBarControl
+{
+  cursor:default;
+}
+
+.Form
+{
+	font : 14px/normal "Noto Sans KR Regular","맑은 고딕";
+	color : #333333;
+	background : #ffffff;
+	border : 0px none;
+}
+.Button
+{
+	background : #eaeaea;
+	background : -webkit-linear-gradient(to top,#eaeaea,#ffffff);
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+	cursor : pointer;
+}
+.FileDownload
+{
+	background : #eaeaea;
+	background : -webkit-linear-gradient(to top,#eaeaea,#ffffff);
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+	cursor : pointer;
+}
+.ButtonControl
+{
+	background : transparent;
+	border : 0px none;
+}
+.FileUpload .fileuploaditem .fileuploaditembutton
+{
+	background : #eaeaea;
+	background : -webkit-linear-gradient(to top,#eaeaea,#ffffff);
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+}
+.Calendar
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.CalendarControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.Calendar .calendaredit .nexainput
+{
+	padding : 1px 0px 0px 9px;
+}
+.CalendarControl .calendaredit .nexainput
+{
+	padding : 1px 0px 0px 9px;
+}
+.Calendar .datepicker
+{
+	border : 1px solid #697888;
+}
+.DatePickerControl.popupCalendardatepicker.dummy
+{
+	border : 1px solid #697888;
+}
+.Calendar .datepicker .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.CalendarControl .datepicker .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.Calendar .datepicker .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.CalendarControl .datepicker .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.CheckBox
+{
+	color : #111111;
+}
+.CheckBoxControl
+{
+	color : #111111;
+}
+.Combo
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ComboControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ListBoxControl.popupCombocombolist.dummy
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+	background : #ffffff;
+	border : 1px solid #b1b1b1;
+}
+.ListBoxControl.popupComboControlcombolist.dummy
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+	background : #ffffff;
+	border : 1px solid #b1b1b1;
+}
+.Edit
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.Edit .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.EditControl
+{
+	background : transparent;
+	border : 0px none;
+}
+.EditControl .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.Grid
+{
+	border : 1px solid #E2E2E3;
+	border-radius : 10px;
+}
+.Grid .head .row .cell
+{
+	background : #6954E1;
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #e2e2e3;
+	border-left : 0px none;
+	font : 14px/normal "Noto Sans KR Regular","맑은 고딕";
+	color : #ffffff;
+	justify-content : center;
+}
+.Grid .head .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Grid .body .row .cell
+{
+	font : 14px/normal "Noto Sans KR Regular","맑은 고딕";
+	background : #ffffff;
+	border-top : 1px solid #e2e2e3;
+	border-right : 0px none;
+	border-bottom : 1px solid #e2e2e3;
+	border-left : 0px none;
+	justify-content : center;
+}
+.Grid .body .row .cell.oddcell
+{
+	background : #fdfdfd;
+}
+.Grid .body .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Grid .body .row .cell .subcell
+{
+	color : #666666;
+	border : 1px solid #dbdee2;
+}
+.Grid .body .selection
+{
+	border : 2px solid #6954e1;
+}
+.Grid .summary
+{
+	border-top : 1px solid #c8c1c2;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+}
+.Grid .summary .row .cell
+{
+	font : bold 12px "Noto Sans KR Regular";
+	color : #333333;
+	background : #fdfbe5;
+	border : 1px solid #c8c1c2;
+	justify-content : center;
+}
+.Grid .summary .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Grid .hscrollbar
+{
+	border-top : 1px solid #b1b1b1;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+}
+.Grid .vscrollbar
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 1px solid #b1b1b1;
+}
+.GridCellControl .cellbutton
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+	background : #eaeaea;
+	background : -webkit-linear-gradient(to top,#eaeaea,#ffffff);
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+}
+.GridCellControl .cellcalendar
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.GridCellControl .cellcombo
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListBoxControl.popupGridCellControlcellcombocombolist.dummy.dummy
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+}
+.GridCellControl .celledit
+{
+	font : 12px "Noto Sans KR Regular";
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.GridCellControl .celledit .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.GridCellControl .cellmaskedit
+{
+	font : 12px "Noto Sans KR Regular";
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.GridCellControl .cellmaskedit .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.GridCellControl .cellprogressbar
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.GridCellControl .celltextarea
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.GridCellControl .celltreeitem .treeitemtext
+{
+	font : 14px "Noto Sans KR Regular";
+	color : #333333;
+}
+.GridCellControl .celltreeline
+{
+	border : 1px dotted #909090;
+}
+.GroupBox .groupboxcontents
+{
+	background : #ffffff;
+	border : 1px solid #d6d4d5;
+}
+.GroupBox .groupboxtitle
+{
+	background : #ffffff;
+}
+.ImageViewer
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ImageViewer .imagetext .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.ListBox
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ListBoxControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ListBox .listboxitem
+{
+	color : #555555;
+}
+.ListBoxControl .listboxitem
+{
+	color : #555555;
+}
+.MaskEdit
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.MaskEdit .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.MaskEditControl
+{
+	background : transparent;
+	border : 0px none;
+}
+.MaskEditControl .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.Menu
+{
+	border : 0px none;
+	background : #f5f5f5;
+}
+.Menu .prevbutton
+{
+	cursor : pointer;
+}
+.Menu .nextbutton
+{
+	cursor : pointer;
+}
+.Menu .menuitem
+{
+	border : 0px none;
+	background : transparent;
+	color : #222222;
+	font : 14px "Noto Sans KR Regular";
+	border-radius : 0px;
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy
+{
+	font : 14px "Noto Sans KR Regular";
+	color : #555555;
+	background : #ffffff;
+	border : 1px solid #7b7b7b;
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .prevbutton
+{
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .nextbutton
+{
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem
+{
+	color : #c3e0ff;
+	border : 0px none;
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemtext
+{
+	font : 14px "Noto Sans KR Regular";
+	color : #333333;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #777777;
+	font : 14px "Noto Sans KR Regular";
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext .nexacontentsbox
+{
+	text-align : right;
+	background-position-x : right;
+}
+.Plugin
+{
+	border : 1px solid #d5d5d5;
+}
+.PluginControl
+{
+	border : 1px solid #d5d5d5;
+}
+.PopupMenu
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #333333;
+	background : #ffffff;
+	border : 1px solid #b5b5b5;
+}
+.PopupMenuControl
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #333333;
+	background : #ffffff;
+	border : 1px solid #b5b5b5;
+}
+.PopupMenu .popupmenuitem
+{
+	color : #333333;
+}
+.PopupMenuControl .popupmenuitem
+{
+	color : #333333;
+}
+.PopupMenu .popupmenuitem .popupmenuitemcheckbox
+{
+	background : URL('./images/chk_WF_Box_F.png') no-repeat left center;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemcheckbox
+{
+	background : URL('./images/chk_WF_Box_F.png') no-repeat left center;
+}
+.PopupMenu .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #aaaaaa;
+}
+.PopupMenu .popupmenuitem .popupmenuitemhotkeytext .nexacontentsbox
+{
+	text-align : right;
+	background-position-x : right;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #aaaaaa;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext .nexacontentsbox
+{
+	text-align : right;
+	background-position-x : right;
+}
+.ProgressBar
+{
+	background : #F1F2F5;
+	border : 0px none;
+	border-radius : 20px;
+}
+.ProgressBarControl
+{
+	background : #F1F2F5;
+	border : 0px none;
+	border-radius : 20px;
+}
+.ProgressBar .progressbaritem
+{
+	background : #a598ef;
+	background : -webkit-linear-gradient(to left,#a598ef,#6954e1);
+	background : linear-gradient(to left,#a598ef,#6954e1);
+}
+.ProgressBarControl .progressbaritem
+{
+	background : #a598ef;
+	background : -webkit-linear-gradient(to left,#a598ef,#6954e1);
+	background : linear-gradient(to left,#a598ef,#6954e1);
+}
+.ProgressBar .progressbartext
+{
+	color : #C9C2EF;
+}
+.ProgressBar .progressbartext .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.ProgressBarControl .progressbartext
+{
+	color : #C9C2EF;
+}
+.ProgressBarControl .progressbartext .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Sketch
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.Spin
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.Spin .spinedit .nexainput
+{
+	padding : 0px 3px 0px 3px;
+	text-align : right;
+}
+.Spin .spinedit .nexacontentsbox
+{
+	text-align : right;
+	background-position-x : right;
+}
+.TextArea
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.TextArea .nexatextarea
+{
+	padding : 9px 9px 9px 9px;
+}
+.TextAreaControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.TextAreaControl .nexatextarea
+{
+	padding : 9px 9px 9px 9px;
+}
+.WebBrowser
+{
+	border : 1px solid #d5d5d5;
+}
+.WebBrowserControl
+{
+	border : 1px solid #d5d5d5;
+}
+.Tab .tabpageTab
+{
+	border : 0px none;
+}
+.Tab .tabbuttonitemTab
+{
+	color : #666666;
+	background : #ffffff;
+	border : 0px none;
+	border-radius : 4px;
+	cursor : pointer;
+}
+.DatePickerControl
+{
+	background : #ffffff;
+}
+.DatePickerControl .head
+{
+	background : #6954e1;
+}
+.DatePickerControl .head .yearstatic
+{
+	font : bold 14px Tahoma;
+	color : #ffffff;
+}
+.DatePickerControl .head .monthstatic
+{
+	font : bold 14px Tahoma;
+	color : #ffffff;
+}
+.DatePickerControl .head .yearspin .spinedit
+{
+	font : bold 14px Tahoma;
+	color : #ffffff;
+	background : #5a46cc;
+}
+.DatePickerControl .head .monthspin .spinedit
+{
+	font : bold 14px Tahoma;
+	color : #ffffff;
+	background : #5a46cc;
+}
+.DatePickerControl .body .weekband
+{
+	background : #6954e1;
+}
+.DatePickerControl .body .weekitem
+{
+	color : #ffffff;
+}
+.DatePickerControl .body .dayitem
+{
+	color : #333333;
+}
+.DatePickerControl .body .selection
+{
+	background : #E3DEFC;
+	border-radius : 15px 15px 15px 15px;
+}
+.DateRangePicker
+{
+	border : 1px solid #697888;
+	background : #ffffff;
+}
+.DateRangePickerControl
+{
+	border : 1px solid #697888;
+	background : #D7DAE2;
+}
+.PopupDateRangePicker
+{
+	border : 1px solid #697888;
+	background : #D7DAE2;
+}
+.DateRangePicker .datetabbutton
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 1px solid #dddddd;
+	background : #E6E9F1;
+}
+.PopupDateRangePicker .datetabbutton
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 1px solid #dddddd;
+	background : #E6E9F1;
+}
+.DateRangePicker .timetabbutton
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 1px solid #dddddd;
+	background : #E6E9F1;
+}
+.PopupDateRangePicker .timetabbutton
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 1px solid #dddddd;
+	background : #E6E9F1;
+}
+.DateRangePicker .headline
+{
+	background : #D7DAE2;
+}
+.PopupDateRangePicker .headline
+{
+	background : #D7DAE2;
+}
+.DateRangePicker .headline .splitline
+{
+	border : 1px solid #C2C7D5;
+}
+.PopupDateRangePicker .headline .splitline
+{
+	border : 1px solid #C2C7D5;
+}
+.DateRangePicker .headline .startdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .startdate .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.PopupDateRangePicker .headline .startdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .startdate .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.DateRangePicker .headline .enddate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .enddate .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.PopupDateRangePicker .headline .enddate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .enddate .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.DateRangePicker .headline .startsubdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .startsubdate .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+.PopupDateRangePicker .headline .startsubdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .startsubdate .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+.DateRangePicker .headline .endsubdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .endsubdate .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+.PopupDateRangePicker .headline .endsubdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .endsubdate .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DateRangePickerControl .datetabbutton
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+	background : #E6E9F1;
+}
+.DateRangePickerControl .timetabbutton
+{
+	border : 0px none;
+	background : #E6E9F1;
+}
+.TimePickerControl
+{
+	background : #ffffff;
+}
+.TimePickerControl .delimiter
+{
+	justify-content : center;
+}
+.TimePickerControl .delimiter > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.TimePickerControl .ampmspinner .spinneritem
+{
+	justify-content : center;
+}
+.TimePickerControl .ampmspinner .spinneritem > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.TimePickerControl .hourspinner .spinneritem
+{
+	justify-content : center;
+}
+.TimePickerControl .hourspinner .spinneritem > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.TimePickerControl .minspinner .spinneritem
+{
+	justify-content : center;
+}
+.TimePickerControl .minspinner .spinneritem > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.TimePickerControl .secspinner .spinneritem
+{
+	justify-content : center;
+}
+.TimePickerControl .secspinner .spinneritem > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.TimePickerControl .ampmspinner .overlaytop
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #cccccc;
+	border-left : 0px none;
+	background : rgba(255,255,255,0);
+	background : -webkit-linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+	background : linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .hourspinner .overlaytop
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #cccccc;
+	border-left : 0px none;
+	background : rgba(255,255,255,0);
+	background : -webkit-linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+	background : linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .minspinner .overlaytop
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #cccccc;
+	border-left : 0px none;
+	background : rgba(255,255,255,0);
+	background : -webkit-linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+	background : linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .secspinner .overlaytop
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #cccccc;
+	border-left : 0px none;
+	background : rgba(255,255,255,0);
+	background : -webkit-linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+	background : linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .ampmspinner .overlaybottom
+{
+	border-top : 1px solid #cccccc;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+	background : rgba(255,255,255,0);
+	background : -webkit-linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+	background : linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .hourspinner .overlaybottom
+{
+	border-top : 1px solid #cccccc;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+	background : rgba(255,255,255,0);
+	background : -webkit-linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+	background : linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .minspinner .overlaybottom
+{
+	border-top : 1px solid #cccccc;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+	background : rgba(255,255,255,0);
+	background : -webkit-linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+	background : linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .secspinner .overlaybottom
+{
+	border-top : 1px solid #cccccc;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+	background : rgba(255,255,255,0);
+	background : -webkit-linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+	background : linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.VScrollBarControl
+{
+	background : #ffffff;
+	background : -webkit-linear-gradient(to left,#ffffff,#f7f7f7);
+	background : linear-gradient(to left,#ffffff,#f7f7f7);
+	border : 1px solid #b1b1b1;
+}
+.HScrollBarControl
+{
+	background : #ffffff;
+	background : -webkit-linear-gradient(to top,#ffffff,#f7f7f7);
+	background : linear-gradient(to top,#ffffff,#f7f7f7);
+	border : 1px solid #b1b1b1;
+}
+.VScrollBarControl .trackbar
+{
+	background : #dddddd;
+	border : 1px solid #c8c8c8;
+}
+.HScrollBarControl .trackbar
+{
+	background : #dddddd;
+	border : 1px solid #c8c8c8;
+}
+.VScrollIndicatorControl
+{
+	background : #f2f2f2;
+}
+.HScrollIndicatorControl
+{
+	background : #f2f2f2;
+}
+.VScrollIndicatorControl .trackbar
+{
+	background : #cccccc;
+	border : 2px solid transparent;
+}
+.HScrollIndicatorControl .trackbar
+{
+	background : #cccccc;
+	border : 2px solid transparent;
+}
+.StatusBarControl
+{
+	background : #e7e7e7;
+}
+.StatusBarControl .progressbar
+{
+	background : #eaeaea;
+	border-top : 1px solid #afaeae;
+	border-right : 1px solid #d2d0d0;
+	border-bottom : 1px solid #d2d0d0;
+	border-left : 1px solid #d2d0d0;
+}
+.StatusBarControl .progressbar .progressbaritem
+{
+	background : #4ca0e2;
+}
+.StatusBarControl .resizegrip .nexacontentsbox
+{
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.TitleBarControl
+{
+	font : bold 12px "Noto Sans KR Regular";
+	color : #ffffff;
+	background : #003284;
+}
+.ListView
+{
+	border : 1px solid #d5d5d5;
+	background : #ebecee;
+	color : #666666;
+}
+.ListView .body
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .detail
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #f9f9f9;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #f9f9f9;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .body .cell
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListView .detail .cell
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListViewCellControl .cellbutton
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+	background : #eaeaea;
+	background : -webkit-linear-gradient(to top,#eaeaea,#ffffff);
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+}
+.ListViewCellControl .cellcalendar
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewCellControl .cellcheckbox
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewCellControl .cellcombo
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListBoxControl.popupListViewCellControlcellcombocombolist.dummy.dummy
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+}
+.ListViewCellControl .celledit
+{
+	font : 12px "Noto Sans KR Regular";
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ListViewCellControl .celledit .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.ListViewCellControl .cellmaskedit
+{
+	font : 12px "Noto Sans KR Regular";
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ListViewCellControl .cellmaskedit .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.ListViewCellControl .cellprogressbar
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewCellControl .celltextarea
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .body .expandbar
+{
+	background : transparent;
+	border : 0px none;
+	cursor : pointer;
+}
+.CheckBoxSetControl
+{
+	background : #ffffff;
+}
+.CheckBoxSetControl .checkboxsetitem
+{
+	color : #555555;
+}
+.MultiCombo
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.MultiComboControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.MultiCombo .multicombotext .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.MultiComboControl .multicombotext .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.MultiComboTagBoxControl
+{
+	border : 0px none;
+}
+.MultiComboTagBoxControl .tagboxitem
+{
+	background : #eeeeee;
+	border-radius : 10px;
+}
+.MultiComboTagBoxControl .tagboxedit .nexainput
+{
+	padding : 3px;
+}
+.TagBoxControl
+{
+	background : #eeeeee;
+	border-radius : 10px;
+}
+.TagBoxControl .tagbutton
+{
+	background : url('./images/btn_TF_Close_O.png') no-repeat center center /cover #eeeeee;
+	border-radius : 50%;
+}
+.MultiComboListControl
+{
+	border : 1px solid #d5d5d5;
+}
+.MultiComboListControl .checkboxset
+{
+	font : 12px "맑은 고딕";
+	color : #555555;
+	background : #ffffff;
+	border : 0px none;
+}
+.MultiComboListControl .selectallcheckbox
+{
+	color : #555555;
+	background : #ffffff;
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #d5d5d5;
+	border-left : 0px none;
+}
+#nexacontainer .Button[data-status=mouseover]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .Button[data-status=focused]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .FileDownload[data-status=mouseover]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .FileDownload[data-status=focused]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .FileUpload .fileuploaditem .fileuploaditembutton[data-status=mouseover]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .FileUpload .fileuploaditem .fileuploaditembutton[data-status=focused]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .Calendar[data-status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .CalendarControl[data-status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .Calendar[data-status=focused]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .CalendarControl[data-status=focused]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .Calendar[data-status=readonly]
+{
+	background : #efefef;
+}
+#nexacontainer .CalendarControl[data-status=readonly]
+{
+	background : #efefef;
+}
+#nexacontainer .Calendar .datepicker .body .monthitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .DatePickerControl.popupCalendardatepicker.dummy .body .monthitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .CalendarControl .datepicker .body .monthitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .Calendar .datepicker .body .monthitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendardatepicker.dummy .body .monthitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .CalendarControl .datepicker .body .monthitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .Calendar .datepicker .body .yearitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .DatePickerControl.popupCalendardatepicker.dummy .body .yearitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .CalendarControl .datepicker .body .yearitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .DatePickerControl.popupCalendarControldatepicker.dummy .body .yearitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .Calendar .datepicker .body .yearitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendardatepicker.dummy .body .yearitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .CalendarControl .datepicker .body .yearitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendarControldatepicker.dummy .body .yearitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .Combo[data-status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .Combo[data-status=focused]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .ComboControl[data-status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .ComboControl[data-status=focused]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .Combo[data-status=readonly]
+{
+	background : #EEEFF3;
+	border : 1px solid #D7DAE2;
+}
+#nexacontainer .ComboControl[data-status=readonly]
+{
+	background : #EEEFF3;
+	border : 1px solid #D7DAE2;
+}
+#nexacontainer .Edit[data-status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .Edit[data-status=focused]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .FileUpload .fileuploaditem .fileuploaditemedit[data-status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .FileUpload .fileuploaditem .fileuploaditemedit[data-status=focused]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .Edit[data-status=readonly]
+{
+	background : #EEEFF3;
+	border : 1px solid #D7DAE2;
+}
+#nexacontainer .Grid .body .row .cell[data-status=mouseover]
+{
+	background : #f6f6f6;
+}
+#nexacontainer .Grid .body .row .cell .subcell[data-status=mouseover]
+{
+	background : #f6f6f6;
+}
+#nexacontainer .GridCellControl .cellbutton[data-status=mouseover]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .GridCellControl .cellbutton[data-status=focused]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .ListBoxControl.popupGridCellControlcellcombocombolist.dummy.dummy .listboxitem[data-status=mouseover]
+{
+	background : #e8e9ed;
+}
+#nexacontainer .GridCellControl .celledit[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .GridCellControl .celledit[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .GridCellControl .cellmaskedit[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .GridCellControl .cellmaskedit[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListBox[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListBox[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListBoxControl[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListBoxControl[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListBox .listboxitem[data-status=mouseover]
+{
+	background : #e7e9ed;
+}
+#nexacontainer .ListBoxControl .listboxitem[data-status=mouseover]
+{
+	background : #e7e9ed;
+}
+#nexacontainer .MaskEdit[data-status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .MaskEdit[data-status=focused]
+{
+	border : 1px solid #6954E1;
+}
+#nexacontainer .MaskEdit[data-status=readonly]
+{
+	background : #EEEFF3;
+	border : 1px solid #D7DAE2;
+}
+#nexacontainer .Menu[data-status=focused]
+{
+	border : 0px none;
+	background : #f5f5f5;
+}
+#nexacontainer .Menu .menuitem[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #222222;
+	font : 14px "Noto Sans KR Regular";
+	border-radius : 0px;
+	cursor : pointer;
+}
+#nexacontainer .Menu .menuitem[data-status=mouseover]
+{
+	background : #e0e3e5;
+	font : 14px "Noto Sans KR Regular";
+}
+#nexacontainer .PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[data-status=mouseover]
+{
+	color : #ffffff;
+	background : transparent;
+}
+#nexacontainer .PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[data-status=focused]
+{
+	color : #ffffff;
+	background : #f5f3ff;
+}
+#nexacontainer .PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemtext[data-status=mouseover]
+{
+	color : #48399A;
+}
+#nexacontainer .PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext[data-status=mouseover]
+{
+	color : green;
+}
+#nexacontainer .PopupMenu .popupmenuitem[data-status=mouseover]
+{
+	background : #e7e9ed;
+}
+#nexacontainer .PopupMenu .popupmenuitem[data-status=focused]
+{
+	background : #e7e9ed;
+}
+#nexacontainer .PopupMenuControl .popupmenuitem[data-status=mouseover]
+{
+	background : #e7e9ed;
+}
+#nexacontainer .PopupMenuControl .popupmenuitem[data-status=focused]
+{
+	background : #e7e9ed;
+}
+#nexacontainer .PopupMenu .popupmenuitem .popupmenuitemcheckbox[data-status=mouseover]
+{
+	background : URL('./images/chk_WF_Box_F.png') no-repeat left center;
+}
+#nexacontainer .PopupMenuControl .popupmenuitem .popupmenuitemcheckbox[data-status=mouseover]
+{
+	background : URL('./images/chk_WF_Box_F.png') no-repeat left center;
+}
+#nexacontainer .Spin[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .Spin[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .Spin[data-status=readonly]
+{
+	background : #efefef;
+}
+#nexacontainer .TextArea[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .TextArea[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .TextAreaControl[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .TextAreaControl[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .TextArea[data-status=readonly]
+{
+	background : #efefef;
+	border : 1px solid #d5d5d5;
+}
+#nexacontainer .TextAreaControl[data-status=readonly]
+{
+	background : #efefef;
+	border : 1px solid #d5d5d5;
+}
+#nexacontainer .Tab .tabbuttonitemTab[data-status=mouseover]
+{
+	background : #f1f2f5;
+}
+#nexacontainer .Tab .tabbuttonitemTab[data-status=focused]
+{
+	color : #dee4ef;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-status=mouseover]
+{
+	background : #EEEEEE;
+	color : #333333;
+	border-radius : 15px 15px 15px 15px;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-status=focused]
+{
+	color : #ffffff;
+	background : #6954e1;
+	border-radius : 15px 15px 15px 15px;
+}
+#nexacontainer .DateRangePicker .headline .startdate[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+#nexacontainer .DateRangePicker .headline .startdate[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .DateRangePicker .headline .startdate[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+#nexacontainer .DateRangePicker .headline .startdate[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .PopupDateRangePicker .headline .startdate[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+#nexacontainer .PopupDateRangePicker .headline .startdate[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .PopupDateRangePicker .headline .startdate[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+#nexacontainer .PopupDateRangePicker .headline .startdate[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .DateRangePicker .headline .enddate[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+#nexacontainer .DateRangePicker .headline .enddate[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .DateRangePicker .headline .enddate[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+#nexacontainer .DateRangePicker .headline .enddate[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .PopupDateRangePicker .headline .enddate[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+#nexacontainer .PopupDateRangePicker .headline .enddate[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .PopupDateRangePicker .headline .enddate[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+#nexacontainer .PopupDateRangePicker .headline .enddate[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .DateRangePicker .headline .startsubdate[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+#nexacontainer .DateRangePicker .headline .startsubdate[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+#nexacontainer .DateRangePicker .headline .startsubdate[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+#nexacontainer .DateRangePicker .headline .startsubdate[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+#nexacontainer .PopupDateRangePicker .headline .startsubdate[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+#nexacontainer .PopupDateRangePicker .headline .startsubdate[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+#nexacontainer .PopupDateRangePicker .headline .startsubdate[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+#nexacontainer .PopupDateRangePicker .headline .startsubdate[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+#nexacontainer .DateRangePicker .headline .endsubdate[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+#nexacontainer .DateRangePicker .headline .endsubdate[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+#nexacontainer .DateRangePicker .headline .endsubdate[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+#nexacontainer .DateRangePicker .headline .endsubdate[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+#nexacontainer .PopupDateRangePicker .headline .endsubdate[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+#nexacontainer .PopupDateRangePicker .headline .endsubdate[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+#nexacontainer .PopupDateRangePicker .headline .endsubdate[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+#nexacontainer .PopupDateRangePicker .headline .endsubdate[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : top;
+	background-position-y : top;
+}
+#nexacontainer .DateRangePickerControl .datepickergroup .datepicker .body .monthitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .PopupDateRangePicker .datepickergroup .datepicker .body .monthitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .DateRangePickerControl .datepickergroup .datepicker .body .monthitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .PopupDateRangePicker .datepickergroup .datepicker .body .monthitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .DateRangePickerControl .datepickergroup .datepicker .body .yearitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .PopupDateRangePicker .datepickergroup .datepicker .body .yearitem[data-status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+#nexacontainer .DateRangePickerControl .datepickergroup .datepicker .body .yearitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .PopupDateRangePicker .datepickergroup .datepicker .body .yearitem[data-status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .VScrollBarControl .trackbar[data-status=focused]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+#nexacontainer .HScrollBarControl .trackbar[data-status=focused]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+#nexacontainer .VScrollBarControl .trackbar[data-status=mouseover]
+{
+	background : #bbbbbb;
+	border : 1px solid #a8a8a8;
+}
+#nexacontainer .HScrollBarControl .trackbar[data-status=mouseover]
+{
+	background : #bbbbbb;
+	border : 1px solid #a8a8a8;
+}
+#nexacontainer .VScrollIndicatorControl .trackbar[data-status=mouseover]
+{
+	background : #999999;
+}
+#nexacontainer .HScrollIndicatorControl .trackbar[data-status=mouseover]
+{
+	background : #999999;
+}
+#nexacontainer .ListView[data-status=readonly]
+{
+	border : 1px solid #d5d5d5;
+	background : #ebecee;
+	color : #666666;
+}
+#nexacontainer .ListView[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListView[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListView .body[data-status=readonly]
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListView .detail[data-status=readonly]
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy[data-status=readonly]
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListView .body[data-status=focused]
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListView .detail[data-status=focused]
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy[data-status=focused]
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListView .body[data-status=mouseover]
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListView .detail[data-status=mouseover]
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy[data-status=mouseover]
+{
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px solid #dbdee2;
+	border-left : 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListView .body .cell[data-status=readonly]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+#nexacontainer .ListView .detail .cell[data-status=readonly]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell[data-status=readonly]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+#nexacontainer .ListView .body .cell[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+#nexacontainer .ListView .detail .cell[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+#nexacontainer .ListViewCellControl .cellbutton[data-status=mouseover]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .ListViewCellControl .cellbutton[data-status=focused]
+{
+	background : #e7e7e7;
+	background : -webkit-linear-gradient(to top,#e7e7e7,#fefefe);
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+#nexacontainer .ListBoxControl.popupListViewCellControlcellcombocombolist.dummy.dummy .listboxitem[data-status=mouseover]
+{
+	background : #e8e9ed;
+}
+#nexacontainer .ListViewCellControl .celledit[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListViewCellControl .celledit[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListViewCellControl .cellmaskedit[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListViewCellControl .cellmaskedit[data-status=focused]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .ListView .body .expandbar[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+	cursor : pointer;
+}
+#nexacontainer .ListView .body .expandbar[data-status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .CheckBoxSetControl .checkboxsetitem[data-status=mouseover]
+{
+	background : #e7e9ed;
+}
+#nexacontainer .MultiCombo[data-status=mouseover]
+{
+	border : 1px solid #5a86cd;
+}
+#nexacontainer .MultiCombo[data-status=focused]
+{
+	border : 1px solid #5a86cd;
+}
+#nexacontainer .MultiComboControl[data-status=mouseover]
+{
+	border : 1px solid #5a86cd;
+}
+#nexacontainer .MultiComboControl[data-status=focused]
+{
+	border : 1px solid #5a86cd;
+}
+#nexacontainer .MultiCombo[data-status=readonly]
+{
+	background : #efefef;
+}
+#nexacontainer .MultiComboControl[data-status=readonly]
+{
+	background : #efefef;
+}
+#nexacontainer .MultiComboListControl[data-status=mouseover]
+{
+	border : 1px solid #5a86cd;
+}
+#nexacontainer .MultiComboListControl .selectallcheckbox[data-status=mouseover]
+{
+	background : #e7e9ed;
+}
+#nexacontainer .Form[data-userstatus=contents]
+{
+	background : transparent;
+}
+#nexacontainer .Button[data-userstatus=pushed]
+{
+	background : #fefefe;
+	background : -webkit-linear-gradient(to top,#fefefe,#e9e9e9);
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+#nexacontainer .Button[data-userstatus=selected]
+{
+	background : #fefefe;
+	background : -webkit-linear-gradient(to top,#fefefe,#e9e9e9);
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+#nexacontainer .FileDownload[data-userstatus=pushed]
+{
+	background : #fefefe;
+	background : -webkit-linear-gradient(to top,#fefefe,#e9e9e9);
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+#nexacontainer .FileUpload .fileuploaditem .fileuploaditembutton[data-userstatus=pushed]
+{
+	background : #fefefe;
+	background : -webkit-linear-gradient(to top,#fefefe,#e9e9e9);
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+#nexacontainer .FileUpload .fileuploaditem .fileuploaditembutton[data-userstatus=selected]
+{
+	background : #fefefe;
+	background : -webkit-linear-gradient(to top,#fefefe,#e9e9e9);
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+#nexacontainer .Calendar .datepicker .body .monthitem[data-userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendardatepicker.dummy .body .monthitem[data-userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .Calendar .datepicker .body .monthitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendardatepicker.dummy .body .monthitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .CalendarControl .datepicker .body .monthitem[data-userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem[data-userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .CalendarControl .datepicker .body .monthitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .Calendar .datepicker .body .yearitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendardatepicker.dummy .body .yearitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .CalendarControl .datepicker .body .yearitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .DatePickerControl.popupCalendarControldatepicker.dummy .body .yearitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .Edit[data-userstatus=nulltext]
+{
+	color : #BABABA;
+}
+#nexacontainer .EditControl[data-userstatus=nulltext]
+{
+	color : #BABABA;
+}
+#nexacontainer .MaskEdit[data-userstatus=nulltext]
+{
+	color : #BABABA;
+}
+#nexacontainer .MaskEditControl[data-userstatus=nulltext]
+{
+	color : #BABABA;
+}
+#nexacontainer .TextArea[data-userstatus=nulltext]
+{
+	color : #BABABA;
+}
+#nexacontainer .TextAreaControl[data-userstatus=nulltext]
+{
+	color : #BABABA;
+}
+#nexacontainer .Calendar[data-userstatus=invalidtext]
+{
+	color : #999999;
+}
+#nexacontainer .CalendarControl[data-userstatus=invalidtext]
+{
+	color : #999999;
+}
+#nexacontainer .MaskEdit[data-userstatus=invalidtext]
+{
+	color : #999999;
+}
+#nexacontainer .MaskEditControl[data-userstatus=invalidtext]
+{
+	color : #999999;
+}
+#nexacontainer .Spin[data-userstatus=invalidtext]
+{
+	color : #999999;
+}
+#nexacontainer .SpinControl[data-userstatus=invalidtext]
+{
+	color : #999999;
+}
+#nexacontainer .Grid .body .row .cell[data-userstatus=selected]
+{
+	background : #F1EFFF;
+}
+#nexacontainer .Grid .body .row .cell.oddcell[data-userstatus=selected]
+{
+	background : #F1EFFF;
+}
+#nexacontainer .Grid .body .row .cell[data-userstatus=blinked]
+{
+	background : #0078d6;
+	color : #ffffff;
+}
+#nexacontainer .Grid .body .row .cell .subcell[data-userstatus=selected]
+{
+	background : #f2f9ff;
+}
+#nexacontainer .Grid .body .row .cell .subcell[data-userstatus=blinked]
+{
+	background : #125dae;
+	color : #ffffff;
+}
+#nexacontainer .GridCellControl .cellbutton[data-userstatus=pushed]
+{
+	background : #fefefe;
+	background : -webkit-linear-gradient(to top,#fefefe,#e9e9e9);
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+#nexacontainer .GridCellControl .cellbutton[data-userstatus=selected]
+{
+	background : #fefefe;
+	background : -webkit-linear-gradient(to top,#fefefe,#e9e9e9);
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+#nexacontainer .ListBox .listboxitem[data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+}
+#nexacontainer .ListBoxControl .listboxitem[data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+}
+#nexacontainer .Menu .menuitem[data-userstatus=selected]
+{
+	background : #555a5e;
+	color : #ffffff;
+	font : 14px "Noto Sans KR Bold";
+}
+#nexacontainer .PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #f5f3ff;
+}
+#nexacontainer .PopupMenu .popupmenuitem[data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+}
+#nexacontainer .PopupMenuControl .popupmenuitem[data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+}
+#nexacontainer .Tab .tabbuttonitemTab[data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #A598EF;
+	border : 0px none;
+}
+#nexacontainer .DatePickerControl .body .weekitem[data-userstatus=saturday]
+{
+	color : #48afff;
+}
+#nexacontainer .DatePickerControl .body .weekitem[data-userstatus=sunday]
+{
+	color : #ff7986;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+	border-radius : 15px 15px 15px 15px;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-userstatus=today]
+{
+	color : #ffffff;
+	background : #FE5252;
+	border-radius : 15px 15px 15px 15px;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-userstatus=saturday]
+{
+	color : #269bee;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-userstatus=sunday]
+{
+	color : #ff4c5e;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-userstatus=trailingday]
+{
+	color : #989898;
+}
+#nexacontainer .DateRangePicker .datetabbutton[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+#nexacontainer .PopupDateRangePicker .datetabbutton[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+#nexacontainer .DateRangePicker .timetabbutton[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+#nexacontainer .PopupDateRangePicker .timetabbutton[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+#nexacontainer .DateRangePickerControl .datepickergroup .datepicker .body .monthitem[data-userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .DateRangePickerControl .datepickergroup .datepicker .body .monthitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .PopupDateRangePicker .datepickergroup .datepicker .body .monthitem[data-userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .PopupDateRangePicker .datepickergroup .datepicker .body .monthitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .DateRangePickerControl .datepickergroup .datepicker .body .yearitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .PopupDateRangePicker .datepickergroup .datepicker .body .yearitem[data-userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+#nexacontainer .DateRangePickerControl .datetabbutton[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+#nexacontainer .DateRangePickerControl .timetabbutton[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+#nexacontainer .TimePickerControl .ampmspinner .spinneritem[data-userstatus=selected]
+{
+	font : bold 15px "Noto Sans KR Regular";
+}
+#nexacontainer .TimePickerControl .hourspinner .spinneritem[data-userstatus=selected]
+{
+	font : bold 15px "Noto Sans KR Regular";
+}
+#nexacontainer .TimePickerControl .minspinner .spinneritem[data-userstatus=selected]
+{
+	font : bold 15px "Noto Sans KR Regular";
+}
+#nexacontainer .TimePickerControl .secspinner .spinneritem[data-userstatus=selected]
+{
+	font : bold 15px "Noto Sans KR Regular";
+}
+#nexacontainer .VScrollBarControl .trackbar[data-userstatus=pushed]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+#nexacontainer .VScrollBarControl .trackbar[data-userstatus=selected]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+#nexacontainer .HScrollBarControl .trackbar[data-userstatus=pushed]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+#nexacontainer .HScrollBarControl .trackbar[data-userstatus=selected]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+#nexacontainer .VScrollIndicatorControl .trackbar[data-userstatus=pushed]
+{
+	background : #606060;
+}
+#nexacontainer .HScrollIndicatorControl .trackbar[data-userstatus=pushed]
+{
+	background : #606060;
+}
+#nexacontainer .ListView .body[data-userstatus=selected]
+{
+	background : #f2f9ff;
+}
+#nexacontainer .ListView .detail[data-userstatus=selected]
+{
+	background : #f8f9fb;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy[data-userstatus=selected]
+{
+	background : #f8f9fb;
+}
+#nexacontainer .ListViewCellControl .cellbutton[data-userstatus=pushed]
+{
+	background : #fefefe;
+	background : -webkit-linear-gradient(to top,#fefefe,#e9e9e9);
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+#nexacontainer .CheckBoxSetControl .checkboxsetitem[data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #125dae;
+}
+#nexacontainer .TagBoxControl[data-userstatus=selected]
+{
+	background : #5a86cd;
+	color : #ffffff;
+}
+#nexacontainer .MultiComboListControl .selectallcheckbox[data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #125dae;
+}
+#nexacontainer .Form[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .FileUpload .fileuploaditem[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .Button[data-status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+#nexacontainer .FileDownload[data-status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+#nexacontainer .FileUpload .fileuploaditem .fileuploaditembutton[data-status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+#nexacontainer .Calendar[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .CalendarControl[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .CheckBox[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .CheckBoxControl[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .Combo[data-status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+#nexacontainer .ComboControl[data-status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+#nexacontainer .Combo .dropbutton[data-status=disabled]
+{
+	opacity : 0.50;
+}
+#nexacontainer .ComboControl .dropbutton[data-status=disabled]
+{
+	opacity : 0.50;
+}
+#nexacontainer .Edit[data-status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+#nexacontainer .FileUpload .fileuploaditem .fileuploaditemedit[data-status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+#nexacontainer .Grid .head .row .cell[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .Grid .body .row .cell[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .Grid .body .row .cell .subcell[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .GridCellControl .cellbutton[data-status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+#nexacontainer .GridCellControl .cellcheckbox[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .GridCellControl .celledit[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .GridCellControl .cellmaskedit[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .GridCellControl .celltreeitem .treeitemtext[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .GroupBox .groupboxcontents[data-status=disabled]
+{
+	background : #efefef;
+}
+#nexacontainer .GroupBox .groupboxtitle[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .ImageViewer[data-status=disabled]
+{
+	background : #f2f2f2;
+}
+#nexacontainer .ImageViewer .imagetext[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .ListBox[data-status=disabled]
+{
+	background : #efefef;
+}
+#nexacontainer .ListBoxControl[data-status=disabled]
+{
+	background : #efefef;
+}
+#nexacontainer .ListBox .listboxitem[data-status=disabled]
+{
+	opacity : 0.50;
+}
+#nexacontainer .ListBoxControl .listboxitem[data-status=disabled]
+{
+	opacity : 0.50;
+}
+#nexacontainer .MaskEdit[data-status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+#nexacontainer .Menu[data-status=disabled]
+{
+	background : #94a9bf;
+}
+#nexacontainer .Menu .menuitem[data-status=disabled]
+{
+	color : #c7d4e2;
+}
+#nexacontainer .PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[data-status=disabled]
+{
+	color : purple;
+}
+#nexacontainer .PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemtext[data-status=disabled]
+{
+	color : #bbbbbb;
+}
+#nexacontainer .PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext[data-status=disabled]
+{
+	color : #bbbbbb;
+}
+#nexacontainer .PopupMenu .popupmenuitem[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .PopupMenuControl .popupmenuitem[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .PopupMenu .popupmenuitem .popupmenuitemcheckbox[data-status=disabled]
+{
+	background : URL('./images/chk_WF_Box_D.png') no-repeat left center;
+}
+#nexacontainer .PopupMenuControl .popupmenuitem .popupmenuitemcheckbox[data-status=disabled]
+{
+	background : URL('./images/chk_WF_Box_D.png') no-repeat left center;
+}
+#nexacontainer .PopupMenu .popupmenuitem .popupmenuitemhotkeytext[data-status=disabled]
+{
+	color : #4577b9;
+}
+#nexacontainer .PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext[data-status=disabled]
+{
+	color : #4577b9;
+}
+#nexacontainer .ProgressBar .progressbaritem[data-status=disabled]
+{
+	background : #b5b5b5;
+}
+#nexacontainer .ProgressBarControl .progressbaritem[data-status=disabled]
+{
+	background : #b5b5b5;
+}
+#nexacontainer .Sketch[data-status=disabled]
+{
+	background : #efefef;
+}
+#nexacontainer .Spin[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .Spin .spinedit[data-status=disabled] .nexainput
+{
+	padding : 1px 2px 0px 9px;
+}
+#nexacontainer .Static[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .StaticControl[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .TextArea[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .TextAreaControl[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .Tab .tabbuttonitemTab[data-status=disabled]
+{
+	color : #ababab;
+	background : #ffffff;
+}
+#nexacontainer .Tab .tabbuttonitemTab .tabbuttonitemtext[data-status=disabled]
+{
+	color : #c8c8c8;
+}
+#nexacontainer .DatePickerControl .head[data-status=disabled]
+{
+	background : #94a9bf;
+	color : #cdcdcd;
+}
+#nexacontainer .DatePickerControl .head .yearstatic[data-status=disabled]
+{
+	color : #c7d4e2;
+}
+#nexacontainer .DatePickerControl .head .monthstatic[data-status=disabled]
+{
+	color : #c7d4e2;
+}
+#nexacontainer .DatePickerControl .body .weekband[data-status=disabled]
+{
+	background : #94a9bf;
+}
+#nexacontainer .DatePickerControl .body .weekitem[data-status=disabled]
+{
+	color : #c7d4e2;
+	background : #94a9bf;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-status=disabled]
+{
+	color : #cdcdcd;
+}
+#nexacontainer .VScrollBarControl .trackbar[data-status=disabled]
+{
+	background : #eeeeee;
+	border : 1px solid #d8d8d8;
+}
+#nexacontainer .HScrollBarControl .trackbar[data-status=disabled]
+{
+	background : #eeeeee;
+	border : 1px solid #d8d8d8;
+}
+#nexacontainer .ListView[data-status=disabled]
+{
+	background : #666666;
+}
+#nexacontainer .ListView .body[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .ListView .detail[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .ListView .body .cell[data-status=disabled]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+#nexacontainer .ListView .detail .cell[data-status=disabled]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell[data-status=disabled]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+#nexacontainer .ListViewCellControl .cellbutton[data-status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+#nexacontainer .ListViewCellControl .celledit[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .ListViewCellControl .cellmaskedit[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .ListView .body .expandbar[data-status=disabled]
+{
+	background : transparent;
+	border : 0px none;
+	opacity : 0.50;
+}
+#nexacontainer .CheckBoxSetControl[data-status=disabled]
+{
+	background : #efefef;
+}
+#nexacontainer .CheckBoxSetControl .checkboxsetitem[data-status=disabled]
+{
+	opacity : 0.5;
+}
+#nexacontainer .MultiCombo[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .MultiComboControl[data-status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+#nexacontainer .MultiCombo .dropbutton[data-status=disabled]
+{
+	opacity : 0.50;
+}
+#nexacontainer .MultiComboControl .dropbutton[data-status=disabled]
+{
+	opacity : 0.50;
+}
+#nexacontainer .MultiComboListControl[data-status=disabled]
+{
+	background : #efefef;
+}
+#nexacontainer .MultiComboListControl .selectallcheckbox[data-status=disabled]
+{
+	opacity : 0.50;
+}
+#nexacontainer .CheckBox[data-status=disabled][data-userstatus=selected]
+{
+	color : #999999;
+}
+#nexacontainer .CheckBoxControl[data-status=disabled][data-userstatus=selected]
+{
+	color : #999999;
+}
+#nexacontainer .Grid .body .row .cell[data-status=disabled][data-userstatus=selected]
+{
+	background : #f0f0f0;
+}
+#nexacontainer .GridCellControl .cellcheckbox[data-status=disabled][data-userstatus=selected]
+{
+	color : #999999;
+}
+#nexacontainer .Tab .tabbuttonitemTab[data-status=focused][data-userstatus=selected]
+{
+	color : #ffffff;
+	background : #A598EF;
+	border : 0px none;
+}
+#nexacontainer .Tab .tabbuttonitemTab[data-status=disabled][data-userstatus=selected]
+{
+	background : #ffffff;
+	color : #c0bbdb;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-status=mouseover][data-userstatus=saturday]
+{
+	color : #269bee;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-status=mouseover][data-userstatus=sunday]
+{
+	color : #ff4c5e;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-status=mouseover][data-userstatus=trailingday]
+{
+	color : #333333;
+}
+#nexacontainer .DatePickerControl .body .dayitem[data-status=disabled][data-userstatus=selected]
+{
+	background : #f0f0f0;
+	border-radius : 15px 15px 15px 15px;
+}

@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="330" onload="form_onload" onbeforeclose="form_onbeforeclose" ontimer="form_ontimer">
+    <Layouts>
+      <Layout height="330" width="920">
+        <Static id="Static03_00_00" taborder="0" left="20" top="66" height="30" cssclass="sta_WF_compTitle05" text="TEXT(&quot;external.xpush.subtitle&quot;,&quot;데모사이트에 접속한 모든 사용자에게 메시지를 전송해 보세요.&quot;)" fittocontents="height" right="20" wordWrap="english" messageid="external.xpush.subtitle"/>
+        <Static id="stXPushState" taborder="3" height="40" usedecorate="true" text="TEXT(&quot;external.xpush.state&quot;,&quot;&lt;fc v='gray'&gt;X-PUSH 와 연결 끊어짐&lt;/fc&gt;&quot;)" top="Static03_00_00:10" left="21" right="21" textAlign="center" messageid="external.xpush.state"/>
+        <Div id="Div01" taborder="1" left="21" top="stXPushState:0" text="" right="21" cssclass="div_WF_component" height="150">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Static00" left="0" top="40" height="1" right="0" cssclass="sta_WF_titleLine"/>
+              <Static id="Static03_00" taborder="1" text="TEXT(&quot;external.xpush.divtitle&quot;,&quot;푸시 메시지 전송&quot;)" left="30" top="8" height="30" cssclass="sta_WF_txt20px" width="200" fittocontents="width" messageid="external.xpush.divtitle"/>
+              <CheckBox id="chk_listen_noti" taborder="3" top="-2" width="60" height="50" cssclass="chk_WF_toggle" value="false" onchanged="Div01_chk_listen_noti_onchanged" right="10" enable="true"/>
+              <Static id="staPushNoti" taborder="2" text="TEXT(&quot;external.xpush.usenoti&quot;,&quot;푸시사용&quot;)" top="5" height="30" cssclass="sta_WF_compTitle03" textAlign="right" right="chk_listen_noti:0" width="80" messageid="external.xpush.usenoti" fittocontents="width"/>
+              <Button id="btnSendMsg" taborder="5" text="TEXT(&quot;external.xpush.send&quot;,&quot;전송&quot;)" top="69" width="120" height="40" cssclass="btn_WF_basic02" onclick="Div01_btnSendMsg_onclick" right="20" messageid="external.xpush.send" enable="false"/>
+              <Edit id="edtMsg" taborder="4" left="20" top="69" height="40" onkeydown="Div01_edtMsg_onkeydown" right="btnSendMsg:10" displaynulltext="TEXT(&quot;external.xpush.editnull&quot;,&quot;메시지를 입력하세요.&quot;)" messageid="external.xpush.editnull"/>
+              <Div id="div_loading" taborder="6" left="0" top="0" background="url('imagerc::page_loading.gif') no-repeat center center" visible="false" right="0" bottom="0" text=""/>
+            </Layout>
+            <Layout name="Layout0">
+              <Static id="Static02_02_00" left="38" top="67" width="100" height="30"/>
+              <CheckBox id="CheckBox00" left="38" top="99" width="50" height="50"/>
+              <CheckBox id="CheckBox01" left="83" top="99" width="50" height="50"/>
+              <Static id="Static02_00_02_00" left="187" top="67" width="100" height="30"/>
+              <Radio id="Radio00" left="172" top="99" width="82" height="50"/>
+              <Static id="staPushNoti" left="308" top="67" width="70" height="30"/>
+              <CheckBox id="chk_listen_noti" left="308" top="99" width="60" height="50"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static00_00_00" taborder="2" text="X-PUSH" left="22" top="20" width="300" height="40" cssclass="sta_WF_pageTitle" fittocontents="none"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsXpushMessage">
+        <ColumnInfo>
+          <Column id="TOPIC_ID" type="STRING" size="256"/>
+          <Column id="MSG" type="STRING" size="256"/>
+          <Column id="USER" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <XPush id="XPush00" onerror="XPush_onerror" onsuccess="XPush_onsuccess" debug="false" layouturl="pushUrl::push_message_layout.xml"/>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.app = nexacro.getApplication();
+this.rootForm = this.app.mainframe.childframe.form;
+
+this.XPUSH_USER_ID = "TOBESOFT";
+this.XPUSH_PROJECT_ID = "nexacro-n-demo";
+
+this.XPUSH_CONNECT_STATE = {
+	ko : {
+		connect : "<fc v='#0C9F47'>X-PUSH 와 연결되었습니다</fc>",
+		connecting : [
+						"<fc v='#FE5252'>X-PUSH 연결 중 </fc>" ,
+						"<fc v='#FE5252'>X-PUSH 연결 중 . </fc>" ,
+						"<fc v='#FE5252'>X-PUSH 연결 중 . .</fc>" ,
+						"<fc v='#FE5252'>X-PUSH 연결 중 . . .</fc>"
+					],
+		disconnect : "<fc v='#7F7F85'>X-PUSH 와 연결 끊어짐</fc>"
+	},
+	en : {
+		connect : "<fc v='#0C9F47'>Connect with X-PUSH</fc>",
+		connecting : [
+						"<fc v='#FE5252'>Connecting to X-PUSH </fc>",
+						"<fc v='#FE5252'>Connecting to X-PUSH . </fc>",
+						"<fc v='#FE5252'>Connecting to X-PUSH . .</fc>",
+						"<fc v='#FE5252'>Connecting to X-PUSH . . .</fc>"
+					],
+		disconnect : "<fc v='#7F7F85'>Disconnect with X-PUSH</fc>"
+	}
+}
+this.idx_connecting = 0;
+
+this.set_stXPushState = function(state)
+{
+	if(state == "connecting") {
+		this.stXPushState.text = this.XPUSH_CONNECT_STATE[this.app.langCode][state][0];
+		this.setTimer(1, 500);	
+	} else {
+		this.stXPushState.text = this.XPUSH_CONNECT_STATE[this.app.langCode][state];
+		this.idx_connecting = 0;
+	}
+};
+
+/**************************************************************************
+ * FORM EVENT 영역
+ **************************************************************************/
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{	
+	this.gfnFormOnLoad();	
+	
+	let USE_XPUSH = nexacro.getPrivateProfile("USE_XPUSH");
+	if(nexacro.isEmpty(USE_XPUSH)) {
+		USE_XPUSH = false;
+		nexacro.setPrivateProfile("USE_XPUSH", false);
+	}
+	
+	// x-push connect	
+	this.Div01.form.chk_listen_noti.value = USE_XPUSH;
+	this.fn_xpushConnect(USE_XPUSH); 
+};
+
+this.form_onbeforeclose = function(obj:nexacro.Form,e:nexacro.CloseEventInfo)
+{
+	this.rootForm.fnCloseAllMemo();
+};
+
+this.form_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	switch(e.timerid) {
+	case 1 :
+		this.idx_connecting = (++this.idx_connecting > 3) ? 0 : this.idx_connecting;
+ 		this.stXPushState.text = this.XPUSH_CONNECT_STATE[this.app.langCode]["connecting"][this.idx_connecting];		
+		break;
+	default:
+	}
+};
+
+/************************************************************************
+ * connect to X-PUSH
+ ************************************************************************/
+this.fn_xpushConnect = function(use_yn)
+{	
+	this.XPush00.layouturl = "pushUrl::push_message_layout.xml";
+	this.XPush00.iplist = nexacro.getEnvironment().services["xpush"].url;
+	this.XPush00.projectid = this.XPUSH_PROJECT_ID;
+	this.XPush00.protocolversion = "3";
+	
+	if(use_yn) {		
+		this.XPush00.connect(this.XPUSH_USER_ID, "xpush");
+		this.Div01.form.div_loading.visible = true;
+		this.set_stXPushState("connecting");
+	}
+	else {
+		this.XPush00.disconnect();
+		this.Div01.form.div_loading.visible = false;
+	}
+};
+
+this.XPush_onsuccess = function(obj:nexacro.XPush,e:nexacro.XPushEventInfo)
+{
+	switch(e.action) {
+	case 0 :	// on x-push connect
+		//trace("x-push connect");		
+		
+		this.XPush00.subscribe('NOTI', 'SENDMSG', this, this.dsXpushMessage, "append", "fnPushCallback");
+		this.Div01.form.btnSendMsg.enable = true;			
+		this.Div01.form.div_loading.visible = false;
+		
+		break;
+		
+	case 1 :	// on x-push disconnect
+		//trace("xpush disconnect")
+		this.Div01.form.btnSendMsg.enable = false;	
+		this.Div01.form.div_loading.visible = false;
+		this.set_stXPushState("disconnect");
+		break;
+		
+	case 2 :	// on subscribe
+		//trace("xpush-subscribe")		
+		this.killTimer(1);
+		this.set_stXPushState("connect");
+		break;
+		
+	case 3 :	// on unsubscribe
+		//trace("xpush-unsubscribe")
+		break;
+		
+	default:
+	}
+};
+
+this.XPush_onerror = function(obj:nexacro.XPush,e:nexacro.XPushErrorEventInfo)
+{
+	if(e.message != null)
+	{
+		trace( "e.message != null\n" + 
+			" - e.message.messagetype: " + e.message.messagetype + "\n" +
+			" - e.message.messagekey: " + e.message.messagekey + "\n" +
+			" - e.message.messageid: " + e.message.messageid + "\n" +
+			" - e.message.devicetoken: " + e.message.devicetoken);
+	}
+};
+
+this.fnPushCallback = function(ChangeRow, ChangeCol, ColList, strMsgType, strActionType, strMsgID) 
+{
+	if(strActionType == "PUSH")
+	{			
+		let sMessage = this.dsXpushMessage.getColumn(ChangeRow,'MSG');
+		let sUserId = this.dsXpushMessage.getColumn(ChangeRow,'USER');
+		
+		this.rootForm.createMessage(sMessage, sUserId);
+	}	
+};
+
+this.Div01_chk_listen_noti_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{	
+	this.fn_xpushConnect(e.postvalue)
+	nexacro.setPrivateProfile("USE_XPUSH", e.postvalue);
+};
+
+
+/************************************************************************
+ * message send
+ ************************************************************************/
+this.Div01_edtMsg_onkeydown = function(obj:nexacro.Edit,e:nexacro.KeyEventInfo)
+{
+	if(e.keycode == 13) {
+		this.fnSendMessage();
+	}	
+};
+
+this.Div01_btnSendMsg_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fnSendMessage();
+};
+
+this.fnSendMessage = function()
+{
+	let msgBox = this.Div01.form.edtMsg;
+	let msg = msgBox.value;
+	
+	if(nexacro.isEmpty(msg)) {
+		if(this.app.langCode == "ko"){
+			alert("메시지를 입력하세요!");
+		} else {
+			alert("Please enter your message");
+		}
+		
+		return;
+	}
+	let sNotices =  "TOPIC_TYPE=" + "'NOTI'";
+		sNotices += " TOPIC_ID=" + "'SENDMSG'";
+		sNotices += " USER_ID='" + this.XPUSH_USER_ID + "'";
+		sNotices += " PROJECT_ID='" + this.XPUSH_PROJECT_ID + "'";
+		sNotices += " SEND_MESSAGE='" + msg + "'";
+		sNotices += " SERVER_IP='" + this.XPush00.getCurrentIP() + "'";
+	
+	this.fnCallProvider(sNotices);
+}
+
+/************************************************************************************************
+ * Transaction 영역(Transaction, Popup, Common)
+ ************************************************************************************************/
+this.fnCallProvider = function(sNotices)
+{
+	let strSvcId    = "sendMassage";
+	let strSvcUrl   = "svc::xpush/sendMessage";
+	let inData      = "";
+	let outData     = "";
+	let strArg      = sNotices;
+	let callBackFnc = "fnCallback";
+	let isAsync     = true;
+	let nDataType 	= 0;
+	
+	this.transaction(strSvcId ,     // transaction을 구분하기 위한 svc id값
+		strSvcUrl ,   				// transaction을 요청할 주소
+		inData ,     				// 입력값으로 보낼 dataset id , a=b형태로 실제이름과 입력이름을 매칭
+		outData ,     				// 처리결과값으로 받을 dataset id, a=b형태로 실제이름과 입력이름을 매칭
+		strArg ,     				// 입력값으로 보낼 arguments, a=b
+		callBackFnc ,   			// transaction의 결과를 받을 Function 이름
+		isAsync,     				// 비동기통신 여부 [생략가능]
+		nDataType);					// 통신타입 (0 = xml , 1 = binary , 2 = ssv , 3 = JSON)
+};
+/************************************************************************************************
+ * CallBack 영역(Transaction, Popup, Common)
+ ************************************************************************************************/
+this.fnCallback = function(id, code, msg)
+{
+	switch (id)
+	{			
+		case "sendMassage":
+			if(code == -1){
+				if(this.app.langCode == "ko"){
+					alert("푸시 메시지 전송실패!");
+				} else {
+					alert("Failed to send push message");
+				}
+				
+			} else {	
+			
+				//입력된 메시지 초기화
+				let msgBox = this.Div01.form.edtMsg;
+				msgBox.value = "";
+				msgBox.setFocus();		
+				
+				if(this.app.langCode == "ko"){
+					alert("푸시 메시지 전송!");
+				} else {
+					alert("Send push messages");
+				}
+				
+			}
+			break;
+		default:
+	}
+};
+
+
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="work" width="480" height="800" onlayoutchanged="work_onlayoutchanged" scrollbartype="none" background="transparent">
+    <Layouts>
+      <Layout height="800" width="480" screenid="Mobile_screen">
+        <Div id="divMain" taborder="0" top="20" height="760" left="20" right="20" formscrolltype="none" cssclass="div_WF_area" semantictag="article">
+          <Layouts>
+            <Layout/>
+            <Layout name="large"/>
+          </Layouts>
+        </Div>
+        <Static id="sta_gap0" taborder="4" left="20" top="divMain:0" height="25" right="20" visible="true"/>
+        <Div id="divDesc" taborder="1" left="20" top="sta_gap0:0" height="100" visible="false" cssclass="div_WF_area" right="20" formscrollbartype="none" semantictag="article"/>
+        <ImageViewer id="imgPageLoading" taborder="2" left="0" top="0" image="url('imagerc::page_loading.gif')" right="0" background="transparent" border="0px none" bottom="0"/>
+        <Static id="sta_gap1" taborder="3" left="20" top="divDesc:0" height="30" right="20" visible="false"/>
+      </Layout>
+      <Layout name="large" width="990" height="720" mobileorientation="landscape" screenid="Desktop_screen">
+        <Div id="divDesc" visible="true" left="40" top="divMain:25" height="100" right="30"/>
+        <Div id="divMain" left="40" top="40" height="700" width="920"/>
+        <Static id="sta_gap1" visible="true"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.menuInfo = {menuId: '', menuName: '', menuUrl: ''};
+
+this.loadMenuPage = function(menuId, menuUrl)
+{
+	this.divMain.url = "";
+	this.divDesc.url = "";
+	this.imgPageLoading.visible = true;
+	this.divMain.url = menuUrl;
+	
+	this.menuInfo = {
+		menuId: menuId,
+		menuName: nexacro.getApplication().gdsMenu.lookup("id", menuId, "caption"),
+		menuUrl: menuUrl
+	};
+};
+
+this.work_onlayoutchanged = function(obj:nexacro.Form,e:nexacro.LayoutChangeEventInfo)
+{
+	this.resetScroll();
+};
+
+this.mainPageOnLoad = function()
+{
+	// fittocontents 동적 처리
+	this.divMain.fittocontents = "height"; 	
+	this.resetScroll();	
+		
+	const p = this.parent.parent;
+	p["menuPageOnLoad"].call(p);
+	
+	// visible 처리
+	this.divMain.visible = true;
+	this.imgPageLoading.visible = false;
+	
+	// 모바일 아니면 desc를 표출한다.
+	if (!nexacro.getApplication().IsMobile) {
+		this.divDesc.url = this.getDescUrl(this.divMain.url);
+	}	
+};
+
+this.descPageOnLoad = function()
+{
+	// fittocontents 동적 처리
+	this.divDesc.fittocontents = "height";	
+	this.resetScroll();
+	
+	const p = this.parent.parent;
+	p["menuPageOnLoad"].call(p);	
+};
+
+this.getDescUrl = function(menuUrl)
+{
+	return new String(menuUrl).replace(".xfdl", "_desc.xfdl");
+};
+
+this.showDescription = function()
+{
+	let url = this.getDescUrl(this.divMain.url),
+	menuName = this.menuInfo.menuName;
+	this.openPopup("description", "frame::mobiledescription.xfdl", {menuName: menuName, descUrl: url}, "showtitlebar=false autosize=false openstatus=maximize");
+};
+]]></Script>
+  </Form>
+</FDL>

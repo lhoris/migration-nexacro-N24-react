@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="main_video" width="960" height="540" titletext="메인 비디오화면" onload="main_video_onload">
+    <Layouts>
+      <Layout height="540" mobileorientation="landscape" width="960" screenid="Mobile_screen,Desktop_screen">
+        <VideoPlayer id="VideoPlayer00" taborder="0" left="0" top="0" right="0" bottom="0" autoplay="true" repeat="true"/>
+        <Button id="btnMute" taborder="1" height="35" width="35" left="VideoPlayer00:-70" top="VideoPlayer00:-60" onclick="btnMute_onclick" cssclass="btn_WF_videoMute"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.bMute = true;	// 음소거 여부
+this.main_video_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+ 	const app = nexacro.getApplication();
+	let sUrl = app.webRootUrl;
+ 	this.VideoPlayer00.url = sUrl + "NexacroNv24.mp4";
+	
+	// WRE
+ 	if (!app.IsNRE) {  
+		// 초기화
+		this.VideoPlayer00.autoplay = false;
+		this.VideoPlayer00.repeat = false;
+		
+		this.VideoPlayer00.autoplay = true;
+		this.VideoPlayer00.mute = true;	//음소거
+		this.VideoPlayer00.repeat = true;
+		
+	// NRE
+	} else {
+		this.VideoPlayer00.autoplay = true;
+		this.VideoPlayer00.mute = true;
+	}
+};
+
+// 스피커 버튼 클릭
+this.btnMute_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// 음소거 해제
+	if (this.bMute) {
+		this.bMute = false;
+		this.VideoPlayer00.mute = false;
+		obj.cssclass = "btn_WF_videoSpeaker";	// 스피커 이미지
+		
+		if (system.navigatorname.indexOf("nexacro") == -1) {
+			gtag('event', 'Volume Control', {
+					'event_category': "Main Video",
+					'event_label': '음소거 해제',
+					'value': "음소거 해제"
+				});
+		}
+		
+	// 음소거 설정
+	} else {
+		this.bMute = true;
+		this.VideoPlayer00.mute = true;
+		obj.cssclass = "btn_WF_videoMute";	// 음소거 이미지
+		
+		if (system.navigatorname.indexOf("nexacro") == -1) {
+			gtag('event', 'Volume Control', {
+					'event_category': "Main Video",
+					'event_label': '음소거',
+					'value': "음소거"
+				});
+		}
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

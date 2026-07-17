@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="main_realosmu" width="480" height="1420" titletext="New Form" onload="main_realosmu_onload" background="#FBFBFE">
+    <Layouts>
+      <Layout height="1420" mobileorientation="portrait" width="480" screenid="Mobile_screen">
+        <Static id="Static03" taborder="7" left="0" cssclass="sta_WF_conBox02" top="0" right="0" bottom="0"/>
+        <Static id="Static00" taborder="0" text="Real OSMU Solution" left="21" top="29" width="440" height="70" cssclass="sta_WF_mainvisualTitle" fittocontents="height"/>
+        <Static id="Static01" taborder="1" left="25" top="112" width="435" height="97" cssclass="sta_WF_mainvisualTxt" wordWrap="english" fittocontents="height" messageid="osmu.desc" text="TEXT(&quot;osmu.desc&quot;)"/>
+        <ImageViewer id="ImageViewer00" taborder="2" top="Static01:4" width="425" height="350" right="27" image="url('imagerc::Main/img_WF_mainPR01.png')" cssclass="img_WF_mainvisualImg" background="transparent" stretch="fit"/>
+        <Static id="Static00_00" taborder="3" text="TEXT(&quot;ide&quot;,&quot;개발 생산성을 높이는 IDE&quot;)" left="21" top="ImageViewer00:46" width="430" height="70" cssclass="sta_WF_mainvisualTitle" fittocontents="height" messageid="ide" wordWrap="english"/>
+        <Static id="Static01_00" taborder="4" left="19" top="Static00_00:13" width="440" fittocontents="height" cssclass="sta_WF_mainvisualTxt" wordWrap="english" messageid="ide.desc" height="97" text="TEXT(&quot;ide.desc&quot;)"/>
+        <ImageViewer id="ImageViewer00_00" taborder="5" top="Static01_00:18" height="372" image="url('imagerc::Main/img_WF_mainPR03.png')" cssclass="img_WF_mainvisualImg" text="" background="transparent" stretch="fit" right="32" width="401"/>
+        <Static id="Static02" taborder="6" text="background color : &#13;&#10;#FBFBFE" left="0" top="1152" width="198" height="77" background="palegreen" visible="false"/>
+      </Layout>
+      <Layout height="1150" mobileorientation="landscape" name="large" type="default" width="1263" screenid="Desktop_screen">
+        <Static id="Static00" top="200" width="490" height="70" left="40"/>
+        <Static id="Static01" left="40" top="283" width="530" height="97" wordWrap="english" text="TEXT(&quot;osmu.desc&quot;)"/>
+        <ImageViewer id="ImageViewer00" top="70" width="640" height="540" right="20" stretch="none"/>
+        <Static id="Static00_00" left="673" top="726" width="580" height="70" wordWrap="none" text="TEXT(&quot;ide&quot;)"/>
+        <Static id="Static01_00" left="673" top="809" width="557" height="97" text="TEXT(&quot;ide.desc&quot;)"/>
+        <ImageViewer id="ImageViewer00_00" left="20" top="596" width="490" height="460" stretch="none"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.main_realosmu_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	/* AS-IS 다국어 처리 */
+	//nexacro.applyI18n(this);
+};
+]]></Script>
+  </Form>
+</FDL>

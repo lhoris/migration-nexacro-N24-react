@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="300" onload="form_onload">
+    <Layouts>
+      <Layout height="300" width="920">
+        <Static id="Static00" taborder="0" left="20" top="19" width="150" height="30" cssclass="sta_WF_compTitle02" fittocontents="width" messageid="external.intersectionobserver.desc" text="TEXT(&quot;external.intersectionobserver&quot;)"/>
+        <Static id="Static01" taborder="1" left="20" top="51" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" usedecorate="true" messageid="external.intersectionobserver.desc" text="TEXT(&quot;external.intersectionobserver.desc&quot;)" bottom="29" right="20"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};]]></Script>
+  </Form>
+</FDL>

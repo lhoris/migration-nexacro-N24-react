@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<message_layout>
+	<message type="NOTI"> 
+		<field id="TOPIC_ID" type="string" size="9"/> 
+		<field id="MSG" type="string" size="255"/>
+		<field id="USER" type="string" size="255"/>
+	</message> 
+</message_layout>

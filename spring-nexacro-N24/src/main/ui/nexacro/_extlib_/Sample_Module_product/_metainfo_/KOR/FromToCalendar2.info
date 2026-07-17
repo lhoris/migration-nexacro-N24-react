@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <Object id="FromToCalendar2">
+    <ObjectInfo inheritance="nexacro.CompositeComponent" classname="nexacro.FromToCalendar2" shorttypename="FromToCalendar2" csstypename="FromToCalendar2" csscontrolname="FromToCalendar2Control" group="Component" subgroup="Component ( default )" csspseudo="true" container="true" tabstop="true" cssstyle="true" defaultwidth="260" defaultheight="30" registration="allow" edittype="" useinitvalue="true" popup="false" edittypecomponent="" dblclickevent="onclick" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="" finalclass="false"/>
+    <PropertyInfo/>
+    <CSSInfo>
+      <PropertyInfo/>
+    </CSSInfo>
+    <StatusInfo/>
+    <MethodInfo>
+      <Method name="set_fromToColor" async="false" unused="false" description="시작일 과 종료일 배경색을 지정합니다.">
+        <Syntax text="set_fromToColor()">
+          <Return type=""/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getFromToColor" async="false" unused="false" description="시작일 과 종료일 배경색을 가져옵니다.">
+        <Syntax text="getFromToColor()">
+          <Return type="String" description="배경색을 가져옵니다."/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="set_betweenColor" async="false" unused="false" description="시작일 과 종료일 사이 배경색을 지정합니다.">
+        <Syntax text="set_betweenColor()">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getBetweenColor" async="false" unused="false" description="시작일 과 종료일 사이 배경색을 가져옵니다.">
+        <Syntax text="getBetweenColor()">
+          <Return type="String" description="배경색을 가져옵니다."/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="set_fromdate" async="false" unused="false" description="시작일을 지정합니다 (yyyymmdd)">
+        <Syntax text="set_fromdate()">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="set_todate" async="false" unused="false" description="종료일을 지정합니다 (yyyymmdd)">
+        <Syntax text="set_todate()">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getFromDate" async="false" unused="false" description="시작일을 가져옵니다">
+        <Syntax text="getFromDate()">
+          <Return type="String"/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getToDate" async="false" unused="false" description="종료일을 가져옵니다.">
+        <Syntax text="getToDate()">
+          <Return type="String"/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getDates" async="false" unused="false" description="시작일과 종료일을 가져옵니다.">
+        <Syntax text="getDates()">
+          <Return type="Array"/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+    </MethodInfo>
+    <EventHandlerInfo/>
+  </Object>
+</MetaInfo>

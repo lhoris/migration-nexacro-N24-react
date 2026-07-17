@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sttntts" width="920" height="720" titletext="New Form" onload="sttntts_onload">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="920">
+        <Static id="Static01" taborder="0" text="STT(Speech to text)" left="20" top="170" height="40" cssclass="sta_WF_compTitle02" fittocontents="width" right="500"/>
+        <Static id="Static00" taborder="1" text="TEXT(&quot;external.sttntts.stt&quot;,&quot;Press the button and speak.&quot;)" left="20" top="200" width="400" height="40" messageid="external.sttntts.stt" cssclass="sta_WF_compTitle05"/>
+        <Button id="btnStt" taborder="2" top="285" width="100" height="100" cssclass="btn_MWF_voiceRecord" right="40" onclick="btnStt_onclick"/>
+        <TextArea id="tareStt" taborder="3" left="20" top="260" height="150" right="btnStt:40"/>
+        <Static id="Static01_00" taborder="4" text="TTS(Text to speech)" left="20" top="445" height="40" cssclass="sta_WF_compTitle02" fittocontents="width" right="500"/>
+        <Static id="Static00_00" taborder="5" text="TEXT(&quot;external.sttntts.tts&quot;,&quot;Enter the text and press the button.&quot;)" left="20" top="475" width="400" height="40" messageid="external.sttntts.tts" cssclass="sta_WF_compTitle05"/>
+        <Button id="btnTts" taborder="7" top="560" width="100" height="100" cssclass="btn_MWF_voiceSpeaker" right="40" onclick="btnTts_onclick"/>
+        <TextArea id="tareTts" taborder="6" left="20" top="535" right="btnTts:40" height="150"/>
+        <Static id="Static00_01" taborder="8" text="STT / TTS" left="20" top="20" width="120" height="40" cssclass="sta_WF_pageTitle" fittocontents="width"/>
+        <Combo id="cboLang" taborder="9" text="" left="20" top="120" width="150" height="40" innerdataset="dsLang" datacolumn="lang" codecolumn="langCD" index="-1" value="" onitemchanged="cboLang_onitemchanged" displayrowcount="10"/>
+        <Combo id="cboLangLo" taborder="10" text="Combo00" left="cboLang:20" top="120" width="170" height="40" innerdataset="dsLangLo" datacolumn="data" codecolumn="code" displayrowcount="10" onitemchanged="cboLangLo_onitemchanged"/>
+        <Static id="Static02" taborder="11" text="TEXT(&quot;external.sttntts.selectlang&quot;,&quot;언어를 선택해 주세요.&quot;)" left="20" top="70" width="200" height="40" messageid="external.sttntts.selectlang" cssclass="sta_WF_compTitle05"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsLang">
+        <ColumnInfo>
+          <Column id="lang" type="STRING" size="256"/>
+          <Column id="langCD" type="STRING" size="256"/>
+          <Column id="langLo" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="lang">Afrikaans</Col>
+            <Col id="langCD">af-ZA</Col>
+          </Row>
+          <Row>
+            <Col id="lang">አማርኛ</Col>
+            <Col id="langCD">am-ET</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Azərbaycanca</Col>
+            <Col id="langCD">az-AZ</Col>
+          </Row>
+          <Row>
+            <Col id="lang">বাংলা</Col>
+            <Col id="langCD">bn-BD,bn-IN</Col>
+            <Col id="langLo">বাংলাদেশ,ভারত</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Bahasa Indonesia</Col>
+            <Col id="langCD">id-ID</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Bahasa Melayu</Col>
+            <Col id="langCD">ms-MY</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Català</Col>
+            <Col id="langCD">ca-ES</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Čeština</Col>
+            <Col id="langCD">cs-CZ</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Dansk</Col>
+            <Col id="langCD">da-DK</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Deutsch</Col>
+            <Col id="langCD">de-DE</Col>
+          </Row>
+          <Row>
+            <Col id="lang">English</Col>
+            <Col id="langCD">en-AU,en-CA,en-IN,en-KE,en-TZ,en-GH,en-NZ,en-NG,en-ZA,en-PH,en-GB,en-US</Col>
+            <Col id="langLo">Australia,Canada,India,Kenya,Tanzania,Ghana,New Zealand,Nigeria,South Africa,Philippines,United Kingdom,United States</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Español</Col>
+            <Col id="langCD">es-AR,es-BO,es-CL,es-CO,es-CR,es-EC,es-SV,es-ES,es-US,es-GT,es-HN,es-MX,es-NI,es-PA,es-PY,es-PE,es-PR,es-DO,es-UY,es-VE</Col>
+            <Col id="langLo">Argentina,Bolivia,Chile,Colombia,Costa Rica,Ecuador,El Salvador,España,Estados Unidos,Guatemala,Honduras,México,Nicaragua,Panamá,Paraguay,Perú,Puerto Rico,República Dominicana,Uruguay,Venezuela</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Euskara</Col>
+            <Col id="langCD">eu-ES</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Filipino</Col>
+            <Col id="langCD">fil-PH</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Français</Col>
+            <Col id="langCD">fr-FR</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Basa Jawa</Col>
+            <Col id="langCD">jv-ID</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Galego</Col>
+            <Col id="langCD">gl-ES</Col>
+          </Row>
+          <Row>
+            <Col id="lang">ગુજરાતી</Col>
+            <Col id="langCD">gu-IN</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Hrvatski</Col>
+            <Col id="langCD">hr-HR</Col>
+          </Row>
+          <Row>
+            <Col id="lang">IsiZulu</Col>
+            <Col id="langCD">zu-ZA</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Íslenska</Col>
+            <Col id="langCD">is-IS</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Italiano</Col>
+            <Col id="langCD">it-IT,it-CH</Col>
+            <Col id="langLo">Italia,Svizzera</Col>
+          </Row>
+          <Row>
+            <Col id="lang">ಕನ್ನಡ</Col>
+            <Col id="langCD">kn-IN</Col>
+          </Row>
+          <Row>
+            <Col id="lang">ភាសាខ្មែរ</Col>
+            <Col id="langCD">km-KH</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Latviešu</Col>
+            <Col id="langCD">lv-LV</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Lietuvių</Col>
+            <Col id="langCD">lt-LT</Col>
+          </Row>
+          <Row>
+            <Col id="lang">മലയാളം</Col>
+            <Col id="langCD">ml-IN</Col>
+          </Row>
+          <Row>
+            <Col id="lang">मराठी</Col>
+            <Col id="langCD">mr-IN</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Magyar</Col>
+            <Col id="langCD">hu-HU</Col>
+          </Row>
+          <Row>
+            <Col id="lang">ລາວ</Col>
+            <Col id="langCD">lo-LA</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Nederlands</Col>
+            <Col id="langCD">nl-NL</Col>
+          </Row>
+          <Row>
+            <Col id="lang">नेपाली भाषा</Col>
+            <Col id="langCD">ne-NP</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Norsk bokmål</Col>
+            <Col id="langCD">nb-NO</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Polski</Col>
+            <Col id="langCD">pl-PL</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Português</Col>
+            <Col id="langCD">pt-BR,pt-PT</Col>
+            <Col id="langLo">Brasil,Portugal</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Română</Col>
+            <Col id="langCD">ro-RO</Col>
+          </Row>
+          <Row>
+            <Col id="lang">සිංහල</Col>
+            <Col id="langCD">si-LK</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Slovenščina</Col>
+            <Col id="langCD">sl-SI</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Basa Sunda</Col>
+            <Col id="langCD">su-ID</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Slovenčina</Col>
+            <Col id="langCD">sk-SK</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Suomi</Col>
+            <Col id="langCD">fi-FI</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Svenska</Col>
+            <Col id="langCD">sv-SE</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Kiswahili</Col>
+            <Col id="langCD">sw-TZ,sw-KE</Col>
+            <Col id="langLo">Tanzania,Kenya</Col>
+          </Row>
+          <Row>
+            <Col id="lang">ქართული</Col>
+            <Col id="langCD">ka-GE</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Հայերեն</Col>
+            <Col id="langCD">hy-AM</Col>
+          </Row>
+          <Row>
+            <Col id="lang">தமிழ்</Col>
+            <Col id="langCD">ta-IN,ta-SG,ta-LK,ta-MY</Col>
+            <Col id="langLo">இந்தியா,சிங்கப்பூர்,இலங்கை,மலேசியா</Col>
+          </Row>
+          <Row>
+            <Col id="lang">తెలుగు</Col>
+            <Col id="langCD">te-IN</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Tiếng Việt</Col>
+            <Col id="langCD">vi-VN</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Türkçe</Col>
+            <Col id="langCD">tr-TR</Col>
+          </Row>
+          <Row>
+            <Col id="lang">اُردُو</Col>
+            <Col id="langCD">ur-PK,ur-IN</Col>
+            <Col id="langLo">پاکستان,بھارت</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Ελληνικά</Col>
+            <Col id="langCD">el-GR</Col>
+          </Row>
+          <Row>
+            <Col id="lang">български</Col>
+            <Col id="langCD">bg-BG</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Pусский</Col>
+            <Col id="langCD">ru-RU</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Српски</Col>
+            <Col id="langCD">sr-RS</Col>
+          </Row>
+          <Row>
+            <Col id="lang">Українська</Col>
+            <Col id="langCD">uk-UA</Col>
+          </Row>
+          <Row>
+            <Col id="lang">한국어</Col>
+            <Col id="langCD">ko-KR</Col>
+          </Row>
+          <Row>
+            <Col id="lang">中文</Col>
+            <Col id="langCD">cmn-Hans-CN,cmn-Hans-HK,cmn-Hant-TW,yue-Hant-HK</Col>
+            <Col id="langLo">普通话 (中国大陆),普通话 (香港),中文 (台灣),粵語 (香港)</Col>
+          </Row>
+          <Row>
+            <Col id="lang">日本語</Col>
+            <Col id="langCD">ja-JP</Col>
+          </Row>
+          <Row>
+            <Col id="lang">हिन्दी</Col>
+            <Col id="langCD">hi-IN</Col>
+          </Row>
+          <Row>
+            <Col id="lang">ภาษาไทย</Col>
+            <Col id="langCD">th-TH</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsLangLo">
+        <ColumnInfo>
+          <Column id="data" type="STRING" size="256"/>
+          <Column id="code" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.langCD;
+var propForm;
+
+this.sttntts_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+	this.cboLang.index = 55;
+	this.cboLangLo.visible = false;
+	this.langCD = "ko-KR";
+	propForm = this;
+	this.app = nexacro.getApplication();
+};
+
+this.cboLang_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	let langLo = this.dsLang.getColumn(e.postindex,"langLo");
+	
+	if(!nexacro.isEmpty(langLo)){
+		this.cboLangLo.visible = true;
+		this.langCD = "";
+		let langLos = langLo.split(",");
+		let langCds = e.postvalue.split(",");
+		this.dsLangLo.clearData();
+		if(langLos.length == langCds.length){
+			let row;
+			for(let i=0; i<langLos.length; ++i){
+				row = this.dsLangLo.addRow();
+				this.dsLangLo.setColumn(row,"code",langCds[i]);
+				this.dsLangLo.setColumn(row,"data",langLos[i]);
+			}
+			this.cboLangLo.index = 0;
+			this.langCD = this.cboLangLo.value;
+		}
+		
+	}else{
+		this.cboLangLo.visible = false;
+		this.langCD = e.postvalue;
+	}
+};
+
+this.cboLangLo_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	this.langCD = e.postvalue;
+};
+
+this.btnStt_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+	
+	if(!Recognition){
+		if(this.app.langCode == "ko"){
+			alert("이 브라우저는 음성 인식을 지원하지 않습니다.");
+		}else {
+			alert("This browser does not support speech recognition.");
+		}
+		return;
+	}
+	
+	const recognition = new Recognition();
+	//interimResults - 임시 결과 반환여부 
+	recognition.interimResults = true;
+	recognition.lang = this.langCD;
+	
+	recognition.start();
+	
+	recognition.onend = function(e) {
+		if(propForm.app.langCode == "ko"){
+			alert("음성인식 종료");
+		}else {
+			alert("End voice recognition");
+		}
+// 		console.log(e);
+	};
+
+	recognition.onresult = function (e)
+	{
+// 		trace("result");
+// 		console.log(e);
+		
+		let text = e.results[0][0].transcript;
+// 		trace("text");
+// 		console.log('transcript',text);
+		
+		propForm.tareStt.value = text;
+	};
+	
+	recognition.onerror = function (e)
+	{
+// 		trace("error");
+// 		console.log(e);
+	};
+	
+	recognition.onnomatch = function (e)
+	{
+// 		trace("nomatch");
+// 		console.log(e);
+	};
+};
+
+this.btnTts_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if (typeof SpeechSynthesisUtterance === "undefined" || typeof window.speechSynthesis === "undefined") {
+		if(this.app.langCode == "ko"){
+			alert("이 브라우저는 음성 합성을 지원하지 않습니다.");
+		}else {
+			alert("This browser does not support speech synthesis.");
+		}
+		return;
+	}
+	if(nexacro.isEmpty(this.tareTts.value)){
+		if(this.app.langCode == "ko"){
+			alert("텍스트를 입력해 주세요.");
+		}else {
+			alert("Please enter your text.");
+		}
+	}else{
+		window.speechSynthesis.cancel(); // 현재 읽고있다면 초기화
+		
+		const speechMsg = new SpeechSynthesisUtterance();
+		speechMsg.rate = 1; // 속도: 0.1 ~ 10      
+		speechMsg.pitch = 1;// 음높이: 0 ~ 2
+		speechMsg.lang = this.langCD;
+		speechMsg.text = this.tareTts.value;
+		
+		// SpeechSynthesisUtterance에 저장된 내용을 바탕으로 음성합성 실행
+		window.speechSynthesis.speak(speechMsg);
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <Object id="NxPivot">
+    <ObjectInfo inheritance="nexacro.Div" classname="nexacro.NxPivot" shorttypename="NxPivot" csstypename="NxPivot" csscontrolname="NxPivotControl" group="Component" subgroup="Component ( default )" csspseudo="true" container="false" composite="false" tabstop="false" cssstyle="true" contents="true" formats="false" contentseditor="auto" defaultwidth="840" defaultheight="500" registration="allow" edittype="NxPivot" useinitvalue="false" popup="false" edittypecomponent="" dblclickevent="" requirement="IE8,IE9,IE10,IE11,Chrome,Safari,Firefox,Opera,Windows nexacro Browser,macOS nexacro Browser,Android nexacro Browser,iOS nexacro Browser,Android Default Web Browser,iOS Default Web Browser" description="Pivot 구성을 위한 컴포넌트 입니다."/>
+    <PropertyInfo>
+      <Property name="binddataset" group="Binding" subgroup="" refreshinfo="" edittype="DatasetID" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="IE8,IE9,IE10,IE11,Chrome,Safari,Firefox,Opera,Windows nexacro Browser,macOS nexacro Browser,Android nexacro Browser,iOS nexacro Browser,Android Default Web Browser,iOS Default Web Browser" description="Grid 의 전체 Cell 과 바인드 되는 DataSet 의 ID 를 설정하는 속성입니다." csspropertyname="" csselementname="" normalpropertyname="binddataset"/>
+      <Property name="coltotalposition" edittype="Enum" defaultvalue="none" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" enuminfo="PivotTotalPosition" description="Pivot column 소계 표시여부 및 위치를 설정하는 속성입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="coltotalposition"/>
+      <Property name="colgrandtotalposition" edittype="Enum" defaultvalue="none" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" enuminfo="PivotTotalPosition" description="Pivot column 총계 표시여부 및 위치를 설정하는 속성입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="colgrandtotalposition"/>
+      <Property name="rowtotalposition" edittype="Enum" defaultvalue="none" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" enuminfo="PivotTotalPosition" description="Pivot row 소계 표시여부 및 위치를 설정하는 속성입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="rowtotalposition"/>
+      <Property name="rowgrandtotalposition" edittype="Enum" defaultvalue="none" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" enuminfo="PivotTotalPosition" description="Pivot row 총계 표시여부 및 위치를 설정하는 속성입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="rowgrandtotalposition"/>
+      <Property name="casesensitive" edittype="Boolean" defaultvalue="true" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" description="Pivot filter시 대소문자 구분여부를 설정하는 속성입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="casesensitive"/>
+      <Property name="contents" edittype="Contents" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" description="Pivot contents xml." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="contents"/>
+      <Property name="totaltext" edittype="String" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" description="Total Text. " requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="totaltext"/>
+      <Property name="grandtotaltext" edittype="String" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" description="Grand Total Text." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="grandtotaltext"/>
+      <Property name="roundfractiondigit" edittype="Number" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" description="집계값 처리시 소수점 이하 반올림 자리 수." normalpropertyname="roundfractiondigit" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser"/>
+      <Property name="loadingimage" edittype="ImageID" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" description="데이터 로딩 시 화면에 표시될 이미지를 설정하는 속성입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="loadingimage"/>
+      <Property name="usetoolbar" edittype="Boolean" unused="false" defaultvalue="true" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Appearance" description="toolbar영역을 사용할지 여부를 설정하는 속성입니다." normalpropertyname="usetoolbar" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser"/>
+      <Property name="useitems" edittype="Boolean" unused="false" defaultvalue="true" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Appearance" description="items영역을 사용할지 여부를 설정하는 속성입니다." normalpropertyname="useitems" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser"/>
+      <Property name="gridheadheight" edittype="Number" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" description="Grid의 Head 높이를 설정하는 속성입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="gridheadheight"/>
+      <Property name="gridbodyheight" edittype="Number" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" description="Grid의 Body 높이를 설정하는 속성입니다." normalpropertyname="gridbodyheight" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser"/>
+      <Property name="gridsummheight" edittype="Number" unused="false" readonly="false" initonly="false" hidden="false" control="false" style="false" expr="false" bind="false" deprecated="false" mandatory="false" group="Information" description="Grid의 Summ 높이를 설정하는 속성입니다." normalpropertyname="gridsummheight" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser"/>
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo/>
+    </CSSInfo>
+    <StatusInfo/>
+    <ControlInfo/>
+    <MethodInfo>
+      <Method name="enableToolbarButtons" unused="false" async="false" usecontextmenu="false" deprecated="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Toolbar의 버튼의 Enable 여부를 설정하는 메소드입니다.">
+        <Syntax text="enableToolbarButtons()">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getPivotGrid" unused="false" async="false" usecontextmenu="false" deprecated="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot Grid를 리턴하는 메소드입니다.">
+        <Syntax text="getPivotGrid()">
+          <Return type="Object" description="Grid 오브젝트를 반환합니다."/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="setConfig" unused="false" async="false" usecontextmenu="false" deprecated="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot Config정보를 리턴하는 메소드입니다.">
+        <Syntax text="setConfig()">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getConfig" unused="false" async="false" usecontextmenu="false" deprecated="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot Config정보를 설정하는 메소드입니다.">
+        <Syntax text="getConfig()">
+          <Return type="Object" description="Config 오브젝트를 반환합니다."/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="setPanel" unused="false" async="false" usecontextmenu="false" deprecated="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot Panel정보를 리턴하는 메소드입니다.">
+        <Syntax text="setPanel()">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getPanel" unused="false" async="false" usecontextmenu="false" deprecated="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot Panel정보를 설정하는 메소드입니다.">
+        <Syntax text="getPanel()">
+          <Return type="Object" description="Panel 오브젝트를 반환합니다."/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="setSettingPopup" unused="false" async="false" usecontextmenu="false" deprecated="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot SettingPopup정보를 리턴하는 메소드입니다.">
+        <Syntax text="setSettingPopup()">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getSettingPopup" unused="false" async="false" usecontextmenu="false" deprecated="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot SettingPopup정보를 설정하는 메소드입니다.">
+        <Syntax text="getSettingPopup()">
+          <Return type="Object" description="SettingPopup 오브젝트를 반환합니다."/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="updateToDataset" unused="false" async="false" usecontextmenu="false" deprecated="false" description="binddataset 정보가 변경되었을때 호출하는 메소드입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="updateToDataset">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getSelectedPivotData" unused="false" async="false" usecontextmenu="false" deprecated="false" description="선택된 Pivot 정보를 조회하는 메소드입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="getSelectedPivotData(nRowIdx, nColIdx, arrValueIds, sType)">
+          <Return type="Object" description="성공 시 선택된 Pivot 정보에 대한 Object 반환"/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getSelectedPivotDetailData" unused="false" async="false" usecontextmenu="false" deprecated="false" description="선택된 Pivot 상세 정보를 조회하는 메소드입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="getPivotDetailData(nRowIdx, nColIdx)">
+          <Return type="String" description="성공 시 상세 정보에 대한 Dataset XML 데이터 반환"/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="getBindDataset" async="false" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="getBindDataset()">
+          <Return type="Object"/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="redraw" async="false" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="redraw()">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="render" async="false" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="render()">
+          <Return/>
+          <Arguments/>
+        </Syntax>
+      </Method>
+      <Method name="setBindDataset" async="false" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="setBindDataset(objDataset)">
+          <Return/>
+          <Arguments>
+            <Argument name="objDataset" type="Object"/>
+          </Arguments>
+        </Syntax>
+      </Method>
+    </MethodInfo>
+    <EventHandlerInfo>
+      <EventHandler name="cancreate" group="Event" unused="false" deprecated="false" description="컴포넌트 생성 전 발생하는 이벤트입니다. " requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="cancreate(obj:nexacro.NxPivot, e:nexacro.EventInfo)">
+          <Return type="Boolean" description="컴포넌트 생성을 원하지 않을 경우 false 반환."/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.NxPivot" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.EventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="oncreate" group="Event" unused="false" deprecated="false" description="컴포넌트 생성 후 발생하는 이벤트입니다. " requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="oncreate(obj:nexacro.NxPivot, e:nexacro.EventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.NxPivot" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.EventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="canrender" group="Event" unused="false" deprecated="false" description="Pivot render 실행 전에 발생하는 이벤트입니다. " requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="canrender(obj:nexacro.NxPivot, e:nexacro.EventInfo)">
+          <Return type="Boolean" description="Render 실행을 원치 않을 경우에는 false 반환."/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.NxPivot" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.EventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="onrender" group="Event" unused="false" deprecated="false" description="Pivot render 실행 완료 후 발생하는 이벤트입니다. " requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="onrender(obj:nexacro.NxPivot, e:nexacro.EventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.NxPivot" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.EventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="cantoolbarbuttonclick" group="Event" unused="false" deprecated="false" description="Pivot toolbar의 버튼 내에서 마우스 왼쪽버튼을 클릭하기 전에 발생하는 이" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="cantoolbarbuttonclick(obj:nexacro.NxPivot, e:nexacro.ToolbarButtonClickEventInfo)">
+          <Return type="Boolean" description="toolbar 버튼 클릭을 원하지 않을 경우 false 반환."/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.NxPivot" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.ToolbarButtonClickEventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="ontoolbarbuttonclick" group="Event" unused="false" deprecated="false" description="Pivot toolbar의 버튼 내에서 마우스 왼쪽버튼을 클릭했을 때 발생하는 이벤트 입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="ontoolbarbuttonclick(obj:nexacro.NxPivot, e:nexacro.ToolbarButtonClickEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.NxPivot" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.ToolbarButtonClickEventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="onerror" group="Event" unused="false" deprecated="false" description="Error시 발생하는 이벤트입니다. " requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="onrender(obj:nexacro.NxPivot, e:nexacro.ErrorEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.NxPivot" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.ErrorEventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="ongridcellclick" group="Event" deprecated="false" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot Grid 에서 Body 영역의 Cell을 클릭했을 때 발생하는 이벤트입니다.">
+        <Syntax text="ongridcellclick(obj:nexacro.Grid, e:nexacro.GridClickEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.Grid" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.GridClickEventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="ongridcelldblclick" group="Event" deprecated="false" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot Grid 에서 Body 영역의 Cell을 더블 클릭했을 때 발생하는 이벤트입니다.">
+        <Syntax text="ongridcelldblclick(obj:nexacro.Grid, e:nexacro.GridClickEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.Grid" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.GridClickEventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="ongridselectchanged" group="Event" deprecated="false" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Pivot Grid 에서 선택영역이 변경된 후 발생하는 이벤트입니다.">
+        <Syntax text="ongridselectchanged(obj:nexacro.Grid, e:nexacro.GridSelectEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.Grid" in="false" out="false" option="false" variable="false" description=""/>
+            <Argument name="e" type="nexacro.GridSelectEventInfo" in="false" out="false" option="false" variable="false" description=""/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+    </EventHandlerInfo>
+    <ContentsInfo contentsformat="json" contentseditor="external" contentstype="contents" showpreview="true" showobjtree="false" showproperties="false"/>
+  </Object>
+</MetaInfo>

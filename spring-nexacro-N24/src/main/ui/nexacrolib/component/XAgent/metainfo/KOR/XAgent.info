@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaInfo version="2.0">
+  <Object id="nexacro.XAgent">
+    <ObjectInfo finalclass="false" inheritance="" classname="nexacro.XAgent" shorttypename="XAgent" csstypename="" csscontrolname="" group="Object" subgroup="Object" csspseudo="" container="false" composite="false" tabstop="false" cssstyle="false" contents="false" formats="false" contentseditor="" defaultwidth="" defaultheight="" registration="allow" edittype="" useinitvalue="false" popup="false" edittypecomponent="" dblclickevent="" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="X-AGENT 서버와 통신할 수 있는 클라이언트 컴포넌트입니다." />
+    <PropertyInfo>
+      <Property name="addport" group="" subgroup="" refreshinfo="" displayinfo="" edittype="Number" defaultvalue="5" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="X-AGENT 서버와 통신 실패 시 연결을 시도할 다른 포트의 범위를 설정합니다." csspropertyname="" normalpropertyname="addport" stringrc="false" defaultstringrc="false" />
+      <Property name="port" group="" subgroup="" refreshinfo="" displayinfo="" edittype="Number" defaultvalue="49020" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="X-AGENT 서버와 통신할 포트를 설정합니다." csspropertyname="" normalpropertyname="port" stringrc="false" defaultstringrc="false" />
+      <Property name="protocol" group="" subgroup="" refreshinfo="" displayinfo="" edittype="Enum" defaultvalue="ws" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="XAgentProtocol" enuminfo2="" unitinfo="" delimiter="" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="X-AGENT 서버와 통신할 웹소켓 통신 프로토콜을 설정합니다." csspropertyname="" normalpropertyname="protocol" stringrc="false" defaultstringrc="false" />
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo />
+    </CSSInfo>
+    <StatusInfo />
+    <ControlInfo />
+    <MethodInfo>
+      <Method name="callMethod" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="X-AGENT 서버를 통해 X-AGENT 상태를 확인하거나 모듈을 설치하고 모듈을 실행하는 메서드입니다.">
+        <Syntax text="XAgent.callMethod(srvId, moduleName, funcName, paramObj)">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="funcName" type="String" in="false" out="false" option="false" variable="false" description="함수명&#xA;&#xA;funcName을 별도로 지정하지 않는 경우에는 srvId와 같은 값으로 설정합니다. &#xA;DLL 모듈을 로드하고 함수를 실행하는 execute 서비스의 경우에는 해당 함수명을 설정합니다." />
+            <Argument name="moduleName" type="String" in="false" out="false" option="false" variable="false" description="모듈 이름" />
+            <Argument name="paramObj" type="Object" in="false" out="false" option="false" variable="false" description="파라미터&#xA;&#xA;X-AGENT 서비스 별 설정할 수 있는 파라미터는 하단 표를 참고하세요." />
+            <Argument name="srvId" type="String" in="false" out="false" option="false" variable="false" description="X-AGENT 서비스명&#xA;&#xA;사용할 수 있는 서비스명은 아래와 같습니다.&#xA;- project: 프로젝트 초기화&#xA;- version: version 정보 확인&#xA;- update-module: 1개 모듈 업데이트&#xA;- update-modules: 1개 이상 모듈 업데이트&#xA;- update-module-check: 모듈 업데이트 중 다운로드 완료 여부 확인&#xA;- status: 서버 실행 상태 확인&#xA;- installed: 타사 앱 설치 여부 확인&#xA;- execute: 모듈 실행" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="connect" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Opera,Windows NRE" description="X-AGENT 서버에 연결합니다.">
+        <Syntax text="XAgent.connect()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="disconnect" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="X-AGENT 서버와 연결을 종료합니다.">
+        <Syntax text="XAgent.disconnect()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+    </MethodInfo>
+    <EventHandlerInfo>
+      <EventHandler name="onerror" group="" deprecated="false" unused="false" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="메서드 실행 실패 시 발생하는 이벤트입니다.">
+        <Syntax text="XAgent.onerror(obj:nexacro.XAgent,e:nexacro.XAgentErrorEventInfo);">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="obj" type="nexacro.XAgent" in="false" out="false" option="false" variable="false" description="Event가 발생한 Object." />
+            <Argument name="e" type="nexacro.XAgentErrorEventInfo" in="false" out="false" option="false" variable="false" description="Event Object." />
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="onsuccess" group="" deprecated="false" unused="false" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="메서드 실행 성공 시 발생하는 이벤트입니다.">
+        <Syntax text="XAgent.onsuccess(obj:nexacro.XAgent,e:nexacro.XAgentEventInfo);">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="obj" type="nexacro.XAgent" in="false" out="false" option="false" variable="false" description="Event가 발생한 Object." />
+            <Argument name="e" type="nexacro.XAgentEventInfo" in="false" out="false" option="false" variable="false" description="Event Object." />
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+    </EventHandlerInfo>
+  </Object>
+</MetaInfo>

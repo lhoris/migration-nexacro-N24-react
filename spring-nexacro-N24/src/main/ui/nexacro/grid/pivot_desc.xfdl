@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="480" onload="form_onload">
+    <Layouts>
+      <Layout height="480" width="920">
+        <Static id="Static00" taborder="1" text="TEXT(&quot;grid.pivot&quot;,&quot;Pivot&quot;)" left="20" top="15" width="42" height="30" cssclass="sta_WF_compTitle02" messageid="grid.pivot" fittocontents="width"/>
+        <Static id="Static01" taborder="0" text="TEXT(&quot;grid.pivot.desc&quot;)" left="20" top="Static00:2" height="60" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.pivot.desc" right="20"/>
+        <Static id="Static02" taborder="2" text="TEXT(&quot;grid.pivot.largedata&quot;,&quot;Large data pivot&quot;)" left="20" top="Static01:10" width="123" height="30" cssclass="sta_WF_compTitle02" messageid="grid.pivot.largedata" fittocontents="width"/>
+        <Static id="Static03" taborder="3" text="TEXT(&quot;grid.pivot.largedata.desc&quot;)" left="20" top="Static02:2" height="120" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.pivot.largedata.desc" right="20"/>
+        <Static id="Static04" taborder="4" text="TEXT(&quot;grid.pivot.value.desc&quot;)" left="20" top="Static03:20" height="40" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.pivot.value.desc" right="20"/>
+        <Static id="Static05" taborder="5" text="TEXT(&quot;grid.pivot.export&quot;,&quot;Export to Excel&quot;)" left="20" top="Static04:10" width="113" height="30" cssclass="sta_WF_compTitle02" messageid="grid.pivot.export" fittocontents="width"/>
+        <Static id="Static06" taborder="6" text="TEXT(&quot;grid.pivot.export.desc&quot;)" left="20" top="Static05:2" height="80" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.pivot.export.desc" right="20"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+]]></Script>
+  </Form>
+</FDL>

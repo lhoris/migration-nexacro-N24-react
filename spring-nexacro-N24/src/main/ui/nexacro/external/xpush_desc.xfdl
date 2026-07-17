@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="1100" onload="form_onload">
+    <Layouts>
+      <Layout height="1100" width="920">
+        <Static id="Static04" taborder="0" text="X-PUSH" left="20" top="15" width="160" height="30" cssclass="sta_WF_compTitle02" fittocontents="width"/>
+        <Static id="Static00_00" taborder="1" text="TEXT(&quot;external.xpush.desc.xpushdesc&quot;,&quot;X-PUSH 서버는 메시지를 넥사크로 클라이언트에 능동적으로 푸시하는 메시징 서비스를 제공합니다.&quot;)" left="20" top="Static04:2" height="33" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" usedecorate="true" right="20" messageid="external.xpush.desc.xpushdesc"/>
+        <Static id="Static04_00" taborder="2" text="TEXT(&quot;external.xpush.desc.realtimemonitor&quot;,&quot;실시간 모니터링&quot;)" left="20" top="Static00_00:10" width="120" height="30" cssclass="sta_WF_compTitle02" fittocontents="width" messageid="external.xpush.desc.realtimemonitor"/>
+        <Static id="Static00_00_00" taborder="3" text="TEXT(&quot;external.xpush.desc.reatimemonitor.desc&quot;,&quot;업무 현황 등 실시간으로 변동되는 데이터를 X-PUSH로 부터 전송받아 지연없이 UI 에 표현할 수 있습니다.&quot;)" left="20" top="Static04_00:2" height="38" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" usedecorate="true" right="20" messageid="external.xpush.desc.reatimemonitor.desc"/>
+        <ImageViewer id="ImageViewer00" taborder="6" left="0" top="Static00_00_00:10" height="425" image="url('imagerc::realtime_monitor_02.png')" stretch="fixaspectratio" right="0" border="0px none" background="transparent" enable="false" enableevent="false"/>
+        <Static id="Static04_00_00" taborder="4" text="TEXT(&quot;external.xpush.desc.noti&quot;,&quot;푸시 알림&quot;)" left="20" top="ImageViewer00:10" width="120" height="30" cssclass="sta_WF_compTitle02" fittocontents="width" messageid="external.xpush.desc.noti"/>
+        <Static id="Static00_00_00_00" taborder="5" text="TEXT(&quot;external.xpush.desc.noti.desc&quot;)" left="20" top="Static04_00_00:2" height="33" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" usedecorate="true" right="20" messageid="external.xpush.desc.noti.desc"/>
+        <ImageViewer id="ImageViewer00_00" taborder="7" left="10" top="Static00_00_00_00:10" height="425" image="url('imagerc::mobile_noti_01.png')" stretch="fixaspectratio" border="0px none" background="transparent" width="440" imagealign="right middle" enable="false" enableevent="false"/>
+        <ImageViewer id="ImageViewer00_00_00" taborder="8" top="Static00_00_00_00:10" height="425" image="url('imagerc::mobile_noti_02.png')" stretch="fixaspectratio" right="10" border="0px none" background="transparent" width="440" imagealign="left middle" enable="false" enableevent="false"/>
+      </Layout>
+      <Layout name="Layout0" screenid="Mobile_screen" width="440" height="768" mobileorientation="portrait" type="default">
+        <ImageViewer id="ImageViewer00_00_00" height="320" top="Static00_00_00_00:10" width="200" right="0" text=""/>
+        <ImageViewer id="ImageViewer00_00" width="200" left="0" top="Static00_00_00_00:10" height="320"/>
+        <ImageViewer id="ImageViewer00" left="0" top="Static00_00_00:10" height="210" right="0"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};]]></Script>
+  </Form>
+</FDL>

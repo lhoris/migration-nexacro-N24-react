@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="sttntts_desc" width="920" height="265" titletext="New Form" onload="sttntts_desc_onload">
+    <Layouts>
+      <Layout height="265" mobileorientation="landscape" width="920">
+        <Static id="Static00" taborder="0" text="STT / TTS" left="20" top="20" width="120" height="30" cssclass="sta_WF_compTitle02"/>
+        <Static id="Static01" taborder="1" text="TEXT(&quot;external.sttntts.desc&quot;,&quot;STT(Speech To Text) - 음성을 텍스트로 변환&#13;&#10;TTS(Text To Speech) - 텍스트를 음성으로 변환&#13;&#10;&#13;&#10;※ 본 샘플은 브라우저에서 제공하는 Web API 를 활용하여 만들었습니다.&#13;&#10;특정 브라우저에서는 동작하지 않을 수 있습니다.&quot;)" left="20" top="Static00:2" height="128" right="20" wordWrap="english" messageid="external.sttntts.desc" cssclass="sta_WF_compTitle05"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.sttntts_desc_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+]]></Script>
+  </Form>
+</FDL>

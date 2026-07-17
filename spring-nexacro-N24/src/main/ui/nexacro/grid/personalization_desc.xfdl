@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="559" onload="form_onload">
+    <Layouts>
+      <Layout height="559" width="920">
+        <Static id="Static00" taborder="1" text="TEXT(&quot;grid.personalization&quot;,&quot;Personalization&quot;)" left="20" top="15" width="120" height="30" cssclass="sta_WF_compTitle02" messageid="grid.personalization" fittocontents="width"/>
+        <Static id="Static01" taborder="0" text="TEXT(&quot;grid.personalization.desc&quot;)" left="20" top="Static00:2" height="60" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.personalization.desc" right="20"/>
+        <Static id="Static05" taborder="2" text="TEXT(&quot;grid.personalization.cellmoving&quot;,&quot;Cell moving&quot;)" left="20" top="Static01:10" width="120" height="30" cssclass="sta_WF_compTitle02" messageid="grid.personalization.cellmoving" fittocontents="width"/>
+        <Static id="Static06" taborder="3" text="TEXT(&quot;grid.personalization.cellmoving.desc&quot;)" left="20" top="Static05:2" height="40" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.personalization.cellmoving.desc" right="20"/>
+        <Static id="Static07" taborder="4" text="TEXT(&quot;grid.personalization.cellsizing&quot;,&quot;Cell sizing&quot;)" left="20" top="Static06:10" width="120" height="30" cssclass="sta_WF_compTitle02" messageid="grid.personalization.cellsizing" fittocontents="width"/>
+        <Static id="Static08" taborder="5" text="TEXT(&quot;grid.personalization.cellsizing.desc&quot;)" left="20" top="Static07:2" height="80" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.personalization.cellsizing.desc" right="20"/>
+        <Static id="Static09" taborder="6" text="TEXT(&quot;grid.personalization.columnhiding&quot;,&quot;Column hiding&quot;)" left="20" top="Static08:10" width="120" height="30" cssclass="sta_WF_compTitle02" messageid="grid.personalization.columnhiding" fittocontents="width"/>
+        <Static id="Static10" taborder="7" text="TEXT(&quot;grid.personalization.columnhiding.desc&quot;)" left="20" top="Static09:2" height="60" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.personalization.columnhiding.desc" right="20"/>
+        <Static id="Static09_00" taborder="9" text="TEXT(&quot;grid.personalization.rowhiding&quot;,&quot;Row hiding&quot;)" left="20" top="Static10:10" width="120" height="30" cssclass="sta_WF_compTitle02" messageid="grid.personalization.rowhiding" fittocontents="width"/>
+        <Static id="Static12_00" taborder="10" text="TEXT(&quot;grid.personalization.rowhiding.desc&quot;)" left="20" top="Static09_00:2" height="40" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.personalization.rowhiding.desc" right="20"/>
+        <Static id="Static12" taborder="8" text="TEXT(&quot;grid.personalization.default.desc&quot;)" left="20" top="Static12_00:10" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.personalization.default.desc" right="20" height="40"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+]]></Script>
+  </Form>
+</FDL>

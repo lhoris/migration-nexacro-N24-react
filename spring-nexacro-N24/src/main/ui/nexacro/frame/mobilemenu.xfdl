@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="mobilemenu" width="480" height="717" onload="mobilemenu_onload" ondevicebuttonup="mobilemenu_ondevicebuttonup">
+    <Layouts>
+      <Layout height="717" mobileorientation="landscape" width="480">
+        <Static id="Static00" taborder="4" left="0" top="0" cssclass="sta_MWF_leftBg" right="0" bottom="0"/>
+        <Button id="btnHome" taborder="0" left="2" top="2" width="60" height="60" cssclass="btn_MLF_homeBtn" onclick="btnHome_onclick"/>
+        <Button id="btnClose" taborder="1" width="60" height="60" right="2" top="2" cssclass="btn_MLF_closeMenu" onclick="btnClose_onclick"/>
+        <Button id="btnLanguage" taborder="2" left="62" top="2" width="35" height="60" cssclass="btn_TF_function03_M" onclick="btnLanguage_onclick"/>
+        <Button id="btnTheme" taborder="3" left="107" top="2" width="35" height="60" cssclass="btn_TF_function02Dark_M" onclick="btnTheme_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.selectedMenu = "";
+
+this.mobilemenu_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.createMenuButton();
+	
+	this.btnLanguage.cssclass = nexacro.getApplication().langCode=="en"?"btn_TF_function03_M":"btn_TF_function03ENG_M";
+	this.btnTheme.cssclass = nexacro.getApplication().themeMode=="L"?"btn_TF_function02Dark_M":"btn_TF_function02_M";
+};
+
+this.createMenuButton = function()
+{
+	const app = nexacro.getApplication();
+
+	this.dsMenu.clearData();
+	app.gdsMenu.filter("");
+	
+	for (let i=0,len=app.gdsMenu.rowcount; i<len; i++) {
+		let r = this.dsMenu.addRow();
+		this.dsMenu.copyRow(r, app.gdsMenu, i, "id=id,caption=caption,level=level,upid=upid,url=url");
+	}
+	
+	this.dsMenu.applyChange();
+
+	let left=0;
+	let mainTop=66;
+	let subTop=0;
+	let mainHeight=60;
+	let subHeight=50;
+	let right=0;
+	let gap=0;
+	
+	for (let i = 0, len = this.dsMenu.rowcount; i < len; i++) {
+		let id = this.dsMenu.getColumn(i, "id");
+		let caption = this.dsMenu.getColumn(i, "caption");
+		let level = this.dsMenu.getColumn(i, "level");
+		let upid = this.dsMenu.getColumn(i, "upid");
+
+		if (level == 0) {
+			let objId = "btnMenu_"+id;
+			let menuTitle = new Button(objId, left, mainTop, null, mainHeight, right, null);
+			let cssclass = "";
+			
+			switch(id) {
+			case "10000":
+				cssclass = "btn_MLF_Lmenu01";
+				break;
+			case "20000":
+				cssclass = "btn_MLF_Lmenu02";
+				break;
+			case "30000":
+				cssclass = "btn_MLF_Lmenu03";
+				break;
+			case "40000":
+				cssclass = "btn_MLF_Lmenu04";
+				break;
+			case "50000":
+				cssclass = "btn_MLF_Lmenu05";
+				break;
+			}
+			
+			menuTitle.cssclass = cssclass;
+			menuTitle.text = caption;
+			menuTitle.menuId = id;
+			menuTitle.addEventHandler("onclick", this.menuTitle_onclick, this);
+
+			this.addChild(objId, menuTitle);
+			menuTitle.show();
+
+			mainTop = objId + ":0";
+			objId = "divSubMenu_"+id;
+
+			let container = new Div(objId, left, mainTop, null, 0, right, null);
+			container.cssclass = "div_MLF_subMenu";
+			this.addChild(objId, container);
+			container.show();
+	
+			mainTop = objId + ":0";
+		} else {
+			let objId = "btnMenu_"+id;
+			let button = new Button(objId, left, subTop, null, subHeight, right, null);
+
+			button.cssclass = "brn_MLF_subMenu";
+			button.text = caption;
+			button.menuId = id; 
+			button.addEventHandler("onclick", this.menuButton_onclick, this);
+
+			this.components["divSubMenu_"+upid].addChild(objId, button);
+			button.show();
+			
+			subTop = objId + ":0";
+		}
+	}
+};
+
+this.menuTitle_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var cssclasses = obj.cssclass.split(","),
+		container = this.components["divSubMenu_"+obj.menuId];
+	
+	// expanded
+	if (cssclasses.length > 1 && cssclasses[1] == "btn_MLF_LmenuS") {
+		container.height = 0;
+		obj.cssclass = cssclasses[0];
+		this.selectedMenu = "";
+	}
+	// collapsed
+	else {
+		if (this.selectedMenu)	this.components[this.selectedMenu].click();
+		
+		container.height = container.form.components.length * 50 + 2;
+		obj.cssclass = cssclasses[0] + ",btn_MLF_LmenuS";
+		this.selectedMenu = obj.name;
+	}
+	
+	this.resetScroll();
+};
+
+this.menuButton_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close(obj.menuId);
+};
+
+this.btnHome_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.openMain();
+	this.close();
+};
+
+this.btnLanguage_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var app = nexacro.getApplication(),
+		langCode = app.langCode=="en"?"ko":"en";
+	
+	app["changeLanguage"].call(app, langCode);
+	this.reload();
+};
+
+this.btnTheme_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var app = nexacro.getApplication(),
+    rootForm = app.mainframe.childframe.form,
+    topForm = app.mainframe.childframe.form.divTop.form,
+	themeMode = app.themeMode=="L"?"D":"L";
+	
+	app.themeMode = themeMode;
+	
+	nexacro.loadStyle("xcssrc::demo_"+themeMode+".xcss");
+  //trace("[테마 변경] xcssrc::demo_"+themeMode+".xcss");
+
+  /** 
+		버튼 css 변경을 위해 reload해야하지만 초기화로 대체처리
+	**/
+  obj.cssclass = "";
+ 	obj.cssclass = app.themeMode=="L"?"btn_TF_function02Dark_M":"btn_TF_function02_M";
+		
+	this.btnLanguage.cssclass = "";
+	this.btnLanguage.cssclass = app.langCode=="en"?"btn_TF_function03_M":"btn_TF_function03ENG_M";
+	
+	this.btnHome.cssclass = "";
+	this.btnHome.cssclass = "btn_MLF_homeBtn";
+	
+	this.btnClose.cssclass = "";
+	this.btnClose.cssclass = "btn_MLF_closeMenu";
+
+	topForm.btnMobileMenu.cssclass = "";
+	topForm.btnMobileMenu.cssclass = "btn_MTF_menuBtn";
+	
+	topForm.btnBack.cssclass = "";
+	topForm.btnBack.cssclass = "btn_MTF_prevBtn";
+	
+	//메인 롤링이미지 변경(배경색 다른 gif)
+	if(rootForm.divWork.url == "frame::main.xfdl")
+	{
+		rootForm.divWork.form.div_rolling.form.mainImgDis();
+	}
+};
+
+this.btnClose_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close();
+};
+
+
+this.mobilemenu_ondevicebuttonup = function(obj:nexacro.Form,e:nexacro.DeviceButtonEventInfo)
+{
+	//Android 디바이스에서 입력된 디바이스 버튼
+	if(e.button == 1) // MENU     
+	{	
+		
+	}     
+	else if(e.button == 2) // CANCEL     
+	{   
+		//경우: 1.메뉴 팝업에서 back, (2.Main 화면에서 back, 3.work에서 back)
+		if (nexacro.getApplication().IsMobile) {
+			this.close();
+		}
+	}
+
+	return true;	//상위폼 버블 안함
+};
+]]></Script>
+    <Objects>
+      <Dataset id="dsMenu">
+        <ColumnInfo>
+          <Column id="id" type="STRING" size="256"/>
+          <Column id="caption" type="STRING" size="256"/>
+          <Column id="level" type="STRING" size="256"/>
+          <Column id="upid" type="STRING" size="256"/>
+          <Column id="url" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="300" onload="form_onload">
+    <Layouts>
+      <Layout height="300" width="920">
+        <Static id="Static00" taborder="1" text="TEXT(&quot;grid.largedata&quot;,&quot;Large Data&quot;)" left="20" top="15" width="79" height="30" cssclass="sta_WF_compTitle02" messageid="grid.largedata" fittocontents="width"/>
+        <Static id="Static01" taborder="0" text="TEXT(&quot;grid.largedata.desc&quot;)" left="20" top="Static00:2" height="120" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.largedata.desc" right="20"/>
+        <Static id="Static05" taborder="2" text="TEXT(&quot;grid.largedata.query&quot;,&quot;Large data query&quot;)" left="20" top="Static01:10" width="124" height="30" cssclass="sta_WF_compTitle02" messageid="grid.largedata.query" fittocontents="width"/>
+        <Static id="Static06" taborder="3" text="TEXT(&quot;grid.largedata.query.desc&quot;)" left="20" top="Static05:2" height="70" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.largedata.query.desc" right="20"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <EnumInfo id="PivotTotalPosition">
+    <Enum name="none" description="소계/합계를 표시하지 않는다."/>
+    <Enum name="first" description="소계/합계를 처음에 표시한다."/>
+    <Enum name="last" description="소계/합계를 마지막에 표시한다."/>
+  </EnumInfo>
+</MetaInfo>

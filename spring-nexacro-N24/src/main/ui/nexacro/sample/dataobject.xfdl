@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="dataobject" width="920" height="880" onload="fnFormOnload" ontimer="form_ontimer" onlbuttonup="form_onlbuttonup">
+    <Layouts>
+      <Layout height="880" mobileorientation="landscape" width="920">
+        <Static id="Static01" taborder="0" text="TEXT(&quot;sample.dataobject&quot;,&quot;DataObject&quot;)" left="20" top="20" width="160" height="40" cssclass="sta_WF_pageTitle" messageid="sample.dataobject" fittocontents="width"/>
+        <Button id="btnCall" taborder="1" text="TEXT(&quot;sample.dataobject.sendrequest&quot;,&quot;Send Request&quot;)" left="780" top="121" width="120" height="40" cssclass="btn_WF_basic01" messageid="sample.dataobject.sendrequest" onclick="btnCall_onclick"/>
+        <Static id="Static02" taborder="2" text="URL" left="30" top="121" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <Combo id="cboMethod" taborder="7" text="GET" left="144" top="121" width="150" height="40" itemheight="36" index="0" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" value="GET" onitemchanged="cboMethod_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">GET</Col>
+                <Col id="datacolumn">GET</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">POST</Col>
+                <Col id="datacolumn">POST</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">OPTIONS</Col>
+                <Col id="datacolumn">OPTIONS</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">PUT</Col>
+                <Col id="datacolumn">PUT</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">DELETE</Col>
+                <Col id="datacolumn">DELETE</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">HEAD</Col>
+                <Col id="datacolumn">HEAD</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Static id="Static04" taborder="3" text="Parameter" left="30" top="171" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <Static id="Static05" taborder="4" text="Data" left="30" top="350" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <Tab id="Tab00" taborder="5" tabindex="0" left="144" top="350" height="450" tabbuttonheight="36" onchanged="Tab00_onchanged" width="756">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="TEXT(&quot;sample.dataobject.dataexpression&quot;,&quot;Data Expression&quot;)" messageid="sample.dataobject.dataexpression">
+              <Layouts>
+                <Layout>
+                  <Grid id="grdDataExpr" taborder="1" left="0" top="3" bottom="0" cellmovingtype="col" cellsizingtype="col" right="0">
+                    <Formats>
+                      <Format id="default">
+                        <Columns>
+                          <Column size="200"/>
+                        </Columns>
+                        <Rows>
+                          <Row size="24"/>
+                        </Rows>
+                        <Band id="body">
+                          <Cell/>
+                        </Band>
+                      </Format>
+                    </Formats>
+                  </Grid>
+                </Layout>
+              </Layouts>
+            </Tabpage>
+            <Tabpage id="Tabpage2" text="TEXT(&quot;sample.dataobject.datastructure&quot;,&quot;Data Structure&quot;)" messageid="sample.dataobject.datastructure">
+              <Layouts>
+                <Layout>
+                  <Grid id="grdDataStructure" taborder="0" left="363" top="3" right="0" bottom="0" binddataset="dsDataStructure" autofittype="col" treeusecheckbox="false" treeuseimage="false" treeinitstatus="expand,all" cellsizingtype="col">
+                    <Formats>
+                      <Format id="default">
+                        <Columns>
+                          <Column size="150"/>
+                          <Column size="250"/>
+                        </Columns>
+                        <Rows>
+                          <Row size="46" band="head"/>
+                          <Row size="46"/>
+                        </Rows>
+                        <Band id="head">
+                          <Cell text="KEY"/>
+                          <Cell col="1" text="VALUE"/>
+                        </Band>
+                        <Band id="body">
+                          <Cell text="bind:KEY" textAlign="left" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:DEPTH"/>
+                          <Cell col="1" text="bind:VALUE" textAlign="left"/>
+                        </Band>
+                      </Format>
+                    </Formats>
+                  </Grid>
+                  <TextArea id="txtJson" taborder="1" left="0" top="3" width="360" bottom="0" readonly="true" scrolltype="vertical"/>
+                </Layout>
+              </Layouts>
+            </Tabpage>
+          </Tabpages>
+        </Tab>
+        <Edit id="edtDataObjectPath" taborder="6" top="350" height="35" readonly="true" left="750" width="150"/>
+        <Static id="Static00" taborder="12" text="TEXT(&quot;sample.dataobject.path&quot;,&quot;dataobjectpath\n(filtering value)&quot;)" top="345" height="35" cssclass="sta_WF_labelTxt01" right="edtDataObjectPath:10" width="107" messageid="sample.dataobject.path" fittocontents="height" wordWrap="english" textAlign="right"/>
+        <TextArea id="txtUrl" taborder="8" left="cboMethod:0" top="121" width="480" height="40" oneditclick="txtUrl_oneditclick" onkillfocus="txtUrl_onkillfocus" wordWrap="char" maxheight="300" minheight="40" onkeyup="txtUrl_onkeyup" value="https://jsonplaceholder.typicode.com/users" onsetfocus="txtUrl_onsetfocus"/>
+        <TextArea id="txtParams" taborder="9" top="171" width="756" height="159" wordWrap="char" left="144"/>
+        <TextArea id="txtUrl00" taborder="10" left="927" top="121" width="486" height="40" scrolltype="vertical" wordWrap="char" minheight="40" maxheight="300" visible="false"/>
+        <Static id="Static03" taborder="11" left="20" top="66" width="760" height="40" cssclass="sta_WF_compTitle05" text="TEXT(&quot;sample.dataobject.top.desc&quot;)" messageid="sample.dataobject.top.desc" usedecorate="true" wordWrap="english" fittocontents="height"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/**
+*  dataobject.xfdl
+*  @Creator 	TOBESOFT
+*  @CreateDate 	2023.5.8
+*  @Desction    
+******************* 소스 수정 이력 *****************************************************************
+*  date          		Modifier                Description
+*************************************************************************************************
+*  2023.5.8     	    TOBESOFT 	           	    최초 생성 
+*************************************************************************************************
+*/
+
+/***********************************************************************************************
+* 0. 폼로드
+***********************************************************************************************/
+/***********************************************************************************************
+* 00.01. Form Include 선언
+***********************************************************************************************/
+/***********************************************************************************************
+* 00.02. Form 변수 선언
+***********************************************************************************************/
+this.arrRootPath = [];
+this.arrObjType = [];
+this.isArray;
+this.isTxtExtension = false;
+
+this.finVscrollPos = -1;
+/***********************************************************************************************
+* 00.03. Form Onload 이벤트
+***********************************************************************************************/
+this.fnFormOnload = function (obj:Form, e:LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+	this.txtUrl.bringToFront();
+}
+
+/***********************************************************************************************
+* 1. 폼 이벤트
+***********************************************************************************************/
+this.form_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if (e.timerid == 0) {
+		// trace("timer");
+		if (this.isTxtExtension == false) {
+			this.killTimer(0);
+			this.txtUrl.height = 40;
+		} else {
+			let sTxtUrl = this.txtUrl.value;			
+			if (!nexacro.isEmpty(sTxtUrl)) {
+				let nHeight = 40 + this.finVscrollPos;
+				this.txtUrl.height = nHeight;
+			} else {
+				this.txtUrl.height = 40;
+			}
+		}
+	}
+};
+
+this.form_onlbuttonup = function(obj:nexacro.Form,e:nexacro.MouseEventInfo)
+{
+	let fromObjId = e.fromobject.id;
+	
+	if (fromObjId != "txtUrl") {
+		this.isTxtExtension = false;
+	}
+};
+
+/************************************************************************************************
+* 2. CALLBACK 처리부분(Transaction, Popup)
+************************************************************************************************/
+//
+this.fnPopupCallback = function(strId, rtnValue)
+{
+	
+};
+// 메시지 콜백
+this.fnMsgCallback = function(strId, rtnValue)
+{
+};
+
+/***********************************************************************************************
+* 3. 사용자 함수
+***********************************************************************************************/
+this.fnSetDataObjectInit = function ()
+{	
+	// trace("=========================================");
+	
+	this.Tab00.Tabpage1.form.grdDataExpr.enableredraw = false;
+	this.dsDataStructure.enableevent = false;
+	
+	let oDataObjData = this.DataObject00.data;
+	// Json 검사
+	if (nexacro.isEmpty(oDataObjData) || !this.fnIsJson(oDataObjData)) {
+		alert("JSON 구조가 올바르지 않습니다.");
+		return;
+	}	
+	
+	// Json 텍스트 세팅
+	let sJsondata = JSON.stringify(oDataObjData, null, 2);
+	this.Tab00.Tabpage2.form.txtJson.value = sJsondata;
+	
+	// 데이터오브젝트 데이터가 배열형식이라면
+	if (Array.isArray(oDataObjData)) {
+		this.isArray = true;
+	} else {
+		this.isArray = false;
+	}
+
+	let arrayData = new Array(oDataObjData);	// 배열형식의 데이터 저장
+	
+	// 함수실행
+	this.fnSetDataObject(arrayData);
+	// trace(this.dsDataStructure.saveXML());
+	
+	// var sDataObjPath = this.dsDataStructure.lookup("TYPE", "array", "ROOT_PATH");
+	let sDataObjPath = this.dsDataStructure.lookup("TYPE", "array object", "UPPER_ROOT_PATH");
+	this.edtDataObjectPath.value = sDataObjPath;
+	
+ 	let sExpr = "UPPER_ROOT_PATH == '" + sDataObjPath + "' && (TYPE != 'array' && TYPE != 'array object' && TYPE != 'object')";
+	
+ 	this.dsDataStructure.filter(sExpr);
+	this.dsTemp.copyData(this.dsDataStructure, true);
+	this.dsDataStructure.filter("");
+	
+	// 데이터셋(결과 그리드를 표현하기 위한) 컬럼 생성 -> this.dsDataExpr
+	this.fnSetDataset();
+	
+	// 결과 그리드 그리기
+	this.fnRedrawGrid();
+	
+	this.Tab00.Tabpage1.form.grdDataExpr.enableredraw = true;
+	this.dsDataStructure.enableevent = true;
+	
+	//// 후처리
+	// 데이터표현 tab - 그리드 col size 조절
+	this.Tab00.Tabpage1.form.grdDataExpr.scrollTo(0, 100);	// 임의로 v스크롤을 100으로 옮긴 후 
+	let nGridVscroll = this.Tab00.Tabpage1.form.grdDataExpr.getVScrollPos();	// v스크롤의 위치를 구한다.
+	this.Tab00.Tabpage1.form.grdDataExpr.scrollTo(0, 0);	// v스크롤을 원래대로
+	
+	let nGridWidth = 0;
+	// v스크롤의 위치가 0 이상이면 스크롤바가 생긴것이므로 스크롤의 width(18px) 를 더 뺀다
+	if (nGridVscroll > 0) {
+		nGridWidth = this.Tab00.Tabpage1.form.grdDataExpr.getOffsetWidth()-20;
+		
+	// v스크롤의 위치가 0 미만이면 스크롤바가 생기지 않은것
+	} else {
+		nGridWidth = this.Tab00.Tabpage1.form.grdDataExpr.getOffsetWidth()-2;
+	}
+	
+	let nColCnt = this.dsDataExpr.getColCount();
+	let nColSize = nexacro.round(nGridWidth/nColCnt, 1);	// 그리드의 width를 열의 수만큼 나누어서 열 하나의 width를 구한다.
+	if (nColSize < 90) nColSize = 90;	// 최소 width 는 90px
+	this.Tab00.Tabpage1.form.grdDataExpr.setRealColSize("body", -1, nColSize);	// 그리드 전체의 열 width 를 변경
+	
+	// 데이터구조 tab - 그리드 맨 위부터 보이도록 
+	if (this.dsDataStructure.getRowCount() > 0) {
+		this.dsDataStructure.rowposition = 0;
+	}
+};
+
+this.fnSetDataObject = function (oObj)
+{	
+	for (let i=0;i<Object.keys(oObj).length;i++) {
+		let bLoop = true;
+		let objKey = Object.keys(oObj)[i];
+		let objValue = oObj[Object.keys(oObj)[i]];
+		let depth = nexacro.toNumber(this.arrObjType.length, 0);
+		let preObject = this.arrObjType[this.arrObjType.length-1];
+		let preObjectPath = this.arrRootPath[this.arrRootPath.length-1];
+		let rootPath = "";	// 현재 오브젝트 root path
+		let upperRootPath = "";	// 상위 root path 
+		
+		// 오브젝트 타입
+		let objType = typeof objValue;	// array, object, string, number...
+		if (Array.isArray(objValue)) {
+			objType = "array";
+		} else if (objType == "object" && preObject == "array") {
+			objType = "array object";
+		}
+		
+		if (nexacro.isEmpty(objValue)) {
+			bLoop = false;
+			objValue = "";
+		}
+		
+		if (depth > 0) {
+			if (objType == "array") {
+				upperRootPath = preObjectPath /*+ "." + objKey*/;
+				rootPath = preObjectPath + "." + objKey + "[*]";
+				
+			} else if (objType == "array object") {
+				upperRootPath = preObjectPath;
+				
+				let nFromIdx = preObjectPath.lastIndexOf("[");
+				if (nFromIdx > -1) {
+					preObjectPath = preObjectPath.substring(0, nFromIdx);
+				} else {
+					preObjectPath = preObjectPath;
+				}
+				
+				rootPath = preObjectPath + "[" + objKey + "]";
+				
+			} else if (objType == "object") {
+				upperRootPath = preObjectPath;
+				rootPath = preObjectPath + "." + objKey;
+				
+				// string, number...
+			} else {
+				bLoop = false;
+				if (preObject == "array") {
+					upperRootPath = preObjectPath;
+					
+					let nFromIdx = preObjectPath.lastIndexOf("[");
+					if (nFromIdx > -1) {
+						preObjectPath = preObjectPath.substring(0, nFromIdx);
+					} else {
+						preObjectPath = preObjectPath;
+					}
+					
+					rootPath = preObjectPath + "[" + objKey + "]";
+					
+				} else {
+					if (preObject == "array object") {
+						upperRootPath = this.dsDataStructure.lookup("ROOT_PATH", preObjectPath, "UPPER_ROOT_PATH");
+					} else {
+						upperRootPath = preObjectPath;
+					}
+					
+					rootPath = preObjectPath + "." + objKey;
+				}
+			}
+			
+		} else {
+			if (this.isArray) {
+				rootPath = "$[*]";
+			} else {
+				rootPath = "$";
+			}
+		}
+		
+		let nAddRow = this.dsDataStructure.addRow();
+		this.dsDataStructure.setColumn(nAddRow, "KEY", objKey);
+		this.dsDataStructure.setColumn(nAddRow, "VALUE", objValue);
+		this.dsDataStructure.setColumn(nAddRow, "TYPE", objType);
+		this.dsDataStructure.setColumn(nAddRow, "DEPTH", depth);
+		this.dsDataStructure.setColumn(nAddRow, "ROOT_PATH", rootPath);
+		this.dsDataStructure.setColumn(nAddRow, "UPPER_ROOT_PATH", upperRootPath);
+		//		this.dsDataStructure.setColumn(nAddRow-1, "CHILD_CNT", Object.keys(oObj).length);
+		
+		if (bLoop) {
+			this.arrRootPath.push(rootPath);
+			this.arrObjType.push(objType);
+			
+			// 재귀함수 실행
+			this.fnSetDataObject(objValue);
+			
+			this.arrObjType.pop();
+			this.arrRootPath.pop();
+		}
+	}
+};
+
+this.fnSetDataset = function ()
+{
+	for (let n=0;n<this.dsTemp.getRowCount();n++) {
+		let sDatapath = "@." + this.dsTemp.getColumn(n, "KEY");
+		let objColinfo = new ColumnInfo();
+		objColinfo.type = "STRING";
+		objColinfo.size = 256;
+		objColinfo.datapath = sDatapath;
+		
+		this.dsDataExpr.addColumnInfo(this.dsTemp.getColumn(n, "KEY"), objColinfo);
+	}
+	
+	let sDataObjPath = this.edtDataObjectPath.value;
+	this.dsDataExpr.dataobjectpath = sDataObjPath;
+	this.dsDataExpr.binddataobject = "DataObject00";
+};
+
+this.fnRedrawGrid = function ()
+{
+	this.Tab00.Tabpage1.form.grdDataExpr.binddataset = this.dsDataExpr.name;
+	this.Tab00.Tabpage1.form.grdDataExpr.createFormat();
+	this.Tab00.Tabpage1.form.grdDataExpr.setFormatRowProperty(0, "size", 46);
+	this.Tab00.Tabpage1.form.grdDataExpr.setFormatRowProperty(1, "size", 46);
+};
+
+this.fnIsJson = function (str)
+{
+	try {
+		if (typeof str == "string") {
+			let json = JSON.parse(str);
+		} else if (typeof str == "object") {
+			let json = str;
+		}
+		
+		return (typeof json === "object");
+	} catch(e) {
+		return false;
+	}
+};
+
+
+this.sendRequest = function(url, settings) 
+{
+    let createCORSRequest = function(method, url) {
+		let xhr = new XMLHttpRequest();
+		
+		if (xhr) {
+			xhr.open(method, url, true);
+		} else if (typeof XDomainRequest != "undefined") {
+			xhr = new XDomainRequest();
+			xhr.open(method, url);
+		} else {
+			xhr = null;
+		}
+		return xhr;
+	};
+	
+    const pForm = this;
+	let method = settings["method"]?settings["method"]:"GET";
+    let xhr = createCORSRequest(method, url);
+    let sParam = JSON.stringify(settings["param"]);
+    let callback = settings["callback"];
+	
+	try {
+        xhr.timeout = nexacro.getEnvironment().httptimeout * 1000; // time in milliseconds
+        xhr.ontimeout = function(e) {
+            if (typeof callback == "function") {
+                callback.call(pForm, -1, "Request Timeout");
+            } else if (typeof callback == "string") {
+                pForm[callback].call(pForm, -1, "Request Timeout");
+            }
+        };
+    } catch (e) {}
+	
+	xhr.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            let response = this.responseText;
+			
+            if (typeof callback == "function") {
+                callback.call(pForm, 0, response);
+            } else if (typeof callback == "string") {
+                pForm[callback].call(pForm, 0, response);
+            }
+        }
+	};
+	
+	xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+	xhr.send(sParam);
+};
+
+this.fnResizeTextArea = function ()
+{
+	let obj = this.txtUrl;
+	this.txtUrl00.value = obj.value;
+	
+	if (obj.getVScrollPos() > this.finVscrollPos) {
+		this.txtUrl00.scrollTo(0, obj.getVScrollPos());
+	} else {
+		this.txtUrl00.scrollTo(0, this.finVscrollPos);
+	}
+	this.finVscrollPos = this.txtUrl00.getVScrollPos();
+};
+
+/***********************************************************************************************
+* 4. 컴포넌트 이벤트 영역
+***********************************************************************************************/
+// Send Request onclick
+this.btnCall_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.Tab00.Tabpage2.form.txtJson.value = "";
+	this.edtDataObjectPath.value = "";
+	this.dsDataExpr.clear();
+	this.dsTemp.clearData();
+	this.dsDataStructure.clearData();
+	
+	let sUrl = this.txtUrl.value;		// url edit
+	let sMethod = this.cboMethod.value;	// GET, POST, PUT, DELETE, HEAD, PATCH
+	let sParam = this.txtParams.value;
+	let sNavi = system.navigatorname;
+	
+	if (nexacro.isEmpty(sUrl)) return;
+	
+	if (sUrl.substr(0, 4) == "http") {
+		// web
+		if (sNavi != "nexacro") {
+			let settings = {
+				"method": sMethod,
+				"param": sParam,
+				"callback": function(code, response) {
+					this.DataObject00.data = response;
+					this.fnSetDataObjectInit();
+				}
+			};
+			this.sendRequest(sUrl, settings);
+			
+		// nexacro
+		} else {
+			let header = {"Content-Type" : "application/json; charset=UTF-8"};
+			let json_param = {
+				"httpheader" : header,
+				"postdata" : sParam
+			};
+			
+			this.DataObject00.request("SEARCH", sMethod, sUrl, json_param);
+		}
+		// text
+	} else if (sUrl.substr(0, 4) != "http") {
+		this.DataObject00.data = sUrl;
+		this.fnSetDataObjectInit();
+		
+		// url, text 가 모두 빈값일때
+	} else {
+		alert("JSON 구조가 존재하지 않습니다.");
+		this.txtUrl.setFocus();
+		return;
+	} 
+};
+
+let serviceid;
+this.DataObject00_onsuccess = function(obj:nexacro.DataObject,e:nexacro.DataObjectEventInfo)
+{
+	serviceid = e.serviceid;
+    if (e.statuscode > 200) {
+		e.preventDefault();
+	}
+};
+
+this.DataObject00_onerror = function(obj:nexacro.DataObject,e:nexacro.DataObjectErrorEventInfo)
+{
+	trace(e.statuscode + ":" + e.errormsg);
+	
+	// 초기화
+	this.Tab00.Tabpage2.form.txtJson.value = "";
+	this.edtDataObjectPath.value = "";
+	this.dsDataStructure.clearData();
+	this.dsDataExpr.clear();
+	this.dsTemp.clearData();
+};
+
+this.DataObject00_onload = function(obj:nexacro.DataObject,e:nexacro.DataObjectLoadEventInfo)
+{
+	if (/*e.reason == 0 || */e.reason == 2) {
+		if (serviceid == "SEARCH") {
+			this.fnSetDataObjectInit();
+		}
+	}
+};
+
+this.txtUrl_oneditclick = function(obj:nexacro.TextArea,e:nexacro.EditClickEventInfo)
+{
+	// txt 컴포넌트를 클릭했을때
+	this.isTxtExtension = true;
+	this.setTimer(0, 300);
+};
+
+this.txtUrl_onsetfocus = function(obj:nexacro.TextArea,e:nexacro.SetFocusEventInfo)
+{
+	this.isTxtExtension = true;
+	this.setTimer(0, 300);
+};
+
+this.txtUrl_onkillfocus = function(obj:nexacro.TextArea,e:nexacro.KillFocusEventInfo)
+{
+	this.isTxtExtension = false;
+};
+
+this.txtUrl_onkeyup = function(obj:nexacro.TextArea,e:nexacro.KeyEventInfo)
+{
+	this.fnResizeTextArea();
+};
+
+this.cboMethod_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	let sValue = obj.value;
+	
+	if (sValue == "GET") {
+ 		this.txtUrl.value = "https://jsonplaceholder.typicode.com/users";
+ 		this.txtParams.value = "";
+		
+	} else if (sValue == "POST") {
+ 		this.txtUrl.value = "https://services.odata.org/v4/TripPinServiceRW/People";
+		this.txtParams.value = `{
+    'id':'1',
+    'UserName':'lewisblack',
+    'FirstName':'Lewis',
+    'LastName':'Black',
+    'Emails':[
+        'lewisblack@example.com'
+    ]
+}`;
+		
+	} else if (sValue == "OPTIONS") {
+ 		this.txtUrl.value = "";
+		
+	} else if (sValue == "PUT") {
+ 		this.txtUrl.value = "";
+		
+	} else if (sValue == "DELETE") {
+ 		this.txtUrl.value = "";
+		
+	} else if (sValue == "HEAD") {
+ 		this.txtUrl.value = "https://jsonplaceholder.typicode.com/users";
+ 		this.txtParams.value = "";
+		
+	} 
+};
+]]></Script>
+    <Objects>
+      <DataObject id="DataObject00" onerror="DataObject00_onerror" onload="DataObject00_onload" onsuccess="DataObject00_onsuccess"/>
+      <Dataset id="dsDataStructure">
+        <ColumnInfo>
+          <Column id="KEY" type="STRING" size="256"/>
+          <Column id="VALUE" type="STRING" size="256"/>
+          <Column id="TYPE" type="STRING" size="256"/>
+          <Column id="DEPTH" type="STRING" size="256"/>
+          <Column id="ROOT_PATH" type="STRING" size="256"/>
+          <Column id="UPPER_ROOT_PATH" type="STRING" size="256"/>
+          <Column id="CHILD_CNT" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="dsTemp">
+        <ColumnInfo>
+          <Column id="KEY" type="STRING" size="256"/>
+          <Column id="VALUE" type="STRING" size="256"/>
+          <Column id="TYPE" type="STRING" size="256"/>
+          <Column id="DEPTH" type="STRING" size="256"/>
+          <Column id="ROOT_PATH" type="STRING" size="256"/>
+          <Column id="UPPER_ROOT_PATH" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="dsDataExpr"/>
+    </Objects>
+  </Form>
+</FDL>

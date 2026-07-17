@@ -1,0 +1,224 @@
+﻿.Button.btn_pagingFirst
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_first.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+.Button.btn_pagingLast
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_last.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+.Button.btn_pagingPrev
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_prev.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+.Button.btn_pagingNext
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_next.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+.Button.btn_pagingNum
+{
+	background : transparent;
+	color : #222222;
+	cursor : pointer;
+	font : bold 12px "Arial","Gulim";
+	border : 0px none;
+}
+.Button.btn_pagingNum .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_pagingFirst[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_first.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingFirst[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_first.png') no-repeat center center #f6f6f6;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingLast[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_last.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingLast[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_last.png') no-repeat center center #f6f6f6;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingPrev[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_prev.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingPrev[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_prev.png') no-repeat center center #f6f6f6;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingNext[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_next.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingNext[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_next.png') no-repeat center center #f6f6f6;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingNum[data-status=focused]
+{
+	background : transparent;
+	color : #222222;
+	cursor : pointer;
+	font : bold 12px "Arial","Gulim";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_pagingNum[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_pagingNum[data-status=mouseover]
+{
+	background : transparent;
+	color : #3366cc;
+	cursor : pointer;
+	font : bold 12px "Arial","Gulim";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_pagingNum[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	text-decoration : underline;
+}
+#nexacontainer .Button.btn_pagingFirst[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_first.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingFirst[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_first.png') no-repeat center center #f6f6f6;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingLast[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_last.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingLast[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_last.png') no-repeat center center #f6f6f6;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingPrev[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_prev.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingPrev[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_prev.png') no-repeat center center #f6f6f6;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingNext[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_next.png') no-repeat center center #ffffff;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingNext[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_next.png') no-repeat center center #f6f6f6;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingNum[data-userstatus=selected]
+{
+	background : transparent;
+	color : #222222;
+	cursor : pointer;
+	font : bold 12px "Arial","Gulim";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_pagingNum[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_pagingNum[data-userstatus=pushed]
+{
+	background : transparent;
+	color : #3366cc;
+	cursor : pointer;
+	font : bold 12px "Arial","Gulim";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_pagingNum[data-userstatus=pushed] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	text-decoration : underline;
+}
+#nexacontainer .Button.btn_pagingFirst[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_first_D.png') no-repeat center center #e9e9e9;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingLast[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_last_D.png') no-repeat center center #e9e9e9;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingPrev[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_prev_D.png') no-repeat center center #e9e9e9;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingNext[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/commPaging/btn_next_D.png') no-repeat center center #e9e9e9;
+	cursor : pointer;
+	border : 1px solid #c7c7c7;
+}
+#nexacontainer .Button.btn_pagingNum[data-status=disabled]
+{
+	background : transparent;
+	color : #3366cc;
+	cursor : pointer;
+	font : bold 12px "Arial","Gulim";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_pagingNum[data-status=disabled] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}

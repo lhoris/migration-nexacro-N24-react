@@ -1,0 +1,58 @@
+﻿{
+    "version" : "21.0.0.1",
+    "runtime" :
+    {
+        "target" :
+        {
+            "os" : "windows"
+        },
+        "framework" :
+        [    
+        "./nexacrolib/framework/Framework.js"
+        ],
+        "component" :
+        [    
+        "./nexacrolib/component/CompBase.js",
+        "./nexacrolib/component/ComComp.js",
+        "./nexacrolib/component/Grid.js",
+        "./nexacrolib/component/ListView.js"
+        ],
+        "environment" :
+        [    
+        {
+        "file":"./environment.xml.js"
+        }
+        ],
+        "screen" :
+        [    
+        {"id":"black","type":"desktop","themeid":"theme::default"},
+        {"id":"white","type":"desktop","themeid":"theme::default"}
+        ],
+        "xadl" :
+        [
+        {
+        	"screenid":"black,white",
+        	"launch":"./NxPivotCtse_app.xadl.js",
+        	"quickview":"./NxPivotCtse_app.xadl.quickview.js",
+        	"form":[]
+        }
+        ],  
+        "protocol" :
+        {
+            "adaptors" :
+            []
+        },
+        "resource" :
+        {
+
+        },
+		"deploy" :
+        {
+
+        },
+        "userfont" :
+        [
+
+        ]
+    }
+}

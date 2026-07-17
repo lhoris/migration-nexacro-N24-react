@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <Object id="ToolbarButtonClickEventInfo">
+    <ObjectInfo inheritance="nexacro.ActionEventInfo" classname="nexacro.ToolbarButtonClickEventInfo" shorttypename="ToolbarButtonClickEventInfo" csstypename="ToolbarButtonClickEventInfo" csscontrolname="ToolbarButtonClickEventInfoControl" group="Object" subgroup="EventInfo" csspseudo="" container="false" tabstop="false" cssstyle="false" defaultwidth="" defaultheight="" registration="deny" edittype="" useinitvalue="false" popup="false" edittypecomponent="" dblclickevent="" requirement="" description="" finalclass="false"/>
+    <PropertyInfo>
+      <Property name="postvalue" readonly="true" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="EventInfo" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="postvalue" description="새로 변경된 value 값을 갖는 속성입니다."/>
+      <Property name="prevalue" readonly="true" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="EventInfo" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" normalpropertyname="prevalue" description="변경 전 value 값을 갖는 속성입니다."/>
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo/>
+    </CSSInfo>
+    <StatusInfo/>
+    <MethodInfo/>
+    <EventHandlerInfo/>
+  </Object>
+</MetaInfo>

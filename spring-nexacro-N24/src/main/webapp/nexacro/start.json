@@ -1,0 +1,99 @@
+﻿{
+    "version" : "24.0.0.1",
+    "runtime" :
+    {
+        "target" :
+        {
+            "os" : "windows"
+        },
+        "framework" :
+        [    
+        "./nexacrolib/framework/Framework.js"
+        ],
+        "component" :
+        [    
+        "./nexacrolib/component/CompBase.js",
+        "./nexacrolib/component/ComComp.js",
+        "./nexacrolib/component/Grid.js",
+        "./nexacrolib/component/ListView.js",
+        "./nexacrolib/component/Graphics.js",
+        "./nexacrolib/component/DeviceAPI.js",
+        "./nexacrolib/component/util/es6-promise.auto.js",
+        "./nexacrolib/component/util/override.js",
+        "./nexacrolib/component/util/form.js",
+        "./nexacrolib/component/util/grid.js",
+        "./nexacrolib/component/util/history.js",
+        "./nexacrolib/component/pivot/NxPivot.js",
+        "./nexacrolib/component/pivot/NxPivot.message.js",
+        "./nexacrolib/component/pivot/NxPivot.pivot.js",
+        "./nexacrolib/component/pivot/NxPivot.config.js",
+        "./nexacrolib/component/pivot/NxPivot.view.js",
+        "./nexacrolib/component/pivot/ToolbarButtonClickEventInfo.js",
+        "./nexacrolib/component/UbiReport4/UbiReport4.js",
+        "./nexacrolib/component/UbiReport4/ubihtml.js",
+        "./nexacrolib/component/UbiReport4/ubiexcanvas.js",
+        "./nexacrolib/component/UbiReport4/ubinonax.js",
+        "./nexacrolib/component/UbiReport4/msg.js",
+        "./nexacrolib/component/compositeModule/commPaging.xcdl.js",
+        "./nexacrolib/component/Push.js",
+        "./nexacrolib/component/Sample_Module_product/Sample_Module_product.js",
+        "./nexacrolib/component/DxChart/DxChart.license.js",
+        "./nexacrolib/component/DxChart/DxChart.js",
+        "./nexacrolib/component/MobileComp.js"
+        ],
+        "environment" :
+        [    
+        {
+        "file":"./environment.xml.js"
+        }
+        ],
+        "screen" :
+        [    
+        {"id":"Mobile_screen","type":"mobile_small","userzoom":"true","scrollbartype":"autoindicator","filesecurelevel":"all","networksecurelevel":"all","usehttpkeepalive":"true","themeid":"theme::demo"},
+        {"id":"Desktop_screen","type":"desktop","filesecurelevel":"all","networksecurelevel":"all","usehttpkeepalive":"true","themeid":"theme::demo"}
+        ],
+        "xadl" :
+        [
+        {
+        	"screenid":"Mobile_screen,Desktop_screen",
+        	"launch":"./Application.xadl.js",
+        	"quickview":"./Application.xadl.quickview.js",
+        	"form":[]
+        }
+        ],  
+        "protocol" :
+        {
+            "adaptors" :
+            []
+        },
+        "resource" :
+        {
+
+        },
+		"deploy" :
+        {
+
+        },
+        "userfont" :
+        [
+        {
+            "font-family" : "Noto Sans KR Regular",
+            "font-style" : "normal",
+            "font-weight" : "400",
+            "local-font-family" : "NotoSansKR-Regular"
+        },
+        {
+            "font-family" : "Noto Sans KR Medium",
+            "font-style" : "normal",
+            "font-weight" : "500",
+            "local-font-family" : "NotoSansKR-Medium"
+        },
+        {
+            "font-family" : "Noto Sans KR Bold",
+            "font-style" : "normal",
+            "font-weight" : "700",
+            "local-font-family" : "NotoSansKR-Bold"
+        }
+        ]
+    }
+}

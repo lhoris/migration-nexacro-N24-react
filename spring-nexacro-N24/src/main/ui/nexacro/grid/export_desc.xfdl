@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="550" onload="form_onload">
+    <Layouts>
+      <Layout height="550" width="920">
+        <Static id="Static00_00" taborder="0" text="TEXT(&quot;grid.export.desc&quot;)" left="20" top="47" height="260" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.export.desc" usedecorate="true" right="20"/>
+        <Static id="Static04" taborder="1" text="TEXT(&quot;grid.export&quot;,&quot;Export&quot;)" left="20" top="15" width="120" height="30" cssclass="sta_WF_compTitle02" messageid="grid.export" fittocontents="width"/>
+        <Static id="Static04_00" taborder="2" text="TEXT(&quot;grid.import&quot;,&quot;Import&quot;)" left="20" top="Static00_00:20" width="120" height="30" cssclass="sta_WF_compTitle02" messageid="grid.import" fittocontents="width"/>
+        <Static id="Static00_00_00" taborder="3" text="TEXT(&quot;grid.import.desc&quot;)" left="20" top="Static04_00:2" height="160" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.import.desc" usedecorate="true" right="20"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+]]></Script>
+  </Form>
+</FDL>

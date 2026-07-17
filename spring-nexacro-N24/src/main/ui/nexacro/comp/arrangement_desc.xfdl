@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="generate_desc" width="920" height="170" onload="form_onload">
+    <Layouts>
+      <Layout height="170" width="920">
+        <Static id="Static00" taborder="1" text="TEXT(&quot;comp.arrangement.title&quot;,&quot;편리한 컴포넌트 정렬&quot;)" left="20" top="15" width="150" height="30" cssclass="sta_WF_compTitle02" messageid="comp.arrangement.title" fittocontents="width"/>
+        <Static id="Static01" taborder="0" text="TEXT(&quot;comp.arrangement.desc&quot;)" left="20" top="Static00:2" height="103" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="comp.arrangement.desc" right="20" usedecorate="true"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+]]></Script>
+  </Form>
+</FDL>

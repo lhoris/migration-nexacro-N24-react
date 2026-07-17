@@ -1,0 +1,35 @@
+﻿{
+	"name": "Sample_Module_product",
+	"moduletype": "component",
+	"version": "6.6",
+	"minnexacroversion": "21.0.0.100",
+	"description": "",
+	"license": "",
+	"objInfo": [	
+    "Sample_Module_product/_metainfo_/CommonInfo.info",
+    "Sample_Module_product/_metainfo_/CheckCombo.info",
+    "Sample_Module_product/_metainfo_/CustomCalendar.info",
+    "Sample_Module_product/_metainfo_/WindowCalendar.info",
+    "Sample_Module_product/_metainfo_/FromToCalendar.info",
+    "Sample_Module_product/_metainfo_/FromToCalendar2.info",
+    "Sample_Module_product/_metainfo_/FromToCalendar3.info",
+    "Sample_Module_product/_metainfo_/CustomRadio.info"
+	],
+	"scripts": [
+    "Sample_Module_product/Sample_Module_product.js"
+	],
+	"designscripts": [
+    "Sample_Module_product/DesignSample_Module_product.js"
+	],
+	"help": "",	
+	"xcss": "Sample_Module_product/_xcss_/Sample_Module_product.xcss",
+	"images": "Sample_Module_product/_images_/",	
+	"licensefiles": "",
+	"icons": "",
+	"userfolder": [
+
+	],
+	"contentseditor": [
+
+	]
+}

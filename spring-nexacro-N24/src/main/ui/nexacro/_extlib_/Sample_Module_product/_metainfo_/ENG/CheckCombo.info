@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <Object id="CheckCombo">
+    <ObjectInfo inheritance="nexacro.CompositeComponent" classname="nexacro.CheckCombo" shorttypename="CheckCombo" csstypename="CheckCombo" csscontrolname="CheckComboControl" group="Component" subgroup="Component ( default )" csspseudo="true" container="true" tabstop="true" cssstyle="true" defaultwidth="320" defaultheight="480" registration="allow" edittype="" useinitvalue="true" popup="false" edittypecomponent="" dblclickevent="onclick" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="" finalclass="false"/>
+    <PropertyInfo>
+      <Property name="value" group="Action" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="" description="" csspropertyname="" normalpropertyname=""/>
+      <Property name="valuecolumn" group="Binding" subgroup="" refreshinfo="" displayinfo="" edittype="InnerColumnID" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="" description="" csspropertyname="" normalpropertyname=""/>
+      <Property name="codecolumn" group="Binding" subgroup="" refreshinfo="" displayinfo="" edittype="InnerColumnID" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="" description="" csspropertyname="" normalpropertyname=""/>
+      <Property name="innerdataset" group="Binding" subgroup="" refreshinfo="" displayinfo="" edittype="InnerDatasetID" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="" description="" csspropertyname="" normalpropertyname=""/>
+      <Property name="checkcolumn" group="Binding" subgroup="" refreshinfo="" displayinfo="" edittype="InnerColumnID" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="" description="" csspropertyname="" normalpropertyname=""/>
+      <Property name="text" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Action" edittype="String"/>
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo/>
+    </CSSInfo>
+    <StatusInfo/>
+    <MethodInfo/>
+    <EventHandlerInfo>
+      <EventHandler name="onchanged" group="Event" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="onchanged(obj:nexacro.CheckCombo, e:nexacro.EventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.CheckCombo"/>
+            <Argument name="e" type="nexacro.EventInfo"/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="userevent00" group="Event" unused="false">
+        <Syntax text="userevent00(obj:nexacro.CheckCombo, e:nexacro.EventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.CheckCombo"/>
+            <Argument name="e" type="nexacro.EventInfo"/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+    </EventHandlerInfo>
+  </Object>
+</MetaInfo>

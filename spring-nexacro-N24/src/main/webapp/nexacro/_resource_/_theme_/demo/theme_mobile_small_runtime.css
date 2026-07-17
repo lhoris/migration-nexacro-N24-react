@@ -1,0 +1,2670 @@
+﻿
+        
+.nexainput.nexaleftalign
+{
+  text-align:left;
+}
+.nexainput.nexarightalign
+{
+  text-align:right;
+}
+.nexainput.nexacenteralign
+{
+  text-align:center;
+}
+
+.nexacontentsbox.nexaleftalign
+{
+  text-align:left;
+}
+.nexacontentsbox.nexarightalign
+{
+  text-align:right;
+}
+.nexacontentsbox.nexacenteralign
+{
+  text-align:center;
+}
+.celltreeline
+{
+  border : 1px dotted #999999;
+}
+.Edit, .MaskEdit, .TextArea, .EditControl, .MaskEditControl, .TextAreaControl
+{
+  cursor:text;
+}
+.Button .nexacontentsbox, .ButtonControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.FileDownload  .nexacontentsbox, .FileDownloadControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.IconTextControl .nexacontentsbox, .IconControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.DatePickerDayItemControl .nexacontentsbox, .DatePickerWeekItemControl .nexacontentsbox, .DatepickerYearItemControl .nexacontentsbox, .TitleBarButtonControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.MainFrame, .VScrollBarControl, .HScrollBarControl
+{
+  cursor:default;
+}
+
+.Sketch .nexacontentsbox
+{
+   text-align:center;
+}
+
+.nexainput
+{
+  cursor:inherit;
+}
+
+.Form
+{
+	font : 14px/normal "Noto Sans KR Regular","맑은 고딕";
+	color : #333333;
+	background : #ffffff;
+	border : 0px none;
+}
+.Button
+{
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+	cursor : pointer;
+}
+.FileDownload
+{
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+	cursor : pointer;
+}
+.ButtonControl
+{
+	background : transparent;
+	border : 0px none;
+}
+.FileUpload .fileuploaditem .fileuploaditembutton
+{
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+}
+.Calendar
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.CalendarControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.Calendar .calendaredit
+{
+	padding : 1px 0px 0px 9px;
+}
+.CalendarControl .calendaredit
+{
+	padding : 1px 0px 0px 9px;
+}
+.Calendar .datepicker
+{
+	border : 1px solid #697888;
+}
+.DatePickerControl.popupCalendardatepicker.dummy
+{
+	border : 1px solid #697888;
+}
+.Calendar .datepicker .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.CalendarControl .datepicker .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.Calendar .datepicker .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.CalendarControl .datepicker .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.CheckBox
+{
+	color : #111111;
+}
+.CheckBoxControl
+{
+	color : #111111;
+}
+.Combo
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ComboControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ListBoxControl.popupCombocombolist.dummy
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+	background : #ffffff;
+	border : 1px solid #b1b1b1;
+}
+.ListBoxControl.popupComboControlcombolist.dummy
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+	background : #ffffff;
+	border : 1px solid #b1b1b1;
+}
+.Edit
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+	padding : 1px 9px 0px 9px;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+	padding : 1px 9px 0px 9px;
+}
+.EditControl
+{
+	background : transparent;
+	border : 0px none;
+	padding : 1px 9px 0px 9px;
+}
+.Grid
+{
+	border : 1px solid #E2E2E3;
+	border-radius : 10px;
+}
+.Grid .head .row .cell
+{
+	background : #6954E1;
+	border : 0px none,0px none,1px solid #e2e2e3;
+	font : 14px/normal "Noto Sans KR Regular","맑은 고딕";
+	color : #ffffff;
+}
+.Grid .head .row .cell .nexacontentsbox
+{
+	text-align : center;
+}
+.Grid .body .row .cell
+{
+	font : 14px/normal "Noto Sans KR Regular","맑은 고딕";
+	background : #ffffff;
+	border : 1px solid #e2e2e3,0px none;
+}
+.Grid .body .row .cell.oddcell
+{
+	background : #fdfdfd;
+}
+.Grid .body .row .cell .nexacontentsbox
+{
+	text-align : center;
+}
+.Grid .body .row .cell .subcell
+{
+	color : #666666;
+	border : 1px solid #dbdee2;
+}
+.Grid .body .selection
+{
+	border : 2px solid #6954e1;
+}
+.Grid .summary
+{
+	border : 1px solid #c8c1c2, 0px none, 0px none, 0px none;
+}
+.Grid .summary .row .cell
+{
+	font : bold 12px "Noto Sans KR Regular";
+	color : #333333;
+	background : #fdfbe5;
+	border : 1px solid #c8c1c2;
+}
+.Grid .summary .row .cell .nexacontentsbox
+{
+	text-align : center;
+}
+.Grid .hscrollbar
+{
+	border : 1px solid #b1b1b1, 0px none, 0px none, 0px none;
+}
+.Grid .vscrollbar
+{
+	border : 0px none, 0px none, 0px none, 1px solid #b1b1b1;
+}
+.GridCellControl .cellbutton
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+}
+.GridCellControl .cellcalendar
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.GridCellControl .cellcombo
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListBoxControl.popupGridCellControlcellcombocombolist.dummy.dummy
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+}
+.GridCellControl .celledit
+{
+	font : 12px "Noto Sans KR Regular";
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+	padding : 1px 9px 0px 9px;
+}
+.GridCellControl .cellmaskedit
+{
+	font : 12px "Noto Sans KR Regular";
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+	padding : 1px 9px 0px 9px;
+}
+.GridCellControl .cellprogressbar
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.GridCellControl .celltextarea
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.GridCellControl .celltreeitem .treeitemtext
+{
+	font : 14px "Noto Sans KR Regular";
+	color : #333333;
+}
+.GridCellControl .celltreeline
+{
+	border : 1px dotted #909090;
+}
+.GroupBox .groupboxcontents
+{
+	background : #ffffff;
+	border : 1px solid #d6d4d5;
+}
+.GroupBox .groupboxtitle
+{
+	background : #ffffff;
+}
+.ImageViewer
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ImageViewer .imagetext .nexacontentsbox
+{
+	text-align : center;
+}
+.ListBox
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ListBoxControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.ListBox .listboxitem
+{
+	color : #555555;
+}
+.ListBoxControl .listboxitem
+{
+	color : #555555;
+}
+.MaskEdit
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+	padding : 1px 9px 0px 9px;
+}
+.MaskEditControl
+{
+	background : transparent;
+	border : 0px none;
+	padding : 1px 9px 0px 9px;
+}
+.Menu
+{
+	border : 0px none;
+	background : #f5f5f5;
+}
+.Menu .prevbutton
+{
+	cursor : pointer;
+}
+.Menu .nextbutton
+{
+	cursor : pointer;
+}
+.Menu .menuitem
+{
+	border : 0px none;
+	background : transparent;
+	color : #222222;
+	font : 14px "Noto Sans KR Regular";
+	border-radius : 0px;
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy
+{
+	font : 14px "Noto Sans KR Regular";
+	color : #555555;
+	background : #ffffff;
+	border : 1px solid #7b7b7b;
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .prevbutton
+{
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .nextbutton
+{
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem
+{
+	color : #c3e0ff;
+	border : 0px none;
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemtext
+{
+	font : 14px "Noto Sans KR Regular";
+	color : #333333;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #777777;
+	font : 14px "Noto Sans KR Regular";
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext .nexacontentsbox
+{
+	text-align : right;
+}
+.Plugin
+{
+	border : 1px solid #d5d5d5;
+}
+.PluginControl
+{
+	border : 1px solid #d5d5d5;
+}
+.PopupMenu
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #333333;
+	background : #ffffff;
+	border : 1px solid #b5b5b5;
+}
+.PopupMenuControl
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #333333;
+	background : #ffffff;
+	border : 1px solid #b5b5b5;
+}
+.PopupMenu .popupmenuitem
+{
+	color : #333333;
+}
+.PopupMenuControl .popupmenuitem
+{
+	color : #333333;
+}
+.PopupMenu .popupmenuitem .popupmenuitemcheckbox
+{
+	background : URL('./images/chk_WF_Box_F.png') no-repeat left center;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemcheckbox
+{
+	background : URL('./images/chk_WF_Box_F.png') no-repeat left center;
+}
+.PopupMenu .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #aaaaaa;
+}
+.PopupMenu .popupmenuitem .popupmenuitemhotkeytext .nexacontentsbox
+{
+	text-align : right;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #aaaaaa;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext .nexacontentsbox
+{
+	text-align : right;
+}
+.ProgressBar
+{
+	background : #F1F2F5;
+	border : 0px none;
+	border-radius : 20px;
+}
+.ProgressBarControl
+{
+	background : #F1F2F5;
+	border : 0px none;
+	border-radius : 20px;
+}
+.ProgressBar .progressbaritem
+{
+	background : linear-gradient(to left,#a598ef,#6954e1);
+}
+.ProgressBarControl .progressbaritem
+{
+	background : linear-gradient(to left,#a598ef,#6954e1);
+}
+.ProgressBar .progressbartext
+{
+	color : #C9C2EF;
+}
+.ProgressBar .progressbartext .nexacontentsbox
+{
+	text-align : left;
+}
+.ProgressBarControl .progressbartext
+{
+	color : #C9C2EF;
+}
+.ProgressBarControl .progressbartext .nexacontentsbox
+{
+	text-align : left;
+}
+.Sketch
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.Spin
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.Spin .spinedit
+{
+	padding : 0px 3px 0px 3px;
+}
+.Spin .spinedit .nexainput
+{
+	text-align : right;
+}
+.Spin .spinedit .nexacontentsbox
+{
+	text-align : right;
+}
+.TextArea
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+	padding : 9px 9px 9px 9px;
+}
+.TextAreaControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+	padding : 9px 9px 9px 9px;
+}
+.WebBrowser
+{
+	border : 1px solid #d5d5d5;
+}
+.WebBrowserControl
+{
+	border : 1px solid #d5d5d5;
+}
+.Tab .tabpageTab
+{
+	border : 0px none;
+}
+.Tab .tabbuttonitemTab
+{
+	color : #666666;
+	background : #ffffff;
+	border : 0px none;
+	border-radius : 4px;
+	cursor : pointer;
+}
+.DatePickerControl
+{
+	background : #ffffff;
+}
+.DatePickerControl .head
+{
+	background : #6954e1;
+}
+.DatePickerControl .head .yearstatic
+{
+	font : bold 14px Tahoma;
+	color : #ffffff;
+}
+.DatePickerControl .head .monthstatic
+{
+	font : bold 14px Tahoma;
+	color : #ffffff;
+}
+.DatePickerControl .head .yearspin .spinedit
+{
+	font : bold 14px Tahoma;
+	color : #ffffff;
+	background : #5a46cc;
+}
+.DatePickerControl .head .monthspin .spinedit
+{
+	font : bold 14px Tahoma;
+	color : #ffffff;
+	background : #5a46cc;
+}
+.DatePickerControl .body .weekband
+{
+	background : #6954e1;
+}
+.DatePickerControl .body .weekitem
+{
+	color : #ffffff;
+}
+.DatePickerControl .body .dayitem
+{
+	color : #333333;
+}
+.DatePickerControl .body .selection
+{
+	background : #E3DEFC;
+	border-radius : 15px 15px 15px 15px;
+}
+.DateRangePicker
+{
+	border : 1px solid #697888;
+	background : #ffffff;
+}
+.DateRangePickerControl
+{
+	border : 1px solid #697888;
+	background : #D7DAE2;
+}
+.PopupDateRangePicker
+{
+	border : 1px solid #697888;
+	background : #D7DAE2;
+}
+.DateRangePicker .datetabbutton
+{
+	border : 0px none, 0px none, 0px none, 1px solid #dddddd;
+	background : #E6E9F1;
+}
+.PopupDateRangePicker .datetabbutton
+{
+	border : 0px none, 0px none, 0px none, 1px solid #dddddd;
+	background : #E6E9F1;
+}
+.DateRangePicker .timetabbutton
+{
+	border : 0px none, 0px none, 0px none, 1px solid #dddddd;
+	background : #E6E9F1;
+}
+.PopupDateRangePicker .timetabbutton
+{
+	border : 0px none, 0px none, 0px none, 1px solid #dddddd;
+	background : #E6E9F1;
+}
+.DateRangePicker .headline
+{
+	background : #D7DAE2;
+}
+.PopupDateRangePicker .headline
+{
+	background : #D7DAE2;
+}
+.DateRangePicker .headline .splitline
+{
+	border : 1px solid #C2C7D5;
+}
+.PopupDateRangePicker .headline .splitline
+{
+	border : 1px solid #C2C7D5;
+}
+.DateRangePicker .headline .startdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .startdate .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.PopupDateRangePicker .headline .startdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .startdate .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.DateRangePicker .headline .enddate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .enddate .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.PopupDateRangePicker .headline .enddate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .enddate .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.DateRangePicker .headline .startsubdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .startsubdate .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.PopupDateRangePicker .headline .startsubdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .startsubdate .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.DateRangePicker .headline .endsubdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .endsubdate .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.PopupDateRangePicker .headline .endsubdate
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .endsubdate .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .monthitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .yearitem
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DateRangePickerControl .datetabbutton
+{
+	border : 0px none, 0px none, 0px none, 0px none;
+	background : #E6E9F1;
+}
+.DateRangePickerControl .timetabbutton
+{
+	border : 0px none;
+	background : #E6E9F1;
+}
+.TimePickerControl
+{
+	background : #ffffff;
+}
+.TimePickerControl .delimiter .nexacontentsbox
+{
+	text-align : center;
+}
+.TimePickerControl .ampmspinner .spinneritem .nexacontentsbox
+{
+	text-align : center;
+}
+.TimePickerControl .hourspinner .spinneritem .nexacontentsbox
+{
+	text-align : center;
+}
+.TimePickerControl .minspinner .spinneritem .nexacontentsbox
+{
+	text-align : center;
+}
+.TimePickerControl .secspinner .spinneritem .nexacontentsbox
+{
+	text-align : center;
+}
+.TimePickerControl .ampmspinner .overlaytop
+{
+	border : 0px none, 0px none, 1px solid #cccccc, 0px none;
+	background : linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .hourspinner .overlaytop
+{
+	border : 0px none, 0px none, 1px solid #cccccc, 0px none;
+	background : linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .minspinner .overlaytop
+{
+	border : 0px none, 0px none, 1px solid #cccccc, 0px none;
+	background : linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .secspinner .overlaytop
+{
+	border : 0px none, 0px none, 1px solid #cccccc, 0px none;
+	background : linear-gradient(to top,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .ampmspinner .overlaybottom
+{
+	border : 1px solid #cccccc, 0px none, 0px none, 0px none;
+	background : linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .hourspinner .overlaybottom
+{
+	border : 1px solid #cccccc, 0px none, 0px none, 0px none;
+	background : linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .minspinner .overlaybottom
+{
+	border : 1px solid #cccccc, 0px none, 0px none, 0px none;
+	background : linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.TimePickerControl .secspinner .overlaybottom
+{
+	border : 1px solid #cccccc, 0px none, 0px none, 0px none;
+	background : linear-gradient(to bottom,rgba(255,255,255, 0) 0%,#ffffff);
+}
+.VScrollBarControl
+{
+	background : linear-gradient(to left,#ffffff,#f7f7f7);
+	border : 1px solid #b1b1b1;
+}
+.HScrollBarControl
+{
+	background : linear-gradient(to top,#ffffff,#f7f7f7);
+	border : 1px solid #b1b1b1;
+}
+.VScrollBarControl .trackbar
+{
+	background : #dddddd;
+	border : 1px solid #c8c8c8;
+}
+.HScrollBarControl .trackbar
+{
+	background : #dddddd;
+	border : 1px solid #c8c8c8;
+}
+.VScrollIndicatorControl
+{
+	background : #f2f2f2;
+}
+.HScrollIndicatorControl
+{
+	background : #f2f2f2;
+}
+.VScrollIndicatorControl .trackbar
+{
+	background : #cccccc;
+	border : 2px solid transparent;
+}
+.HScrollIndicatorControl .trackbar
+{
+	background : #cccccc;
+	border : 2px solid transparent;
+}
+.StatusBarControl
+{
+	background : #e7e7e7;
+}
+.StatusBarControl .progressbar
+{
+	background : #eaeaea;
+	border : 1px solid #afaeae, 1px solid #d2d0d0, 1px solid #d2d0d0, 1px solid #d2d0d0;
+}
+.StatusBarControl .progressbar .progressbaritem
+{
+	background : #4ca0e2;
+}
+.StatusBarControl .resizegrip .nexacontentsbox
+{
+	vertical-align : bottom;
+}
+.TitleBarControl
+{
+	font : bold 12px "Noto Sans KR Regular";
+	color : #ffffff;
+	background : #003284;
+}
+.ListView
+{
+	border : 1px solid #d5d5d5;
+	background : #ebecee;
+	color : #666666;
+}
+.ListView .body
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .detail
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #f9f9f9;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #f9f9f9;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .body .cell
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListView .detail .cell
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListViewCellControl .cellbutton
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	border : 1px solid #c2c2c2;
+}
+.ListViewCellControl .cellcalendar
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewCellControl .cellcheckbox
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewCellControl .cellcombo
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListBoxControl.popupListViewCellControlcellcombocombolist.dummy.dummy
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #555555;
+}
+.ListViewCellControl .celledit
+{
+	font : 12px "Noto Sans KR Regular";
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+	padding : 1px 9px 0px 9px;
+}
+.ListViewCellControl .cellmaskedit
+{
+	font : 12px "Noto Sans KR Regular";
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+	padding : 1px 9px 0px 9px;
+}
+.ListViewCellControl .cellprogressbar
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewCellControl .celltextarea
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .body .expandbar
+{
+	background : transparent;
+	border : 0px none;
+	cursor : pointer;
+}
+.CheckBoxSetControl
+{
+	background : #ffffff;
+}
+.CheckBoxSetControl .checkboxsetitem
+{
+	color : #555555;
+}
+.MultiCombo
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.MultiComboControl
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.MultiCombo .multicombotext
+{
+	padding : 1px 9px 0px 9px;
+}
+.MultiComboControl .multicombotext
+{
+	padding : 1px 9px 0px 9px;
+}
+.MultiComboTagBoxControl
+{
+	border : 0px none;
+}
+.MultiComboTagBoxControl .tagboxitem
+{
+	background : #eeeeee;
+	border-radius : 10px;
+}
+.MultiComboTagBoxControl .tagboxedit
+{
+	padding : 3px;
+}
+.TagBoxControl
+{
+	background : #eeeeee;
+	border-radius : 10px;
+}
+.TagBoxControl .tagbutton
+{
+	background : url('./images/btn_TF_Close_O.png') no-repeat center center /cover #eeeeee;
+	border-radius : 50%;
+}
+.MultiComboListControl
+{
+	border : 1px solid #d5d5d5;
+}
+.MultiComboListControl .checkboxset
+{
+	font : 12px "맑은 고딕";
+	color : #555555;
+	background : #ffffff;
+	border : 0px none;
+}
+.MultiComboListControl .selectallcheckbox
+{
+	color : #555555;
+	background : #ffffff;
+	border : 0px none,0px none,1px solid #d5d5d5;
+}
+.Button[status=mouseover]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.Button[status=focused]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.FileDownload[status=mouseover]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.FileDownload[status=focused]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.FileUpload .fileuploaditem .fileuploaditembutton[status=mouseover]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.FileUpload .fileuploaditem .fileuploaditembutton[status=focused]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.Calendar[status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+.CalendarControl[status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+.Calendar[status=focused]
+{
+	border : 1px solid #6954E1;
+}
+.CalendarControl[status=focused]
+{
+	border : 1px solid #6954E1;
+}
+.Calendar[status=readonly]
+{
+	background : #efefef;
+}
+.CalendarControl[status=readonly]
+{
+	background : #efefef;
+}
+.Calendar .datepicker .body .monthitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .monthitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.CalendarControl .datepicker .body .monthitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.Calendar .datepicker .body .monthitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .monthitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.CalendarControl .datepicker .body .monthitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.Calendar .datepicker .body .yearitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .yearitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.CalendarControl .datepicker .body .yearitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .yearitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.Calendar .datepicker .body .yearitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .yearitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.CalendarControl .datepicker .body .yearitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .yearitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.Combo[status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+.Combo[status=focused]
+{
+	border : 1px solid #6954E1;
+}
+.ComboControl[status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+.ComboControl[status=focused]
+{
+	border : 1px solid #6954E1;
+}
+.Combo[status=readonly]
+{
+	background : #EEEFF3;
+	border : 1px solid #D7DAE2;
+}
+.ComboControl[status=readonly]
+{
+	background : #EEEFF3;
+	border : 1px solid #D7DAE2;
+}
+.Edit[status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+.Edit[status=focused]
+{
+	border : 1px solid #6954E1;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit[status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit[status=focused]
+{
+	border : 1px solid #6954E1;
+}
+.Edit[status=readonly]
+{
+	background : #EEEFF3;
+	border : 1px solid #D7DAE2;
+}
+.Grid .body .row .cell[status=mouseover]
+{
+	background : #f6f6f6;
+}
+.Grid .body .row .cell .subcell[status=mouseover]
+{
+	background : #f6f6f6;
+}
+.GridCellControl .cellbutton[status=mouseover]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.GridCellControl .cellbutton[status=focused]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.ListBoxControl.popupGridCellControlcellcombocombolist.dummy.dummy .listboxitem[status=mouseover]
+{
+	background : #e8e9ed;
+}
+.GridCellControl .celledit[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.GridCellControl .celledit[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.GridCellControl .cellmaskedit[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.GridCellControl .cellmaskedit[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.ListBox[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.ListBox[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.ListBoxControl[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.ListBoxControl[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.ListBox .listboxitem[status=mouseover]
+{
+	background : #e7e9ed;
+}
+.ListBoxControl .listboxitem[status=mouseover]
+{
+	background : #e7e9ed;
+}
+.MaskEdit[status=mouseover]
+{
+	border : 1px solid #6954E1;
+}
+.MaskEdit[status=focused]
+{
+	border : 1px solid #6954E1;
+}
+.MaskEdit[status=readonly]
+{
+	background : #EEEFF3;
+	border : 1px solid #D7DAE2;
+}
+.Menu[status=focused]
+{
+	border : 0px none;
+	background : #f5f5f5;
+}
+.Menu .menuitem[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #222222;
+	font : 14px "Noto Sans KR Regular";
+	border-radius : 0px;
+	cursor : pointer;
+}
+.Menu .menuitem[status=mouseover]
+{
+	background : #e0e3e5;
+	font : 14px "Noto Sans KR Regular";
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[status=mouseover]
+{
+	color : #ffffff;
+	background : transparent;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[status=focused]
+{
+	color : #ffffff;
+	background : #f5f3ff;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemtext[status=mouseover]
+{
+	color : #48399A;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext[status=mouseover]
+{
+	color : green;
+}
+.PopupMenu .popupmenuitem[status=mouseover]
+{
+	background : #e7e9ed;
+}
+.PopupMenu .popupmenuitem[status=focused]
+{
+	background : #e7e9ed;
+}
+.PopupMenuControl .popupmenuitem[status=mouseover]
+{
+	background : #e7e9ed;
+}
+.PopupMenuControl .popupmenuitem[status=focused]
+{
+	background : #e7e9ed;
+}
+.PopupMenu .popupmenuitem .popupmenuitemcheckbox[status=mouseover]
+{
+	background : URL('./images/chk_WF_Box_F.png') no-repeat left center;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemcheckbox[status=mouseover]
+{
+	background : URL('./images/chk_WF_Box_F.png') no-repeat left center;
+}
+.Spin[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.Spin[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.Spin[status=readonly]
+{
+	background : #efefef;
+}
+.TextArea[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.TextArea[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.TextAreaControl[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.TextAreaControl[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.TextArea[status=readonly]
+{
+	background : #efefef;
+	border : 1px solid #d5d5d5;
+}
+.TextAreaControl[status=readonly]
+{
+	background : #efefef;
+	border : 1px solid #d5d5d5;
+}
+.Tab .tabbuttonitemTab[status=mouseover]
+{
+	background : #f1f2f5;
+}
+.Tab .tabbuttonitemTab[status=focused]
+{
+	color : #dee4ef;
+}
+.DatePickerControl .body .dayitem[status=mouseover]
+{
+	background : #EEEEEE;
+	color : #333333;
+	border-radius : 15px 15px 15px 15px;
+}
+.DatePickerControl .body .dayitem[status=focused]
+{
+	color : #ffffff;
+	background : #6954e1;
+	border-radius : 15px 15px 15px 15px;
+}
+.DateRangePicker .headline .startdate[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .startdate[status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.DateRangePicker .headline .startdate[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .startdate[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.PopupDateRangePicker .headline .startdate[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .startdate[status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.PopupDateRangePicker .headline .startdate[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .startdate[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.DateRangePicker .headline .enddate[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .enddate[status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.DateRangePicker .headline .enddate[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .enddate[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.PopupDateRangePicker .headline .enddate[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .enddate[status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.PopupDateRangePicker .headline .enddate[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : bold 17px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .enddate[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : bottom;
+}
+.DateRangePicker .headline .startsubdate[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .startsubdate[status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.DateRangePicker .headline .startsubdate[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .startsubdate[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.PopupDateRangePicker .headline .startsubdate[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .startsubdate[status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.PopupDateRangePicker .headline .startsubdate[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .startsubdate[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.DateRangePicker .headline .endsubdate[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .endsubdate[status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.DateRangePicker .headline .endsubdate[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.DateRangePicker .headline .endsubdate[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.PopupDateRangePicker .headline .endsubdate[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .endsubdate[status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.PopupDateRangePicker .headline .endsubdate[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #555555;
+	font : 15px "Noto Sans KR Regular";
+}
+.PopupDateRangePicker .headline .endsubdate[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : top;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .monthitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .monthitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .monthitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .monthitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .yearitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .yearitem[status=focused]
+{
+	background : #ffffff;
+	color : #333333;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .yearitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .yearitem[status=mouseover]
+{
+	background : #A598EF;
+	color : #ffffff;
+}
+.VScrollBarControl .trackbar[status=focused]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+.HScrollBarControl .trackbar[status=focused]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+.VScrollBarControl .trackbar[status=mouseover]
+{
+	background : #bbbbbb;
+	border : 1px solid #a8a8a8;
+}
+.HScrollBarControl .trackbar[status=mouseover]
+{
+	background : #bbbbbb;
+	border : 1px solid #a8a8a8;
+}
+.VScrollIndicatorControl .trackbar[status=mouseover]
+{
+	background : #999999;
+}
+.HScrollIndicatorControl .trackbar[status=mouseover]
+{
+	background : #999999;
+}
+.ListView[status=readonly]
+{
+	border : 1px solid #d5d5d5;
+	background : #ebecee;
+	color : #666666;
+}
+.ListView[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.ListView[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.ListView .body[status=readonly]
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .detail[status=readonly]
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy[status=readonly]
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .body[status=focused]
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .detail[status=focused]
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy[status=focused]
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .body[status=mouseover]
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .detail[status=mouseover]
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy[status=mouseover]
+{
+	border : 0px none, 0px none, 1px solid #dbdee2, 0px none;
+	background : #ffffff;
+	font : 12px "Noto Sans KR Regular";
+}
+.ListView .body .cell[status=readonly]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListView .detail .cell[status=readonly]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell[status=readonly]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListView .body .cell[status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListView .detail .cell[status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell[status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListViewCellControl .cellbutton[status=mouseover]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.ListViewCellControl .cellbutton[status=focused]
+{
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+	border : 1px solid #a0a0a0;
+}
+.ListBoxControl.popupListViewCellControlcellcombocombolist.dummy.dummy .listboxitem[status=mouseover]
+{
+	background : #e8e9ed;
+}
+.ListViewCellControl .celledit[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.ListViewCellControl .celledit[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.ListViewCellControl .cellmaskedit[status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+.ListViewCellControl .cellmaskedit[status=focused]
+{
+	border : 1px solid #A598EF;
+}
+.ListView .body .expandbar[status=focused]
+{
+	background : transparent;
+	border : 0px none;
+	cursor : pointer;
+}
+.ListView .body .expandbar[status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+}
+.CheckBoxSetControl .checkboxsetitem[status=mouseover]
+{
+	background : #e7e9ed;
+}
+.MultiCombo[status=mouseover]
+{
+	border : 1px solid #5a86cd;
+}
+.MultiCombo[status=focused]
+{
+	border : 1px solid #5a86cd;
+}
+.MultiComboControl[status=mouseover]
+{
+	border : 1px solid #5a86cd;
+}
+.MultiComboControl[status=focused]
+{
+	border : 1px solid #5a86cd;
+}
+.MultiCombo[status=readonly]
+{
+	background : #efefef;
+}
+.MultiComboControl[status=readonly]
+{
+	background : #efefef;
+}
+.MultiComboListControl[status=mouseover]
+{
+	border : 1px solid #5a86cd;
+}
+.MultiComboListControl .selectallcheckbox[status=mouseover]
+{
+	background : #e7e9ed;
+}
+.Form[userstatus=contents]
+{
+	background : transparent;
+}
+.Button[userstatus=pushed]
+{
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+.Button[userstatus=selected]
+{
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+.FileDownload[userstatus=pushed]
+{
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+.FileUpload .fileuploaditem .fileuploaditembutton[userstatus=pushed]
+{
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+.FileUpload .fileuploaditem .fileuploaditembutton[userstatus=selected]
+{
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+.Calendar .datepicker .body .monthitem[userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .monthitem[userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.Calendar .datepicker .body .monthitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .monthitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.CalendarControl .datepicker .body .monthitem[userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem[userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.CalendarControl .datepicker .body .monthitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .monthitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.Calendar .datepicker .body .yearitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendardatepicker.dummy .body .yearitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.CalendarControl .datepicker .body .yearitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.DatePickerControl.popupCalendarControldatepicker.dummy .body .yearitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.Edit[userstatus=nulltext]
+{
+	color : #BABABA;
+}
+.EditControl[userstatus=nulltext]
+{
+	color : #BABABA;
+}
+.MaskEdit[userstatus=nulltext]
+{
+	color : #BABABA;
+}
+.MaskEditControl[userstatus=nulltext]
+{
+	color : #BABABA;
+}
+.TextArea[userstatus=nulltext]
+{
+	color : #BABABA;
+}
+.TextAreaControl[userstatus=nulltext]
+{
+	color : #BABABA;
+}
+.Calendar[userstatus=invalidtext]
+{
+	color : #999999;
+}
+.CalendarControl[userstatus=invalidtext]
+{
+	color : #999999;
+}
+.MaskEdit[userstatus=invalidtext]
+{
+	color : #999999;
+}
+.MaskEditControl[userstatus=invalidtext]
+{
+	color : #999999;
+}
+.Spin[userstatus=invalidtext]
+{
+	color : #999999;
+}
+.SpinControl[userstatus=invalidtext]
+{
+	color : #999999;
+}
+.Grid .body .row .cell[userstatus=selected]
+{
+	background : #F1EFFF;
+}
+.Grid .body .row .cell.oddcell[userstatus=selected]
+{
+	background : #F1EFFF;
+}
+.Grid .body .row .cell[userstatus=blinked]
+{
+	background : #0078d6;
+	color : #ffffff;
+}
+.Grid .body .row .cell .subcell[userstatus=selected]
+{
+	background : #f2f9ff;
+}
+.Grid .body .row .cell .subcell[userstatus=blinked]
+{
+	background : #125dae;
+	color : #ffffff;
+}
+.GridCellControl .cellbutton[userstatus=pushed]
+{
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+.GridCellControl .cellbutton[userstatus=selected]
+{
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+.ListBox .listboxitem[userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+}
+.ListBoxControl .listboxitem[userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+}
+.Menu .menuitem[userstatus=selected]
+{
+	background : #555a5e;
+	color : #ffffff;
+	font : 14px "Noto Sans KR Bold";
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[userstatus=selected]
+{
+	color : #ffffff;
+	background : #f5f3ff;
+}
+.PopupMenu .popupmenuitem[userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+}
+.PopupMenuControl .popupmenuitem[userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+}
+.Tab .tabbuttonitemTab[userstatus=selected]
+{
+	color : #ffffff;
+	background : #A598EF;
+	border : 0px none;
+}
+.DatePickerControl .body .weekitem[userstatus=saturday]
+{
+	color : #48afff;
+}
+.DatePickerControl .body .weekitem[userstatus=sunday]
+{
+	color : #ff7986;
+}
+.DatePickerControl .body .dayitem[userstatus=selected]
+{
+	color : #ffffff;
+	background : #6954e1;
+	border-radius : 15px 15px 15px 15px;
+}
+.DatePickerControl .body .dayitem[userstatus=today]
+{
+	color : #ffffff;
+	background : #FE5252;
+	border-radius : 15px 15px 15px 15px;
+}
+.DatePickerControl .body .dayitem[userstatus=saturday]
+{
+	color : #269bee;
+}
+.DatePickerControl .body .dayitem[userstatus=sunday]
+{
+	color : #ff4c5e;
+}
+.DatePickerControl .body .dayitem[userstatus=trailingday]
+{
+	color : #989898;
+}
+.DateRangePicker .datetabbutton[userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+.PopupDateRangePicker .datetabbutton[userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+.DateRangePicker .timetabbutton[userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+.PopupDateRangePicker .timetabbutton[userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .monthitem[userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .monthitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .monthitem[userstatus=pushed]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .monthitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.DateRangePickerControl .datepickergroup .datepicker .body .yearitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.PopupDateRangePicker .datepickergroup .datepicker .body .yearitem[userstatus=selected]
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.DateRangePickerControl .datetabbutton[userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+.DateRangePickerControl .timetabbutton[userstatus=selected]
+{
+	border : 0px none;
+	background : #A598EF;
+}
+.TimePickerControl .ampmspinner .spinneritem[userstatus=selected]
+{
+	font : bold 15px "Noto Sans KR Regular";
+}
+.TimePickerControl .hourspinner .spinneritem[userstatus=selected]
+{
+	font : bold 15px "Noto Sans KR Regular";
+}
+.TimePickerControl .minspinner .spinneritem[userstatus=selected]
+{
+	font : bold 15px "Noto Sans KR Regular";
+}
+.TimePickerControl .secspinner .spinneritem[userstatus=selected]
+{
+	font : bold 15px "Noto Sans KR Regular";
+}
+.VScrollBarControl .trackbar[userstatus=pushed]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+.VScrollBarControl .trackbar[userstatus=selected]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+.HScrollBarControl .trackbar[userstatus=pushed]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+.HScrollBarControl .trackbar[userstatus=selected]
+{
+	background : #999999;
+	border : 1px solid #888888;
+}
+.VScrollIndicatorControl .trackbar[userstatus=pushed]
+{
+	background : #606060;
+}
+.HScrollIndicatorControl .trackbar[userstatus=pushed]
+{
+	background : #606060;
+}
+.ListView .body[userstatus=selected]
+{
+	background : #f2f9ff;
+}
+.ListView .detail[userstatus=selected]
+{
+	background : #f8f9fb;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy[userstatus=selected]
+{
+	background : #f8f9fb;
+}
+.ListViewCellControl .cellbutton[userstatus=pushed]
+{
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+.CheckBoxSetControl .checkboxsetitem[userstatus=selected]
+{
+	color : #ffffff;
+	background : #125dae;
+}
+.TagBoxControl[userstatus=selected]
+{
+	background : #5a86cd;
+	color : #ffffff;
+}
+.MultiComboListControl .selectallcheckbox[userstatus=selected]
+{
+	color : #ffffff;
+	background : #125dae;
+}
+.Form[status=disabled]
+{
+	color : #999999;
+}
+.FileUpload .fileuploaditem[status=disabled]
+{
+	color : #999999;
+}
+.Button[status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+.FileDownload[status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+.FileUpload .fileuploaditem .fileuploaditembutton[status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+.Calendar[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.CalendarControl[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.CheckBox[status=disabled]
+{
+	color : #999999;
+}
+.CheckBoxControl[status=disabled]
+{
+	color : #999999;
+}
+.Combo[status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+.ComboControl[status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+.Combo .dropbutton[status=disabled]
+{
+	opacity : 0.50;
+}
+.ComboControl .dropbutton[status=disabled]
+{
+	opacity : 0.50;
+}
+.Edit[status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit[status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+.Grid .head .row .cell[status=disabled]
+{
+	color : #999999;
+}
+.Grid .body .row .cell[status=disabled]
+{
+	color : #999999;
+}
+.Grid .body .row .cell .subcell[status=disabled]
+{
+	color : #999999;
+}
+.GridCellControl .cellbutton[status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+.GridCellControl .cellcheckbox[status=disabled]
+{
+	color : #999999;
+}
+.GridCellControl .celledit[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.GridCellControl .cellmaskedit[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.GridCellControl .celltreeitem .treeitemtext[status=disabled]
+{
+	color : #999999;
+}
+.GroupBox .groupboxcontents[status=disabled]
+{
+	background : #efefef;
+}
+.GroupBox .groupboxtitle[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.ImageViewer[status=disabled]
+{
+	background : #f2f2f2;
+}
+.ImageViewer .imagetext[status=disabled]
+{
+	color : #999999;
+}
+.ListBox[status=disabled]
+{
+	background : #efefef;
+}
+.ListBoxControl[status=disabled]
+{
+	background : #efefef;
+}
+.ListBox .listboxitem[status=disabled]
+{
+	opacity : 0.50;
+}
+.ListBoxControl .listboxitem[status=disabled]
+{
+	opacity : 0.50;
+}
+.MaskEdit[status=disabled]
+{
+	color : #BABABA;
+	background : #EEEFF3;
+	border : 1px solid #EEEFF3;
+}
+.Menu[status=disabled]
+{
+	background : #94a9bf;
+}
+.Menu .menuitem[status=disabled]
+{
+	color : #c7d4e2;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[status=disabled]
+{
+	color : purple;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemtext[status=disabled]
+{
+	color : #bbbbbb;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext[status=disabled]
+{
+	color : #bbbbbb;
+}
+.PopupMenu .popupmenuitem[status=disabled]
+{
+	color : #999999;
+}
+.PopupMenuControl .popupmenuitem[status=disabled]
+{
+	color : #999999;
+}
+.PopupMenu .popupmenuitem .popupmenuitemcheckbox[status=disabled]
+{
+	background : URL('./images/chk_WF_Box_D.png') no-repeat left center;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemcheckbox[status=disabled]
+{
+	background : URL('./images/chk_WF_Box_D.png') no-repeat left center;
+}
+.PopupMenu .popupmenuitem .popupmenuitemhotkeytext[status=disabled]
+{
+	color : #4577b9;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext[status=disabled]
+{
+	color : #4577b9;
+}
+.ProgressBar .progressbaritem[status=disabled]
+{
+	background : #b5b5b5;
+}
+.ProgressBarControl .progressbaritem[status=disabled]
+{
+	background : #b5b5b5;
+}
+.Sketch[status=disabled]
+{
+	background : #efefef;
+}
+.Spin[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.Spin .spinedit[status=disabled]
+{
+	padding : 1px 2px 0px 9px;
+}
+.Static[status=disabled]
+{
+	color : #999999;
+}
+.StaticControl[status=disabled]
+{
+	color : #999999;
+}
+.TextArea[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.TextAreaControl[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.Tab .tabbuttonitemTab[status=disabled]
+{
+	color : #ababab;
+	background : #ffffff;
+}
+.Tab .tabbuttonitemTab .tabbuttonitemtext[status=disabled]
+{
+	color : #c8c8c8;
+}
+.DatePickerControl .head[status=disabled]
+{
+	background : #94a9bf;
+	color : #cdcdcd;
+}
+.DatePickerControl .head .yearstatic[status=disabled]
+{
+	color : #c7d4e2;
+}
+.DatePickerControl .head .monthstatic[status=disabled]
+{
+	color : #c7d4e2;
+}
+.DatePickerControl .body .weekband[status=disabled]
+{
+	background : #94a9bf;
+}
+.DatePickerControl .body .weekitem[status=disabled]
+{
+	color : #c7d4e2;
+	background : #94a9bf;
+}
+.DatePickerControl .body .dayitem[status=disabled]
+{
+	color : #cdcdcd;
+}
+.VScrollBarControl .trackbar[status=disabled]
+{
+	background : #eeeeee;
+	border : 1px solid #d8d8d8;
+}
+.HScrollBarControl .trackbar[status=disabled]
+{
+	background : #eeeeee;
+	border : 1px solid #d8d8d8;
+}
+.ListView[status=disabled]
+{
+	background : #666666;
+}
+.ListView .body[status=disabled]
+{
+	color : #999999;
+}
+.ListView .detail[status=disabled]
+{
+	color : #999999;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy[status=disabled]
+{
+	color : #999999;
+}
+.ListView .body .cell[status=disabled]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListView .detail .cell[status=disabled]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell[status=disabled]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+}
+.ListViewCellControl .cellbutton[status=disabled]
+{
+	color : #bbbbbb;
+	background : #f5f5f5;
+	border : 1px solid #d9d9d9;
+}
+.ListViewCellControl .celledit[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.ListViewCellControl .cellmaskedit[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.ListView .body .expandbar[status=disabled]
+{
+	background : transparent;
+	border : 0px none;
+	opacity : 0.50;
+}
+.CheckBoxSetControl[status=disabled]
+{
+	background : #efefef;
+}
+.CheckBoxSetControl .checkboxsetitem[status=disabled]
+{
+	opacity : 0.5;
+}
+.MultiCombo[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.MultiComboControl[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.MultiCombo .dropbutton[status=disabled]
+{
+	opacity : 0.50;
+}
+.MultiComboControl .dropbutton[status=disabled]
+{
+	opacity : 0.50;
+}
+.MultiComboListControl[status=disabled]
+{
+	background : #efefef;
+}
+.MultiComboListControl .selectallcheckbox[status=disabled]
+{
+	opacity : 0.50;
+}
+.CheckBox[status=disabled][userstatus=selected]
+{
+	color : #999999;
+}
+.CheckBoxControl[status=disabled][userstatus=selected]
+{
+	color : #999999;
+}
+.Grid .body .row .cell[status=disabled][userstatus=selected]
+{
+	background : #f0f0f0;
+}
+.GridCellControl .cellcheckbox[status=disabled][userstatus=selected]
+{
+	color : #999999;
+}
+.Tab .tabbuttonitemTab[status=focused][userstatus=selected]
+{
+	color : #ffffff;
+	background : #A598EF;
+	border : 0px none;
+}
+.Tab .tabbuttonitemTab[status=disabled][userstatus=selected]
+{
+	background : #ffffff;
+	color : #c0bbdb;
+}
+.DatePickerControl .body .dayitem[status=mouseover][userstatus=saturday]
+{
+	color : #269bee;
+}
+.DatePickerControl .body .dayitem[status=mouseover][userstatus=sunday]
+{
+	color : #ff4c5e;
+}
+.DatePickerControl .body .dayitem[status=mouseover][userstatus=trailingday]
+{
+	color : #333333;
+}
+.DatePickerControl .body .dayitem[status=disabled][userstatus=selected]
+{
+	background : #f0f0f0;
+	border-radius : 15px 15px 15px 15px;
+}

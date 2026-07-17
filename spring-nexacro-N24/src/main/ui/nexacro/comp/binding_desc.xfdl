@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="200" onload="form_onload">
+    <Layouts>
+      <Layout height="200" width="920">
+        <Static id="Static00" taborder="1" text="TEXT(&quot;comp.binding&quot;,&quot;Binding&quot;)" left="20" top="15" width="79" height="30" cssclass="sta_WF_compTitle02" messageid="comp.binding" fittocontents="width"/>
+        <Static id="Static01" taborder="0" text="TEXT(&quot;comp.binding.desc&quot;)" left="20" top="Static00:2" height="80" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="comp.binding.desc" width="880"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+]]></Script>
+  </Form>
+</FDL>

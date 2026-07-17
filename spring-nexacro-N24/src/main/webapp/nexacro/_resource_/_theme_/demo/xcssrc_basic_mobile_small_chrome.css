@@ -1,0 +1,4684 @@
+﻿.Button.btn_WF_inquiry
+{
+	border : 0px none;
+	color : #ffffff;
+	border-radius : 4px;
+	background : #FE5252;
+}
+.Button.btn_WF_add
+{
+	border : 0px none;
+	border-radius : 50%;
+	background : #D7DAE2;
+}
+.Button.btn_WF_delete
+{
+	border : 0px none;
+	border-radius : 50%;
+	background : #D7DAE2;
+}
+.Button.btn_WF_btnUp
+{
+	border : 0px none;
+	border-radius : 50%;
+	background : #D7DAE2;
+}
+.Button.btn_WF_btnDown
+{
+	border : 0px none;
+	border-radius : 50%;
+	background : #D7DAE2;
+}
+.Static.sta_WF_contentBg01
+{
+	background : url('./../../../_resource_/_images_/img_WF_contentBg01.png') no-repeat center;
+}
+.Static.sta_WF_con01
+{
+	background : url('./../../../_resource_/_images_/img_con01.png') no-repeat center;
+}
+.Static.sta_WF_con02
+{
+	background : url('./../../../_resource_/_images_/img_con02.png') no-repeat center;
+}
+.Grid .body .row .cell.grd_txtR.dummy.dummy.dummy > .nexacontentsbox
+{
+	text-align : right;
+	background-position-x : right;
+}
+.Grid .body .row .cell.grd_txtR.dummy.dummy.dummy
+{
+	justify-content : flex-end;
+}
+.Grid .body .row .cell.grd_txtRed.dummy.dummy.dummy
+{
+	color : red;
+}
+.Grid .body .row .cell.grd_txtBlue.dummy.dummy.dummy
+{
+	color : blue;
+}
+.Button.btn_WF_megaMenu
+{
+	border : 0px none;
+	background : transparent;
+	font : 16px "Noto Sans KR Regular";
+	color : #2d345c;
+}
+.Button.btn_WF_megaMenu .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_megaTitle01
+{
+	color : #ffffff;
+	font : 18px "Noto Sans KR Bold";
+	background : url('./../../../_resource_/_images_/img_WF_megaTitle01.png') no-repeat left center #6954E1;
+}
+.Static.sta_WF_megaTitle01 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_megaTitle02
+{
+	color : #ffffff;
+	font : 18px "Noto Sans KR Bold";
+	background : url('./../../../_resource_/_images_/img_WF_megaTitle02.png') no-repeat left center #6954E1;
+}
+.Static.sta_WF_megaTitle02 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_megaTitle03
+{
+	color : #ffffff;
+	font : 18px "Noto Sans KR Bold";
+	background : url('./../../../_resource_/_images_/img_WF_megaTitle03.png') no-repeat left center #6954E1;
+}
+.Static.sta_WF_megaTitle03 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_megaTitle04
+{
+	color : #ffffff;
+	font : 18px "Noto Sans KR Bold";
+	background : url('./../../../_resource_/_images_/img_WF_megaTitle04.png') no-repeat left center #6954E1;
+}
+.Static.sta_WF_megaTitle04 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_megaTitle05
+{
+	color : #ffffff;
+	font : 18px "Noto Sans KR Bold";
+	background : url('./../../../_resource_/_images_/img_WF_megaTitle05.png') no-repeat left center #6954E1;
+}
+.Static.sta_WF_megaTitle05 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_megaTitleBlank
+{
+	color : #ffffff;
+	font : 18px "Noto Sans KR Bold";
+	background : #6954E1;
+}
+.Static.sta_WF_megaTitleBlank .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_compTitle01
+{
+	font : 20px "Noto Sans KR Bold";
+	color : #2D345C;
+}
+.Static.sta_WF_compTitle02
+{
+	font : 16px "Noto Sans KR Regular";
+	color : #FE5252;
+}
+.Static.sta_WF_compTitle02_1
+{
+	font : 18px "Noto Sans KR Bold";
+	color : #FE5252;
+}
+.Static.sta_WF_compTitle03
+{
+	font : 14px "Noto Sans KR Regular";
+	color : #BABABA;
+}
+.Static.sta_WF_compTitle04
+{
+	font : 16px "Noto Sans KR Bold";
+	color : #6954E1;
+}
+.Static.sta_WF_compTitle05
+{
+	font : 15px/20px "Noto Sans KR Regular";
+	color : #111111;
+}
+.Static.sta_WF_pageTitle02
+{
+	background : #D7DAE2;
+	font : 25px "Noto Sans KR Bold";
+	color : #2D345C;
+}
+.Static.sta_WF_pageTitle02 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Button.btn_WF_basic01
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 5px;
+	color : #ffffff;
+	background : #FE5252;
+}
+.Button.btn_WF_basic02
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 5px;
+	color : #ffffff;
+	background : #6954E1;
+}
+.Button.btn_WF_basic03
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	color : #ffffff;
+	background : #6954E1;
+}
+.Button.btn_WF_basic04
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 5px;
+	color : #ffffff;
+	background : #59618E;
+}
+.Button.btn_WF_megaClose
+{
+	border : 0px none;
+	background : transparent;
+}
+.Edit.edit_WF_essential
+{
+	background : #FFFBFB;
+	border : 1px solid #FE5252;
+}
+.Edit.edit_WF_essential .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.MaskEdit.msk_WF_essential
+{
+	background : #FFFBFB;
+	border : 1px solid #FE5252;
+}
+.MaskEdit.msk_WF_essential .nexainput
+{
+	padding : 1px 9px 0px 9px;
+}
+.Combo.cmb_WF_essential
+{
+	background : #FFFBFB;
+	border : 1px solid #FE5252;
+}
+.CheckBox.chk_WF_toggle .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.CheckBox.chk_WF_toggle02 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Button.btn_WF_contact
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_toTop
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_source
+{
+	border : 0px none;
+	background : transparent;
+}
+.Grid.grd_WF_celldisplay .head
+{
+	background : #F1F0F8;
+}
+.Grid.grd_WF_celldisplay .head .row .cell
+{
+	font : 14px/normal "Noto Sans KR Bold","맑은 고딕";
+	border : 1px solid #e2e2e3;
+	color : #333333;
+	justify-content : center;
+}
+.Grid.grd_WF_celldisplay .head .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Grid.grd_WF_celldisplay .body .row .cell
+{
+	border : 1px solid #e2e2e3;
+}
+.Grid .body .row .cell .cellbutton
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 6px;
+	color : #ffffff;
+	background : #FE5252;
+}
+.Grid .body .row .cell.grd_celldsiplay.dummy.dummy.dummy
+{
+	background : #F1F0F8;
+	font : 14px/normal "Noto Sans KR Bold","맑은 고딕";
+	border : 1px solid #e2e2e3;
+	color : #333333;
+	justify-content : center;
+}
+.Grid .body .row .cell.grd_celldsiplay.dummy.dummy.dummy > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Button.btn_MLF_Lmenu01
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+.Button.btn_MLF_Lmenu01 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Button.btn_MLF_Lmenu02
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+.Button.btn_MLF_Lmenu02 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Button.btn_MLF_Lmenu03
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+.Button.btn_MLF_Lmenu03 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Button.btn_MLF_Lmenu04
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+.Button.btn_MLF_Lmenu04 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Button.btn_MLF_Lmenu05
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+.Button.btn_MLF_Lmenu05 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Button.btn_MLF_LmenuS
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuClose.png') no-repeat right center #ffffff;
+}
+.Div.div_MLF_subMenu
+{
+	background : #F6F8FB;
+	border-top : 1px solid #cecece;
+	border-right : 0px none;
+	border-bottom : 1px solid #cecece;
+	border-left : 0px none;
+}
+.Button.brn_MLF_subMenu
+{
+	border : 0px none;
+	background : transparent;
+	color : #8f8f8f;
+}
+.Button.brn_MLF_subMenu .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.ListView .body .cell.cell_lstvTxt01
+{
+	font : 14px "Noto Sans KR Bold";
+	color : #FE5252;
+}
+.ListView .body .cell.cell_lstvTxt02
+{
+	font : 14px "Noto Sans KR Bold";
+}
+.ListView .detail .cell.cell_lstvTxt03
+{
+	font : 16px "Noto Sans KR Bold";
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt03
+{
+	font : 16px "Noto Sans KR Bold";
+}
+.ListView .detail .cell.cell_lstvTxt04
+{
+	font : 14px "Noto Sans KR Bold";
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt04
+{
+	font : 14px "Noto Sans KR Bold";
+}
+.ListView .detail .cell.cell_lstvTxt05
+{
+	font : 18px "Noto Sans KR Bold";
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt05
+{
+	font : 18px "Noto Sans KR Bold";
+}
+.ListView .detail .cell.cell_lstvTxt06
+{
+	font : 12px "Noto Sans KR Bold";
+	color : #48399A;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt06
+{
+	font : 12px "Noto Sans KR Bold";
+	color : #48399A;
+}
+.ListView .detail .cell.cell_lstvTxt07
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt07
+{
+	font : 12px "Noto Sans KR Regular";
+}
+.Button.btn_WF_descM
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MWF_camera
+{
+	background : #6954E1;
+	border : 0px none;
+	border-radius : 100%;
+}
+.Button.btn_MWF_camera >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_camera.png');
+}
+.Button.btn_MWF_voiceRecord
+{
+	background : #FE5252;
+	border : 0px none;
+	border-radius : 100%;
+	color : #ffffff;
+}
+.Button.btn_MWF_voiceRecord >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/bnt_MWF_voiceRecord.png');
+}
+.Button.btn_MWF_voiceSpeaker
+{
+	background : #6954E1;
+	border : 0px none;
+	border-radius : 100%;
+	color : #ffffff;
+}
+.Button.btn_MWF_voiceSpeaker >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/btn_MWF_voiceSpeaker.png');
+}
+.ListView .body .cell.lstvContact_txt01
+{
+	font : 14px "Noto Sans KR Bold";
+	color : #111111;
+}
+.ListView .body .cell.lstvContact_txt02
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #505050;
+}
+.ListView .body .cell.lstvContact_btn01
+{
+	font : 15px "Noto Sans KR Bold";
+	color : #111111;
+}
+.ListView .body .cell.lstvContact_btn01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.ListView .body .cell.lstvContact_btn01 >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/lstvContact_btn01.png');
+}
+.ListView .body .cell.lstvContact_profile
+{
+	background : transparent;
+	color : #505050;
+	border-radius : 100%;
+}
+.ListView .detail .cell.lstvContact_txt03
+{
+	font : 15px "Noto Sans KR Bold";
+	color : #111111;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_txt03
+{
+	font : 15px "Noto Sans KR Bold";
+	color : #111111;
+}
+.ListView .detail .cell.lstvContact_txt03 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_txt03 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.ListView .detail .cell.lstvContact_img01
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img01
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+.ListView .detail .cell.lstvContact_img01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.ListView .detail .cell.lstvContact_img01 >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon01.png');
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img01 >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon01.png');
+}
+.ListView .detail .cell.lstvContact_img02
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img02
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+.ListView .detail .cell.lstvContact_img02 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img02 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.ListView .detail .cell.lstvContact_img02 >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon02.png');
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img02 >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon02.png');
+}
+.ListView .detail .cell.lstvContact_img03
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img03
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+.ListView .detail .cell.lstvContact_img03 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img03 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+.ListView .detail .cell.lstvContact_img03 >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon03.png');
+}
+.ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img03 >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon03.png');
+}
+.ListView.lstv_MWF_contact .body
+{
+	background : #f8f9fb;
+}
+.ListView.lstv_MWF_contact .detail
+{
+	background : #ffffff;
+}
+.ListViewDetailBandControl.popupListViewlstv_MWF_contactdetail.dummy.dummy
+{
+	background : #ffffff;
+}
+.Edit.edit_MWF_contactSearch
+{
+	background : url('./../../../_resource_/_images_/img_MWF_contactSearch.png') no-repeat left center #ffffff;
+}
+.Edit.edit_MWF_contactSearch .nexainput
+{
+	padding : 0px 0px 0px 37px;
+}
+.ImageViewer.img_MWF_profile
+{
+	border : 0px none;
+	border-radius : 100%;
+	background : #eeeeee;
+}
+.Static.sta_MWF_contactName
+{
+	font : 20px "Noto Sans KR Bold";
+}
+.Static.sta_MWF_contactName .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_MWF_contactPhone
+{
+	font : 15px "Noto Sans KR Bold";
+}
+.Static.sta_MWF_contactPhone .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_MWF_contactTitle
+{
+	font : 12px "Noto Sans KR Bold";
+	color : #939393;
+}
+.Static.sta_MWF_contactTxt
+{
+	color : #111111;
+}
+.Button.btn_MWF_contactPhone
+{
+	background : transparent;
+	border : 0px none;
+}
+.Button.btn_MWF_contactPhone >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactPhone.png');
+}
+.Button.btn_MWF_contactEmail
+{
+	background : transparent;
+	border : 0px none;
+}
+.Button.btn_MWF_contactEmail >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactEmail.png');
+}
+.Button.btn_MWF_contactAddress
+{
+	background : transparent;
+	border : 0px none;
+}
+.Button.btn_MWF_contactAddress >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactAddress.png');
+}
+.Div.div_WF_portBox
+{
+	border : 0px none;
+	cursor : pointer;
+}
+.Div.div_WF_portBox2
+{
+	border : 2px dotted #ff6c54;
+	cursor : pointer;
+}
+.Button.btn_WF_portMove
+{
+	background : url('./../../../_resource_/_images_/Portlet/icon_WF_move.png') no-repeat center center;
+	border : 0px none;
+	cursor : move;
+}
+.Button.btn_WF_portBg01
+{
+	background : #f5e35d;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+.Button.btn_WF_portBg02
+{
+	background : #999a9c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+.Button.btn_WF_portBg03
+{
+	background : #0e4b80;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+.Button.btn_WF_portBg04
+{
+	background : #f86e6c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+.Button.btn_WF_portBg05
+{
+	background : #5f4a8b;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+.Button.btn_WF_portBg06
+{
+	background : #88b04d;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+.Button.btn_WF_portBg07
+{
+	background : #f7c9cb;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+.Button.btn_WF_portBg08
+{
+	background : #97504e;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+.Static.sta_WF_schTextRed
+{
+	color : #f15353;
+	font : 30px "Arial";
+}
+.Static.sta_WF_schTextRed .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_weekDay01
+{
+	background : #f2f2f2;
+	font : 16px "Malgun Gothic","Arial";
+	border : 1px solid #e3e3e3;
+}
+.Static.sta_WF_weekDay01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_weekDay02
+{
+	background : #ffffff;
+	font : 13px "Malgun Gothic","Arial";
+	border : 1px solid #e3e3e3;
+}
+.Static.sta_WF_weekDay02 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Button.btn_WF_widgetMove04
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove04.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+.Button.btn_WF_calculatorBack
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_calculatorBack.png") no-repeat center #d7dae2;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+}
+.Button.btn_WF_calculatorNum
+{
+	background : #d7dae2;
+	border-radius : 8px;
+	color : #101010;
+	cursor : pointer;
+	font : 24px "Arial";
+	border : 0px none;
+}
+.Button.btn_WF_calculatorNum .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Button.btn_WF_division
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_division.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+.Button.btn_WF_multiple
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_multiple.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+.Button.btn_WF_minus
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_minus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+.Button.btn_WF_plus
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_plus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+.Button.btn_WF_result
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_result.png") no-repeat center center #a598ef;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+	color : #ffffff;
+	font : 26px "Arial";
+}
+.Button.btn_WF_noteAdd
+{
+	background : url('./../../../_resource_/_images_/Personalization/btn_WF_addFile.png') no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+.Button.btn_WF_noteDel
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_menu_close.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+.Button.btn_WF_noteHead
+{
+	background : #D1CBF3;
+	border : 0px none;
+	border-radius : 20px 20px 0px 0px;
+}
+.TextArea.txa_WF_notepad
+{
+	background : transparent;
+	color : #101010;
+	font : 12px "Nanum Gothic","Arial";
+	border : 0px none;
+}
+.Static.sta_WF_notepad
+{
+	background : #E7E4FB;
+	border : 1px solid #A598EF;
+	border-radius : 20px;
+}
+.Button.btn_WF_widgetMove02
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove02.png") no-repeat left bottom;
+	cursor : se-resize;
+	border : 0px none;
+}
+.Static.sta_WF_clock01
+{
+	background : #B2BAE6;
+	border-radius : 100%;
+	font : 32px "Noto Sans KR Bold";
+	color : #48399A;
+}
+.Static.sta_WF_clock01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_timer
+{
+	background : transparent;
+	color : #2d345c;
+	font : 30px "Noto Sans KR Bold";
+}
+.Static.sta_WF_timer .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Button.btn_WF_widgetMove03
+{
+	background : transparent;
+	border : 0px none;
+}
+.Static.sta_cm_text14CWhite
+{
+	color : #ffffff;
+	font : 14px "Malgun Gothic","Arial";
+}
+.Static.sta_cm_text14CWhite .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_clock01Text
+{
+	color : #fc4e37;
+	font : 14px "Noto Sans KR Regular";
+}
+.Static.sta_WF_clock01Text .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_cm_box03
+{
+	background : #ffffff;
+	font : 14px "Malgun Gothic","Arial";
+	border : 1px solid #c0c2c5;
+}
+.Static.sta_cm_box03 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_box03
+{
+	border : 1px solid #93acd4;
+	background : #fbfcfe;
+	color : #111111;
+}
+.Static.sta_WF_mainvisualTitle
+{
+	font : 48px "Noto Sans KR Bold";
+	color : #000000;
+	letter-spacing : -2px;
+}
+.Static.sta_WF_mainvisualTitleW
+{
+	font : 50px "Noto Sans KR Bold";
+	color : #ffffff;
+}
+.Static.sta_WF_mainvisualTxt
+{
+	font : 16px/26px "Noto Sans KR Regular";
+	color : #000000;
+}
+.Static.sta_WF_mainvisualTxtW
+{
+	font : 14px "Noto Sans KR Regular";
+	color : #ffffff;
+}
+.Button.sta_WF_mainBtn01
+{
+	background : #fe5252;
+	color : #ffffff;
+	border : 0px none;
+	border-radius : 10px;
+}
+.Button.sta_WF_mainBtn02
+{
+	background : #d7dae2;
+	color : #000000;
+	border : 0px none;
+	border-radius : 10px;
+}
+.Button.sta_WF_mainBtn03
+{
+	background : #d7dae2;
+	color : #000000;
+	border : 0px none;
+	border-radius : 10px;
+}
+.ImageViewer.img_WF_mainvisualImg
+{
+	border : 0px none;
+}
+.Button.btn_WF_mainPage
+{
+	background : #D9D3F6;
+	border : 0px none;
+}
+.Button.btn_WF_mainPageS
+{
+	background : #6954E1;
+	border : 0px none;
+}
+.Static.sta_WF_mainboxTitle
+{
+	font : 26px "Noto Sans KR Bold";
+	color : #111111;
+}
+.Static.sta_WF_mainboxTitle .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainbox01
+{
+	border : 1px solid #B3C3C2;
+	border-radius : 20px;
+	background : url("./../../../_resource_/_images_/Main/img_WF_mainKey01.png") no-repeat center #D6E7E6;
+}
+.Static.sta_WF_mainbox01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainbox02
+{
+	border : 1px solid #9E95CD;
+	border-radius : 20px;
+	background : url("./../../../_resource_/_images_/Main/img_WF_mainKey02.png") no-repeat center #C2BAF2;
+}
+.Static.sta_WF_mainbox02 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainbox03
+{
+	border : 1px solid #E8B457;
+	border-radius : 20px;
+	background : url("./../../../_resource_/_images_/Main/img_WF_mainKey03.png") no-repeat center bottom #FFCD75;
+}
+.Static.sta_WF_mainbox03 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainbox04
+{
+	border : 1px solid #ABAFD9;
+	border-radius : 20px;
+	background : url("./../../../_resource_/_images_/Main/img_WF_mainKey04.png") no-repeat center #C8CBF1;
+}
+.Static.sta_WF_mainbox04 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainboxOver
+{
+	background : #ffffff;
+	opacity : 0.5;
+}
+.Static.sta_WF_mainboxTxt01
+{
+	font : 50px "Noto Sans KR Bold";
+	color : #000000;
+}
+.Static.sta_WF_mainboxTxt01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainboxTxt01W
+{
+	font : 50px "Noto Sans KR Bold";
+	color : #ffffff;
+}
+.Static.sta_WF_mainboxTxt01W .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainboxTxt02
+{
+	font : 16px "Noto Sans KR Regular";
+	color : #555555;
+}
+.Static.sta_WF_mainboxTxt02 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainboxTxt03
+{
+	font : 20px "Noto Sans KR Regular";
+	color : #B4BAD6;
+}
+.Static.sta_WF_mainboxTxt03 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainboxTxt04
+{
+	font : 55px "Noto Sans KR Bold";
+	color : #ffc663;
+}
+.Static.sta_WF_mainboxTxt04 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainboxTxt05
+{
+	font : 40px "Noto Sans KR Bold";
+	color : #59618e;
+}
+.Static.sta_WF_mainboxTxt05 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_mainboxTxt06
+{
+	font : 40px "Noto Sans KR Bold";
+	color : #d7dae2;
+}
+.Static.sta_WF_mainboxTxt06 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_reference01
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_gov01.png') no-repeat center;
+}
+.Static.sta_WF_reference02
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_biz01.png') no-repeat center;
+}
+.Static.sta_WF_reference03
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_fin01.png') no-repeat center;
+}
+.Static.sta_WF_reference04
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_univ01.png') no-repeat center;
+}
+.Static.sta_WF_reference05
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_global01.png') no-repeat center;
+}
+.Static.sta_WF_reference06
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_gov02.png') no-repeat center;
+}
+.Static.sta_WF_reference07
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_biz02.png') no-repeat center;
+}
+.Static.sta_WF_reference08
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_fin02.png') no-repeat center;
+}
+.Static.sta_WF_reference09
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_univ02.png') no-repeat center;
+}
+.Static.sta_WF_reference10
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_global02.png') no-repeat center;
+}
+.Static.sta_WF_reference11
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_gov03.png') no-repeat center;
+}
+.Static.sta_WF_reference12
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_biz03.png') no-repeat center;
+}
+.Static.sta_WF_reference13
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_fin03.png') no-repeat center;
+}
+.Static.sta_WF_reference14
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_medical01.png') no-repeat center;
+}
+.Static.sta_WF_reference15
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_global03.png') no-repeat center;
+}
+.Static.sta_WF_reference16
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_gov04.png') no-repeat center;
+}
+.Static.sta_WF_reference17
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_biz04.png') no-repeat center;
+}
+.Static.sta_WF_reference18
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_fin04.png') no-repeat center;
+}
+.Static.sta_WF_reference19
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_medical02.png') no-repeat center;
+}
+.Static.sta_WF_reference20
+{
+	background : url('./../../../_resource_/_images_/Main/img_WF_ref_global04.png') no-repeat center;
+}
+.Grid.grd_WF_part
+{
+	border : 1px solid #E2E2E3;
+	border-radius : 6px;
+}
+.Grid.grd_WF_part .head .row .cell
+{
+	background : #a598ef;
+	border : 1px solid #e2e2e3;
+	color : #222222;
+	font : 14px/normal "Noto Sans KR Bold","맑은 고딕";
+}
+.Grid.grd_WF_part .body .row .cell
+{
+	border : 1px solid #e2e2e3;
+}
+.Button.btn_WF_download
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 4px;
+	color : #ffffff;
+	background : #FE5252;
+}
+.Button.btn_WF_import
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 4px;
+	color : #ffffff;
+	background : #FE5252;
+}
+.Static.sta_grd_move
+{
+	background : #F1EFFF;
+	border : 2px dashed #a598ef;
+}
+.Static.sta_grd_move .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_grd_move2
+{
+	background : #c9c1f5;
+}
+.Button.btn_WF_popupBtn01
+{
+	font : 13px "Noto Sans KR Regular";
+	border : 0px none;
+	color : #ffffff;
+	background : #6954E1;
+}
+.Button.btn_WF_popupBtn02
+{
+	font : 13px "Noto Sans KR Regular";
+	border : 0px none;
+	color : #ffffff;
+	background : #59618e;
+}
+.Div.div_WF_dragItem
+{
+	background : url('./../../../_resource_/_images_/img_WF_itemMove.png') no-repeat right top #d7dae2;
+	color : red;
+	border-radius : 4px;
+}
+.Button.btn_WF_slidePrev
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_slideNext
+{
+	border : 0px none;
+	background : transparent;
+}
+.Div.div_WF_widget01
+{
+	background : #F9FAFE;
+	border : 1px solid #e9e9e9;
+	border-radius : 20px;
+}
+.Div.div_WF_widget02
+{
+	background : #ffffff;
+	border : 1px solid #e9e9e9;
+	border-radius : 20px;
+}
+.Static.sta_WF_sampleProfile01
+{
+	background : url('./../../../_resource_/_images_/img_WF_sampleProfile01.png') no-repeat center #fff7da;
+	border-radius : 50%;
+}
+.Static.sta_WF_sampleProfile02
+{
+	background : url('./../../../_resource_/_images_/img_WF_sampleProfile02.png') no-repeat center #ffecfa;
+	border-radius : 50%;
+}
+.Static.sta_WF_sampleProfile03
+{
+	background : url('./../../../_resource_/_images_/img_WF_sampleProfile03.png') no-repeat center #ecedff;
+	border-radius : 50%;
+}
+.Static.sta_WF_sampleProfile04
+{
+	background : url('./../../../_resource_/_images_/img_WF_sampleProfile04.png') no-repeat center #ffecfd;
+	border-radius : 50%;
+}
+.Static.sta_WF_sampleProfile05
+{
+	background : url('./../../../_resource_/_images_/img_WF_sampleProfile05.png') no-repeat center #fbffec;
+	border-radius : 50%;
+}
+.Static.sta_WF_sampleMore
+{
+	background : #C2B9F2;
+	border-radius : 50%;
+	font : 14px "Noto Sans KR Bold";
+}
+.Static.sta_WF_sampleMore .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_weeklyLabel01
+{
+	background : #ECEBF7;
+	border-radius : 50%;
+	color : #fe5252;
+}
+.Static.sta_WF_weeklyLabel01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Button.btn_WF_sampleMore
+{
+	background : #D7DAE2;
+	border : 0px none;
+	border-radius : 50%;
+}
+.Button.btn_WF_sampleAdd01
+{
+	background : #D7DAE2;
+	border : 0px none;
+	border-radius : 50%;
+}
+.Static.sta_WF_widgetTitle
+{
+	font : 18px "Noto Sans KR Bold";
+	color : #111111;
+	border-top : 0px none;
+	border-right : 0px none;
+	border-bottom : 1px dashed #d7dae2;
+	border-left : 0px none;
+}
+.Button.btn_WF_sampleWrite
+{
+	border : 1px solid #d7dae2;
+	background : #ffffff;
+	border-radius : 50%;
+}
+.Button.btn_WF_samplesShare
+{
+	border : 1px solid #d7dae2;
+	background : #ffffff;
+	border-radius : 50%;
+}
+.Button.btn_WF_sampleAdd
+{
+	border : 0px none;
+	background : #a598ef;
+	border-radius : 50%;
+	box-shadow : 3px 3px 3px RGBA(84,84,84,0.20);
+}
+.Static.sta_WF_widgetTxt01
+{
+	color : #6954e1;
+	font : 16px "Noto Sans KR Bold";
+}
+.Static.sta_WF_widgetImg01
+{
+	background : url('./../../../_resource_/_images_/img_WF_widgetImg01.png') no-repeat center;
+}
+.Static.sta_WF_widgetBox01
+{
+	background : url('./../../../_resource_/_images_/img_WF_widgetIcon01.png') no-repeat left center #a598ef;
+	color : #ffffff;
+	font : 16px "Noto Sans KR Bold";
+	border-radius : 10px;
+}
+.Static.sta_WF_widgetBox01 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_widgetBox02
+{
+	background : url('./../../../_resource_/_images_/img_WF_widgetIcon02.png') no-repeat left center #ff9fa6;
+	color : #ffffff;
+	font : 16px "Noto Sans KR Bold";
+	border-radius : 10px;
+}
+.Static.sta_WF_widgetBox02 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Button.btn_WF_widgetCalendar
+{
+	background : transparent;
+	border : 0px none;
+	color : #222222;
+	font : 14px "Noto Sans KR Bold";
+	border-radius : 4px;
+}
+.Button.btn_WF_widgetCalendar .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Button.btn_WF_widgetCalendarH
+{
+	background : transparent;
+	border : 0px none;
+	color : #fe5252;
+	font : 14px "Noto Sans KR Bold";
+	border-radius : 4px;
+}
+.Button.btn_WF_widgetCalendarH .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Button.btn_WF_widgetToday
+{
+	background : #D0CAF6;
+	border : 0px none;
+	color : #222222;
+	font : 14px "Noto Sans KR Bold";
+	border-radius : 4px;
+}
+.Button.btn_WF_widgetToday .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_wdgCalendarTitle
+{
+	font : 18px "Noto Sans KR Bold";
+	background : #F8F9FC;
+	color : #48399a;
+	border-radius : 10px 10px 0px 0px;
+}
+.Static.sta_WF_wdgCalendarTitle .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_wdgCalendarWeek .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_wdgCalendarWeekH
+{
+	color : #fe5252;
+}
+.Static.sta_WF_wdgCalendarWeekH .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_wdgCalendarBg
+{
+	background : #F8F9FC;
+}
+.Static.sta_WF_wdgWeekBg
+{
+	border-top : 1px solid #dddddd;
+	border-right : 0px none;
+	border-bottom : 1px solid #dddddd;
+	border-left : 0px none;
+	background : #EDEFF6;
+}
+.Static.sta_WF_rightTitle
+{
+	font : 15px "Noto Sans KR Bold";
+}
+.Static.sta_WF_rightTitle .nexacontentsbox
+{
+	text-align : right;
+	background-position-x : right;
+}
+.Static.sta_WF_clockBg
+{
+	background : #2D345C;
+	border-radius : 20px;
+}
+.Static.sta_WF_clockLabel
+{
+	background : #59618E;
+	border-radius : 10px;
+	color : #D1CBF3;
+	font : 16px "Noto Sans KR Regular";
+}
+.Static.sta_WF_clockLabel .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_clockTime
+{
+	color : #ffffff;
+	font : 16px "Noto Sans KR Regular";
+}
+.Static.sta_WF_clockTime .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_stWorld
+{
+	background : url('./../../../_resource_/_images_/Animation/img_WF_stWorld.png') no-repeat center;
+}
+.Static.sta_WF_stSNS01
+{
+	background : url('./../../../_resource_/_images_/Animation/img_WF_stSNS01.png') no-repeat center;
+}
+.Static.sta_WF_stSNS02
+{
+	background : url('./../../../_resource_/_images_/Animation/img_WF_stSNS02.png') no-repeat center;
+}
+.Static.sta_WF_stSNS03
+{
+	background : url('./../../../_resource_/_images_/Animation/img_WF_stSNS03.png') no-repeat center;
+}
+.Static.sta_WF_stSNS04
+{
+	background : url('./../../../_resource_/_images_/Animation/img_WF_stSNS04.png') no-repeat center;
+}
+.Static.sta_WF_stSNS05
+{
+	background : url('./../../../_resource_/_images_/Animation/img_WF_stSNS05.png') no-repeat center;
+}
+.Static.sta_WF_stSNS06
+{
+	background : url('./../../../_resource_/_images_/Animation/img_WF_stSNS06.png') no-repeat center;
+}
+.Div.div_WF_bannerBox
+{
+	border : 1px dashed #D7DAE2;
+	border-radius : 20px;
+}
+.TextArea.txt_WF_design01
+{
+	border : 1px solid #D7DAE2;
+	background : #ffffff;
+	border-radius : 10px;
+}
+.TextArea.txt_WF_design01 .nexatextarea
+{
+	padding : 10px;
+}
+.Static.sta_WF_ideaShare
+{
+	background : url('./../../../_resource_/_images_/img_WF_ideaShare.png') no-repeat center;
+}
+.Static.sta_WF_ideaTag
+{
+	background : url('./../../../_resource_/_images_/img_WF_ideaTag.png') no-repeat center;
+}
+.Grid.grd_WF_dynamic .head .row .cell
+{
+	background : #D1CBF3;
+	color : #333333;
+}
+.Grid.grd_WF_dynamic .body .row .cell
+{
+	background : #ffffff;
+	border : 1px solid #e2e2e3;
+}
+.Grid.grd_WF_dynamic .body .row .cell.oddcell
+{
+	background : #ffffff;
+}
+.Grid.grd_WF_dynamic .body .row .cell.grd_dynamicLabel.dummy.dummy.dummy
+{
+	background : #F5F5FC;
+}
+.Grid.grd_WF_dynamic .body .row .cell.grd_dynamicLabel.dummy.dummy.dummy.oddcell
+{
+	background : #F5F5FC;
+}
+.ListView.lstv_WF_compListview
+{
+	border : 1px solid #a598ef;
+	border-radius : 20px;
+}
+.ListView.lstv_WF_compListview .detail
+{
+	background : #E8EAEF;
+}
+.ListViewDetailBandControl.popupListViewlstv_WF_compListviewdetail.dummy.dummy
+{
+	background : #E8EAEF;
+}
+.Static.sta_WF_tablelabel
+{
+	color : #6954e1;
+}
+.Button.btn_WF_callMenu
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 5px;
+	color : #ffffff;
+	background : #FE5252;
+}
+.Static.sta_WF_compMenu01
+{
+	background : #6954E1;
+	color : #ffffff;
+}
+.Static.sta_WF_compMenu01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_compMenu02
+{
+	background : transparent;
+	color : #111111;
+	cursor : pointer;
+}
+.Static.sta_WF_compMenu02 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Div.div_WF_bgLaptop
+{
+	background : url('./../../../_resource_/_images_/img_WF_bgLaptop.png') no-repeat center;
+}
+.Button.btn_WF_link
+{
+	border : 0px none;
+	background : transparent;
+}
+.Static.sta_WF_CalTitle
+{
+	font : bold 15px "Malgun Gothic";
+	color : #333333;
+}
+.Calendar.cal_WF_FromTo
+{
+	border : 1px solid #dddddd;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Calendar.cal_WF_FromTo .datepicker .body .dayitem
+{
+	border-radius : 50%;
+}
+.DatePickerControl.popupCalendarcal_WF_FromTodatepicker.dummy.dummy .body .dayitem
+{
+	border-radius : 50%;
+}
+.Static.sta_WF_CalLabel
+{
+	font : 12px "Malgun Gothic";
+	color : #8D8D8D;
+}
+.Static.sta_WF_CalDate
+{
+	font : bold 14px "Malgun Gothic";
+	color : #3683E2;
+}
+.Button.btn_WF_videoSpeaker
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 100%;
+	color : #ffffff;
+	opacity : 0.8;
+}
+.Button.btn_WF_videoSpeaker >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/btn_WF_videoSpeaker.png');
+}
+.Button.btn_WF_videoMute
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 100%;
+	color : #ffffff;
+	opacity : 0.8;
+}
+.Button.btn_WF_videoMute >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/btn_WF_videoMute.png');
+}
+#nexacontainer .Button.btn_WF_inquiry[data-status=focused]
+{
+	border : 0px none;
+	color : #ffffff;
+	border-radius : 4px;
+	background : #FE5252;
+}
+#nexacontainer .Button.btn_WF_inquiry[data-status=mouseover]
+{
+	border : 0px none;
+	background : #FC4F4F;
+}
+#nexacontainer .Button.btn_WF_add[data-status=focused]
+{
+	border : 0px none;
+	border-radius : 50%;
+	background : #D7DAE2;
+}
+#nexacontainer .Button.btn_WF_add[data-status=mouseover]
+{
+	border : 0px none;
+	background : #D4D8E4;
+}
+#nexacontainer .Button.btn_WF_delete[data-status=focused]
+{
+	border : 0px none;
+	border-radius : 50%;
+	background : #D7DAE2;
+}
+#nexacontainer .Button.btn_WF_delete[data-status=mouseover]
+{
+	border : 0px none;
+	background : #D4D8E4;
+}
+#nexacontainer .Button.btn_WF_btnUp[data-status=focused]
+{
+	border : 0px none;
+	border-radius : 50%;
+	background : #D7DAE2;
+}
+#nexacontainer .Button.btn_WF_btnUp[data-status=mouseover]
+{
+	border : 0px none;
+	background : #D4D8E4;
+}
+#nexacontainer .Button.btn_WF_btnDown[data-status=focused]
+{
+	border : 0px none;
+	border-radius : 50%;
+	background : #D7DAE2;
+}
+#nexacontainer .Button.btn_WF_btnDown[data-status=mouseover]
+{
+	border : 0px none;
+	background : #D4D8E4;
+}
+#nexacontainer .Button.btn_WF_megaMenu[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	font : 16px "Noto Sans KR Regular";
+	color : #2d345c;
+}
+#nexacontainer .Button.btn_WF_megaMenu[data-status=focused] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_WF_megaMenu[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #FE5252;
+}
+#nexacontainer .Button.btn_WF_basic01[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 5px;
+	color : #ffffff;
+	background : #FE5252;
+}
+#nexacontainer .Button.btn_WF_basic01[data-status=mouseover]
+{
+	border : 0px none;
+	background : #FC4F4F;
+}
+#nexacontainer .Button.btn_WF_basic02[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 5px;
+	color : #ffffff;
+	background : #6954E1;
+}
+#nexacontainer .Button.btn_WF_basic02[data-status=mouseover]
+{
+	border : 0px none;
+	background : #614BDF;
+}
+#nexacontainer .Button.btn_WF_basic03[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	color : #ffffff;
+	background : #6954E1;
+}
+#nexacontainer .Button.btn_WF_basic03[data-status=mouseover]
+{
+	border : 0px none;
+	background : #614BDF;
+}
+#nexacontainer .Button.btn_WF_basic04[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 5px;
+	color : #ffffff;
+	background : #59618E;
+}
+#nexacontainer .Button.btn_WF_basic04[data-status=mouseover]
+{
+	border : 0px none;
+	background : #404771;
+}
+#nexacontainer .Button.btn_WF_megaClose[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_megaClose[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Edit.edit_WF_essential[data-status=mouseover]
+{
+	border : 1px solid #FC4F4F;
+}
+#nexacontainer .Edit.edit_WF_essential[data-status=focused]
+{
+	border : 1px solid #FC4F4F;
+}
+#nexacontainer .Edit.edit_WF_essential[data-status=readonly]
+{
+	background : #FFFBFB;
+	border : 1px solid #D7DAE2;
+}
+#nexacontainer .MaskEdit.msk_WF_essential[data-status=mouseover]
+{
+	border : 1px solid #FC4F4F;
+}
+#nexacontainer .MaskEdit.msk_WF_essential[data-status=focused]
+{
+	border : 1px solid #FC4F4F;
+}
+#nexacontainer .MaskEdit.msk_WF_essential[data-status=readonly]
+{
+	background : #FFFBFB;
+	border : 1px solid #D7DAE2;
+}
+#nexacontainer .Combo.cmb_WF_essential[data-status=mouseover]
+{
+	border : 1px solid #FC4F4F;
+}
+#nexacontainer .Combo.cmb_WF_essential[data-status=focused]
+{
+	border : 1px solid #FC4F4F;
+}
+#nexacontainer .Combo.cmb_WF_essential[data-status=readonly]
+{
+	background : #FFFBFB;
+	border : 1px solid #D7DAE2;
+}
+#nexacontainer .CheckBox.chk_WF_toggle[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .CheckBox.chk_WF_toggle[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .CheckBox.chk_WF_toggle02[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .CheckBox.chk_WF_toggle02[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_WF_contact[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_contact[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_toTop[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_toTop[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_source[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_source[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Grid .body .row .cell .cellbutton[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 6px;
+	color : #ffffff;
+	background : #FE5252;
+}
+#nexacontainer .Grid .body .row .cell .cellbutton[data-status=mouseover]
+{
+	border : 0px none;
+	background : #FC4F4F;
+}
+#nexacontainer .Grid .body .row .cell.grd_celldsiplay.dummy.dummy.dummy[data-status=mouseover]
+{
+	background : #F1F0F8;
+	font : 14px/normal "Noto Sans KR Bold","맑은 고딕";
+	border : 1px solid #e2e2e3;
+	color : #333333;
+	justify-content : center;
+}
+#nexacontainer .Grid .body .row .cell.grd_celldsiplay.dummy.dummy.dummy[data-status=mouseover] > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Grid .body .row .cell.grd_celldsiplay.dummy.dummy.dummy[data-status=focused]
+{
+	background : #F1F0F8;
+	font : 14px/normal "Noto Sans KR Bold","맑은 고딕";
+	border : 1px solid #e2e2e3;
+	color : #333333;
+	justify-content : center;
+}
+#nexacontainer .Grid .body .row .cell.grd_celldsiplay.dummy.dummy.dummy[data-status=focused] > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_MLF_Lmenu01[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu01[data-status=focused] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu01[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu01[data-status=mouseover] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu02[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu02[data-status=focused] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu02[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu02[data-status=mouseover] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu03[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu03[data-status=focused] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu03[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu03[data-status=mouseover] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu04[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu04[data-status=focused] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu04[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu04[data-status=mouseover] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu05[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu05[data-status=focused] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu05[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu05[data-status=mouseover] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_LmenuS[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuClose.png') no-repeat right center #ffffff;
+}
+#nexacontainer .Button.btn_MLF_LmenuS[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuClose.png') no-repeat right center #ffffff;
+}
+#nexacontainer .Button.brn_MLF_subMenu[data-status=mouseover] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.brn_MLF_subMenu[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #8f8f8f;
+}
+#nexacontainer .Button.brn_MLF_subMenu[data-status=focused] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.brn_MLF_subMenu[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #8f8f8f;
+}
+#nexacontainer .ListView .body .cell.cell_lstvTxt01[data-status=focused]
+{
+	font : 14px "Noto Sans KR Bold";
+	color : #FE5252;
+}
+#nexacontainer .ListView .body .cell.cell_lstvTxt01[data-status=mouseover]
+{
+	font : 14px "Noto Sans KR Bold";
+	color : #FE5252;
+}
+#nexacontainer .ListView .body .cell.cell_lstvTxt02[data-status=focused]
+{
+	font : 14px "Noto Sans KR Bold";
+}
+#nexacontainer .ListView .body .cell.cell_lstvTxt02[data-status=mouseover]
+{
+	font : 14px "Noto Sans KR Bold";
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt03[data-status=focused]
+{
+	font : 16px "Noto Sans KR Bold";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt03[data-status=focused]
+{
+	font : 16px "Noto Sans KR Bold";
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt03[data-status=mouseover]
+{
+	font : 16px "Noto Sans KR Bold";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt03[data-status=mouseover]
+{
+	font : 16px "Noto Sans KR Bold";
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt04[data-status=focused]
+{
+	font : 14px "Noto Sans KR Bold";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt04[data-status=focused]
+{
+	font : 14px "Noto Sans KR Bold";
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt04[data-status=mouseover]
+{
+	font : 14px "Noto Sans KR Bold";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt04[data-status=mouseover]
+{
+	font : 14px "Noto Sans KR Bold";
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt05[data-status=focused]
+{
+	font : 18px "Noto Sans KR Bold";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt05[data-status=focused]
+{
+	font : 18px "Noto Sans KR Bold";
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt05[data-status=mouseover]
+{
+	font : 18px "Noto Sans KR Bold";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt05[data-status=mouseover]
+{
+	font : 18px "Noto Sans KR Bold";
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt06[data-status=focused]
+{
+	font : 12px "Noto Sans KR Bold";
+	color : #48399A;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt06[data-status=focused]
+{
+	font : 12px "Noto Sans KR Bold";
+	color : #48399A;
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt06[data-status=mouseover]
+{
+	font : 12px "Noto Sans KR Bold";
+	color : #48399A;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt06[data-status=mouseover]
+{
+	font : 12px "Noto Sans KR Bold";
+	color : #48399A;
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt07[data-status=focused]
+{
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt07[data-status=focused]
+{
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListView .detail .cell.cell_lstvTxt07[data-status=mouseover]
+{
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.cell_lstvTxt07[data-status=mouseover]
+{
+	font : 12px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_descM[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_descM[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_MWF_camera[data-status=focused]
+{
+	background : #6954E1;
+	border : 0px none;
+	border-radius : 100%;
+}
+#nexacontainer .Button.btn_MWF_camera[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_camera.png');
+}
+#nexacontainer .Button.btn_MWF_camera[data-status=mouseover]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_MWF_voiceRecord[data-status=focused]
+{
+	background : #FE5252;
+	border : 0px none;
+	border-radius : 100%;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_MWF_voiceRecord[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/bnt_MWF_voiceRecord.png');
+}
+#nexacontainer .Button.btn_MWF_voiceRecord[data-status=mouseover]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_MWF_voiceSpeaker[data-status=focused]
+{
+	background : #6954E1;
+	border : 0px none;
+	border-radius : 100%;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_MWF_voiceSpeaker[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/btn_MWF_voiceSpeaker.png');
+}
+#nexacontainer .Button.btn_MWF_voiceSpeaker[data-status=mouseover]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .ListView .body .cell.lstvContact_txt01[data-status=focused]
+{
+	font : 14px "Noto Sans KR Bold";
+	color : #111111;
+}
+#nexacontainer .ListView .body .cell.lstvContact_txt01[data-status=mouseover]
+{
+	font : 14px "Noto Sans KR Bold";
+	color : #111111;
+}
+#nexacontainer .ListView .body .cell.lstvContact_txt02[data-status=focused]
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #505050;
+}
+#nexacontainer .ListView .body .cell.lstvContact_txt02[data-status=mouseover]
+{
+	font : 12px "Noto Sans KR Regular";
+	color : #505050;
+}
+#nexacontainer .ListView .body .cell.lstvContact_btn01[data-status=focused]
+{
+	font : 15px "Noto Sans KR Bold";
+	color : #111111;
+}
+#nexacontainer .ListView .body .cell.lstvContact_btn01[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .ListView .body .cell.lstvContact_btn01[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/lstvContact_btn01.png');
+}
+#nexacontainer .ListView .body .cell.lstvContact_btn01[data-status=mouseover]
+{
+	font : 15px "Noto Sans KR Bold";
+	color : #111111;
+}
+#nexacontainer .ListView .body .cell.lstvContact_btn01[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .ListView .body .cell.lstvContact_btn01[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/lstvContact_btn01.png');
+}
+#nexacontainer .ListView .body .cell.lstvContact_profile[data-status=focused]
+{
+	background : transparent;
+	color : #505050;
+	border-radius : 100%;
+}
+#nexacontainer .ListView .body .cell.lstvContact_profile[data-status=mouseover]
+{
+	background : transparent;
+	color : #505050;
+	border-radius : 100%;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_txt03[data-status=focused]
+{
+	font : 15px "Noto Sans KR Bold";
+	color : #111111;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_txt03[data-status=focused]
+{
+	font : 15px "Noto Sans KR Bold";
+	color : #111111;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_txt03[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_txt03[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_txt03[data-status=mouseover]
+{
+	font : 15px "Noto Sans KR Bold";
+	color : #111111;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_txt03[data-status=mouseover]
+{
+	font : 15px "Noto Sans KR Bold";
+	color : #111111;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_txt03[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_txt03[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img01[data-status=focused]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img01[data-status=focused]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img01[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img01[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img01[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon01.png');
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img01[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon01.png');
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img01[data-status=mouseover]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img01[data-status=mouseover]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img01[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img01[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img01[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon01.png');
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img01[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon01.png');
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img02[data-status=focused]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img02[data-status=focused]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img02[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img02[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img02[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon02.png');
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img02[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon02.png');
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img02[data-status=mouseover]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img02[data-status=mouseover]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img02[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img02[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img02[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon02.png');
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img02[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon02.png');
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img03[data-status=focused]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img03[data-status=focused]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img03[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img03[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img03[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon03.png');
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img03[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon03.png');
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img03[data-status=mouseover]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img03[data-status=mouseover]
+{
+	font : 11px "Noto Sans KR Regular";
+	color : #505050;
+	background : transparent;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img03[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img03[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : bottom;
+	background-position-y : bottom;
+}
+#nexacontainer .ListView .detail .cell.lstvContact_img03[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon03.png');
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewdetail.dummy .cell.lstvContact_img03[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_lstvIcon03.png');
+}
+#nexacontainer .ListView.lstv_MWF_contact .body[data-status=focused]
+{
+	background : #f8f9fb;
+}
+#nexacontainer .ListView.lstv_MWF_contact .body[data-status=mouseover]
+{
+	background : #f8f9fb;
+}
+#nexacontainer .ListView.lstv_MWF_contact .detail[data-status=focused]
+{
+	background : #ffffff;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewlstv_MWF_contactdetail.dummy.dummy[data-status=focused]
+{
+	background : #ffffff;
+}
+#nexacontainer .ListView.lstv_MWF_contact .detail[data-status=mouseover]
+{
+	background : #ffffff;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewlstv_MWF_contactdetail.dummy.dummy[data-status=mouseover]
+{
+	background : #ffffff;
+}
+#nexacontainer .Button.btn_MWF_contactPhone[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactPhone[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactPhone.png');
+}
+#nexacontainer .Button.btn_MWF_contactPhone[data-status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactPhone[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactPhone.png');
+}
+#nexacontainer .Button.btn_MWF_contactEmail[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactEmail[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactEmail.png');
+}
+#nexacontainer .Button.btn_MWF_contactEmail[data-status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactEmail[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactEmail.png');
+}
+#nexacontainer .Button.btn_MWF_contactAddress[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactAddress[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactAddress.png');
+}
+#nexacontainer .Button.btn_MWF_contactAddress[data-status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactAddress[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactAddress.png');
+}
+#nexacontainer .Div.div_WF_portBox2[data-status=mouseover]
+{
+	border : 2px dotted #ff6c54;
+	cursor : pointer;
+}
+#nexacontainer .Div.div_WF_portBox2[data-status=focused]
+{
+	border : 2px dotted #ff6c54;
+	cursor : pointer;
+}
+#nexacontainer .Button.btn_WF_portMove[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/Portlet/icon_WF_move.png') no-repeat center center;
+	border : 0px none;
+	cursor : move;
+}
+#nexacontainer .Button.btn_WF_portMove[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/Portlet/icon_WF_move.png') no-repeat center center;
+	border : 0px none;
+	cursor : move;
+}
+#nexacontainer .Button.btn_WF_portBg01[data-status=focused]
+{
+	background : #f5e35d;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg01[data-status=mouseover]
+{
+	background : #e7d552;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_portBg02[data-status=focused]
+{
+	background : #999a9c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg02[data-status=mouseover]
+{
+	background : #8f9092;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_portBg03[data-status=focused]
+{
+	background : #0e4b80;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg03[data-status=mouseover]
+{
+	background : #0f4778;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_portBg04[data-status=focused]
+{
+	background : #f86e6c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg04[data-status=mouseover]
+{
+	background : #f76967;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_portBg05[data-status=focused]
+{
+	background : #5f4a8b;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg05[data-status=mouseover]
+{
+	background : #574382;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_portBg06[data-status=focused]
+{
+	background : #88b04d;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg06[data-status=mouseover]
+{
+	background : #7ca342;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_portBg07[data-status=focused]
+{
+	background : #f7c9cb;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg07[data-status=mouseover]
+{
+	background : #8fa6d0;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_portBg08[data-status=focused]
+{
+	background : #97504e;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg08[data-status=mouseover]
+{
+	background : #924846;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetMove04[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove04.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetMove04[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove04.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorBack[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_calculatorBack.png") no-repeat center #d7dae2;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorBack[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_calculatorBack.png") no-repeat center #d7dae2;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorNum[data-status=focused]
+{
+	background : #d7dae2;
+	border-radius : 8px;
+	color : #101010;
+	cursor : pointer;
+	font : 24px "Arial";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorNum[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_WF_calculatorNum[data-status=mouseover]
+{
+	background : #d7dae2;
+	border-radius : 8px;
+	color : #101010;
+	cursor : pointer;
+	font : 24px "Arial";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorNum[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_WF_division[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_division.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_division[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_division.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_multiple[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_multiple.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_multiple[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_multiple.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_minus[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_minus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_minus[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_minus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_plus[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_plus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_plus[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_plus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_result[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_result.png") no-repeat center center #a598ef;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+	color : #ffffff;
+	font : 26px "Arial";
+}
+#nexacontainer .Button.btn_WF_result[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_result.png") no-repeat center center #a598ef;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+	color : #ffffff;
+	font : 26px "Arial";
+}
+#nexacontainer .Button.btn_WF_noteAdd[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/Personalization/btn_WF_addFile.png') no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteAdd[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/Personalization/btn_WF_addFile.png') no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteDel[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_menu_close.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteDel[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_menu_close.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteHead[data-status=mouseover]
+{
+	background : #D1CBF3;
+	border : 0px none;
+	border-radius : 20px 20px 0px 0px;
+}
+#nexacontainer .Button.btn_WF_noteHead[data-status=focused]
+{
+	background : #D1CBF3;
+	border : 0px none;
+	border-radius : 20px 20px 0px 0px;
+}
+#nexacontainer .TextArea.txa_WF_notepad[data-status=mouseover]
+{
+	background : transparent;
+	color : #101010;
+	font : 12px "Nanum Gothic","Arial";
+	border : 0px none;
+}
+#nexacontainer .TextArea.txa_WF_notepad[data-status=focused]
+{
+	background : transparent;
+	color : #101010;
+	font : 12px "Nanum Gothic","Arial";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetMove02[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove02.png") no-repeat left bottom;
+	cursor : se-resize;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetMove02[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove02.png") no-repeat left bottom;
+	cursor : se-resize;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetMove03[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetMove03[data-status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.sta_WF_mainBtn01[data-status=focused]
+{
+	background : #fe5252;
+	color : #ffffff;
+	border : 0px none;
+	border-radius : 10px;
+}
+#nexacontainer .Button.sta_WF_mainBtn01[data-status=mouseover]
+{
+	border : 0px none;
+	background : #FC4F4F;
+}
+#nexacontainer .Button.sta_WF_mainBtn02[data-status=focused]
+{
+	background : #d7dae2;
+	color : #000000;
+	border : 0px none;
+	border-radius : 10px;
+}
+#nexacontainer .Button.sta_WF_mainBtn02[data-status=mouseover]
+{
+	border : 0px none;
+	background : #DCDFE8;
+}
+#nexacontainer .Button.sta_WF_mainBtn03[data-status=focused]
+{
+	background : #d7dae2;
+	color : #000000;
+	border : 0px none;
+	border-radius : 10px;
+}
+#nexacontainer .Button.sta_WF_mainBtn03[data-status=mouseover]
+{
+	border : 0px none;
+	background : #DCDFE8;
+}
+#nexacontainer .Button.btn_WF_mainPage[data-status=focused]
+{
+	background : #D9D3F6;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_mainPage[data-status=mouseover]
+{
+	background : #a598ef;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_mainPageS[data-status=mouseover]
+{
+	background : #6954E1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_mainPageS[data-status=focused]
+{
+	background : #6954E1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_download[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 4px;
+	color : #ffffff;
+	background : #FE5252;
+}
+#nexacontainer .Button.btn_WF_download[data-status=mouseover]
+{
+	border : 0px none;
+	background : #FC4F4F;
+}
+#nexacontainer .Button.btn_WF_import[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 4px;
+	color : #ffffff;
+	background : #FE5252;
+}
+#nexacontainer .Button.btn_WF_import[data-status=mouseover]
+{
+	border : 0px none;
+	background : #FC4F4F;
+}
+#nexacontainer .Button.btn_WF_popupBtn01[data-status=focused]
+{
+	font : 13px "Noto Sans KR Regular";
+	border : 0px none;
+	color : #ffffff;
+	background : #6954E1;
+}
+#nexacontainer .Button.btn_WF_popupBtn01[data-status=mouseover]
+{
+	border : 0px none;
+	background : #614BDF;
+}
+#nexacontainer .Button.btn_WF_popupBtn02[data-status=focused]
+{
+	font : 13px "Noto Sans KR Regular";
+	border : 0px none;
+	color : #ffffff;
+	background : #59618e;
+}
+#nexacontainer .Button.btn_WF_popupBtn02[data-status=mouseover]
+{
+	border : 0px none;
+	background : #614BDF;
+}
+#nexacontainer .Button.btn_WF_slidePrev[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_slidePrev[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_slideNext[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_slideNext[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_sampleMore[data-status=focused]
+{
+	background : #D7DAE2;
+	border : 0px none;
+	border-radius : 50%;
+}
+#nexacontainer .Button.btn_WF_sampleMore[data-status=mouseover]
+{
+	background : #C5C8D1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_sampleAdd01[data-status=focused]
+{
+	background : #D7DAE2;
+	border : 0px none;
+	border-radius : 50%;
+}
+#nexacontainer .Button.btn_WF_sampleAdd01[data-status=mouseover]
+{
+	background : #C5C8D1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_sampleWrite[data-status=focused]
+{
+	border : 1px solid #d7dae2;
+	background : #ffffff;
+	border-radius : 50%;
+}
+#nexacontainer .Button.btn_WF_sampleWrite[data-status=mouseover]
+{
+	border : 1px solid #D1CBF3;
+	background : #E7E4FB;
+}
+#nexacontainer .Button.btn_WF_samplesShare[data-status=focused]
+{
+	border : 1px solid #d7dae2;
+	background : #ffffff;
+	border-radius : 50%;
+}
+#nexacontainer .Button.btn_WF_samplesShare[data-status=mouseover]
+{
+	border : 1px solid #D1CBF3;
+	background : #E7E4FB;
+}
+#nexacontainer .Button.btn_WF_sampleAdd[data-status=focused]
+{
+	border : 0px none;
+	background : #a598ef;
+	border-radius : 50%;
+	box-shadow : 3px 3px 3px RGBA(84,84,84,0.20);
+}
+#nexacontainer .Button.btn_WF_sampleAdd[data-status=mouseover]
+{
+	border : 0px none;
+	background : #6954e1;
+}
+#nexacontainer .Button.btn_WF_widgetCalendar[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+	color : #222222;
+	font : 14px "Noto Sans KR Bold";
+	border-radius : 4px;
+}
+#nexacontainer .Button.btn_WF_widgetCalendar[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_WF_widgetCalendar[data-status=mouseover]
+{
+	background : #ffc663;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetCalendarH[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+	color : #fe5252;
+	font : 14px "Noto Sans KR Bold";
+	border-radius : 4px;
+}
+#nexacontainer .Button.btn_WF_widgetCalendarH[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_WF_widgetCalendarH[data-status=mouseover]
+{
+	background : #ff9fa6;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetToday[data-status=focused]
+{
+	background : #D0CAF6;
+	border : 0px none;
+	color : #222222;
+	font : 14px "Noto Sans KR Bold";
+	border-radius : 4px;
+}
+#nexacontainer .Button.btn_WF_widgetToday[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_WF_widgetToday[data-status=mouseover]
+{
+	background : #D0CAF6;
+	border : 0px none;
+	color : #222222;
+	font : 14px "Noto Sans KR Bold";
+	border-radius : 4px;
+}
+#nexacontainer .Button.btn_WF_widgetToday[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .TextArea.txt_WF_design01[data-status=focused]
+{
+	border : 1px solid #D7DAE2;
+	background : #ffffff;
+	border-radius : 10px;
+}
+#nexacontainer .TextArea.txt_WF_design01[data-status=focused] .nexatextarea
+{
+	padding : 10px;
+}
+#nexacontainer .TextArea.txt_WF_design01[data-status=mouseover]
+{
+	border : 1px solid #A598EF;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell[data-status=focused]
+{
+	background : #ffffff;
+	border : 1px solid #e2e2e3;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell.oddcell[data-status=focused]
+{
+	background : #ffffff;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell[data-status=mouseover]
+{
+	background : #ffffff;
+	border : 1px solid #e2e2e3;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell.oddcell[data-status=mouseover]
+{
+	background : #ffffff;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell.grd_dynamicLabel.dummy.dummy.dummy[data-status=focused]
+{
+	background : #F5F5FC;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell.grd_dynamicLabel.dummy.dummy.dummy.oddcell[data-status=focused]
+{
+	background : #F5F5FC;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell.grd_dynamicLabel.dummy.dummy.dummy[data-status=mouseover]
+{
+	background : #F5F5FC;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell.grd_dynamicLabel.dummy.dummy.dummy.oddcell[data-status=mouseover]
+{
+	background : #F5F5FC;
+}
+#nexacontainer .Button.btn_WF_callMenu[data-status=focused]
+{
+	font : 14px "Noto Sans KR Regular";
+	border : 0px none;
+	border-radius : 5px;
+	color : #ffffff;
+	background : #FE5252;
+}
+#nexacontainer .Button.btn_WF_callMenu[data-status=mouseover]
+{
+	border : 0px none;
+	background : #FC4F4F;
+}
+#nexacontainer .Static.sta_WF_compMenu02[data-status=mouseover]
+{
+	color : #fe5252;
+}
+#nexacontainer .Button.btn_WF_link[data-status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_link[data-status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Calendar.cal_WF_FromTo[data-status=mouseover][data-status=focused]
+{
+	border : 1px solid #778EBC;
+}
+#nexacontainer .Calendar.cal_WF_FromTo[data-status=readonly]
+{
+	background : #f2f2f2;
+}
+#nexacontainer .Button.btn_WF_videoSpeaker[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 100%;
+	color : #ffffff;
+	opacity : 0.8;
+}
+#nexacontainer .Button.btn_WF_videoSpeaker[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/btn_WF_videoSpeaker.png');
+}
+#nexacontainer .Button.btn_WF_videoSpeaker[data-status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+	opacity : 1;
+}
+#nexacontainer .Button.btn_WF_videoSpeaker[data-status=mouseover] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/btn_WF_videoSpeaker.png');
+}
+#nexacontainer .Button.btn_WF_videoMute[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 100%;
+	color : #ffffff;
+	opacity : 0.8;
+}
+#nexacontainer .Button.btn_WF_videoMute[data-status=focused] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/btn_WF_videoMute.png');
+}
+#nexacontainer .Button.btn_WF_videoMute[data-status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+	opacity : 1;
+}
+#nexacontainer .Button.btn_WF_inquiry[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_inquiry[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_add[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #CBD0DE;
+}
+#nexacontainer .Button.btn_WF_add[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #CBD0DE;
+}
+#nexacontainer .Button.btn_WF_delete[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #CBD0DE;
+}
+#nexacontainer .Button.btn_WF_delete[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #CBD0DE;
+}
+#nexacontainer .Button.btn_WF_btnUp[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #CBD0DE;
+}
+#nexacontainer .Button.btn_WF_btnUp[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #CBD0DE;
+}
+#nexacontainer .Button.btn_WF_btnDown[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #CBD0DE;
+}
+#nexacontainer .Button.btn_WF_btnDown[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #CBD0DE;
+}
+#nexacontainer .Button.btn_WF_megaMenu[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+	color : #FE5252;
+	font : 14px "Noto Sans KR Medium";
+}
+#nexacontainer .Button.btn_WF_megaMenu[data-userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+	color : #FE5252;
+	font : 14px "Noto Sans KR Medium";
+}
+#nexacontainer .Button.btn_WF_basic01[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_basic01[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_basic02[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_WF_basic02[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_WF_basic03[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_WF_basic03[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_WF_basic04[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #373E64;
+}
+#nexacontainer .Button.btn_WF_basic04[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #373E64;
+}
+#nexacontainer .Button.btn_WF_megaClose[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_megaClose[data-userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Edit.edit_WF_essential[data-userstatus=nulltext]
+{
+	color : #BABABA;
+}
+#nexacontainer .MaskEdit.msk_WF_essential[data-userstatus=invalidtext]
+{
+	color : #BABABA;
+}
+#nexacontainer .Button.btn_WF_contact[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_contact[data-userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_toTop[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_toTop[data-userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_source[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_source[data-userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Grid .body .row .cell .cellbutton[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Grid .body .row .cell .cellbutton[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Grid .body .row .cell.grd_celldsiplay.dummy.dummy.dummy[data-userstatus=selected]
+{
+	background : #F1F0F8;
+	font : 14px/normal "Noto Sans KR Bold","맑은 고딕";
+	border : 1px solid #e2e2e3;
+	color : #333333;
+	justify-content : center;
+}
+#nexacontainer .Grid .body .row .cell.grd_celldsiplay.dummy.dummy.dummy[data-userstatus=selected] > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_MLF_Lmenu01[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu01[data-userstatus=pushed] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu01[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu01[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu02[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu02[data-userstatus=pushed] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu02[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu02[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu03[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu03[data-userstatus=pushed] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu03[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu03[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu04[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu04[data-userstatus=pushed] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu04[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu04[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu05[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu05[data-userstatus=pushed] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_Lmenu05[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuOpen.png') no-repeat right center #ffffff;
+	border : 0px none;
+	font : 16px "Noto Sans KR Bold";
+	color : #393939;
+}
+#nexacontainer .Button.btn_MLF_Lmenu05[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+#nexacontainer .Button.btn_MLF_LmenuS[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuClose.png') no-repeat right center #ffffff;
+}
+#nexacontainer .Button.btn_MLF_LmenuS[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/img_MLF_LmenuClose.png') no-repeat right center #ffffff;
+}
+#nexacontainer .Button.brn_MLF_subMenu[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #FE5252;
+	color : #ffffff;
+}
+#nexacontainer .Button.brn_MLF_subMenu[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #FE5252;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_WF_descM[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_descM[data-userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_MWF_camera[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_MWF_camera[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_MWF_voiceRecord[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_MWF_voiceRecord[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_MWF_voiceSpeaker[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_MWF_voiceSpeaker[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .ListView.lstv_MWF_contact .body[data-userstatus=selected]
+{
+	background : #f8f9fb;
+}
+#nexacontainer .ListView.lstv_MWF_contact .detail[data-userstatus=selected]
+{
+	background : #ffffff;
+}
+#nexacontainer .ListViewDetailBandControl.popupListViewlstv_MWF_contactdetail.dummy.dummy[data-userstatus=selected]
+{
+	background : #ffffff;
+}
+#nexacontainer .Edit.edit_MWF_contactSearch[data-userstatus=nulltext]
+{
+	color : #afafaf;
+}
+#nexacontainer .Button.btn_MWF_contactPhone[data-userstatus=pushed]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactPhone[data-userstatus=pushed] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactPhone.png');
+}
+#nexacontainer .Button.btn_MWF_contactPhone[data-userstatus=selected]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactPhone[data-userstatus=selected] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactPhone.png');
+}
+#nexacontainer .Button.btn_MWF_contactEmail[data-userstatus=pushed]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactEmail[data-userstatus=pushed] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactEmail.png');
+}
+#nexacontainer .Button.btn_MWF_contactEmail[data-userstatus=selected]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactEmail[data-userstatus=selected] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactEmail.png');
+}
+#nexacontainer .Button.btn_MWF_contactAddress[data-userstatus=pushed]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactAddress[data-userstatus=pushed] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactAddress.png');
+}
+#nexacontainer .Button.btn_MWF_contactAddress[data-userstatus=selected]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_MWF_contactAddress[data-userstatus=selected] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/img_MWF_contactAddress.png');
+}
+#nexacontainer .Button.btn_WF_portMove[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/Portlet/icon_WF_move.png') no-repeat center center;
+	border : 0px none;
+	cursor : move;
+}
+#nexacontainer .Button.btn_WF_portMove[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/Portlet/icon_WF_move.png') no-repeat center center;
+	border : 0px none;
+	cursor : move;
+}
+#nexacontainer .Button.btn_WF_portBg01[data-userstatus=selected]
+{
+	background : #f5e35d;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg01[data-userstatus=pushed]
+{
+	background : #f5e35d;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg02[data-userstatus=selected]
+{
+	background : #999a9c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg02[data-userstatus=pushed]
+{
+	background : #999a9c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg03[data-userstatus=selected]
+{
+	background : #0e4b80;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg03[data-userstatus=pushed]
+{
+	background : #0e4b80;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg04[data-userstatus=selected]
+{
+	background : #f86e6c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg04[data-userstatus=pushed]
+{
+	background : #f86e6c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg05[data-userstatus=selected]
+{
+	background : #5f4a8b;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg05[data-userstatus=pushed]
+{
+	background : #5f4a8b;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg06[data-userstatus=selected]
+{
+	background : #88b04d;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg06[data-userstatus=pushed]
+{
+	background : #88b04d;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg07[data-userstatus=selected]
+{
+	background : #f7c9cb;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg07[data-userstatus=pushed]
+{
+	background : #f7c9cb;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg08[data-userstatus=selected]
+{
+	background : #97504e;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg08[data-userstatus=pushed]
+{
+	background : #97504e;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_widgetMove04[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove04.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorBack[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_calculatorBack.png") no-repeat center #d7dae2;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorNum[data-userstatus=selected]
+{
+	background : #d7dae2;
+	border-radius : 8px;
+	color : #101010;
+	cursor : pointer;
+	font : 24px "Arial";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorNum[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_WF_division[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_division.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_multiple[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_multiple.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_minus[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_minus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_plus[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_plus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_result[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_result.png") no-repeat center center #a598ef;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+	color : #ffffff;
+	font : 26px "Arial";
+}
+#nexacontainer .Button.btn_WF_noteAdd[data-userstatus=pushed]
+{
+	background : url('./../../../_resource_/_images_/Personalization/btn_WF_addFile.png') no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteAdd[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/Personalization/btn_WF_addFile.png') no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteDel[data-userstatus=pushed]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_menu_close.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteDel[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_menu_close.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteHead[data-userstatus=pushed]
+{
+	background : #D1CBF3;
+	border : 0px none;
+	border-radius : 20px 20px 0px 0px;
+}
+#nexacontainer .Button.btn_WF_noteHead[data-userstatus=selected]
+{
+	background : #D1CBF3;
+	border : 0px none;
+	border-radius : 20px 20px 0px 0px;
+}
+#nexacontainer .Button.btn_WF_widgetMove02[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove02.png") no-repeat left bottom;
+	cursor : se-resize;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetMove03[data-userstatus=selected]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.sta_WF_mainBtn01[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.sta_WF_mainBtn01[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.sta_WF_mainBtn02[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #D9DEE9;
+}
+#nexacontainer .Button.sta_WF_mainBtn02[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #D9DEE9;
+}
+#nexacontainer .Button.sta_WF_mainBtn03[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #D9DEE9;
+}
+#nexacontainer .Button.sta_WF_mainBtn03[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #D9DEE9;
+}
+#nexacontainer .Button.btn_WF_mainPage[data-userstatus=pushed]
+{
+	background : #D9D3F6;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_mainPage[data-userstatus=selected]
+{
+	background : #D9D3F6;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_mainPageS[data-userstatus=pushed]
+{
+	background : #6954E1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_mainPageS[data-userstatus=selected]
+{
+	background : #6954E1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_download[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_download[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_import[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_import[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_popupBtn01[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_WF_popupBtn01[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_WF_popupBtn02[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_WF_popupBtn02[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #5A44D6;
+}
+#nexacontainer .Button.btn_WF_slidePrev[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_slidePrev[data-userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_slideNext[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_slideNext[data-userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_sampleMore[data-userstatus=pushed]
+{
+	background : #C5C8D1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_sampleMore[data-userstatus=selected]
+{
+	background : #C5C8D1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_sampleAdd01[data-userstatus=pushed]
+{
+	background : #C5C8D1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_sampleAdd01[data-userstatus=selected]
+{
+	background : #C5C8D1;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_sampleWrite[data-userstatus=pushed]
+{
+	border : 1px solid #D1CBF3;
+	background : #E7E4FB;
+}
+#nexacontainer .Button.btn_WF_sampleWrite[data-userstatus=selected]
+{
+	border : 1px solid #D1CBF3;
+	background : #E7E4FB;
+}
+#nexacontainer .Button.btn_WF_samplesShare[data-userstatus=pushed]
+{
+	border : 1px solid #D1CBF3;
+	background : #E7E4FB;
+}
+#nexacontainer .Button.btn_WF_samplesShare[data-userstatus=selected]
+{
+	border : 1px solid #D1CBF3;
+	background : #E7E4FB;
+}
+#nexacontainer .Button.btn_WF_sampleAdd[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #6954e1;
+}
+#nexacontainer .Button.btn_WF_sampleAdd[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #6954e1;
+}
+#nexacontainer .Button.btn_WF_widgetCalendar[data-userstatus=pushed]
+{
+	background : #ffc663;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetCalendar[data-userstatus=selected]
+{
+	background : #ffc663;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetCalendarH[data-userstatus=pushed]
+{
+	background : #ff9fa6;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetCalendarH[data-userstatus=selected]
+{
+	background : #ff9fa6;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetToday[data-userstatus=pushed]
+{
+	background : #D0CAF6;
+	border : 0px none;
+	color : #222222;
+	font : 14px "Noto Sans KR Bold";
+	border-radius : 4px;
+}
+#nexacontainer .Button.btn_WF_widgetToday[data-userstatus=pushed] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_WF_widgetToday[data-userstatus=selected]
+{
+	background : #D0CAF6;
+	border : 0px none;
+	color : #222222;
+	font : 14px "Noto Sans KR Bold";
+	border-radius : 4px;
+}
+#nexacontainer .Button.btn_WF_widgetToday[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .TextArea.txt_WF_design01[data-userstatus=nulltext]
+{
+	color : #C2C5CC;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell[data-userstatus=selected]
+{
+	background : #ffffff;
+	border : 1px solid #e2e2e3;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell.oddcell[data-userstatus=selected]
+{
+	background : #ffffff;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell.grd_dynamicLabel.dummy.dummy.dummy[data-userstatus=selected]
+{
+	background : #F5F5FC;
+}
+#nexacontainer .Grid.grd_WF_dynamic .body .row .cell.grd_dynamicLabel.dummy.dummy.dummy.oddcell[data-userstatus=selected]
+{
+	background : #F5F5FC;
+}
+#nexacontainer .Button.btn_WF_callMenu[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_callMenu[data-userstatus=selected]
+{
+	border : 0px none;
+	background : #F34747;
+}
+#nexacontainer .Button.btn_WF_link[data-userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_link[data-userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_videoSpeaker[data-userstatus=pushed]
+{
+	background : transparent;
+	border : 0px none;
+	opacity : 1;
+}
+#nexacontainer .Button.btn_WF_videoSpeaker[data-userstatus=pushed] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/btn_WF_videoSpeaker.png');
+}
+#nexacontainer .Button.btn_WF_videoSpeaker[data-userstatus=selected]
+{
+	background : transparent;
+	border : 0px none;
+	opacity : 1;
+}
+#nexacontainer .Button.btn_WF_videoSpeaker[data-userstatus=selected] >.nexaedge
+{
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+	border-image-source : url('./../../../_resource_/_images_/btn_WF_videoSpeaker.png');
+}
+#nexacontainer .Button.btn_WF_videoMute[data-userstatus=pushed]
+{
+	background : transparent;
+	border : 0px none;
+	opacity : 1;
+}
+#nexacontainer .Button.btn_WF_videoMute[data-userstatus=selected]
+{
+	background : transparent;
+	border : 0px none;
+	opacity : 1;
+}
+#nexacontainer .Button.btn_WF_basic01[data-status=disabled]
+{
+	border : 0px none;
+	background : #FF9FA6;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_WF_basic02[data-status=disabled]
+{
+	border : 0px none;
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_WF_basic03[data-status=disabled]
+{
+	border : 0px none;
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_WF_basic04[data-status=disabled]
+{
+	border : 0px none;
+	background : #59618E;
+	color : #949BC1;
+}
+#nexacontainer .Edit.edit_WF_essential[data-status=disabled]
+{
+	background : #FFFBFB;
+	border : 0px none;
+	color : #bbbbbb;
+}
+#nexacontainer .MaskEdit.msk_WF_essential[data-status=disabled]
+{
+	background : #FFFBFB;
+	border : 0px none;
+	color : #bbbbbb;
+}
+#nexacontainer .Combo.cmb_WF_essential[data-status=disabled]
+{
+	background : #FFFBFB;
+	border : 0px none;
+	color : #bbbbbb;
+}
+#nexacontainer .Button.btn_WF_portMove[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/Portlet/icon_WF_move.png') no-repeat center center;
+	border : 0px none;
+	cursor : move;
+}
+#nexacontainer .Button.btn_WF_portBg01[data-status=disabled]
+{
+	background : #f5e35d;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg02[data-status=disabled]
+{
+	background : #999a9c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg03[data-status=disabled]
+{
+	background : #0e4b80;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg04[data-status=disabled]
+{
+	background : #f86e6c;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg05[data-status=disabled]
+{
+	background : #5f4a8b;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg06[data-status=disabled]
+{
+	background : #88b04d;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg07[data-status=disabled]
+{
+	background : #f7c9cb;
+	border : 0px none;
+	color : #333333;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_portBg08[data-status=disabled]
+{
+	background : #97504e;
+	border : 0px none;
+	color : #ffffff;
+	font : 14px/20px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_widgetMove04[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove04.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorBack[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_calculatorBack.png") no-repeat center #d7dae2;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorNum[data-status=disabled]
+{
+	background : #d7dae2;
+	border-radius : 8px;
+	color : #101010;
+	cursor : pointer;
+	font : 24px "Arial";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_calculatorNum[data-status=disabled] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.btn_WF_division[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_division.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_multiple[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_multiple.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_minus[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_minus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_plus[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_plus.png") no-repeat center center #6954e1;
+	border-radius : 8px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_result[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/Personalization/img_WF_result.png") no-repeat center center #a598ef;
+	border-radius : 50%;
+	cursor : pointer;
+	border : 0px none;
+	color : #ffffff;
+	font : 26px "Arial";
+}
+#nexacontainer .Button.btn_WF_noteAdd[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/Personalization/btn_WF_addFile.png') no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteDel[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_menu_close.png") no-repeat center center;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_noteHead[data-status=disabled]
+{
+	background : #D1CBF3;
+	border : 0px none;
+	border-radius : 20px 20px 0px 0px;
+}
+#nexacontainer .TextArea.txa_WF_notepad[data-status=disabled]
+{
+	background : transparent;
+	color : #101010;
+	font : 12px "Nanum Gothic","Arial";
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetMove02[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/Personalization/btn_WF_widgetMove02.png") no-repeat left bottom;
+	cursor : se-resize;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_widgetMove03[data-status=disabled]
+{
+	background : transparent;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_download[data-status=disabled]
+{
+	border : 0px none;
+	background : #FF9FA6;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_WF_import[data-status=disabled]
+{
+	border : 0px none;
+	background : #FF9FA6;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_WF_popupBtn01[data-status=disabled]
+{
+	border : 0px none;
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_WF_popupBtn02[data-status=disabled]
+{
+	border : 0px none;
+	background : #A598EF;
+	color : #ffffff;
+}
+#nexacontainer .Button.btn_WF_slidePrev[data-status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_slideNext[data-status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+#nexacontainer .Button.btn_WF_widgetCalendar[data-status=disabled]
+{
+	background : transparent;
+	border : 0px none;
+	color : #b5b5b5;
+	font : 14px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_widgetCalendarH[data-status=disabled]
+{
+	background : transparent;
+	border : 0px none;
+	color : #FFD9DC;
+	font : 14px "Noto Sans KR Regular";
+}
+#nexacontainer .Button.btn_WF_callMenu[data-status=disabled]
+{
+	border : 0px none;
+	background : #FF9FA6;
+	color : #ffffff;
+}
+#nexacontainer .Calendar.cal_WF_FromTo[data-status=disabled]
+{
+	border : 1px solid #efefef;
+	background : #f9f9f9;
+	color : #aeaeae;
+}

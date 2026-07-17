@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="main" width="480" height="2140" scrollbartype="none" onload="main_onload" background="#fff" onlayoutchanged="main_onlayoutchanged">
+    <Layouts>
+      <Layout height="2140" width="480" screenid="Mobile_screen">
+        <Div id="div_rolling" taborder="0" left="0" top="0" height="700" right="0" text="" cssclass="div_WF_rollingBg"/>
+        <Div id="div_realosmu" taborder="1" left="0" top="700" height="1420" right="0" url="frame::main_realosmu.xfdl"/>
+        <Div id="div_reference" taborder="2" left="0" top="2120" height="400" right="0" url="frame::main_reference.xfdl"/>
+      </Layout>
+      <Layout height="2830" width="1263" name="large" screenid="Desktop_screen">
+        <Div id="div_rolling" taborder="0" left="0" top="0" height="700" right="0"/>
+        <Div id="div_realosmu" taborder="1" left="0" top="700" height="1150" right="0"/>
+        <Div id="div_reference" taborder="2" left="0" top="1850" height="980" right="0"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.menuInfo = {menuId: 'main', menuName: 'main', menuUrl: 'frame::main.xfdl'};
+
+this.main_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	nexacro._OnceCallbackTimer.callonce(this, function() {
+		const app = nexacro.getApplication();
+		const rootForm = app.mainframe.childframe.form;
+			
+		rootForm["menuPageOnLoad"].call(rootForm, this.getLayoutInfo(this.getCurrentLayoutID(), "height"));
+		rootForm.resetScroll();
+		rootForm.vscrollbar.set_pos(0);
+
+		//스텝 오동작 방지
+		this.div_rolling.url = "frame::main_rolling.xfdl";  
+		//this.div_rolling.url = "frame::main_video.xfdl";	// 메인에 비디오 추가(각각 div의 top과 form height를 380px 씩 줄임)
+	}, 10);
+};
+
+this.main_onlayoutchanged = function(obj:nexacro.Form,e:nexacro.LayoutChangeEventInfo)
+{
+	const app = nexacro.getApplication();	
+	app.mainframe.childframe.form.resetScroll();
+};
+
+
+/**
+ * @class 값이 존재하는지 여부 체크 <br>
+ * @param {String} sValue	
+ * @return {Boolean} true/false
+ * @example
+ * var bNull = this.gfnIsNull("aaa");	// false
+ */
+this.fnIsNull = function(sValue)
+{
+    if (new String(sValue).valueOf() == "undefined") return true;
+    if (sValue == null) return true;
+    
+    let ChkStr = new String(sValue);
+
+    if (ChkStr == null) return true;
+    if (ChkStr.toString().length == 0 ) return true;
+    return false;
+};
+
+this.getToay = function()
+{
+	let objDate = new nexacro.Date();
+	let year = objDate.getFullYear().toString().padLeft(4, "0");
+	let month = (objDate.getMonth()+1).toString().padLeft(2, "0");
+	let date = objDate.getDate().toString().padLeft(2, "0");
+	
+	return (year + month + date);
+};]]></Script>
+  </Form>
+</FDL>

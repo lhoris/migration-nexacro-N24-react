@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="810" onload="form_onload">
+    <Layouts>
+      <Layout height="810" width="920">
+        <Static id="stcTitle" taborder="0" text="TEXT(&quot;sample.reference&quot;,&quot;Reference&quot;)" left="20" top="20" width="114" height="40" cssclass="sta_WF_pageTitle" messageid="sample.reference" fittocontents="width"/>
+        <Grid id="Grid00" taborder="1" left="19" top="57" width="275" height="767" binddataset="ds_ref1" useselcolor="false" border="0px none" autofittype="col" oncellclick="Grid_oncellclick" scrolltype="none" readonly="true" cssclass="grd_WF_check">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="391"/>
+              </Columns>
+              <Rows>
+                <Row size="200"/>
+                <Row size="30"/>
+                <Row size="12"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:img" displaytype="imagecontrol" imagestretch="fixaspectratio" border="0px none" cursor="pointer"/>
+                <Cell row="1" text="bind:title" border="0px none"/>
+                <Cell row="2" border="0px none"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid00_00" taborder="2" left="321" top="57" width="275" height="767" binddataset="ds_ref2" useselcolor="false" border="0px none" autofittype="col" oncellclick="Grid_oncellclick" scrolltype="none" readonly="true" cssclass="grd_WF_check">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="391"/>
+              </Columns>
+              <Rows>
+                <Row size="200"/>
+                <Row size="30"/>
+                <Row size="12"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:img" displaytype="imagecontrol" imagestretch="fixaspectratio" border="0px none" cursor="pointer"/>
+                <Cell row="1" text="bind:title" border="0px none"/>
+                <Cell row="2" border="0px none"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid00_00_00" taborder="3" left="623" top="56" width="275" height="767" binddataset="ds_ref3" useselcolor="false" border="0px none" autofittype="col" oncellclick="Grid_oncellclick" scrolltype="none" readonly="true" cssclass="grd_WF_check">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="391"/>
+              </Columns>
+              <Rows>
+                <Row size="200"/>
+                <Row size="30"/>
+                <Row size="12"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:img" displaytype="imagecontrol" imagestretch="fixaspectratio" border="0px none" cursor="pointer"/>
+                <Cell row="1" text="bind:title" border="0px none"/>
+                <Cell row="2" border="0px none"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[ 
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+
+this.Grid_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	system.execDefaultBrowser(obj.getBindDataset().getColumn(e.row,"link"));
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_ref1">
+        <ColumnInfo>
+          <Column id="img" type="STRING" size="256"/>
+          <Column id="title" type="STRING" size="256"/>
+          <Column id="link" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="img">imagerc::nexacro_n_sketch.png</Col>
+            <Col id="title">Nexacro N Sketch</Col>
+            <Col id="link">https://sketch.nexacro.com/</Col>
+          </Row>
+          <Row>
+            <Col id="img">imagerc::nexacroMDI.png</Col>
+            <Col id="title">nexacro MDI sample</Col>
+            <Col id="link">https://demo.tobesoft.com/nexacro-demo-v17/</Col>
+          </Row>
+          <Row>
+            <Col id="img">imagerc::smart_factory.png</Col>
+            <Col id="title">SmartFactory Demo</Col>
+            <Col id="link">https://demo.tobesoft.com/SmartFactory/</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_ref2">
+        <ColumnInfo>
+          <Column id="img" type="STRING" size="256"/>
+          <Column id="title" type="STRING" size="256"/>
+          <Column id="link" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="img">imagerc::playnexacro.png</Col>
+            <Col id="title">Community(play nexacro)</Col>
+            <Col id="link">https://www.playnexacro.com/</Col>
+          </Row>
+          <Row>
+            <Col id="img">imagerc::showcase.png</Col>
+            <Col id="title">nexacro platofrm Showcase</Col>
+            <Col id="link">http://support.tobesoft.co.kr/Next_JSP/nexacro17_deploy/Showcase/launch.html</Col>
+          </Row>
+          <Row>
+            <Col id="img">imagerc::developer_guide.png</Col>
+            <Col id="title">Developer Guide Sample</Col>
+            <Col id="link">http://demo.nexacro.com/developer_guide/17/guide.html</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_ref3">
+        <ColumnInfo>
+          <Column id="img" type="STRING" size="256"/>
+          <Column id="title" type="STRING" size="256"/>
+          <Column id="link" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="title">스마트 출입관리 V-Pass</Col>
+            <Col id="img">imagerc::v-pass.png</Col>
+            <Col id="link">https://www.tobesoft.com/solution/v-pass/</Col>
+          </Row>
+          <Row>
+            <Col id="title">Education Video</Col>
+            <Col id="img">imagerc::education.png</Col>
+            <Col id="link">http://demo.nexacro.com/EduPlay/_web_/index.html</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

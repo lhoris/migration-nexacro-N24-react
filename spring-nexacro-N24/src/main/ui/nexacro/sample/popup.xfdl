@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="popup" width="920" height="310" onload="popup_onload">
+    <Layouts>
+      <Layout height="310" width="920">
+        <Static id="Static01" taborder="0" text="TEXT(&quot;sample.popup&quot;,&quot;Popup&quot;)" left="20" top="20" width="114" height="40" cssclass="sta_WF_pageTitle" messageid="sample.popup" fittocontents="width"/>
+        <Button id="Button00" taborder="19" text="TEXT(&quot;sample.popup.call&quot;,&quot;Popup Call&quot;)" left="780" top="250" width="120" height="40" cssclass="btn_WF_basic01" onclick="Button00_onclick" messageid="sample.popup.call"/>
+        <Static id="Static02" taborder="1" text="Modaless" left="40" top="80" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <CheckBox id="chkModeless" taborder="2" left="Static02:20" top="80" width="60" height="40" cssclass="chk_WF_toggle" onchanged="fnComChkOnChanged"/>
+        <Static id="Static03" taborder="3" text="Titlebar" left="342" top="80" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <CheckBox id="chkTitlebar" taborder="4" left="Static03:20" top="80" width="60" height="40" cssclass="chk_WF_toggle"/>
+        <Static id="Static04" taborder="9" text="Width" left="342" top="125" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <Spin id="spnWidth" taborder="10" left="Static04:20" top="125" width="90" height="40" min="100" max="1000" value="600" increment="50" enable="false"/>
+        <Static id="Static05" taborder="11" text="Height" left="644" top="125" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <Spin id="spnHeight" taborder="12" left="Static05:20" top="125" width="90" height="40" min="100" max="1000" value="500" increment="50" enable="false"/>
+        <Static id="Static02_00" taborder="7" text="Autosize" left="40" top="125" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <CheckBox id="chkAutosize" taborder="8" left="Static02_00:20" top="125" width="60" height="40" cssclass="chk_WF_toggle" value="true" onchanged="chkAutosize_onchanged"/>
+        <Static id="Static03_00" taborder="5" text="Statusbar" left="644" top="80" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <CheckBox id="chkStatusbar" taborder="6" left="Static03_00:20" top="80" width="60" height="40" cssclass="chk_WF_toggle"/>
+        <Static id="Static02_00_00" taborder="13" text="Resizable" left="40" top="170" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <CheckBox id="chkResizable" taborder="14" left="Static02_00_00:20" top="170" width="60" height="40" cssclass="chk_WF_toggle" value="false"/>
+        <Static id="Static04_00" taborder="17" text="Opacity" left="644" top="170" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <Spin id="spnOpacity" taborder="18" left="Static04_00:20" top="170" width="90" height="40" min="0.1" max="1" value="1" increment="0.1"/>
+        <Static id="Static02_00_00_00" taborder="15" text="Maximize" left="342" top="170" width="79" height="40" cssclass="sta_WF_labelTxt01"/>
+        <CheckBox id="chkMaximize" taborder="16" left="Static02_00_00_00:20" top="170" width="60" height="40" cssclass="chk_WF_toggle" value="false"/>
+        <Static id="Static02_01" taborder="20" text="Dual Monitor" left="40" top="220" width="90" height="40" cssclass="sta_WF_labelTxt01"/>
+        <CheckBox id="chkDualMonitor" taborder="21" left="139" top="220" width="60" height="40" cssclass="chk_WF_toggle" onchanged="fnComChkOnChanged" enable="false"/>
+        <Static id="Static02_01_00" taborder="22" text="(Modaless only)" left="40" top="250" width="90" height="22" font="normal 9pt/normal &quot;Arial&quot;" cssclass="sta_WF_labelTxt01"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.popup_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+	
+	let objTargetForm = this;
+	
+	// Multi-Screen Window Placement API를 사용하기 위하여 사용자에게 권한을 요청 (필수)
+	// window-placement 권한은 다음과 같이 Permissions API를 사용
+	navigator.permissions.query({name:'window-placement'}).then(function(result) {
+		let sState = result.state;
+		objTargetForm.fnPremissionCallback(sState);
+	});	
+};
+
+this.fnPremissionCallback = function(sState)
+{
+	if (sState=="granted") bWindowPlacement = true;
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	let bModeless = this.chkModeless.value;
+	let bTitlebar = this.chkTitlebar.value;
+	let bStatusbar = this.chkStatusbar.value;
+	let bAutosize = this.chkAutosize.value;
+	let nWidth = this.spnWidth.value;
+	let nHeight = this.spnHeight.value;
+	let bResizable = this.chkResizable.value;
+	let nOpacity = this.spnOpacity.value;
+	let sOption = "titlebar="+bTitlebar+" statusbar="+bStatusbar+" autosize="+bAutosize+" width="+nWidth+" height="+nHeight+" resizable="+bResizable+" opacity="+nOpacity;
+
+	if (this.chkMaximize.isChecked()) {
+		sOption += " openstatus=maximize";
+	}
+
+	let sDualMonitorFlag = this.chkDualMonitor.value;
+	if (sDualMonitorFlag == true) this.fnGetScrrenDetails(sOption, bModeless);
+	else this.openPopup("modalPop", "sample::samplePop.xfdl", {}, sOption, "popupCallback", bModeless);
+};
+
+this.popupCallback = function(id, variant)
+{
+	//trace(id, variant);
+};
+
+this.chkAutosize_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	this.spnWidth.enable = !e.postvalue;
+	this.spnHeight.enable = !e.postvalue;
+};
+
+this.fnComChkOnChanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	switch (obj.name)
+	{
+		case "chkModeless" :
+			if (e.postvalue == true) {
+				this.chkDualMonitor.enable = true;
+			} else {
+				this.chkDualMonitor.enable = false;
+				this.chkDualMonitor.value = false;
+			}
+			break;
+	}		
+};
+
+this.fnGetScrrenDetails = function(sOption, bModeless)
+{
+	let objTargetForm = this;
+	
+	// window.getScreenDetails()를 사용하여 두 번째 화면에 대한 자세한 정보 획득
+	window.getScreenDetails().then(function(result){
+		objTargetForm.fnGetScreenDetailsCallback(result, sOption, bModeless);
+	});
+};
+
+this.fnGetScreenDetailsCallback = function(result, sOption, bModeless)
+{
+	let objScreens = result.screens;
+	
+	let nLeft = result.currentScreen.left; // 현재 화면 ScreenDetailed을 설명하는 객체 반환 (left 값)
+	let nTop = 0;
+	let nWidth = 600;
+	let nHeight = 500;
+	
+	let aVal = sOption.trim().split(" ");
+	  for (let i = 0; i < aVal.length; i++) {
+		let aVal2 = aVal[i].trim().split("=");
+		switch (aVal2[0]) {
+		  case "width":
+			nWidth = parseInt(aVal2[1]);
+			break;
+		  case "height":
+			nHeight = parseInt(aVal2[1]);
+			break;
+		}
+	}
+	
+	for (let i = 0; i < objScreens.length; i++)
+	{
+		if (nLeft != objScreens[i].availLeft) {
+			nLeft = objScreens[i].availLeft;
+			nexacro.open("modalPop", "sample::samplePop.xfdl", this.getOwnerFrame(), "", sOption, nLeft,nTop,nWidth,nHeight, this);
+			return;
+		}
+	}
+};]]></Script>
+  </Form>
+</FDL>

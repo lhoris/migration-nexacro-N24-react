@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="progressload_desc" width="920" height="300" titletext="New Form" onload="progressload_desc_onload">
+    <Layouts>
+      <Layout height="300" mobileorientation="landscape" width="920">
+        <Static id="Static00" taborder="0" text="TEXT(&quot;grid.progressload&quot;,&quot;분할 조회 - ProgressLoad&quot;)" left="20" top="15" width="120" height="30" cssclass="sta_WF_compTitle02" fittocontents="width"/>
+        <Static id="Static01" taborder="1" left="20" top="Static00:2" height="120" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.progressload.desc" right="20" text="TEXT(&quot;grid.progressload.desc&quot;)"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.progressload_desc_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+]]></Script>
+  </Form>
+</FDL>

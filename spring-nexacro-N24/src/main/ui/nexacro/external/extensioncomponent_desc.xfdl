@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="260" titletext="New Form" onload="form_onload">
+    <Layouts>
+      <Layout height="260" mobileorientation="landscape" width="920">
+        <Static id="Static01" taborder="1" left="30" top="70" height="140" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="external.extensioncomponent.desc" right="30" onclick="Static01_onclick" text="TEXT(&quot;external.extensioncomponent.desc&quot;)"/>
+        <Static id="Static00" taborder="0" text="TEXT(&quot;external.extensioncomponent&quot;,&quot;ExtensionComponent&quot;)" left="30" top="20" width="180" cssclass="sta_WF_compTitle02" messageid="external.extensioncomponent" fittocontents="width" bottom="Static01:10"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+
+]]></Script>
+  </Form>
+</FDL>

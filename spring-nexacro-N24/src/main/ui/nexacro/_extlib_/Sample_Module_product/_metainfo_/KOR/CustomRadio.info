@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MetaInfo version="2.0">
+  <Object id="CustomRadio">
+    <ObjectInfo inheritance="nexacro.CompositeComponent" classname="nexacro.CustomRadio" shorttypename="CustomRadio" csstypename="CustomRadio" csscontrolname="CustomRadioControl" group="Component" subgroup="Component ( default )" csspseudo="true" container="true" tabstop="true" cssstyle="true" defaultwidth="400" defaultheight="50" registration="allow" edittype="" useinitvalue="true" popup="false" edittypecomponent="" dblclickevent="onclick" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="" finalclass="false"/>
+    <PropertyInfo>
+      <Property name="buttongap" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Appearance" edittype="Number" description="CustomRadio 에서 아이템들의 수평 간격을 픽셀단위로 설정하는 속성입니다."/>
+      <Property name="codecolumn" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Binding" edittype="InnerColumnID" description="CustomRadio 에서 아이템의 코드 값으로 사용될 Column을 설정하는 속성입니다."/>
+      <Property name="columncount" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" refreshinfo="" group="Appearance" edittype="Number" description="CustomRadio 에서 한 행에 표시되는 아이템 개수를 설정하는 속성입니다."/>
+      <Property name="css_notselected" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Information" edittype="String" description="CustomRadio 에서 선택되지 않은 아이템의 Style을 XCSS 파일에 정의된 class로 설정하는 속성입니다."/>
+      <Property name="css_selected" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Information" edittype="String" description="CustomRadio 에서 선택된 아이템의 Style을 XCSS 파일에 정의된 class로 설정하는 속성입니다."/>
+      <Property name="datacolumn" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Binding" edittype="InnerColumnID" description="CustomRadio 에서 아이템의 데이터 값으로 사용될 Column을 설정하는 속성입니다."/>
+      <Property name="direction" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Appearance" edittype="Enum" enuminfo="directionList" description="CustomRadio 에서 아이템이 표시되는 방향을 설정하는 속성입니다."/>
+      <Property name="index" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Action" edittype="Number" description="CustomRadio 의 아이템 중 선택된 아이템의 인덱스를 갖는 속성입니다."/>
+      <Property name="innerdataset" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Binding" edittype="InnerDatasetID" description="CustomRadio 의 아이템 리스트를 구성할 DataSet 의 ID를 설정하는 속성입니다."/>
+      <Property name="rowcount" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Appearance" edittype="Number" description="CustomRadio 에서 한 열에 표시되는 아이템 개수를 설정하는 속성입니다."/>
+      <Property name="text" readonly="true" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Action" description="CustomRadio 에서 선택된 아이템의 데이터 값을 갖는 읽기전용 속성입니다. "/>
+      <Property name="value" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" unused="false" mandatory="false" group="Action" edittype="String" description="CustomRadio 에서 선택된 아이템의 코드 값을 갖는 속성입니다. "/>
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo/>
+    </CSSInfo>
+    <StatusInfo/>
+    <MethodInfo/>
+    <EventHandlerInfo>
+      <EventHandler name="canitemchanged" group="Event" unused="false" description="CustomRadio 에서 아이템을 변경할 때 발생하는 이벤트입니다." requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="canitemchanged(obj:nexacro.CustomRadio, e:nexacro.ItemChangeEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.CustomRadio"/>
+            <Argument name="e" type="nexacro.ItemChangeEventInfo"/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="onitemchanged" group="Event" unused="false" description="CustomRadio 에서 아이템 선택이 변경된 후 발생하는 이벤트" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="onitemchanged(obj:nexacro.CustomRadio, e:nexacro.ItemChangeEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.CustomRadio"/>
+            <Argument name="e" type="nexacro.ItemChangeEventInfo"/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="onitemclick" group="Event" unused="false" description="CustomRadio 에서 아이템을 클릭했을 때 발생하는 이벤트" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser">
+        <Syntax text="onitemclick(obj:nexacro.CustomRadio, e:nexacro.ItemClickEventInfo)">
+          <Return type="" description=""/>
+          <Arguments>
+            <Argument name="obj" type="nexacro.CustomRadio"/>
+            <Argument name="e" type="nexacro.ItemClickEventInfo"/>
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+    </EventHandlerInfo>
+  </Object>
+</MetaInfo>

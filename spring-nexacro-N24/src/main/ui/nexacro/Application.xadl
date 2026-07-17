@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="2.0">
+  <Application id="Application" screenid="Mobile_screen,Desktop_screen" onload="Application_onload" onbeforeexit="Application_onbeforeexit" licenseurl="./NexacroN_client_license.xml">
+    <Layout>
+      <MainFrame id="mainframe" width="480" height="768" showcascadetitletext="false" titletext="Nexacro N Demo" border="1px solid #eeeeee" showtitlebar="true">
+        <ChildFrame id="childframe" dragmovetype="none" showtitlebar="false"/>
+      </MainFrame>
+    </Layout>
+    <Style url="xcssrc::basic.xcss"/>
+    <Style url="xcssrc::demo_L.xcss"/>
+    <Style url="xcssrc::NxPivot.xcss"/>
+    <Style url="xcssrc::compositeModule.xcss"/>
+    <Style url="xcssrc::Sample_Module_product.xcss"/>
+    <Style url="xcssrc::demo_D.xcss"/>
+  </Application>
+  <Script type="xscript5.1"><![CDATA[// 실행환경
+this.IsMobile = false;
+this.IsNRE    = false;
+this.IsProd   = false;
+this.IsStage  = false;
+this.IsDev    = false;
+this.IsLocal  = false;
+
+// private data code
+this.themeMode 	   = "";
+this.langCode	   = "";
+
+// application keys
+this.proddomain    = "";	//운영서버 도메인
+this.stagedomain   = "";	//stage서버 도메인
+this.devdomain	   = "";	//dev서버 도메인
+this.googlemap     = "";	//GoogleMap Api Key
+this.koreafilm     = "";	//KoreaFilm Service Key
+this.webRootUrl    = "";	//web url
+
+/*
+ *	Application 시작시
+ */ 
+this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventInfo)
+{
+	this.fetchApplicationKey();	
+};
+
+/*
+ *	Application Info 요청
+ */ 
+this.fetchApplicationKey = function()
+{	
+	let xhr = new XMLHttpRequest();
+	let pThis = this;
+    
+	xhr.open("GET", "./i18n/key.json");
+    xhr.send();
+	
+    xhr.onreadystatechange = function() {
+
+		if(this.readyState == 1 || this.readyState == 2 || this.readyState == 3)
+		{
+			//  서버 처리중,,,
+		}
+		else if (this.readyState == 4) {
+			try{
+				//서버로부터 응답이 도착
+				let jsonData = JSON.parse(this.responseText);			
+				
+				// application keys
+				pThis.proddomain 	= jsonData["domain.proddomain"];
+				pThis.stagedomain 	= jsonData["domain.stagedomain"];
+				pThis.devdomain 	= jsonData["domain.devdomain"];
+				pThis.googlemap 	= jsonData["key.googlemap"    ];
+				pThis.koreafilm 	= jsonData["key.koreafilm"	  ];
+			} catch(e) {
+				trace("Application key data empty.");
+			} finally {				
+				pThis.setApplicationInfo();
+				pThis.setPrivateDataInfo();
+			}
+			
+		}
+	};	
+};
+
+/*
+ *	Application 정보
+ */ 
+this.setApplicationInfo = function(){
+	let osNm = system.osversion;
+	let nvNm = system.navigatorname;
+	let orientNm = system.mobileorientation;	
+	let env  = nexacro.getEnvironment();	
+	let projectUrl = nexacro.getProjectPath();
+	projectUrl = projectUrl.substring(0, projectUrl.lastIndexOf("/"));
+	projectUrl = projectUrl.substring(0, projectUrl.lastIndexOf("/")+1);
+	this.webRootUrl = projectUrl;
+	
+	/*	 모바일여부	 */
+	//100/101버전에서 android - osversion/navigatorname 잘못가져오는 문제로 mobileorientation으로 모바일 여부 판단.(임시) //20231220 milpaso
+	if(osNm) {
+		osNm = osNm.toUpperCase();
+		if		(osNm.indexOf("WIN") > -1 || osNm.indexOf("MAC") > -1)										{	this.IsMobile = false;	}
+		else if (osNm.indexOf("AND") > -1 || osNm.indexOf("IOS") > -1 || (orientNm >= 0 && orientNm <= 4)) 	{	this.IsMobile = true;	} 
+		else 																								{	this.IsMobile = false;	}
+	}
+	
+	/*	 전용브라우저여부	 */
+	this.IsNRE = nvNm.indexOf("nexacro") > -1 ? true : false;
+	
+	/*	 운영,개발,로컬 여부	 */
+	if 		(this.webRootUrl.indexOf(this.proddomain)  > -1) {	 this.IsProd  = true;	}
+	else if (this.webRootUrl.indexOf(this.stagedomain) > -1) {	 this.IsStage = true;	}
+	else if (this.webRootUrl.indexOf(this.devdomain)   > -1) {	 this.IsDev   = true;	}
+	else													 {	 this.IsLocal = true;	}
+
+	/*	 서비스별 url	 */
+	if (this.IsProd || this.IsStage || this.IsDev) {
+		env.services["svc"  ].url = `${this.webRootUrl}svc/`;
+		env.services["xeni" ].url = `${this.webRootUrl}xeni/`;
+		env.services["ubi"  ].url = `${this.webRootUrl}ubi-server/`;
+		env.services["xpush"].url = `https://${this.proddomain}:50000, tcps://${this.proddomain}:50001`;
+	}
+	else if (this.IsLocal) {
+		env.services["svc"  ].url = `${this.webRootUrl}`;
+		env.services["xeni" ].url = `${this.webRootUrl}`;
+		env.services["ubi"  ].url = `${this.webRootUrl}ubi-server/`;
+		env.services["xpush"].url = `https://${this.proddomain}:50000, tcps://${this.proddomain}:50001`;
+	}
+	
+	/*	 해상도 설정	 */
+	if(!this.IsMobile && this.IsNRE) {
+		this.mainframe.width = 1293+30;
+		this.mainframe.height = 940+60;
+	}
+	
+	/*	 모바일 디버깅 설정	WRE  */
+	if(!this.IsNRE && !this.IsProd && this.IsMobile) {
+		if(typeof MyHistory.getContext().fnInitMobileDebug == 'function') {
+			MyHistory.getContext().fnInitMobileDebug(window);
+		}
+	} else {
+		this.traceApplicationInfo();
+	}
+	
+};
+
+/*
+ * 어플리케이션 정보 출력
+ */
+this.traceApplicationInfo = function()
+{
+	let env  = nexacro.getEnvironment();
+	
+	/***  trace url (production 환경 제외) ***/
+	if(!this.IsProd) {
+		console.log(`IsMobile >>> ${this.IsMobile}`)
+		console.log(`IsNRE    >>> ${this.IsNRE}`   )
+		console.log(`IsProd   >>> ${this.IsProd}`  )
+		console.log(`IsStage  >>> ${this.IsStage}` )
+		console.log(`IsDev    >>> ${this.IsDev}`   )
+		console.log(`IsLocal  >>> ${this.IsLocal}` )
+		console.log(`webRootUrl >>> ${this.webRootUrl}`);
+		console.log(`services["svc"  ] >>> ${env.services["svc"  ].url}`);
+		console.log(`services["xeni" ] >>> ${env.services["xeni" ].url}`);
+		console.log(`services["ubi"  ] >>> ${env.services["ubi"  ].url}`);
+		console.log(`services["xpush"] >>> ${env.services["xpush"].url}`);
+	}
+};
+
+/*
+*	로컬 스토리지 (다국어, 테마)
+*/ 
+this.setPrivateDataInfo = function(){	
+	let privateData = nexacro.getPrivateProfile("privateData");
+	
+	if (nexacro.isEmpty(privateData)) {
+		this.langCode = system.locale.indexOf("ko")>-1?"ko":"en";
+	} else {
+		let data = JSON.parse(privateData);
+		this.langCode  = data.langCode;
+		
+		try {
+			if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				this.themeMode = "D";
+			} else {
+				this.themeMode = "L";
+			}
+		} catch (err) {
+			if(nexacro.isEmpty(data.themeMode)){
+				this.themeMode = "L";
+			}else {
+				this.themeMode = data.themeMode;
+			}
+		}
+		
+		nexacro.loadStyle("xcssrc::demo_"+this.themeMode+".xcss");
+	}
+	this.changeLanguage(this.langCode);
+};
+
+/*
+ *	다국어처리
+ */ 
+this.changeLanguage = function(langCode)
+{
+	this.langCode = langCode;
+    nexacro.getEnvironment().locale = langCode=="ko"?"ko_KR":"en_US";
+	
+	/* TO-BE 다국어 처리 - Start   */	
+	nexacro.loadStringResource(langCode); //TO-BE : 지정한 언어에 해당하는 StringResource를 로드하는 메서드
+	let pThis = this;
+
+	pThis.setAllMenu();
+
+	let root = pThis.mainframe.childframe;			
+	root.formurl = "";
+	root.formurl = "frame::root.xfdl";			
+
+	pThis.langCode = langCode;
+	
+	if (system.navigatorname.indexOf("nexacro") == -1) {
+		gtag('event', 'select_content', {
+			content_type: "changeLanguage",
+			items: [
+				{
+					id: langCode,
+					name: langCode=="ko"?"Korean":"English"
+				}
+			]
+		});
+	};
+/* TO-BE 다국어 처리 - End   */
+
+/* AS-IS 다국어 처리 - Start */
+// 	let xhr = new XMLHttpRequest(),
+// 		pThis = this;
+//     
+// 	xhr.open("GET", "./i18n/"+langCode+".json");
+//     xhr.send();
+// 	
+//     xhr.onreadystatechange = function() {
+// 		if(this.readyState == 1 || this.readyState == 2 || this.readyState == 3)
+// 		{
+// 			//  서버 처리중,,,
+// 		}
+// 		else if (this.readyState == 4) {
+// 			//서버로부터 응답이 도착
+// 			pThis.messages = JSON.parse(this.responseText);
+// 
+// 			pThis.setAllMenu();
+// 
+// 			let root = pThis.mainframe.childframe;			
+// 			root.set_formurl("");
+// 			root.set_formurl("frame::root.xfdl");			
+// 
+// 			pThis.langCode = langCode;
+// 			
+// 			if (system.navigatorname.indexOf("nexacro") == -1) {
+// 				gtag('event', 'select_content', {
+// 					content_type: "changeLanguage",
+// 					items: [
+// 						{
+// 							id: langCode,
+// 							name: langCode=="ko"?"Korean":"English"
+// 						}
+// 					]
+// 				});
+// 			}
+// 		}
+// 	};
+/* AS-IS 다국어 처리 - End   */
+};
+
+/*
+ *	메뉴설정
+ */ 
+this.setAllMenu = function(menuid){
+	this.gdsAllMenu.filter("");
+	this.gdsAllMenu.updateSortGroup("S:+grp+odr");
+
+	let filterExpr = "";
+
+	filterExpr += this.IsMobile ? "mobile=='1'" : "desktop=='1'";
+	filterExpr += this.IsNRE    ? "&&nre=='1'" : "&&wre=='1'";	
+
+	filterExpr += this.IsMobile ? "&&id.substr(0,1)!='4'" : "";
+	filterExpr += this.IsProd   ? "&&sys=='1'" : "";
+	
+	this.gdsAllMenu.filter(filterExpr);
+	
+	this.gdsMenu.clearData();
+
+	for (let i=0,len=this.gdsAllMenu.rowcount; i<len; i++) {
+		let r = this.gdsMenu.addRow();
+		this.gdsMenu.copyRow(r, this.gdsAllMenu, i, "id=id,caption=caption_"+this.langCode+",level=level,upid=upid,url=url,tooltiptext=tooltiptext_"+this.langCode);
+	}
+	
+	this.gdsMenu.applyChange();	
+}
+
+/*
+ *	쿼리스트링
+ */ 
+this.getParameter = function(name) {  
+	let rtnval = '';  
+	let nowAddress = unescape(MyHistory.getContext().location.href);  
+	let parameters = (nowAddress.slice(nowAddress.indexOf('?') + 1, nowAddress.length)).split('&');  
+	for (let i = 0; i < parameters.length; i++) {  
+		let varName = parameters[i].split('=')[0];  
+		if (varName.toUpperCase() == name.toUpperCase()) {  
+			rtnval = parameters[i].split('=')[1];  
+			break;  
+		}  
+	}  
+	return rtnval;  
+}
+
+/*
+ *	Application 종료시
+ */ 
+this.Application_onbeforeexit = function(obj:nexacro.Application,e:nexacro.ExitEventInfo)
+{
+	let data = {
+		"langCode": this.langCode,
+		"themeMode": this.themeMode
+	};
+	
+	nexacro.setPrivateProfile("privateData", JSON.stringify(data));
+};]]></Script>
+</ADL>

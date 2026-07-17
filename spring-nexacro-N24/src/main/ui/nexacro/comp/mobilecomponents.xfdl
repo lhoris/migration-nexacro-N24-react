@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="mobilecomponents" width="920" height="1340" titletext="모바일 퍼스트 컴포넌트" ontimer="components_ontimer" onload="mobilecomponents_onload" onsize="mobilecomponents_onsize">
+    <Layouts>
+      <Layout height="1340" width="920" screenid="Desktop_screen">
+        <Static id="Static01" taborder="3" text="TEXT(&quot;comp.mobilecomponents&quot;,&quot;Mobile First Components&quot;)" left="20" top="20" width="176" height="40" cssclass="sta_WF_pageTitle" fittocontents="width" messageid="comp.mobilecomponents"/>
+        <Div id="Div00" taborder="0" left="20" top="Static01:20" height="200" cssclass="div_WF_component" flexgrow="1" text="" fittocontents="height" right="20">
+          <Layouts>
+            <Layout type="horizontal" flexwrap="wrap" spacing="8px 15px 0px 15px" tablecellincompalign="start">
+              <Static id="Static03_00" taborder="0" text="TextField" left="29.00" top="10" height="30" cssclass="sta_WF_txt20px" width="820" flexgrow="1"/>
+              <Static id="Static00" taborder="3" text="Static00" left="0" top="40" height="1" cssclass="sta_WF_titleLine" width="100%" flexgrow="1"/>
+              <TextField id="TF_overlap" taborder="2" left="41.00" top="63" width="195" height="88" flexgrow="1" labeltext="Overlap"/>
+              <TextField id="TF_readonly" taborder="1" left="845" top="92" width="195" height="88" labeltext="e-mail" flexgrow="1" inputtype="email" displaynulltext="abc@abc.com" usecharcount="false" useleadingbutton="true" usetrailingbutton="true" invalidtext="Input value is invalid."/>
+              <TextField id="TF_inside" taborder="4" left="41.00" top="63" width="195" height="77" flexgrow="1" labelposition="inside" labeltext="Inside"/>
+              <TextField id="TF_outside" taborder="5" left="234.00" top="60" width="195" height="100" flexgrow="1" labelposition="outside" labeltext="Outside"/>
+              <Panel id="Panel02" taborder="6" left="433" top="70" width="100%" height="150" horizontalgap="8" verticalgap="3" flexwrap="wrap" flexcrossaxisalign="end" spacing="12px 0px 20px 0px" fittocontents="height">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="TF_outside"/>
+                  <PanelItem id="PanelItem02" componentid="TF_inside"/>
+                  <PanelItem id="PanelItem03" componentid="TF_overlap"/>
+                  <PanelItem id="PanelItem04" componentid="TF_readonly"/>
+                </Contents>
+              </Panel>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Panel id="Panel00" taborder="4" left="0" top="Div00:20" height="255" flexwrap="wrap" horizontalgap="20" spacing="0px 20px 0px 20px" verticalgap="20" fittocontents="height" flexgrow="1" right="0">
+          <Contents>
+            <PanelItem id="PanelItem00" componentid="Div02"/>
+            <PanelItem id="PanelItem01" componentid="Div03"/>
+          </Contents>
+        </Panel>
+        <Div id="Div04" taborder="1" left="20" top="Panel00:20" height="180" cssclass="div_WF_component" fittocontents="height" flexgrow="1" right="20">
+          <Layouts>
+            <Layout flexwrap="wrap" type="horizontal" spacing="8px 20px 20px 20px" verticalgap="5">
+              <Static id="Static03_00" taborder="1" text="PopupRangePicker" left="30" top="8" height="30" cssclass="sta_WF_txt20px" width="100%"/>
+              <Static id="Static00" taborder="0" text="Static00" left="0" top="40" height="1" cssclass="sta_WF_titleLine" width="100%"/>
+              <DateField id="DF_start" taborder="2" left="38.00" top="71" width="200" height="85" labeltext="Start Date" flexgrow="1" ondropdown="Div04_DF_start_ondropdown" onchanged="Div04_DF_start_onchanged"/>
+              <DateField id="DF_end" taborder="3" left="448.00" top="71" width="200" height="85" labeltext="End Date" flexgrow="1" ondropdown="Div04_DF_end_ondropdown"/>
+              <Panel id="Panel00" taborder="4" left="0" top="60" height="100" flexwrap="wrap" horizontalgap="30" verticalgap="5" spacing="20px 20px 20px 20px" flexgrow="1" fittocontents="height" width="100%">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="DF_start"/>
+                  <PanelItem id="PanelItem01" componentid="DF_end"/>
+                </Contents>
+              </Panel>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div06" taborder="2" left="20.00" top="Div04:20" text="" cssclass="div_WF_component" onsize="Div06_onsize" right="20" height="530">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Static00" left="20" top="40" height="1" right="20" cssclass="sta_WF_titleLine"/>
+              <Static id="Static03_00" taborder="1" text="DateRangePicker" left="30" top="8" height="30" cssclass="sta_WF_txt20px" right="30"/>
+              <DateRangePicker id="DateRangePicker00" taborder="2" left="35" top="103" height="390" right="35" displaytype="date" tabbuttonheight="36" headlineposition="top" displaymonthcount="3"/>
+              <Radio id="Radio01_00" taborder="3" top="60" width="258" height="30" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" direction="vertical" fittocontents="width" right="30" onitemchanged="Div06_Radio01_00_onitemchanged" index="0" text="date" value="date">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">date</Col>
+                      <Col id="datacolumn">date</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">datetime</Col>
+                      <Col id="datacolumn">datetime</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">time</Col>
+                      <Col id="datacolumn">time</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Radio>
+            </Layout>
+          </Layouts>
+        </Div>
+        <PopupDateRangePicker id="PopupDateRangePicker00" left="960.00" top="290" width="390" height="330" onchanged="PopupDateRangePicker00_onchanged" displaytype="date"/>
+        <Div id="Div03" taborder="4" top="290" width="430" height="255" text="" left="471.00" cssclass="div_WF_component" flexgrow="1">
+          <Layouts>
+            <Layout>
+              <Static id="Static03_00" taborder="0" text="DateField" left="30" top="8" height="30" cssclass="sta_WF_txt20px" right="30"/>
+              <Static id="Static00" taborder="1" text="Static00" left="20" top="40" height="1" right="20" cssclass="sta_WF_titleLine"/>
+              <DateField id="DateField00" taborder="2" left="30" top="75" height="100" right="30" labeltext="DateField"/>
+              <Radio id="Radio01_00" taborder="3" top="DateField00:30" width="258" height="30" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" direction="vertical" fittocontents="width" onitemchanged="Div03_Radio01_00_onitemchanged" right="29" index="0" text="date" value="date">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">date</Col>
+                      <Col id="datacolumn">date</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">datetime</Col>
+                      <Col id="datacolumn">datetime</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">time</Col>
+                      <Col id="datacolumn">time</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Radio>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div02" taborder="5" top="290" width="430" height="255" text="" left="20.00" cssclass="div_WF_component" flexgrow="1">
+          <Layouts>
+            <Layout>
+              <Static id="Static03_00" taborder="0" text="MultiLineTextField" left="30" top="8" height="30" cssclass="sta_WF_txt20px" right="30"/>
+              <Static id="Static00" taborder="1" text="Static00" left="20" top="40" height="1" right="20" cssclass="sta_WF_titleLine"/>
+              <MultiLineTextField id="MultiLineTextField00" taborder="2" left="30.00" top="66" height="135" right="30" labeltext="MultiLineTextField" wordWrap="char"/>
+              <Radio id="Radiomulti" taborder="3" top="MultiLineTextField00:4" width="279" height="30" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" direction="vertical" fittocontents="width" onitemchanged="Div02_Radiomulti_onitemchanged" right="30" index="0" text="overlap" value="overlap">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">overlap</Col>
+                      <Col id="datacolumn">overlap</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">outside</Col>
+                      <Col id="datacolumn">outside</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">inside</Col>
+                      <Col id="datacolumn">inside</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Radio>
+            </Layout>
+            <Layout name="Layout0"/>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[/**
+*  Nexacro DEMO
+*  @FileName 	mobilecomponents.xfdl
+*  @Creator 	TOBESOFT
+*  @CreateDate 	2023/11/27
+*  @Desction   
+************** 소스 수정 이력 ***********************************************
+* Date					Modifier					Description
+*******************************************************************************
+* 2023/11/27			TOBESOFT					최초생성
+*******************************************************************************
+*/
+
+/*******************************************************************************************************************************
+* FORM 변수 선언 영역
+*******************************************************************************************************************************/
+var objApp = nexacro.getApplication();
+
+/*******************************************************************************************************************************
+* FORM EVENT 영역(onload, onbeforeclose..)
+*******************************************************************************************************************************/
+this.mobilecomponents_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+	if(objApp.mainframe.width<600){
+	    this.Div06.form.DateRangePicker00.displaymonthcount="1";
+	}else{
+		this.Div06.form.DateRangePicker00.displaymonthcount="3";
+	}
+	
+	//panel 동작 시 가장 밑의 컴포넌트 bottom 값으로 화면 높이 재계산
+	//this.set_height(this.Div06.getOffsetBottom()+20);
+	//this.resetScroll();
+	
+	//frame resize
+	//var p = this.parent.parent;
+	//p["mainPageOnLoad"].call(p, this.getOffsetHeight());
+};
+
+this.mobilecomponents_onsize = function(obj:nexacro.Form,e:nexacro.SizeEventInfo)
+{
+	if(objApp.mainframe.width<600){
+	    this.Div06.form.DateRangePicker00.displaymonthcount="1";
+	}else{
+		this.Div06.form.DateRangePicker00.displaymonthcount="3";
+	}
+};
+
+/*******************************************************************************************************************************
+* Transaction 서비스호출 처리 영역
+*******************************************************************************************************************************/
+
+/*******************************************************************************************************************************
+* Callback 영역 (Transaction, popup, message..)
+*******************************************************************************************************************************/
+
+/*******************************************************************************************************************************
+* 사용자 Function 영역
+*******************************************************************************************************************************/
+
+/*******************************************************************************************************************************
+* 각 COMPONENT 별 EVENT 영역
+*******************************************************************************************************************************/
+this.Div04_DF_start_ondropdown = function(obj:nexacro.DateField,e:nexacro.EventInfo)
+{
+	this.PopupDateRangePicker00.displaymonthcount = 1;
+	this.PopupDateRangePicker00.useclosebutton = false;
+	this.PopupDateRangePicker00.useheadline = true;
+	
+	this.PopupDateRangePicker00.headlineposition = "top";
+	this.PopupDateRangePicker00.trackPopupCenter("start", 400, 450);
+	
+	e.preventDefault();
+};
+
+this.Div04_DF_end_ondropdown = function(obj:nexacro.DateField,e:nexacro.EventInfo)
+{
+	this.PopupDateRangePicker00.displaymonthcount = 1;
+	this.PopupDateRangePicker00.useclosebutton = false;
+	this.PopupDateRangePicker00.useheadline = true;
+	
+	this.PopupDateRangePicker00.headlineposition = "top";
+	this.PopupDateRangePicker00.trackPopupCenter("end", 400, 450);
+	
+	e.preventDefault();
+};
+
+this.PopupDateRangePicker00_onchanged = function(obj:nexacro.PopupDateRangePicker,e:nexacro.RangeDateChangedEventInfo)
+{
+	this.Div04.form.DF_start.value = this.PopupDateRangePicker00.startdate;
+	this.Div04.form.DF_end.value = this.PopupDateRangePicker00.enddate;
+};
+
+
+this.Div00_Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Div00.form.TextField00.labelposition = obj.value;
+};
+
+
+this.Div02_Radiomulti_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Div02.form.MultiLineTextField00.labelposition = obj.value;
+	this.Div02.form.MultiLineTextField00.setFocus();
+};
+
+
+this.Div03_Radio01_00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Div03.form.DateField00.inputtype = obj.value;
+	this.Div03.form.DateField00.setFocus();
+};
+
+this.Div06_Radio01_00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Div06.form.DateRangePicker00.displaytype = obj.value;
+};
+
+
+]]></Script>
+  </Form>
+</FDL>

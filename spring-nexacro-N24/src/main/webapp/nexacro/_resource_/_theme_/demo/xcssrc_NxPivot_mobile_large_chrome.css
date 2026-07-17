@@ -1,0 +1,829 @@
+﻿.Grid.NxPivot_grid
+{
+	background : #ffffff;
+	border : 1px solid #c7c7c7;
+}
+.Grid.NxPivot_grid .head .row .cell
+{
+	font : bold 12px "Gulim";
+	color : #283757;
+	background : #e6edf5;
+	border-top : 0px none;
+	border-right : 1px solid #c7c7c7;
+	border-bottom : 1px solid #c7c7c7;
+	border-left : 1px solid #c7c7c7;
+	justify-content : center;
+}
+.Grid.NxPivot_grid .head .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Grid.NxPivot_grid .body .row .cell
+{
+	color : #222222;
+	border : 1px solid #c7c7c7;
+}
+.Grid.NxPivot_grid .body .row .cell.oddcell
+{
+	background : #ffffff;
+}
+.Grid.NxPivot_grid .summary
+{
+	border-top : 1px solid #c8c1c2;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+}
+.Grid.NxPivot_grid .summary .row .cell
+{
+	font : bold 12px Gulim;
+	color : #222222;
+	background : #fffce8;
+	justify-content : center;
+}
+.Grid.NxPivot_grid .summary .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Grid .body .row .cell.cell_drilldown_close.dummy.dummy.dummy
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeCollapse.png') no-repeat left center #ffffff;
+}
+.Grid .body .row .cell.cell_drilldown_close.dummy.dummy.dummy.oddcell
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeCollapse.png') no-repeat left center #ffffff;
+}
+.Grid .body .row .cell.cell_drilldown_open.dummy.dummy.dummy
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeExpand.png') no-repeat left center #ffffff;
+}
+.Grid .body .row .cell.cell_drilldown_open.dummy.dummy.dummy.oddcell
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeExpand.png') no-repeat left center #ffffff;
+}
+.Grid .head .row .cell.cell_drilldown_close.dummy.dummy.dummy
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeCollapse.png') no-repeat left center #e6edf5;
+}
+.Grid .head .row .cell.cell_drilldown_open.dummy.dummy.dummy
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeExpand.png') no-repeat left center #e6edf5;
+}
+.Grid .body .row .cell.cell_total.dummy.dummy.dummy
+{
+	background : #f6f6f6;
+	font : bold 12px "Gulim";
+}
+.Grid .body .row .cell.cell_total.dummy.dummy.dummy.oddcell
+{
+	background : #f6f6f6;
+}
+.Div.NxPivot_toolbarArea
+{
+	background : #ffffff;
+	border : 1px solid #c7c7c7;
+}
+.Div.NxPivot_axisArea1
+{
+	background : #f6f6f6;
+	border : 1px solid #dddddd;
+}
+.Div.NxPivot_axisArea2
+{
+	background : #ffffff;
+	border : 1px solid #dddddd;
+}
+.Static.NxPivot_axisArea_title_fields
+{
+	background : url('./../../../_resource_/_images_/img_pvGrd_title_field.png') no-repeat left center;
+	letter-spacing : -0.5px;
+}
+.Static.NxPivot_axisArea_title_fields .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.NxPivot_axisArea_title_colAxis
+{
+	background : url('./../../../_resource_/_images_/img_pvGrd_title_col.png') no-repeat left center;
+	letter-spacing : -0.5px;
+}
+.Static.NxPivot_axisArea_title_colAxis .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.NxPivot_axisArea_title_rowAxis
+{
+	background : url('./../../../_resource_/_images_/img_pvGrd_title_row.png') no-repeat left center;
+	letter-spacing : -0.5px;
+}
+.Static.NxPivot_axisArea_title_rowAxis .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.NxPivot_axisArea_title_values
+{
+	background : url('./../../../_resource_/_images_/img_pvGrd_title_value.png') no-repeat left center;
+	letter-spacing : -0.5px;
+}
+.Static.NxPivot_axisArea_title_values .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.PopupDiv.NxPivot_setListPopup
+{
+	border : 1px solid #dddddd;
+	background : #ffffff;
+}
+.Static.NxPivot_setListPopup_line
+{
+	border : 0px none;
+	background : #dddddd;
+}
+.Static.NxPivot_setListPopup_asc
+{
+	background : URL('./../../../_resource_/_images_/img_pvGrd_asc.png') no-repeat center;
+}
+.Static.NxPivot_setListPopup_desc
+{
+	background : URL('./../../../_resource_/_images_/img_pvGrd_desc.png') no-repeat center;
+}
+.Static.NxPivot_setListPopup_check
+{
+	background : URL('./../../../_resource_/_images_/img_pvGrd_icon_chk.png') no-repeat center;
+}
+.Static.NxPivot_setListPopup_clearFilter
+{
+	background : URL('./../../../_resource_/_images_/img_pvGrd_filterClear.png') no-repeat center;
+}
+.Static.NxPivot_setListPopup_addFilter
+{
+	background : URL('./../../../_resource_/_images_/img_pvGrd_filterAdd.png') no-repeat center;
+}
+.Static.NxPivot_axisArea_item
+{
+	border : 1px solid #b2b7bd;
+	background : #fefefe;
+	background : linear-gradient(#fefefe 0%,#e9e9e9 100%);
+	border-radius : 3px;
+}
+.Static.NxPivot_axisArea_item_name
+{
+	border : 0px none;
+}
+.Static.NxPivot_axisArea_item_name .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_axisArea_item_asc
+{
+	font : normal bold 10pt/normal "Arial";
+	color : #ffffff;
+	border : 0px none;
+	background : URL("./../../../_resource_/_images_/img_pvGrd_asc.png") no-repeat center;
+}
+.Static.NxPivot_axisArea_item_asc .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_drag_indicator
+{
+	border : 0px none;
+}
+.Static.NxPivot_drag_indicator .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_drag_indicator >.nexaedge
+{
+	border-image-source : url('./../../../_resource_/_images_/img_pvGrd_guideArrow.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.NxPivot_axisArea_item_desc
+{
+	font : normal bold 10pt/normal "Arial";
+	color : #ffffff;
+	border : 0px none;
+	background : URL("./../../../_resource_/_images_/img_pvGrd_desc.png") no-repeat center;
+}
+.Static.NxPivot_axisArea_item_desc .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_axisArea_item_filter
+{
+	font : normal bold 10pt/normal "Arial";
+	color : #ffffff;
+	border : 0px none;
+	background : url('./../../../_resource_/_images_/img_pvGrd_filter.png') no-repeat center;
+}
+.Static.NxPivot_axisArea_item_filter .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_axisArea_item_aggregator_sum
+{
+	font : normal bold 10pt/normal "Arial";
+	color : #ffffff;
+	border : 0px none;
+	background : url('./../../../_resource_/_images_/img_pvGrd_iconS.png') no-repeat center;
+}
+.Static.NxPivot_axisArea_item_aggregator_sum .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_axisArea_item_aggregator_func
+{
+	font : normal bold 10pt/normal "Arial";
+	color : #ffffff;
+	border : 0px none;
+	background : url('./../../../_resource_/_images_/img_pvGrd_iconU.png') no-repeat center;
+}
+.Static.NxPivot_axisArea_item_aggregator_func .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_axisArea_item_aggregator_avg
+{
+	font : normal bold 10pt/normal "Arial";
+	color : #ffffff;
+	border : 0px none;
+	background : url('./../../../_resource_/_images_/img_pvGrd_iconA.png') no-repeat center;
+}
+.Static.NxPivot_axisArea_item_aggregator_avg .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_axisArea_item_aggregator_cnt
+{
+	font : normal bold 10pt/normal "Arial";
+	color : #ffffff;
+	border : 0px none;
+	background : url('./../../../_resource_/_images_/img_pvGrd_iconC.png') no-repeat center;
+}
+.Static.NxPivot_axisArea_item_aggregator_cnt .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_axisArea_item_aggregator_min
+{
+	font : normal bold 10pt/normal "Arial";
+	color : #ffffff;
+	border : 0px none;
+	background : url('./../../../_resource_/_images_/img_pvGrd_iconM2.png') no-repeat center;
+}
+.Static.NxPivot_axisArea_item_aggregator_min .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.NxPivot_axisArea_item_aggregator_max
+{
+	font : normal bold 10pt/normal "Arial";
+	color : #ffffff;
+	border : 0px none;
+	background : url('./../../../_resource_/_images_/img_pvGrd_iconM.png') no-repeat center;
+}
+.Static.NxPivot_axisArea_item_aggregator_max .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Button.NxPivot_toolbarButton_show
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_panelClose.png') no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_toolbarButton_hide
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_panelOpen.png') no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_toolbarButton_rowstatus_collapse
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_closeRow.png') no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_toolbarButton_colstatus_collapse
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_closeCol.png') no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_toolbarButton_rowstatus_expand
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_openRow.png') no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_toolbarButton_colstatus_expand
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_openCol.png') no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_toolbarButton_auto
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_autoOn.png') no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_toolbarButton_manual
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_autoOff.png') no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_toolbarButton_init
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_refresh.png') no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_toolbarButton_execute
+{
+	background : URL("./../../../_resource_/_images_/btn_pvGrd_execute.png") no-repeat center;
+	border : 0px none;
+}
+.Button.NxPivot_axisArea_item_setting
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_option.png') no-repeat left center;
+	border : 0px none;
+}
+.PopupDiv.NxPivot_popup
+{
+	background : #f6f6f6;
+	border : 1px solid #dddddd;
+}
+.Static.NxPivot_popup_subtitle
+{
+	font : bold 13px "Malgun Gothic";
+}
+.Static.NxPivot_popup_subtitle .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.NxPivot_setListPopup_list
+{
+	background : #ffffff;
+	border : 0px none;
+}
+.ListBoxControl.popupComboNxPivot_popup_combocombolist.dummy.dummy
+{
+	font : normal 12px/normal "굴림";
+}
+.Button.NxPivot_popup_submit
+{
+	background : #424242;
+	color : #ffffff;
+	cursor : pointer;
+	border : 0px none;
+	border-radius : 2px;
+}
+.Button.NxPivot_popup_submit .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Button.NxPivot_popup_close
+{
+	background : #ffffff;
+	color : #222222;
+	cursor : pointer;
+	border : 1px solid #424242;
+	border-radius : 2px;
+}
+.Button.NxPivot_popup_close .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Grid.NxPivot_popup_grid .head .row .cell
+{
+	color : #283757;
+	background : #e6edf5;
+	font : normal 12px/normal "굴림";
+}
+#nexacontainer .Grid.NxPivot_grid .body .row .cell[data-status=mouseover]
+{
+	background : #daf0ff;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_close.dummy.dummy.dummy[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeCollapse.png') no-repeat left center #f3f7ff;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_close.dummy.dummy.dummy.oddcell[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeCollapse.png') no-repeat left center #f3f7ff;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_open.dummy.dummy.dummy[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeExpand.png') no-repeat left center #f3f7ff;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_open.dummy.dummy.dummy.oddcell[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeExpand.png') no-repeat left center #f3f7ff;
+}
+#nexacontainer .Grid .body .row .cell.cell_total.dummy.dummy.dummy[data-status=mouseover]
+{
+	background : #f6f6f6;
+	font : bold 12px "Gulim";
+}
+#nexacontainer .Grid .body .row .cell.cell_total.dummy.dummy.dummy.oddcell[data-status=mouseover]
+{
+	background : #f6f6f6;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_show[data-status=focused]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_panelClose.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_show[data-status=mouseover]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_panelClose.png') no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_hide[data-status=focused]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_panelOpen.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_hide[data-status=mouseover]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_panelOpen.png') no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_rowstatus_collapse[data-status=focused]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_closeRow.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_rowstatus_collapse[data-status=mouseover]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_closeRow.png') no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_colstatus_collapse[data-status=focused]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_closeCol.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_colstatus_collapse[data-status=mouseover]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_closeCol.png') no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_rowstatus_expand[data-status=focused]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_openRow.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_rowstatus_expand[data-status=mouseover]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_openRow.png') no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_colstatus_expand[data-status=focused]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_openCol.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_colstatus_expand[data-status=mouseover]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_openCol.png') no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_auto[data-status=focused]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_autoOn.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_auto[data-status=mouseover]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_autoOn.png') no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_manual[data-status=focused]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_autoOff.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_manual[data-status=mouseover]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_autoOff.png') no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_init[data-status=focused]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_refresh.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_init[data-status=mouseover]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_refresh.png') no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_execute[data-status=focused]
+{
+	background : URL("./../../../_resource_/_images_/btn_pvGrd_execute.png") no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_execute[data-status=mouseover]
+{
+	background : URL("./../../../_resource_/_images_/btn_pvGrd_execute.png") no-repeat center #faefed;
+	border : 1px solid #e75e4e;
+}
+#nexacontainer .Button.NxPivot_axisArea_item_setting[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_option.png') no-repeat left center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_axisArea_item_setting[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_option.png') no-repeat left center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-status=focused]
+{
+	background : #424242;
+	color : #ffffff;
+	cursor : pointer;
+	border : 0px none;
+	border-radius : 2px;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-status=mouseover]
+{
+	background : #424242;
+	color : #ffffff;
+	cursor : pointer;
+	border : 0px none;
+	border-radius : 2px;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-status=focused]
+{
+	background : #ffffff;
+	color : #222222;
+	cursor : pointer;
+	border : 1px solid #424242;
+	border-radius : 2px;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-status=focused] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-status=mouseover]
+{
+	background : #ffffff;
+	color : #222222;
+	cursor : pointer;
+	border : 1px solid #424242;
+	border-radius : 2px;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Static.NxPivot_setListPopup_list[data-status=mouseover]
+{
+	background : #dfdfdf;
+	border : 0px none;
+}
+#nexacontainer .Grid.NxPivot_grid .body .row .cell[data-userstatus=selected]
+{
+	background : #f6f4f4;
+	color : #222222;
+	font : bold 12px "Gulim";
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_close.dummy.dummy.dummy[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeCollapse.png') no-repeat left center #efefef;
+	font : bold 12px "Gulim";
+	color : #222222;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_close.dummy.dummy.dummy.oddcell[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeCollapse.png') no-repeat left center #efefef;
+	color : #222222;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_open.dummy.dummy.dummy[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeExpand.png') no-repeat left center #efefef;
+	font : bold 12px "Gulim";
+	color : #222222;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_open.dummy.dummy.dummy.oddcell[data-userstatus=selected]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeExpand.png') no-repeat left center #efefef;
+	color : #222222;
+}
+#nexacontainer .Grid .body .row .cell.cell_total.dummy.dummy.dummy[data-userstatus=selected]
+{
+	background : #f6f6f6;
+	font : bold 12px "Gulim";
+}
+#nexacontainer .Grid .body .row .cell.cell_total.dummy.dummy.dummy.oddcell[data-userstatus=selected]
+{
+	background : #f6f6f6;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-userstatus=selected]
+{
+	background : #424242;
+	color : #ffffff;
+	cursor : pointer;
+	border : 0px none;
+	border-radius : 2px;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-userstatus=pushed]
+{
+	background : #424242;
+	color : #ffffff;
+	cursor : pointer;
+	border : 0px none;
+	border-radius : 2px;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-userstatus=pushed] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-userstatus=selected]
+{
+	background : #ffffff;
+	color : #222222;
+	cursor : pointer;
+	border : 1px solid #424242;
+	border-radius : 2px;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-userstatus=selected] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-userstatus=pushed]
+{
+	background : #ffffff;
+	color : #222222;
+	cursor : pointer;
+	border : 1px solid #424242;
+	border-radius : 2px;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-userstatus=pushed] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Grid.NxPivot_grid .body .row .cell[data-status=disabled]
+{
+	color : #999999;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_close.dummy.dummy.dummy[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeCollapse.png') no-repeat left center #ffffff;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_close.dummy.dummy.dummy.oddcell[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeCollapse.png') no-repeat left center #ffffff;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_open.dummy.dummy.dummy[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeExpand.png') no-repeat left center #ffffff;
+}
+#nexacontainer .Grid .body .row .cell.cell_drilldown_open.dummy.dummy.dummy.oddcell[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_TreeExpand.png') no-repeat left center #ffffff;
+}
+#nexacontainer .Grid .body .row .cell.cell_total.dummy.dummy.dummy[data-status=disabled]
+{
+	background : #f6f6f6;
+	font : bold 12px "Gulim";
+}
+#nexacontainer .Grid .body .row .cell.cell_total.dummy.dummy.dummy.oddcell[data-status=disabled]
+{
+	background : #f6f6f6;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_show[data-status=disabled]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_panelClose_D.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_hide[data-status=disabled]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_panelOpen_D.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_rowstatus_collapse[data-status=disabled]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_closeRow_D.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_colstatus_collapse[data-status=disabled]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_closeCol_D.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_rowstatus_expand[data-status=disabled]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_openRow_D.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_colstatus_expand[data-status=disabled]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_openCol_D.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_auto[data-status=disabled]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_autoOn_D.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_manual[data-status=disabled]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_autoOn_D.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_init[data-status=disabled]
+{
+	background : URL('./../../../_resource_/_images_/btn_pvGrd_refresh_D.png') no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_toolbarButton_execute[data-status=disabled]
+{
+	background : URL("./../../../_resource_/_images_/btn_pvGrd_execute_D.png") no-repeat center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_axisArea_item_setting[data-status=disabled]
+{
+	background : url('./../../../_resource_/_images_/btn_pvGrd_option.png') no-repeat left center;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-status=disabled]
+{
+	background : #cbcbcb;
+	color : #aaaaaa;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_popup_submit[data-status=disabled] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-status=disabled]
+{
+	background : #cbcbcb;
+	color : #aaaaaa;
+	border : 0px none;
+}
+#nexacontainer .Button.NxPivot_popup_close[data-status=disabled] .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}

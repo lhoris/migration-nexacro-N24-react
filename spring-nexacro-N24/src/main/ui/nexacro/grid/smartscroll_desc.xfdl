@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="form" width="920" height="200" onload="form_onload">
+    <Layouts>
+      <Layout height="200" width="920">
+        <Static id="Static11" taborder="0" text="TEXT(&quot;grid.function.smartscroll&quot;,&quot;Smart Scroll&quot;)" left="20" top="15" width="120" height="30" cssclass="sta_WF_compTitle02" messageid="grid.function.smartscroll" fittocontents="width"/>
+        <Static id="Static12" taborder="1" text="TEXT(&quot;grid.function.smartscroll.desc&quot;)" left="20" top="Static11:2" height="140" cssclass="sta_WF_txt15px" wordWrap="english" fittocontents="height" messageid="grid.function.smartscroll.desc" right="20"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+};
+]]></Script>
+  </Form>
+</FDL>

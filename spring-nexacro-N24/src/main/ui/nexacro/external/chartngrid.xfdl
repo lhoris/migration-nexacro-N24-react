@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="chartngrid" width="920" height="760" onload="chartngrid_onload">
+    <Layouts>
+      <Layout height="760" width="920">
+        <Static id="Static00" taborder="0" text="TEXT(&quot;external.chartngrid&quot;,&quot;Chart &amp; Grid&quot;)" left="20" top="14" height="40" cssclass="sta_WF_pageTitle" width="135" fittocontents="width" messageid="external.chartngrid"/>
+        <Static id="Static01" taborder="1" left="20" top="66" height="60" cssclass="sta_WF_box01" right="20"/>
+        <Static id="Static02" taborder="2" text="TEXT(&quot;external.chartngrid.charttype&quot;,&quot;Chart Type&quot;)" left="40" top="76" width="69" height="40" cssclass="sta_WF_labelTxt01" fittocontents="width" messageid="external.chartngrid.charttype"/>
+        <Combo id="cmbType" taborder="3" text="tobesoft.pdf" left="Static02:20" top="76" width="220" height="40" codecolumn="codecolumn" datacolumn="datacolumn" index="0" value="tobesoft.pdf" innerdataset="innerdataset" onitemchanged="cmbType_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">Column</Col>
+                <Col id="datacolumn">Column</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">Line</Col>
+                <Col id="datacolumn">Line</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">Combination</Col>
+                <Col id="datacolumn">Combination</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Grid id="grdList" taborder="4" left="20" top="460" binddataset="dsList" right="20" autofittype="col" autoenter="select" height="280">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="46" band="head"/>
+                <Row size="46"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Month"/>
+                <Cell col="1" text="Profit"/>
+                <Cell col="2" text="Cost"/>
+                <Cell col="3" text="Revenue"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Month"/>
+                <Cell col="1" text="bind:Profit" edittype="normal" editinputtype="number"/>
+                <Cell col="2" text="bind:Cost" edittype="normal" editinputtype="number"/>
+                <Cell col="3" text="bind:Revenue" edittype="normal" editinputtype="number"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <ChartJS id="ChartJS00" taborder="5" text="ChartJS00" left="20" top="142" right="20" height="298" background="white"/>
+        <Static id="Static03" taborder="6" top="24" width="130" height="30" onclick="Static03_onclick" cursor="pointer" right="20" cssclass="sta_WF_txt15px" background="url('imagerc::dxchart_logo.png') no-repeat center center black" borderRadius="5px"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsList" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false" oncolumnchanged="dsList_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="Month" type="STRING" size="20"/>
+          <Column id="Profit" type="BIGDECIMAL" size="256"/>
+          <Column id="Cost" type="BIGDECIMAL" size="256"/>
+          <Column id="Revenue" type="BIGDECIMAL" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Month">Jan</Col>
+            <Col id="Profit">900</Col>
+            <Col id="Cost">1500</Col>
+            <Col id="Revenue">2300</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Feb</Col>
+            <Col id="Profit">1400</Col>
+            <Col id="Cost">1400</Col>
+            <Col id="Revenue">1200</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Mar</Col>
+            <Col id="Profit">1500</Col>
+            <Col id="Cost">1200</Col>
+            <Col id="Revenue">1600</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Apr</Col>
+            <Col id="Profit">1900</Col>
+            <Col id="Cost">1300</Col>
+            <Col id="Revenue">1300</Col>
+          </Row>
+          <Row>
+            <Col id="Month">May</Col>
+            <Col id="Profit">1400</Col>
+            <Col id="Cost">900</Col>
+            <Col id="Revenue">1000</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Jun</Col>
+            <Col id="Profit">2000</Col>
+            <Col id="Cost">1000</Col>
+            <Col id="Revenue">1200</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Jul</Col>
+            <Col id="Profit">1800</Col>
+            <Col id="Cost">1500</Col>
+            <Col id="Revenue">2300</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Aug</Col>
+            <Col id="Profit">2500</Col>
+            <Col id="Cost">1400</Col>
+            <Col id="Revenue">1200</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Sep</Col>
+            <Col id="Profit">3000</Col>
+            <Col id="Cost">1200</Col>
+            <Col id="Revenue">1600</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Oct</Col>
+            <Col id="Profit">2000</Col>
+            <Col id="Cost">1300</Col>
+            <Col id="Revenue">1300</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Nov</Col>
+            <Col id="Profit">2100</Col>
+            <Col id="Cost">900</Col>
+            <Col id="Revenue">1000</Col>
+          </Row>
+          <Row>
+            <Col id="Month">Dec</Col>
+            <Col id="Profit">1700</Col>
+            <Col id="Cost">1000</Col>
+            <Col id="Revenue">1200</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.chartLayout;
+
+this.chartngrid_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfnFormOnLoad();
+	
+	this.chartLayout = "Column";
+	this.fnColumnChart();
+};
+
+
+this.cmbType_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	
+	switch(e.postvalue) {
+	case "Column":
+		this.chartLayout = "Column";
+		this.fnColumnChart();
+		break;
+	case "Line":
+		this.chartLayout = "Line";
+		this.fnLineChart();
+		break;
+	case "Combination":
+		this.chartLayout = "Combination";
+		this.fnCombinationChart();
+		break;
+	default:
+	}
+};
+
+this.fnColumnChart = function ()
+{
+	let chart = this.ChartJS00;
+	let canvas = chart.getCanvas();
+	let cvs = canvas.id;
+	DxChart.reset(canvas);
+	
+	let bar = new DxChartBar({
+			id: cvs,
+			elem : canvas,
+			binddataset : this.dsList,
+			data:['bind:Profit','bind:Cost','bind:Revenue'],
+			options: {
+				variant:{Value:'3d',
+					ThreedAngle: 0,
+					ThreedYaxisColor: 'rgba(216,216,216,0.7)',
+					ThreedOffsetx:15,
+					ThreedOffsety:10,
+					ThreedYaxisColor: 'rgba(0,0,0,0.15)',
+				},
+				background:{GridVlines: false,GridHlinesCount: 10,GridBorder: false,GridColor: 'gray',},
+				margin:{Inner: 15,Left: 55,Bottom: 20,Top: 55,},
+				xaxis:{Use:false,
+					Labels:['bind:Month'],
+					LabelsOffsety: 3,
+					LabelsBold: true,
+				},
+				key:{
+					Data: ['Profit','Cost','Revenue'],
+					Position: 'margin',
+					PositionOffsetX: 10,
+					PositionOffsetY: -10,
+					LabelsOffsetY: 2,
+				},
+				title:{Text: 'Annual Report',Offsety: -15, FontStyle:'bold 20pt'},
+				tooltips:{
+					Data:'%{key} %{value}',
+					Css:{backgrountColor:'white'}
+					}
+			}
+		});
+	
+	bar.wave();
+};
+
+this.fnLineChart = function ()
+{
+	let chart = this.ChartJS00;
+	let canvas = chart.getCanvas();
+	let cvs = canvas.id;
+	DxChart.reset(canvas);
+	let line = new DxChartLine({
+			id: cvs,
+			elem : canvas,
+			binddataset : this.dsList,
+			data: ['bind:Profit','bind:Cost','bind:Revenue'],
+			options: {
+				margin : {
+					Inner: 5,
+					Bottom: 45
+				},
+				shadow: {
+					Use : false
+				},
+				background : {
+					GridColor: '#cccccc',
+					GridVlines: false,
+					GridBorder: false
+				},
+				xaxis : {
+					Use: false,
+					Labels: ["bind:Month"]
+				},
+				yaxis : {
+					Use: true,
+					ScaleInvert : false,
+				},
+				tickmarks : {
+					Style: 'filledcircle',
+				},
+				key:{
+					Data: ['Profit','Cost','Revenue'],
+					Position: 'margin',
+					PositionOffsetX: 10,
+					PositionOffsetY: -10,
+					LabelsOffsetY: 2,
+				},
+				margin:{Inner: 30,Left: 55,Bottom: 20,Top: 55,},
+				title:{Text: 'Annual Report',Offsety: -15, FontStyle:"bold 20pt"},
+				tooltips:{
+					Data:'%{key} %{value}',
+					Css:{backgrountColor:'white'}
+					}
+			}
+		}).wave();
+	
+};
+
+this.fnCombinationChart = function ()
+{
+	let chart = this.ChartJS00;
+	let canvas = chart.getCanvas();
+	let cvs = canvas.id;
+	DxChart.reset(canvas);
+	let bar = new DxChartBar({
+			id: cvs,
+			elem : canvas,
+			binddataset : this.dsList,
+			data: ['bind:Profit','bind:Cost'],
+			options: {
+				background:{GridVlines: false,
+					GridBorder: false,
+					GridColor: '#999'},
+				xaxis:{	Labels: ['bind:Month'],
+					TickmarksCount: 0,
+					Use: false
+				},
+				margin:{Left: 55,
+					Right: 55,
+					Bottom: 45},
+				shadow:{Color: 'black',
+					Offsetx: 0,
+					Offsety: 0,
+					Blur: 15},
+				colorsStroke: 'rgba(0,0,0,0)',
+				combined:{	Effect: 'wave',
+					EffectOptions: '{frames: 30}'},
+				title:{Text: 'Annual Report',Offsety: -15, FontStyle:'bold 20pt'},
+				tooltips:{
+					Data:'%{key} %{value}',
+					Css:{backgrountColor:'white'}
+					}
+			}
+		});
+	
+	let line = new DxChartLine({
+			id: cvs,
+			elem : canvas,
+			binddataset : this.dsList,
+			data: ['bind:Revenue'],
+			options: {
+				xaxis:{Use: false},
+				background:{Grid: false},
+				colors: ['#67A0E1'],
+				margin:{Left: 45,
+					Right: 45},
+				tickmarks:{Style: 'filledcircle'},
+				spline: {Use:true},
+				line: {Curve:true, Width:5},
+				combined: {Effect: 'trace'},
+				tooltips:{
+					Data:'%{key} %{value}',
+					Css:{backgrountColor:'white'}
+					}
+			}
+		});
+	
+	let combo = new DxChart.CombinedChart([bar, line]);
+	combo.draw();
+};
+
+this.dsList_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
+{
+	switch(this.chartLayout) {
+	case "Column":
+		this.fnColumnChart();
+		break;
+	case "Line":
+		this.fnLineChart();
+		break;
+	case "Combination":
+		this.fnCombinationChart();
+		break;
+	default:
+	}
+};
+
+this.Static03_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	let url = "http://chart.dxtobe.com/chartTech/index.html";
+	
+	system.execBrowser(url);
+};
+]]></Script>
+  </Form>
+</FDL>

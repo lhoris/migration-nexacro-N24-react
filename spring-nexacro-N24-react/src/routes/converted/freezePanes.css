@@ -1,0 +1,150 @@
+.work-card:has(.fp-card) {
+  max-width: 1060px;
+}
+
+.fp-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.fp-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.fp-toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.fp-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.fp-btn-accent {
+  background: #e0505a;
+  border-color: #e0505a;
+}
+
+.fp-grid-mount {
+  margin-top: 4px;
+}
+
+/* 원본은 그리드가 하나뿐이라 가로 스크롤도 하나다. 우리는 고정 행을 별도(스크롤 없는)
+   Tabulator 인스턴스로 분리했는데, 그 인스턴스도 컬럼이 넘치면 자기 몫의 가로 스크롤바를
+   따로 만들어버려서 화면에 스크롤바가 2개로 보였다(사용자 리포트: "원본은 스크롤이
+   한 개뿐인데 우리는 고정 행에도, 아래 그리드에도 따로 있다"). 고정 행 쪽 가로 스크롤은
+   숨기고 메인 그리드의 스크롤 이벤트로만 위치를 맞춘다(overflow:hidden이어도
+   scrollLeft를 코드로 바꾸는 건 그대로 동작한다). */
+.fp-frozen-mount .tabulator-tableholder {
+  overflow-x: hidden !important;
+}
+
+.fp-frozen-mount:not(:empty) {
+  border-bottom: 2px solid #48399a;
+}
+
+/* Tabulator 헤더 padding-left:10px 기본값 보정은 src/styles/shell.css에 전역으로
+   옮겼다 — 이 화면만의 문제가 아니라 Tabulator를 쓰는 모든 화면에 있던 문제였다. */
+
+/* 원본(fnColFixL/fnColFixR)은 고정된 열의 "헤더 배경색만" 살짝 바뀐다
+   (setCellProperty("head", i, "background", "#48399A")) — 본문 셀이나 정렬은 안 건드린다.
+   Tabulator 기본 테마는 고정 컬럼에 흰색 굵은 경계선(2px)을 넣는데, 그게 시각적으로
+   컬럼 폭을 눌러 내용이 오른쪽으로 쏠려 보이는 것처럼 느껴진다는 피드백이 있어 얇은
+   경계선으로 줄이고, 원본처럼 헤더에만 옅은 색을 입힌다.
+   반드시 완전 불투명한 색이어야 한다 — rgba로 반투명하게 뒀더니 가로 스크롤 시 그
+   밑에 깔린(고정 안 된) 헤더 텍스트가 비쳐서 겹쳐 보이는 버그가 있었다(사용자 리포트로
+   발견: "옆으로 갈 때 헤더 텍스트가 겹쳐보인다" — 고정 컬럼은 position:sticky라 항상
+   그 자리에 있고, 스크롤되는 나머지 헤더는 그 뒤로 그대로 지나가는데 배경이 불투명하지
+   않으면 그게 비쳐 보인다). */
+.fp-grid-mount .tabulator-header .tabulator-col.tabulator-frozen,
+.fp-frozen-mount .tabulator-header .tabulator-col.tabulator-frozen {
+  background-color: #e8e6f5;
+}
+
+.fp-grid-mount .tabulator-frozen.tabulator-frozen-left,
+.fp-frozen-mount .tabulator-frozen.tabulator-frozen-left {
+  border-right-width: 1px;
+}
+
+.fp-grid-mount .tabulator-frozen.tabulator-frozen-right,
+.fp-frozen-mount .tabulator-frozen.tabulator-frozen-right {
+  border-left-width: 1px;
+}
+
+/* Tabulator는 셀 자체엔 배경색이 없고 행(.tabulator-row)의 배경이 비쳐 보이는 방식이다
+   (얼룩말 줄무늬도 행 단위). 고정된(position:sticky) 셀은 스크롤되어 지나가는 다른
+   컬럼과 같은 자리를 차지하게 되는데, 셀 자신은 투명이라 그 뒤로 지나가는 컬럼의
+   텍스트가 비쳐 보인다(사용자 리포트로 발견 — 헤더뿐 아니라 마우스오버 하이라이트를
+   추가했을 때 본문 셀에서도 같은 증상이 남). 고정된 셀에 행 줄무늬와 맞춘 불투명
+   배경을 직접 줘서 항상 완전히 가리도록 한다. */
+.fp-grid-mount .tabulator-cell.tabulator-frozen,
+.fp-frozen-mount .tabulator-cell.tabulator-frozen {
+  background-color: #fff;
+}
+
+.fp-grid-mount .tabulator-row-odd .tabulator-cell.tabulator-frozen,
+.fp-frozen-mount .tabulator-row-odd .tabulator-cell.tabulator-frozen {
+  background-color: #f3f3f3;
+}
+
+/* 원본은 셀 선택형 그리드(set_selecttype("cell"))라 선택한 셀에 엑셀처럼 테두리
+   하이라이트가 있다. Tabulator 내장 selectableRange로 만들어봤다가 "여러 컬럼을 동시에
+   얼리면 예측 불가"라는 라이브러리 자체 경고대로 실제 깨지는 걸 확인해서(헤더가 흐려짐)
+   직접 만든 테두리 박스로 같은 느낌만 재현한다. */
+/* Tabulator 테마가 .tabulator-cell{outline:none}을 이미 정의하고 있어(특이도가 같아
+   번들 순서에 따라 이겨버릴 수 있음) 컬럼 클래스를 하나 더 붙여 특이도를 높인다. */
+.tabulator-cell.fp-selected-cell {
+  outline: 2px solid #2544b7;
+  outline-offset: -2px;
+  z-index: 2;
+}
+
+/* 원본은 셀 선택형이라 마우스오버 시에도(클릭 전에도) 셀 단위 하이라이트를 준다 —
+   selectableRows:false로 행 단위 호버는 껐지만, 셀 단위 호버 자체는 대체할 게 없어서
+   따로 넣는다(사용자 리포트: "마우스오버했을 때 하이라이트는 없네"). background-color는
+   레이어가 아니라 값 하나라서, 반투명 rgba를 쓰면 위의 "고정 셀은 불투명 배경" 규칙을
+   덮어써버려서 다시 뒤쪽 스크롤 컬럼이 비쳐 보이는 문제가 되풀이됐다(직접 겪음) — 아예
+   미리 흰 배경과 섞어 계산한 불투명 색을 쓴다. 홀수 행 + 고정 셀 배경 규칙과 특이도가
+   같아지는 조합이 있어(둘 다 클래스 3~4개) 소스 순서에 기대지 않고 !important로 항상
+   이기게 한다. */
+.fp-grid-mount .tabulator-cell:hover,
+.fp-frozen-mount .tabulator-cell:hover {
+  background-color: #e5e9f7 !important;
+  cursor: pointer;
+}
+
+.fp-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.fp-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.fp-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

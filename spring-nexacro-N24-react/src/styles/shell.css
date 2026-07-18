@@ -368,3 +368,24 @@
   background: var(--accent-bg);
   color: var(--accent);
 }
+
+/* ---------- Tabulator 전역 보정 ---------- */
+/* "modern" 테마 자체가 .tabulator-header{padding-left:10px}를 기본으로 깔아둔다(라이브러리
+   원본 CSS, 우리가 추가한 게 아님) — 헤더 컬럼이 본문 컬럼보다 항상 10px 오른쪽으로
+   밀려 보이는 원인이다("헤더랑 본문 열이 안 맞는다"는 사용자 리포트로 10800 화면에서
+   발견, 실측 10px 오프셋 확인). 그리드를 쓰는 화면마다 각자 고치는 대신 여기 한 곳에서
+   전역으로 바로잡는다 — Tabulator를 쓰는 모든 화면(퀀텀 그리드 등)에 똑같이 적용됨. */
+.tabulator-header {
+  padding-left: 0 !important;
+}
+
+/* 같은 테마의 또 다른 기본값: 고정 컬럼 그룹의 "경계 컬럼"(.tabulator-frozen-left, 왼쪽
+   고정의 마지막 컬럼) 헤더에만 `.tabulator .tabulator-header .tabulator-frozen.
+   tabulator-frozen-left{padding-left:10px}`로 10px 패딩을 더 준다 — 오른쪽 고정
+   (tabulator-frozen-right)엔 이 규칙이 없어 좌우가 비대칭이다. 10800 화면(틀 고정)에서
+   "좌측열고정 누르면 그 경계 컬럼(Last name)의 헤더 텍스트만 오른쪽으로 밀려 보인다"는
+   사용자 리포트로 발견 — 본문 셀은 이 규칙 대상이 아니라 안 밀리는데 헤더만 밀려서 더
+   눈에 띄었다. */
+.tabulator-header .tabulator-frozen.tabulator-frozen-left {
+  padding-left: 0 !important;
+}

@@ -177,6 +177,17 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.quantum.desc":
       "퀀텀그리드란, 데이터를 행별로 그룹핑 하여 계층형태로 보여준다. 그리드에서 컬럼을 드래그하여 상단 영역에 위치하면 해당 컬럼으로 데이터가 그룹핑 된다. 반대로 상단 영역의 컬럼명을 드래그하여 하단 그리드에 드랍하면 데이터 그룹핑이 취소 된다.",
 
+    // -- 실제 Nexacro stringresource (grid::freezepanes.xfdl / freezepanes_desc.xfdl) --
+    "grid.freezepanes.title": "그리드 틀고정",
+    "grid.freezepanes.subtitle": "스크롤 시 선택된 셀을 고정시킵니다. 원하는 셀을 선택 후 버튼이나 마우스 우클릭 컨텍스트 메뉴를 통해서 고정시켜 보세요.",
+    "grid.freezepanes.btnRowFix": "행고정",
+    "grid.freezepanes.btnColFixL": "좌측열고정",
+    "grid.freezepanes.btnColFixR": "우측열고정",
+    "grid.freezepanes.btnCellFix": "행열고정",
+    "grid.freezepanes.brnFixFree": "취소",
+    "grid.freezepanes.desc":
+      "틀 고정 기능은 그리드 컴포넌트에 표현되는 많은 데이터를 효과적으로 스크롤 할 수 있는 기능입니다.\n본 샘플과 같이 그리드 컨텍스트 메뉴로 표준화할 경우 그리드 사용편의성을 더욱 높일수 있습니다.",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -370,6 +381,16 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.quantum.area": "Drag the column and drop it here",
     "grid.quantum.desc":
       "A quantum grid is a hierarchical view of data grouped by row. When a column is dragged from the grid and placed in the upper area, data is grouped into the corresponding column. Conversely, if you drag the column name in the upper area and drop it on the lower grid, data grouping is canceled.",
+
+    "grid.freezepanes.title": "Grid freeze panes",
+    "grid.freezepanes.subtitle": "This function freezes the selected cell when scrolling. After selecting the Area, Freeze it through the button or context menu(mouse right-button).",
+    "grid.freezepanes.btnRowFix": "Row freezing",
+    "grid.freezepanes.btnColFixL": "Left Column freezing",
+    "grid.freezepanes.btnColFixR": "Right Column freezing",
+    "grid.freezepanes.btnCellFix": "Row & Column freezing",
+    "grid.freezepanes.brnFixFree": "Cancel",
+    "grid.freezepanes.desc":
+      "The frame freezing function is that allows you to effectively scroll through a lot of data expressed in the grid component.\nIf you standardize the grid context menu as in this sample, you can further increase the convenience of using the grid.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

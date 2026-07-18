@@ -1,0 +1,95 @@
+/* 그리드 화면은 .work-card의 max-width 캡을 없애 원본처럼 작업 영역 폭을 그대로 따라가게
+   한다 — largeData.css 상단 주석 참고. 마커 클래스가 work-card 자기 자신에 있으므로
+   :has() 대신 그냥 붙여쓴다. */
+.work-card.cp-card {
+  max-width: none;
+}
+
+.cp-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.cp-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.cp-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.cp-toolbar-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.cp-radio-row {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+}
+
+.cp-radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cp-remark {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.cp-grid-mount {
+  margin-top: 4px;
+}
+
+/* Cell 타입 전용 — Tabulator 테마가 .tabulator-cell{outline:none}을 이미 정의하고 있어
+   (특이도가 같아 번들 순서에 따라 이길 수 있음) 컬럼 클래스를 하나 더 붙여 특이도를 높인다
+   (FreezePanes의 동일 패턴 참고). */
+.tabulator-cell.cp-selected-cell {
+  outline: 2px solid #2544b7;
+  outline-offset: -2px;
+  z-index: 2;
+}
+
+.cp-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.cp-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.cp-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

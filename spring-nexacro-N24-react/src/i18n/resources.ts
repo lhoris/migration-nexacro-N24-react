@@ -217,6 +217,15 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.import.desc":
       "임포트 유형을 선택하고 파일을 올리면 시트 목록이 표시되고, 시트를 선택하면 그 안의 데이터를 그리드에서 확인할 수 있습니다. \"헤더에 열 이름 포함\" 옵션을 켜면 첫 번째 행의 텍스트를 컬럼명으로 사용합니다.\n적당한 테스트 파일이 없다면 테스트 파일을 다운로드한 뒤 그대로 다시 가져오기 해보세요.",
 
+    // -- 실제 Nexacro stringresource (grid::copypaste.xfdl / copypaste_desc.xfdl) --
+    "grid.copypaste.title": "그리드 데이터 복사 & 붙여넣기",
+    "grid.copypaste.subtitle":
+      "데이터를 선택하고 단축키(Ctrl + c/v)로 클립보드에 복사하거나 클립보드의 데이터를 그리드 또는 엑셀 프로그램에 붙여 넣을 수 있습니다.",
+    "grid.copypaste.selection.option": "그리드 선택 타입",
+    "grid.copypaste.selection.remark": "※ 다중 선택시 Shift, Ctrl 키 사용",
+    "grid.copypaste.desc":
+      "PC의 클립보드를 활용한 기능입니다.\n그리드에 선택된 데이터를 클립보드에 복사하거나 복사된 데이터를 그리드 또는 엑셀 프로그램에 붙여넣을 수 있는 편리함을 제공합니다.",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -445,6 +454,14 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
       "The Nexacro provides nexacro-xeni for Excel export and import processing. nexacro-xeni is a server application that processes Excel's exports/imports on the server and then returns the results.\nProcessing Excel files requires resources from the local system, which can cause serious security problems and is prevented by the browser.\n\n(Unlike the original, this React demo performs real Excel/CSV export and import inside the browser using the SheetJS library, with no server — the Hancell format and password protection are not supported.)",
     "grid.import.desc":
       'Select the import type and upload a file to see its sheet list; pick a sheet to view its data in the grid. Turning on "Include Column Names as Header" uses the first row\'s text as column names.\nIf you don\'t have a suitable test file, download the test file and import it right back.',
+
+    "grid.copypaste.title": "Copy & Paste Grid Data",
+    "grid.copypaste.subtitle":
+      "selected data can copy to the clipboard with the shortcut key (Ctrl + c/v), or paste the data from the clipboard into a grid or Excel program",
+    "grid.copypaste.selection.option": "Grid selection type",
+    "grid.copypaste.selection.remark": "※ Use Shift, Ctrl keys for multiple selection",
+    "grid.copypaste.desc":
+      "This is a function that utilizes the PC's clipboard.\nIt provides convenience to copy the selected data on the grid to the clipboard or paste the copied data to the grid or Excel program.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

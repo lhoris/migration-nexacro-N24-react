@@ -448,6 +448,39 @@
     헤더 있는 파일/헤더 없는 파일/CSV 전부 Playwright로 검증(자동 판단 정확, 수동
     오버라이드 후에도 그리드가 올바르게 다시 그려짐), `npm run build`까지 재확인.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **커밋·push 완료(2026-07-18).**
+
+- **menu_id 11100("복사 & 붙여넣기", grid::copypaste.xfdl) React 전환 완료(2026-07-18).**
+  `CopyPaste.tsx` + `copyPasteRealData.ts`(dsList에서 그대로 추출한 실제 데이터 500행).
+  원본은 그리드 선택 타입(Area/Multiarea/Row/Multirow/Cell) 라디오에 따라 Ctrl+C/Ctrl+V로
+  클립보드에 TSV(탭 구분) 텍스트를 쓰고 읽는다 — `navigator.clipboard` API로 직접 구현
+  (Tabulator 내장 clipboard 모듈은 붙여넣기 시 "필요하면 새 행 추가"를 지원 안 해서 끔).
+  - 사용자가 5개 타입을 직접 테스트해보고 발견한 문제들을 전부 고쳤다:
+    1. Area: 붙여넣기 후 포커스가 1행으로 튐 — `setData()`가 스크롤을 맨 위로 되돌리는
+       Tabulator 특성(다른 화면에서도 겪은 것과 동일) 때문. 붙여넣기 전 스크롤 위치를
+       저장했다가 복원하도록 수정.
+    2. Multiarea: 맥에서 Ctrl+클릭이 OS 우클릭으로 처리돼 컨텍스트 메뉴가 뜸 — `contextmenu`
+       이벤트에서 Ctrl키일 때 막아서 해결.
+    3. Multiarea: 떨어진 영역 2개를 복사해서 붙여넣으면 영역 모양을 유지 안 하고 세로로
+       이어붙임 — **원본을 Playwright로 직접 테스트해서 확인**: 원본은 영역이 2개 이상
+       선택된 채 복사하면 "This command cannot be used with multiple selection ranges."
+       에러로 아예 거부하고, 붙여넣기는 "완료" 알럿을 띄우면서 실제로는 아무 것도 안
+       바꾸는 버그가 있었다. 후자(거짓 성공)는 재현할 가치가 없다고 판단해 복사와 동일한
+       명시적 거부로 통일.
+    4. Row: No. 컬럼이 복사/붙여넣기 안 되는 것 — 사용자가 의도된 동작으로 확인(원본도
+       그 컬럼은 계산된 값이라 실질적으로 같은 성격).
+    5. Multirow: 수정자 키 없이 다른 행 클릭해도 이전 선택이 안 풀리고 계속 추가됨 —
+       Tabulator `selectableRows` 기본값(토글 누적)이 원본 동작과 달라서 커스텀
+       `rowClick` 핸들러로 재구현(일반 클릭=전체 해제 후 새로 선택, Ctrl=토글 추가,
+       Shift=범위 선택). 원본은 Playwright로 직접 확인(수정자 없이 클릭하면 이전 선택이
+       풀리는 것을 스크린샷으로 확인).
+    6. Cell: 셀 하나만 유지가 안 되고 화살표 키 조작 중 스크롤이 튐 — `selectableRange`를
+       흉내 내기용으로 쓰던 것을 걷어내고 FreezePanes와 같은 커스텀 `cellClick` +
+       outline 클래스 방식으로 재구현.
+  - 이 과정에서 스크롤 후 클릭 좌표가 실제로 화면에 보이는 위치인지 확인 안 하고 테스트
+    하다가 가짜 버그로 오인할 뻔한 것, Tabulator `rowClick`이 자체 기본 토글 *이후에*
+    실행된다는 것 등을 새로 발견해 `conversion-playbook.md` 5-24~5-28에 기록.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
   **아직 커밋 전.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
@@ -463,9 +496,10 @@
 10. ~~menu_id 10800 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `555dd4c`).
 11. ~~menu_id 10900 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, max-width 버그
     수정 `4417d68` + 화면 자체 `8517feb`, 두 커밋으로 분리).
-12. menu_id 11000("내려받기 & 가져오기", grid::export.xfdl) 화면 전환 완료(11/40) —
-    **커밋 여부 사용자 확인 대기.** 화면 전환 29개 남음.
-13. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+12. ~~menu_id 11000 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `14e4654`).
+13. menu_id 11100("복사 & 붙여넣기", grid::copypaste.xfdl) 화면 전환 완료(12/40) —
+    **커밋 여부 사용자 확인 대기.** 화면 전환 28개 남음.
+14. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
     저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
     커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
     README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

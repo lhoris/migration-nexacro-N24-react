@@ -16,6 +16,7 @@ import { QuantumGrid } from "./routes/converted/QuantumGrid";
 import { FreezePanes } from "./routes/converted/FreezePanes";
 import { SmartScroll } from "./routes/converted/SmartScroll";
 import { ExportImport } from "./routes/converted/ExportImport";
+import { CopyPaste } from "./routes/converted/CopyPaste";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -33,6 +34,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   "10800": FreezePanes,
   "10900": SmartScroll,
   "11000": ExportImport,
+  "11100": CopyPaste,
 };
 
 export default function App() {

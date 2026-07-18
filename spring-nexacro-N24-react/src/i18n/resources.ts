@@ -164,6 +164,13 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "largedata.status": "서버/네트워크시간 {network} 초, 렌더링시간 {render} 초, 조회건수 {rows} 건",
     "largedata.search": "조회",
 
+    // -- 실제 Nexacro stringresource (grid::progressload.xfdl / progressload_desc.xfdl) --
+    "grid.progressload": "분할 조회 - ProgressLoad",
+    "grid.progressload.desc":
+      "대용량의 데이터를 조회 할 때, 많은 양의 데이터를 한 번에 불러오려고 하다 보면 OOM(Out of Memory) 발생 가능성이 높아집니다.\n이를 회피하기 위해 Progressload 기능으로 데이터를 row 단위로 분할 조회 할 수 있습니다.\n또한, 데이터를 분할 조회 함으로써 사용자의 대기 시간을 감축 시킬 수 있습니다.\n\n※ 서버에서 OOM이 발생 하지 않고 데이터 통신이 되어도, 브라우저 내에서 해당 데이터를 처리하면서 요구되는 메모리 사용량이 브라우저 한계를 초과할 경우 오류가 발생 할 수 있습니다.",
+    "splitlookup.status": "조회 건수 {loaded} / {total} 건",
+    "splitlookup.search": "조회",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -346,6 +353,12 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
       "Under Search Criteria, select the number of data (10,000/50,000/100,000) and click the Inquiry button. At the end of the query, the data is rendered in the grid and displayed on the screen, separating the server/network interval and the rendering time.",
     "largedata.status": "Server/Network {network} sec, UI Rendering {render} sec, {rows} rows",
     "largedata.search": "Search",
+
+    "grid.progressload": "Split lookup - ProgressLoad",
+    "grid.progressload.desc":
+      "When searching for large amounts of data, Trying to load a large amount of data at once increases the likelihood of an out of memory (OOM) occurrence. To avoid this, you can split the data into rows by using the Progressload function.\nIn addition, the user's waiting time can be reduced by dividing the data.\n\n※ Even if data communication is established without OOM occurring in the server, When the required memory usage exceeds the browser limit while processing the data within the browser. Errors may occur.",
+    "splitlookup.status": "Number of views {loaded} / {total} rows",
+    "splitlookup.search": "Search",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

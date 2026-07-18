@@ -216,6 +216,22 @@
     전혀 없었다 — React StrictMode 이중 마운트 + 빠른 연속 클릭이 겹친 테스트 아티팩트였다
     (`conversion-playbook.md` 5-3 참고), 실제 버그 아님.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **커밋·push 완료(2026-07-18, 커밋 `de3396a`).**
+- **menu_id 11300("분할 조회", grid::progressload.xfdl) React 전환 완료(2026-07-18).**
+  `spring-nexacro-N24-react/src/routes/converted/SplitLookup.tsx` + `splitLookupMock.ts`.
+  10500/10600과 동일한 패턴 — `svc::progressload.do` 백엔드가 없어(원본도 조회하면
+  "조회 건수 0/100,000"에서 멈춤, Playwright로 확인) 클라이언트에서 10,000행씩 10번 배치로
+  나뉘어 도착하는 것과 동등한 시뮬레이션을 구현, 카운터가 실제로 0→10만까지 계단식으로
+  올라간다.
+  - **실사용 성능 버그를 직접 겪고 고침**: 처음엔 배치마다 `table.addData()`를 호출했는데,
+    Tabulator `layout: "fitDataFill"`이 데이터가 바뀔 때마다 전체 행의 셀 텍스트를 다시
+    실측해 컬럼 폭을 재계산하다 보니 누적 행 수가 늘어날수록 매 호출이 점점 느려져 9~10번째
+    배치(9만~10만행)에서 브라우저 탭이 30초 넘게 완전히 멈췄다(Playwright의
+    `browser_wait_for`/`browser_console_messages`까지 전부 타임아웃, 탭을 강제로 닫고 새로
+    열어야 복구됨). 컬럼에 이미 고정 `width`가 있으니 `layout` 옵션 자체를 없애고, 더
+    근본적으로는 진행률 카운터는 배치마다 올리되 실제 `table.setData()`는 전체 데이터를 다
+    모은 뒤 한 번만 호출하도록 바꿔 해결(`conversion-playbook.md` 5-8 참고).
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
   **아직 커밋 전.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
@@ -225,8 +241,9 @@
 4. ~~menu_id 10300 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `5b18c72`).
 5. ~~menu_id 10400 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `b1a0c94`).
 6. ~~menu_id 10500 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `5f2cd30`).
-7. menu_id 10600 화면 전환 완료(6/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 34개 남음.
-8. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+7. ~~menu_id 10600 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `de3396a`).
+8. menu_id 11300 화면 전환 완료(7/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 33개 남음.
+9. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
    저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
    커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
    README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

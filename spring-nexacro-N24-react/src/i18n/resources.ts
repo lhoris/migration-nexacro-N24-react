@@ -188,6 +188,20 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.freezepanes.desc":
       "틀 고정 기능은 그리드 컴포넌트에 표현되는 많은 데이터를 효과적으로 스크롤 할 수 있는 기능입니다.\n본 샘플과 같이 그리드 컨텍스트 메뉴로 표준화할 경우 그리드 사용편의성을 더욱 높일수 있습니다.",
 
+    // -- 실제 Nexacro stringresource (grid::smartscroll.xfdl / smartscroll_desc.xfdl) --
+    "grid.smartscroll.title": "스마트 스크롤",
+    "grid.smartscroll.subtitle":
+      "많은 표현식이 적용되거나 대량 데이터가 로딩된 그리드에서도 고속의 스크롤을 지원합니다. 스크롤 타입을 선택하고 그리드 우측 트랙바를 마우스로 이동 시켜보세요.",
+    "grid.smartscroll.staScrollType": "스크롤 타입",
+    "grid.smartscroll.default": "기본",
+    "grid.smartscroll.trackbarfollow": "스크롤 위치",
+    "grid.smartscroll.topdisplay": "상단",
+    "grid.smartscroll.topbottomdisplay": "상하단",
+    "grid.smartscroll.centerdisplay": "중앙",
+    "grid.smartscroll.topcenterbottomdisplay": "상중하단",
+    "grid.smartscroll.desc":
+      "Grid 컴포넌트는 화면에 표시할 데이터 행이 많아지면 스크롤바가 표시됩니다. 이런 경우 스크롤바를 움직여서 데이터를 탐색하게 되는데 스크롤바를 움직이면서 화면에 표시되는 데이터를 계속 표시해 주어야 합니다. 브라우저 입장에서도 스크롤바를 움직이는 동안 데이터를 표시해 주는 작업이 부담이 될 수 있고 사용자 입장에서는 스크롤바를 움직이면서 원하는 데이터를 찾기가 쉽지 않습니다.\nSmart Scroll 기능은 이런 불편을 어느 정도 해소해 주는 팁 같은 기능입니다. Grid 컴포넌트에 'fastvscrolltype' 속성값을 설정하면 Smart Scroll 기능을 적용할 수 있습니다.\n(종류 : default, top display, center display, top&bottom display, top&center&bottom display, trackbar follow)",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -391,6 +405,19 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.freezepanes.brnFixFree": "Cancel",
     "grid.freezepanes.desc":
       "The frame freezing function is that allows you to effectively scroll through a lot of data expressed in the grid component.\nIf you standardize the grid context menu as in this sample, you can further increase the convenience of using the grid.",
+
+    "grid.smartscroll.title": "Smart Scroll",
+    "grid.smartscroll.subtitle":
+      "Supports high-speed scrolling even in grids with many expressions applied or loaded with large amounts of data. Select the scroll type and move the track bar on the right side of the grid with the mouse.",
+    "grid.smartscroll.staScrollType": "Scroll Type",
+    "grid.smartscroll.default": "None",
+    "grid.smartscroll.trackbarfollow": "Trackbar follow",
+    "grid.smartscroll.topdisplay": "Top display",
+    "grid.smartscroll.topbottomdisplay": "Top & bottom display",
+    "grid.smartscroll.centerdisplay": "Middle display",
+    "grid.smartscroll.topcenterbottomdisplay": "Top & center & bottom display",
+    "grid.smartscroll.desc":
+      "The Grid component displays a scroll bar as there are more rows of data to display on the screen. In this case, you will navigate through the data by moving the scroll bar, and you will need to move the scroll bar and continue to display the data displayed on the screen. From a browser perspective, displaying data while moving the scrollbar can be a burden, and from the user's point of view, it's not easy to move the scrollbar and find the data they want.\nThe Smart Scroll feature is a tip-like feature that eliminates some of these inconveniences. The Smart Scroll function is applicable by setting the 'fastvscrolltype' property value on the Grid component.\n(Type : default, top display, center display, top&bottom display, top&center&bottom display, trackbar follow)",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

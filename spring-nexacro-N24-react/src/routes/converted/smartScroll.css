@@ -1,0 +1,103 @@
+/* 그리드 화면은 .work-card의 max-width 캡을 없애 원본처럼 작업 영역 폭을 그대로 따라가게
+   한다 — largeData.css 상단 주석 참고. `:has(.ss-card)`는 마커 클래스가 work-card
+   자기 자신에 있어 후손 검사만 하는 :has()가 절대 매칭 못 하던 버그라 `.work-card.ss-card`로
+   고침(이 캡이 처음부터 적용된 적이 없었음 — computedStyle로 확인). */
+.work-card.ss-card {
+  max-width: none;
+}
+
+.ss-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.ss-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.ss-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.ss-toolbar-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.ss-radio-columns {
+  display: flex;
+  gap: 40px;
+  flex: 1;
+}
+
+.ss-radio-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ss-radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ss-grid-mount {
+  margin-top: 4px;
+}
+
+/* 원본 Grid.js의 "떠 있는 미리보기 행"(_createHighlightRow 계열) 재현. 스크롤되는 실제
+   행들 위에 겹쳐 보여야 하므로 배경은 반드시 완전 불투명해야 한다(rgba를 쓰면 아래로
+   지나가는 행이 비쳐 보이는 문제를 이미 FreezePanes에서 겪었다). */
+.ss-float-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  z-index: 5;
+  pointer-events: none;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.ss-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.ss-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.ss-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

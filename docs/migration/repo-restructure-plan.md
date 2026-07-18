@@ -355,7 +355,67 @@
     우측열고정/행열고정/취소 전부 재검증(중복 레코드 없음, 선택 복원, 스크롤바 1개,
     콘솔 에러 0건, 클릭 반응 속도 유지 확인) — `conversion-playbook.md` 7절 참고.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
-  **아직 커밋 전.**
+  **커밋·push 완료(2026-07-18, 커밋 `555dd4c`).**
+
+- **menu_id 10900("스마트 스크롤", grid::smartscroll.xfdl) React 전환 진행 중(2026-07-18).**
+  `SmartScroll.tsx` + `smartScrollRealData.ts`(dsList에서 그대로 추출한 실제 데이터 10,000행
+  전부 — 이 화면은 컬럼 수는 FreezePanes와 비슷하지만 행 수가 훨씬 많다는 게 핵심 시연
+  포인트). 원본은 `grdList.fastvscrolltype` 속성(6종 라디오: 기본/스크롤위치/상단/상하단/
+  중앙/상중하단)을 바꿔가며 우측 스크롤바를 드래그하는 동안 나오는 위치 인디케이터를
+  보여주는 기능.
+  - **원본 스크롤바 드래그를 Playwright로 재현하지 못해서** 처음엔 인디케이터 구현을
+    보류하고 사용자에게 직접 드래그해보고 설명해달라고 요청했는데, 사용자가 "네가 원본
+    기능을 제대로 이해 못 한 거 아니냐"고 되물어서 다시 조사함 — **원본 런타임 소스
+    `nexacrolib/component/Grid.js`를 직접 grep해서 `set_fastvscrolltype`/
+    `_floatingScrollRows_callback`/`_createHighlightRow` 함수 본문을 읽고 정확한 동작을
+    확인했다(Playwright로 못 재현한다고 포기할 게 아니라 원본 소스를 읽는 게 정답이었음
+    — `conversion-playbook.md` 1절 참고).** 확인된 동작: 스크롤 중 테두리(`1px solid
+    gray`)+그림자(`1px 1px 12px gray`)가 있는 "떠 있는 미리보기 행"을 1~3개 겹쳐 보여주며
+    (진짜 스크롤 위치에 해당하는 실제 데이터), topdisplay=맨 위 고정 1개, centerdisplay=
+    중앙 고정 1개, topbottomdisplay=맨 위+맨 아래 2개, topcenterbottomdisplay=위 세 개
+    전부, trackbarfollow=트랙바 세로 위치 비율만큼 부드럽게 움직이는 1개, default=없음.
+    이 로직 그대로 구현(`SmartScroll.tsx`, 스크롤 이벤트에서 순수 DOM 조작으로 미리보기
+    행 위치/내용 갱신, 스크롤 멈추고 300ms 후 원본처럼 사라짐 — 원본의 "실제 바디를
+    가려서 렌더링 비용을 아끼는" 부분은 우리 그리드엔 그 성능 문제 자체가 없어서 제외).
+  - **구현 중 버그 2개**: (1) 모드를 바꾸면 이전 모드가 쓰던 위치의 미리보기 행이 안
+    지워지고 남는 문제 — 매 스크롤마다 전부 숨기고 이번 모드에 필요한 것만 다시 켜서
+    해결. (2) 미리보기 행을 스크롤되는 `.tabulator-tableholder`의 자식으로 넣었더니
+    `position:absolute`여도 콘텐츠와 함께 스크롤돼 화면 밖으로 사라짐(인라인 스타일은
+    정상인데 `getBoundingClientRect()`가 전부 0으로 나와서 확인) — 스크롤 안 되는
+    `.tabulator` 루트에 붙이고 헤더 높이만큼 보정해서 해결(`conversion-playbook.md`
+    5-23 참고).
+  - Gender 컬럼 색상(원본 `cssclass="expr:gender=='Male'?'grd_txtBlue':'grd_txtRed'"`,
+    테마 정의는 순수 `color:blue`/`color:red`)과 Chk 컬럼 승인/반려 아이콘(원본
+    `displaytype="imagecontrol"` + `bind:ok`)은 SortFilterFind.tsx에 이미 있던 동일 패턴을
+    재사용해 구현.
+  - **작업 중 원본에 없는 Tabulator 테마 기본값을 하나 더 발견**: 모든 행의 첫 번째
+    컬럼에 10px 색상 액센트 바가 자동으로 붙는다(`border-left:10px solid #3759d7`, 짝수
+    행은 더 옅은 색). 이미 나온 FreezePanes에도 똑같이 있었는데 지금까지 못 잡았던
+    것 — `shell.css`에 전역으로 추가.
+  - **그 전역 수정이 처음엔 `npm run build` 결과물에서 조용히 사라지는 문제가 있었다** —
+    선택자 텍스트를 Tabulator 원본과 완전히 똑같이 썼더니 esbuild CSS 압축기가 값이
+    다른 동일 선택자 규칙을 병합하면서 `!important`를 무시하고 통째로 버린 것(dev
+    서버에서는 정상으로 보여서 처음엔 못 알아챔). `.shell` 조상 선택자를 붙여 선택자
+    텍스트 자체를 다르게 만들어 해결하고, `dist/assets/*.css`를 직접 grep해서 규칙이
+    실제로 살아있는지 확인한 뒤 게이트웨이(:3000)에서 재검증함(`conversion-playbook.md`
+    5-22 참고 — 이번 기회에 기존 padding-left 전역 수정 두 개도 재빌드 결과물에서
+    무사한지 재확인함).
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  - **사용자가 확인 후: "워크 카드 영역이 원래 이렇게 좁냐, 원본도 그러냐"고 질문 —
+    원본 divWork를 실측(990px, 창 폭에서 LNB만 뺀 나머지를 거의 꽉 채움)했더니 우리처럼
+    화면마다 임의의 max-width 캡(900~1200px)을 씌우는 구조가 아니었다. 고치는 과정에서
+    **더 큰 문제 발견**: 이미 있던 캡 규칙 대부분이 `.work-card:has(.xx-card)`처럼 마커
+    클래스를 work-card 자기 자신에 붙여둔 채 `:has()`(후손만 검사)로 검사하고 있어서,
+    **처음 추가된 순간부터 한 번도 실제로 적용된 적이 없었다**(FreezePanes/LargeData/
+    Pivot/QuantumGrid/SplitLookup/SmartScroll 6개 화면 — 이미 커밋된 5개 포함,
+    `getComputedStyle()`로 직접 확인). 우연히 진짜 후손 클래스도 같이 나열해 뒀던
+    4개 화면(Pagination/Personalization/Renderer/SortFilterFind)만 정상 작동 중이었다.
+    `.work-card.xx-card`(같은 엘리먼트면 그냥 붙여쓰기)로 선택자를 고치고, 그리드 화면
+    10개 전부 `max-width: none`으로 통일해 원본처럼 작업 영역 폭을 그대로 따라가게 함
+    (`conversion-playbook.md` 7절 참고). 1200px/1600px 두 뷰포트에서 그리드 10개 전부
+    재검증(콘솔 에러 0건), FreezePanes 행/열 고정 기능도 폭이 넓어진 상태에서 회귀
+    테스트 완료.
+  **아직 커밋 전 — 사용자 최종 확인 대기 중.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
 1. ~~`spring-nexacro-N24/` 복사본 최종 검토~~ — 완료(빌드·실행 확인까지 마침).
@@ -367,8 +427,10 @@
 7. ~~menu_id 10600 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `de3396a`).
 8. ~~menu_id 11300 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `f82b57e`).
 9. ~~menu_id 10700 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `3c96652`).
-10. menu_id 10800 화면 전환 완료(9/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 31개 남음.
-11. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+10. ~~menu_id 10800 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `555dd4c`).
+11. menu_id 10900("스마트 스크롤", grid::smartscroll.xfdl) 화면 전환 완료(10/40) —
+    **커밋 여부 사용자 확인 대기.** 화면 전환 30개 남음.
+12. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
     저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
     커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
     README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

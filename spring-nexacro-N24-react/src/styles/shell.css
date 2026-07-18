@@ -389,3 +389,19 @@
 .tabulator-header .tabulator-frozen.tabulator-frozen-left {
   padding-left: 0 !important;
 }
+
+/* 같은 테마의 또 다른 기본값: 모든 행의 "첫 번째 컬럼"에 장식용 10px 색상 액센트 바를
+   자동으로 붙인다(`.tabulator-row .tabulator-cell:first-child{border-left:10px solid
+   #3759d7}`, 짝수 행은 `#627ce0`로 더 옅게) — 원본 Nexacro 그리드에는 이런 액센트 바가
+   전혀 없다. 10900 화면(스마트 스크롤) 작업 중 발견했고, 이미 나온 10800(틀 고정)에도
+   똑같이 있었던 걸 확인 — Tabulator를 쓰는 모든 화면에 공통이라 여기서 한 번에 없앤다. */
+/* 선택자를 Tabulator 원본과 똑같은 텍스트로 두면(`.tabulator-row .tabulator-cell:
+   first-child`) 빌드 시 CSS 압축기가 동일 선택자 규칙들을 하나로 합치면서 !important를
+   무시하고 마지막 값(Tabulator의 색상 있는 값)을 채택해버리는 문제를 실제로 겪었다 —
+   dev 서버(HMR)에서는 정상 적용됐지만 `npm run build` 결과물에는 이 규칙 자체가 통째로
+   사라져 있었다(gateway :3000에서 액센트 바가 그대로 보임, dist CSS를 grep해서 확인).
+   `.shell` 조상 선택자를 붙여 특이도를 올리는 동시에 선택자 문자열 자체를 다르게 만들어
+   그 합치기를 피한다. */
+.shell .tabulator-row .tabulator-cell:first-child {
+  border-left: 1px solid #fff !important;
+}

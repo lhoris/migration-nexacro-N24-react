@@ -14,6 +14,7 @@ import { LargeData } from "./routes/converted/LargeData";
 import { SplitLookup } from "./routes/converted/SplitLookup";
 import { QuantumGrid } from "./routes/converted/QuantumGrid";
 import { FreezePanes } from "./routes/converted/FreezePanes";
+import { SmartScroll } from "./routes/converted/SmartScroll";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -29,6 +30,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   "11300": SplitLookup,
   "10700": QuantumGrid,
   "10800": FreezePanes,
+  "10900": SmartScroll,
 };
 
 export default function App() {

@@ -226,6 +226,14 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.copypaste.desc":
       "PC의 클립보드를 활용한 기능입니다.\n그리드에 선택된 데이터를 클립보드에 복사하거나 복사된 데이터를 그리드 또는 엑셀 프로그램에 붙여넣을 수 있는 편리함을 제공합니다.",
 
+    // -- 실제 Nexacro stringresource (grid::dragndrop.xfdl / dragndrop_desc.xfdl) --
+    "grid.dragndrop": "드래그 & 드롭",
+    "grid.dragndrop.desc":
+      "넥사크로 컴포넌트들이 제공하는 ondrag와 ondrop 이벤트들을 이용해서 그리드의 컬럼을 동적으로 생성하거나 데이터를 이동하는 등 사용자가 편리한 방식으로 UI를 구성할 수 있습니다.\n\n왼쪽의 컬럼 목록에서 컬럼을 drag하여 그리드 위에 drop 해 보세요. 순서대로 컬럼이 동적으로 생성되고 데이터를 확인할 수 있습니다.\n하단의 멀티 처리의 경우 추가할 컬럼 앞의 체크박스를 선택한 뒤 drag하여 그리드에 drop 해 보세요. 초기화 버튼을 누르면 추가된 컬럼 정보를 전부 삭제합니다.",
+    "grid.dragndrop.dragdesc": "왼쪽의 컬럼 목록에서 컬럼을 drag하여 그리드 위에 drop 해 보세요.",
+    "grid.dragndrop.checkdesc": "체크박스를 선택한 뒤 drag하여 그리드에 drop 해 보세요.",
+    "grid.dragndrop.reset": "초기화",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -462,6 +470,13 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.copypaste.selection.remark": "※ Use Shift, Ctrl keys for multiple selection",
     "grid.copypaste.desc":
       "This is a function that utilizes the PC's clipboard.\nIt provides convenience to copy the selected data on the grid to the clipboard or paste the copied data to the grid or Excel program.",
+
+    "grid.dragndrop": "Drag & Drop",
+    "grid.dragndrop.desc":
+      "The ondrag and ondrop events provided by the Nexacro components allow users to organize the UI in a convenient way, such as dynamically creating columns in the grid or moving data.\n\nDrag a column from the list of columns on the left and drop it over the grid. Columns are dynamically generated in order and data can be viewed.\nFor multitasking at the bottom, select the check box before the column you want to add, drag and drop it on the grid. Press the reset button to delete all additional column information.",
+    "grid.dragndrop.dragdesc": "Drag the column, drop it on the grid.",
+    "grid.dragndrop.checkdesc": "Check and drag the columns, drop them on the grid.",
+    "grid.dragndrop.reset": "Reset",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

@@ -1,0 +1,189 @@
+/* 그리드 화면은 원본 divWork처럼 작업 영역 폭을 그대로 사용한다. */
+.work-card.dd-card {
+  max-width: none;
+}
+
+.dd-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+
+.dd-section + .dd-section {
+  margin-top: 22px;
+}
+
+.dd-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 34px;
+  margin-bottom: 10px;
+}
+
+.dd-section-head h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.dd-reset {
+  min-width: 80px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dd-reset:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.dd-grid-pair {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.dd-source-grid {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  overflow: hidden;
+  min-height: 324px;
+}
+
+.dd-source-grid table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.dd-source-grid th,
+.dd-source-grid td {
+  height: 46px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 13px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.dd-source-grid th {
+  background: var(--paper-alt, rgba(127, 127, 127, 0.06));
+  font-weight: 700;
+}
+
+.dd-source-grid tbody tr {
+  cursor: grab;
+}
+
+.dd-source-grid tbody tr:active {
+  cursor: grabbing;
+}
+
+.dd-source-grid tbody tr:hover,
+.dd-source-grid tbody tr.is-checked {
+  background: rgba(37, 68, 183, 0.08);
+}
+
+.dd-check-cell {
+  width: 40px;
+  padding: 0;
+}
+
+.dd-check-cell input {
+  width: 15px;
+  height: 15px;
+}
+
+.dd-selected-note {
+  height: 46px;
+  border-top: 1px solid var(--line);
+  padding: 13px 10px 0;
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dd-drop-zone {
+  min-width: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+.dd-drop-zone.is-empty {
+  border-color: rgba(37, 68, 183, 0.28);
+}
+
+.dd-grid-mount {
+  min-width: 0;
+}
+
+.dd-drop-zone .tabulator {
+  border-radius: 6px;
+}
+
+.dd-drop-zone .tabulator .dd-reorderable-col {
+  cursor: grab;
+}
+
+.dd-drop-zone .tabulator .dd-reorderable-col:active {
+  cursor: grabbing;
+}
+
+.dd-drop-zone .tabulator .dd-reorderable-col.is-reorder-before {
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.dd-drop-zone .tabulator .dd-reorderable-col.is-reorder-after {
+  box-shadow: inset -3px 0 0 var(--accent);
+}
+
+.dd-drop-zone .tabulator-placeholder {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dd-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.dd-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.dd-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}
+
+@media (max-width: 900px) {
+  .dd-grid-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .dd-source-grid {
+    min-height: auto;
+  }
+}

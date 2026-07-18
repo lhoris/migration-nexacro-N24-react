@@ -1,0 +1,74 @@
+.work-card:has(.pz-grid-mount) {
+  max-width: 900px;
+}
+
+.pz-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.pz-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.pz-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.pz-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.pz-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pz-grid-mount {
+  margin-top: 4px;
+}
+
+.pz-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pz-desc-block:not(:first-child) {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.pz-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.pz-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

@@ -92,6 +92,27 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     // React 쪽 접근성을 위해 새로 붙인 라벨(원본 대응 없음).
     "pagination.search": "조회",
 
+    // -- 실제 Nexacro stringresource (grid::personalization.xfdl / personalization_desc.xfdl) --
+    "grid.personalization": "개인화",
+    "grid.personalization.default": "초기화",
+    "grid.personalization.save": "저장",
+    "grid.personalization.desc":
+      "최근에는 시스템 사용자들의 개인화 기능에 대한 요구가 많습니다. 개발자가 정의해 놓은 컬럼의 순서나 사이즈 등을 변경 후 다음에 시스템에 접속해도 그 포맷이 유지되기를 원합니다.\n넥사크로의 그리드에서 제공하는 API와 HTML5에서 제공하는 Local Storage 기능을 이용하여 개인화 기능을 사용할 수 있습니다.",
+    "grid.personalization.cellmoving": "셀 이동",
+    "grid.personalization.cellmoving.desc":
+      "그리드의 cellmovingtype 속성을 설정하면 사용자가 마우스 드래그 앤 드롭을 이용하여 컬럼의 위치를 변경할 수 있습니다.",
+    "grid.personalization.cellsizing": "셀 크기 변경",
+    "grid.personalization.cellsizing.desc":
+      "그리드에서 한 셀에 많은 양의 데이터가 들어 있으면 전체 내용을 다 볼 수 없는 경우가 있습니다. 이럴 때 엑셀에서처럼 자유롭게 컬럼과 로우 크기를 조절하는 기능이 있으면 사용자가 좀 더 편하게 그리드를 이용할 수 있습니다.\ncellsizingtype 속성은 사용자가 마우스를 셀이나 Head의 경계 부분에 가져가면 포인터가 바뀌고 그 상태에서 마우스 버튼을 누르고 움직이면 셀의 크기를 변경할 수 있습니다.",
+    "grid.personalization.columnhiding": "컬럼 숨기기",
+    "grid.personalization.columnhiding.desc":
+      "숨기고자 하는 컬럼에서 마우스 오른쪽 클릭을 하면 컨텍스트 메뉴가 표시되고 '컬럼 숨기기' 메뉴를 클릭하면 컬럼이 보이지 않게 됩니다. 숨긴 컬럼을 다시 표시할 때는 Head 영역 아무 컬럼에서나 마우스 오른쪽 클릭하여 컨텍스트 메뉴에서 '컬럼 보이기' 메뉴에서 '전체 컬럼 보이기'나 특정 컬럼을 선택하면 다시 표시됩니다.",
+    "grid.personalization.rowhiding": "행 숨기기",
+    "grid.personalization.rowhiding.desc":
+      "숨기고자 하는 행에서 마우스 오른쪽 클릭을 하면 컨텍스트 메뉴가 표시되고 '행 숨기기' 메뉴를 클릭하면 행이 보이지 않게 됩니다. 숨긴 행을 다시 표시할 때는 Body 영역 아무 행에서나 마우스 오른쪽 클릭하여 컨텍스트 메뉴에서 '행 보이기' 메뉴에서 '전체 행 보이기'나 특정 행을 선택하면 다시 표시됩니다.",
+    "grid.personalization.default.desc":
+      "이렇게 변경된 포맷 정보를 '저장'버튼을 눌러서 저장한 뒤 다시 이 화면에 접속하면 저장된 포맷이 자동으로 적용이 됩니다. '초기화' 버튼을 누르면 개발자가 정의한 기본 포맷이 적용됩니다.",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -212,6 +233,26 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
       "In the data area of the grid, when you use the mouse wheel to lower the bottom or the end of the scroll trackbar, the next data is automatically added by looking up.\nThis can cause performance degradation if too much data is loaded, as it continues to add data when scrolling.\nYou can also apply the method of adding data when you click a button, such as 'Show more results' without scrolling.",
     "inquiry.result": "Inquiry result",
     "pagination.search": "Search",
+
+    "grid.personalization": "Personalization",
+    "grid.personalization.default": "Set Default",
+    "grid.personalization.save": "Save",
+    "grid.personalization.desc":
+      "Recently, there has been a lot of demand for personalization features from system users. After changing the order or size of the column defined by the developer, I want the format to be maintained the next time I connect to the system.\nPersonalization functions can be used using API provided by grid of Nexacro and Local Storage provided by HTML5.",
+    "grid.personalization.cellmoving": "Cell moving",
+    "grid.personalization.cellmoving.desc":
+      "Setting the cellmovingtype property of the grid allows the user to change the position of the column using mouse drag and drop.",
+    "grid.personalization.cellsizing": "Cell sizing",
+    "grid.personalization.cellsizing.desc":
+      "In some cases, if a cell in a grid contains a large amount of data, you may not be able to see the entire content. If you have the ability to freely adjust column and low size, as in Excel, you can use the grid more comfortably.\nThe cellsizingtype property changes the pointer when the user moves the mouse over the cell or the border of the head, and in that state, press and move the mouse button to change the size of the cell.",
+    "grid.personalization.columnhiding": "Column hiding",
+    "grid.personalization.columnhiding.desc":
+      "Right-clicking a column that you want to hide will display a context menu, and clicking the Hide Column menu will make the column invisible. When displaying hidden columns again, they are displayed again by right-clicking any column in the Head Area and selecting 'Show all columns' or a specific column in the context menu.",
+    "grid.personalization.rowhiding": "Row hiding",
+    "grid.personalization.rowhiding.desc":
+      "Right-clicking a row that you want to hide will display a context menu, and clicking the Hide Row menu will make the row invisible. When displaying hidden rows again, they are displayed again by right-clicking any row in the Body Area and selecting 'Show all rows' or a specific row in the context menu.",
+    "grid.personalization.default.desc":
+      "If you press the 'Save' button to save this changed format information and access this screen again, the saved format will be automatically applied. Pressing the 'Initialization' button applies the default format defined by the developer.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

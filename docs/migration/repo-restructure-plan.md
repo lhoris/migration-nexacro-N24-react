@@ -150,14 +150,32 @@
     실제로는 `<StrictMode>`의 개발 모드 이중 마운트와 테스트 스크립트의 타이밍 경합
     때문이었음을 확인(라이브러리 버그 아님) — `conversion-playbook.md` 5-3번 참고.
   - `target: "react"`로 전환 완료(`menu.ts`, `serveDirect` 제거), `App.tsx`의
-    `CONVERTED_SCREENS`에 등록. **아직 커밋 전.**
+    `CONVERTED_SCREENS`에 등록. **커밋·push 완료(2026-07-18, 커밋 `5b18c72`).**
+- **menu_id 10400("개인화", grid::personalization.xfdl) React 전환 완료(2026-07-18).**
+  `spring-nexacro-N24-react/src/routes/converted/Personalization.tsx` +
+  `personalizationRealData.ts`(도서 아님, 실제 7행 인물/회사 데이터). 컬럼 이동
+  (`movableColumns`)·크기조절(기본제공)·우클릭 컨텍스트 메뉴로 컬럼/행 숨기기·"저장"
+  버튼으로 localStorage 영구 저장까지 구현.
+  - Tabulator `headerContextMenu`/`rowContextMenu`는 타입 선언엔 정적 배열만 있지만 실제로는
+    함수를 받아 매번 동적으로 메뉴를 만들 수 있다(원본 소스 그대로 재현: "Show All
+    Column"/"Show All Row"는 숨긴 개수 조건 없이 항상 같이 나오고, 개별 항목은 컬럼의 실제
+    현재 캡션 그대로, 행은 `"Row : "+번호` 형식 — 전부 원본을 실제로 우클릭해보며 정확한
+    문구를 확인함).
+  - 컬럼을 "이미 숨긴 상태로" 생성해야 할 때(복원 시) `tableBuilt` 안에서 `column.hide()`를
+    부르면 `isVisible()`은 바뀌는데 DOM엔 반영 안 되는 경합이 있어서, 컬럼 정의 자체에
+    `visible: false`를 넣는 방식으로 해결(`conversion-playbook.md` 5-5번).
+  - Amount 컬럼 통화 기호(￦), 헤더 텍스트(name/address/amount/date/company/approval 실제
+    messageid 재사용), 버튼 위치(그리드 아래 우측 정렬)까지 원본 실측으로 맞춤.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **아직 커밋 전.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
 1. ~~`spring-nexacro-N24/` 복사본 최종 검토~~ — 완료(빌드·실행 확인까지 마침).
 2. ~~`v2-hybrid-pilot` 커밋 및 태그~~ — 완료(2026-07-18, 커밋 `65489ef`, push까지 완료).
 3. ~~menu_id 10200 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `c7a99d6`).
-4. menu_id 10300 화면 전환 완료(3/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 37개 남음.
-4. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+4. ~~menu_id 10300 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `5b18c72`).
+5. menu_id 10400 화면 전환 완료(4/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 36개 남음.
+6. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
    저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
    커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
    README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

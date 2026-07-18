@@ -113,6 +113,43 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.personalization.default.desc":
       "이렇게 변경된 포맷 정보를 '저장'버튼을 눌러서 저장한 뒤 다시 이 화면에 접속하면 저장된 포맷이 자동으로 적용이 됩니다. '초기화' 버튼을 누르면 개발자가 정의한 기본 포맷이 적용됩니다.",
 
+    // -- 실제 Nexacro stringresource (grid::pivot.xfdl / pivot_desc.xfdl) --
+    "grid.pivot": "피벗",
+    "grid.pivot.desc":
+      "엑셀에서는 데이터를 분석 하기 위해 피벗 기능을 활용합니다. 사용자가 행/열을 드래그 앤 드롭으로 손쉽게 조작하고 결과를 확인할 수 있습니다. 넥사크로에서는 nexacro pivot이라는 오픈소스 컴포넌트를 통해 피벗 기능을 제공합니다.\n전용 편집기를 제공하여 개발자와 사용자 모두 쉽게 피벗 기능을 적용할 수 있습니다.",
+    "grid.pivot.largedata": "대용량 데이터",
+    "grid.pivot.largedata.desc":
+      "검색조건에서 데이터 건수(3만/10만/20만/40만건)를 선택하고 '조회' 버튼을 클릭합니다. 조회가 끝나면 데이터를 변환하여 피벗 그리드에 렌더링 되고 조회 시간과 피벗 렌더링 시간을 구분하여 화면에 표시됩니다.\n\n패널 영역에서 행/열을 드래그 앤 드롭하여 조건을 변경하고 '실행' 버튼을 클릭하거나 '자동실행' 버튼을 누르고 조건을 변경하면 변경된 옵션에 따라 새로 피벗이 실행됩니다.",
+    "grid.pivot.value.desc":
+      "표현되는 형식은 합계, 평균, 개수, 최대값, 최소값이고 필요한 경우 사용자 함수를 등록하여 적용할 수 있습니다.",
+    "grid.pivot.export": "엑셀로 내려받기",
+    "grid.pivot.export.desc":
+      "nexacro pivot는 넥사크로의 기본 컴포넌트들을 조합하여 만들어진 컴포넌트입니다. 피벗컴포넌트의 getPivotGrid 함수를 이용하여 그리드 오브젝트를 반환 받아서 ExcelExportObject 오브젝트를 이용해 익스포트 할 수 있습니다.\n\n화면의 엑셀 내려받기 버튼을 눌러보세요.",
+    "grid.rowcount": "행 갯수",
+    "grid.export": "내보내기",
+    // 원본 svc::pivotdata 백엔드가 이 프로젝트엔 없어(원본도 실제로 클릭하면 "FAILED" 알럿만
+    // 뜬다 — Playwright로 확인) 아래 키들은 클라이언트 목업 피벗 엔진 UI용으로 새로 추가한
+    // 것들이다(원본 messageid 대응 없음). 단, 축 종류(전체/열/행/값)와 툴바 버튼 툴팁 문구는
+    // NxPivot 컴포넌트 자체의 내장 번역 리소스(NxPivot.message.js language.ko_kr/en_us)에서
+    // 실제 값을 그대로 가져왔다.
+    "pivot.zone.fields": "전체",
+    "pivot.zone.colAxis": "열",
+    "pivot.zone.rowAxis": "행",
+    "pivot.zone.values": "값",
+    "pivot.tool.rowsExpand": "행모두펼치기",
+    "pivot.tool.rowsCollapse": "행모두접기",
+    "pivot.tool.colsExpand": "열모두펼치기",
+    "pivot.tool.colsCollapse": "열모두접기",
+    "pivot.tool.panelCollapse": "패널접기",
+    "pivot.tool.panelExpand": "패널펼치기",
+    "pivot.tool.execute": "Pivot실행",
+    "pivot.tool.init": "초기화",
+    "pivot.tool.manual": "수동적용",
+    "pivot.tool.auto": "자동적용",
+    "pivot.total": "합계",
+    "pivot.search": "조회",
+    "pivot.status": "서버/네트워크시간 {network} 초, 렌더링시간 {render} 초, 조회건수 {rows} 건",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -253,6 +290,37 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
       "Right-clicking a row that you want to hide will display a context menu, and clicking the Hide Row menu will make the row invisible. When displaying hidden rows again, they are displayed again by right-clicking any row in the Body Area and selecting 'Show all rows' or a specific row in the context menu.",
     "grid.personalization.default.desc":
       "If you press the 'Save' button to save this changed format information and access this screen again, the saved format will be automatically applied. Pressing the 'Initialization' button applies the default format defined by the developer.",
+
+    "grid.pivot": "Pivot",
+    "grid.pivot.desc":
+      "Excel utilizes pivot function to analyze data. Users can easily drag and drop rows/columns and view results. The Nexacro provides pivot function through an open source component called nexacro pivot.\nDedicated editors make it easy for both developers and users to apply pivot functionality.",
+    "grid.pivot.largedata": "Large data pivot",
+    "grid.pivot.largedata.desc":
+      "Under Search Criteria, select the number of data (30,000/100,000/200,000/400,000) and click the Inquiry button. At the end of the query, the data is converted to be rendered in the pivot grid and displayed on the screen, separating the lookup time and pivot rendering time.\n\nDrag and drop rows/columns in the panel area to change the condition, click the 'Run' button, or press the 'AutoRun' button, and change the condition, depending on the changed option, a new pivot will be launched.",
+    "grid.pivot.value.desc":
+      "The formats expressed are sum, mean, count, maximum, and minimum, and if necessary, you can register and apply user functions.",
+    "grid.pivot.export": "Export to Excel",
+    "grid.pivot.export.desc":
+      "Nexacro pivot is a component created by combining the basic components of the Nexacro. You can export a grid object using the ExcelExportObject object by returning it using the getPivotGrid function of the pivot component.\n\nPress the Excel download button on the screen.",
+    "grid.rowcount": "Row count",
+    "grid.export": "Export",
+    "pivot.zone.fields": "All",
+    "pivot.zone.colAxis": "Columns",
+    "pivot.zone.rowAxis": "Rows",
+    "pivot.zone.values": "Values",
+    "pivot.tool.rowsExpand": "Expand rows",
+    "pivot.tool.rowsCollapse": "Collapse rows",
+    "pivot.tool.colsExpand": "Expand columns",
+    "pivot.tool.colsCollapse": "Collapse columns",
+    "pivot.tool.panelCollapse": "Collapse panel",
+    "pivot.tool.panelExpand": "Expand panel",
+    "pivot.tool.execute": "Run pivot",
+    "pivot.tool.init": "Reset",
+    "pivot.tool.manual": "Manual apply",
+    "pivot.tool.auto": "Auto apply",
+    "pivot.total": "Total",
+    "pivot.search": "Search",
+    "pivot.status": "Server/Network {network} sec, UI Rendering {render} sec, {rows} rows",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

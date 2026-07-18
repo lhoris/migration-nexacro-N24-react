@@ -167,6 +167,36 @@
   - Amount 컬럼 통화 기호(￦), 헤더 텍스트(name/address/amount/date/company/approval 실제
     messageid 재사용), 버튼 위치(그리드 아래 우측 정렬)까지 원본 실측으로 맞춤.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **커밋·push 완료(2026-07-18, 커밋 `b1a0c94`).**
+- **menu_id 10500("피벗", grid::pivot.xfdl) React 전환 완료(2026-07-18).**
+  `spring-nexacro-N24-react/src/routes/converted/Pivot.tsx` + `pivotEngine.ts`(범용 피벗
+  집계 엔진) + `src/data/pivotMock.ts`(목업 데이터 생성기). 이 화면은 다른 화면과 근본적으로
+  다른 문제가 있었다 — 원본 dsList는 `ColumnInfo`만 있고 실제 행 데이터가 없다(서버
+  `svc::pivotdata` 트랜잭션으로 채워지는 구조). **그 백엔드가 이 프로젝트엔 존재하지 않는다** —
+  원본 화면에서 직접 "조회" 버튼을 클릭해도 Playwright로 실측 확인한 결과 매번 "FAILED"
+  알럿만 뜨고 데이터가 안 나온다(`http://localhost:3000/pivotdata` → 405). 즉 원본 데모
+  사이트 자체에서도 이 화면의 피벗 기능은 실제로 동작한 적이 없다.
+  - 사용자에게 "원본처럼 깨진 상태를 재현" vs "클라이언트에서 목업 데이터로 실제 동작하는
+    피벗을 구현" 중 선택지를 물었고, 후자로 결정함 — 행/열 드래그 앤 드롭 자체가 이 화면의
+    핵심 기능이라 뼈대만 보여주면 요점을 놓친다고 판단.
+  - `pivotEngine.ts`에 rowAxis/colAxis 필드 개수(0~2개)에 관계없이 동작하는 범용 재귀 집계
+    엔진을 새로 작성함 — Tabulator의 `dataTree`(행 중첩)와 중첩 컬럼 그룹(`columns` 배열,
+    열 중첩)을 그대로 활용해 부모 합계를 직접 계산·부여하는 방식. Playwright로 부모-자식 합계가
+    실제로 일치하는지 여러 뎁스에서 실측 검증함(예: Seoul Sales 143,222,619 = Team 1
+    72,883,417 + Team 2 70,339,202, Team 1 72,883,417 = Online+Offline+Mobile 3개 채널 합).
+  - 필드를 4개 구역(전체/열/행/값) 사이로 옮기는 실제 HTML5 드래그 앤 드롭 구현. 축 종류
+    라벨("전체/열/행/값")과 툴바 버튼 툴팁(패널접기/Pivot실행/초기화/수동적용 등)은 새로
+    지어낸 문구가 아니라 NxPivot 컴포넌트 자체의 내장 번역 리소스(`NxPivot.message.js`의
+    `language.ko_kr`/`language.en_us`)에서 실측으로 가져온 진짜 값이다.
+  - "행모두접기/열모두접기" 토글은 Tabulator API를 직접 건드리는 대신 rowAxis/colAxis 배열을
+    한 단계로 잘라 같은 집계 엔진에 재사용하는 방식으로 구현(더 단순하고 결과도 동일).
+  - "수동적용"(기본값) vs "자동적용" 토글, "초기화" 버튼까지 원본 설명(`grid.pivot.largedata.desc`)
+    그대로 동작 재현.
+  - "내보내기" 버튼은 원본 `ExcelExportObject`(실제 xlsx) 대신 Tabulator 내장 CSV 다운로드로
+    대체함(추가 라이브러리 없이 가능한 선에서 기능 등가 — 문서화된 대체).
+  - dev 서버(:5173)·프로덕션 게이트웨이 빌드(:3000) 양쪽에서 조회→집계→드래그드롭→축소/확장→
+    초기화→내보내기까지 전 기능 Playwright로 검증, 콘솔 에러 0건.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
   **아직 커밋 전.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
@@ -174,8 +204,9 @@
 2. ~~`v2-hybrid-pilot` 커밋 및 태그~~ — 완료(2026-07-18, 커밋 `65489ef`, push까지 완료).
 3. ~~menu_id 10200 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `c7a99d6`).
 4. ~~menu_id 10300 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `5b18c72`).
-5. menu_id 10400 화면 전환 완료(4/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 36개 남음.
-6. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+5. ~~menu_id 10400 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `b1a0c94`).
+6. menu_id 10500 화면 전환 완료(5/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 35개 남음.
+7. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
    저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
    커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
    README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

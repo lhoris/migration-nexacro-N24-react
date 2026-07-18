@@ -9,6 +9,7 @@ import { SortFilterFind } from "./routes/converted/SortFilterFind";
 import { Renderer } from "./routes/converted/Renderer";
 import { Pagination } from "./routes/converted/Pagination";
 import { Personalization } from "./routes/converted/Personalization";
+import { Pivot } from "./routes/converted/Pivot";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -19,6 +20,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   "10200": Renderer,
   "10300": Pagination,
   "10400": Personalization,
+  "10500": Pivot,
 };
 
 export default function App() {

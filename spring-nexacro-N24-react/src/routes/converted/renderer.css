@@ -1,6 +1,7 @@
-/* work-card는 기본 640px 폭 제한 — 이 화면은 카탈로그 테이블(9컬럼)이 필요해 넓혀야 한다 */
+/* 그리드 화면은 .work-card의 max-width 캡을 없애 원본처럼 작업 영역 폭을 그대로 따라가게
+   한다 — largeData.css 상단 주석 참고(사용자 지적으로 발견한, 그리드 화면 전체의 공통 이슈). */
 .work-card:has(.rdr-card, .rdr-section) {
-  max-width: 1200px;
+  max-width: none;
 }
 
 .rdr-page-title {

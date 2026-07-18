@@ -150,9 +150,10 @@
   white-space: nowrap;
 }
 
-/* work-card는 폭이 640px로 제한되어 있는데 넓은 그리드(10~11컬럼)를 써야 한다 */
+/* 그리드 화면은 .work-card의 max-width 캡을 없애 원본처럼 작업 영역 폭을 그대로 따라가게
+   한다 — largeData.css 상단 주석 참고(사용자 지적으로 발견한, 그리드 화면 전체의 공통 이슈). */
 .work-card:has(.sff-section) {
-  max-width: 1100px;
+  max-width: none;
 }
 
 /* 원본 grid::function_desc.xfdl — work.xfdl에서 divMain 바로 아래에 붙는 설명 영역 */

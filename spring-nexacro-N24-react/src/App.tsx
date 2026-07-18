@@ -18,6 +18,7 @@ import { SmartScroll } from "./routes/converted/SmartScroll";
 import { ExportImport } from "./routes/converted/ExportImport";
 import { CopyPaste } from "./routes/converted/CopyPaste";
 import { DragDrop } from "./routes/converted/DragDrop";
+import { DynamicGrid } from "./routes/converted/DynamicGrid";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -37,6 +38,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   "11000": ExportImport,
   "11100": CopyPaste,
   "11200": DragDrop,
+  "11400": DynamicGrid,
 };
 
 export default function App() {

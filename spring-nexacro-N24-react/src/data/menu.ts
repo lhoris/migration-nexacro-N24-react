@@ -48,7 +48,7 @@ export const MENU_ITEMS: MenuItem[] = [
   { id: "11000", parentId: "10000", label: "내려받기 & 가져오기", labelEn: "Export & Import", path: "/m/export", nexacroMenuId: "11000", xfdlFile: "grid::export.xfdl", target: "react", tooltip: "엑셀로 Export & Import 가능 합니다.", tooltipEn: "Export & Import to Excel is possible." },
   { id: "11100", parentId: "10000", label: "복사 & 붙여넣기", labelEn: "Copy & Paste", path: "/m/copypaste", nexacroMenuId: "11100", xfdlFile: "grid::copypaste.xfdl", target: "react", tooltip: "그리드와 엑셀 간의 복사 & 붙여넣을 수 있습니다.", tooltipEn: "You can copy & paste between grid and excel." },
   { id: "11200", parentId: "10000", label: "드래그 & 드롭", labelEn: "Drag & Drop", path: "/m/dragndrop", nexacroMenuId: "11200", xfdlFile: "grid::dragndrop.xfdl", target: "react", tooltip: "원하는 컬럼으로 그리드를 동적으로 생성, 데이터 이동이 가능 합니다.", tooltipEn: "It is possible to dynamically create a grid with desired columns and move data." },
-  { id: "11400", parentId: "10000", label: "동적 그리드", labelEn: "Dynamic Grid", path: "/m/dynamic", nexacroMenuId: "11400", xfdlFile: "grid::dynamic.xfdl", target: "nexacro", tooltip: "그리드를 원하는 형태로 커스터마이징 하여 사용 할 수 있습니다.", tooltipEn: "You can customize the grid to the desired shape and use it." },
+  { id: "11400", parentId: "10000", label: "동적 그리드", labelEn: "Dynamic Grid", path: "/m/dynamic", nexacroMenuId: "11400", xfdlFile: "grid::dynamic.xfdl", target: "react", tooltip: "그리드를 원하는 형태로 커스터마이징 하여 사용 할 수 있습니다.", tooltipEn: "You can customize the grid to the desired shape and use it." },
 
   // 컴포넌트 (grp 2, 실제 menu_id 20000)
   { id: "20000", parentId: null, label: "컴포넌트", labelEn: "Components" },

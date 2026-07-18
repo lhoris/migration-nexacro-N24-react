@@ -481,6 +481,28 @@
     하다가 가짜 버그로 오인할 뻔한 것, Tabulator `rowClick`이 자체 기본 토글 *이후에*
     실행된다는 것 등을 새로 발견해 `conversion-playbook.md` 5-24~5-28에 기록.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **커밋·push 완료(2026-07-18, 커밋 `a6163ae`).**
+
+- **menu_id 11200("드래그 & 드롭", grid::dragndrop.xfdl) React 전환 완료(2026-07-19).**
+  `DragDrop.tsx` + `dragDropRealData.ts`(원본 `dsGrid`와 동일한 500행 데이터).
+  좌측 컬럼 목록을 우측 결과 그리드에 드롭하면 컬럼이 동적으로 추가되고, 하단 멀티 영역은
+  체크된 컬럼 묶음을 드롭해 결과 그리드를 다시 구성한다. 결과 그리드의 헤더 재배치는
+  Tabulator 내장 `movableColumns`가 이동 중 500행 셀 DOM을 계속 재배치해 원본 Nexacro보다
+  버벅이는 문제가 있어, 이 화면 전용 경량 헤더 drag/drop으로 구현했다(drop 시점에만 React
+  state의 컬럼 순서를 갱신).
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **커밋·push 완료(2026-07-19, 커밋 `8d42541`).**
+
+- **menu_id 11400("동적 그리드", grid::dynamic.xfdl) React 전환 완료(2026-07-19).**
+  `DynamicGrid.tsx` + `dynamicGridRealData.ts`. 원본은 일반 데이터 그리드가 아니라 양식
+  디자이너 성격이 강해 Tabulator 표준 그리드 대신 React 상태 기반 sheet로 구현했다.
+  좌측 셀 타입 8개(ComboBox/Calendar/Edit/MaskEdit/Number/CheckBox/Button/TextArea) 드래그,
+  우측 양식 셀 타입 변경, 셀 편집, 영역 선택, 우클릭 메뉴(행/열 추가·삭제, 셀 병합/분할,
+  색상 적용/해제), `Ctrl+M` 병합, `localStorage` 기반 양식저장/초기화를 지원한다.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  - 그리드 메뉴 마지막 화면까지 구현했으므로 다음 공통화 논의 때 Tabulator 공통화(생성/해제
+    훅, placeholder/header 정렬/rowHeight, tableBuilt 타이밍, 경량 컬럼 이동)와 커스텀 그리드
+    공통화(병합 셀 모델, 영역 선택, 우클릭 메뉴, drag payload, 저장/복원)를 분리해서 검토한다.
   **아직 커밋 전.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
@@ -497,9 +519,10 @@
 11. ~~menu_id 10900 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, max-width 버그
     수정 `4417d68` + 화면 자체 `8517feb`, 두 커밋으로 분리).
 12. ~~menu_id 11000 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `14e4654`).
-13. menu_id 11100("복사 & 붙여넣기", grid::copypaste.xfdl) 화면 전환 완료(12/40) —
-    **커밋 여부 사용자 확인 대기.** 화면 전환 28개 남음.
-14. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+13. ~~menu_id 11100 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `a6163ae`).
+14. ~~menu_id 11200 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `8d42541`).
+15. menu_id 11400("동적 그리드", grid::dynamic.xfdl) 화면 전환 완료 — **커밋 예정.**
+16. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
     저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
     커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
     README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

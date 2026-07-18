@@ -77,6 +77,21 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
       "A와 B 컬럼에 숫자 값을 입력하면 셀의 expr 속성을 통해 A+B, A*B 결과값이 옆에 있는 셀에 표시됩니다. 간단한 표현식은 expr 속성에 바로 표현할 수 있고, 표현식이 길어지거나 복잡할 경우 사용자 함수를 정의해서 호출할 수 있습니다.\n보여지는 텍스트 값 외에 displaytype이나 cssclass 등 셀의 속성들 별로 expr을 적용할 수도 있습니다. C 컬럼의 콤보에서 값을 선택하면 선택한 값에 따라 옆의 컬럼이 Edit 또는 Combo로 변환됩니다.",
     "grid.cell.head.display.type": "헤드 Control 표시 유형",
 
+    // -- 실제 Nexacro stringresource (grid::pagination.xfdl / pagination_desc.xfdl) --
+    "grid.pagination": "페이징 처리",
+    "grid.pagination.desc":
+      "넥사크로의 그리드는 한 번에 많은 데이터를 표현할 수 있습니다. 하지만 고객의 요구에 의해 데이터를 페이지 단위로 쪼개서 표현할 경우 다양한 방식으로 표현할 수 있습니다.\n일반적으로 사용하는 페이지 네비게이션을 이용하거나 스크롤 시 다음 데이터를 조회하는 무한 스크롤, 버튼을 클릭 시 다음 데이터를 조회하여 덧붙여주는 등 원하는 방식을 적용할 수 있고, 이러한 페이징 처리는 넥사크로에서 제공하는 컴포넌트들을 이용하여 원하는 형태의 기능을 구현할 수 있고 공통 모듈로 등록하여 사용할 수 있습니다.",
+    "grid.pagination.buttonstyle": "버튼 스타일",
+    "grid.pagination.buttonstyle.desc":
+      "가장 많이 사용하는 페이징 처리 방식은 페이징 버튼으로 표현하는 것입니다. 해당 페이지 번호의 버튼을 클릭하면 데이터를 다시 조회해서 표현합니다.\n한 페이지 당 표현할 수 있는 기본 건수(예: 10~50)를 선택할 수 있고, 원하는 페이지로 바로 이동할 수 있도록 바로 가기 기능도 적용할 수 있습니다.",
+    "grid.pagination.infinitescrolling": "무한 스크롤",
+    "grid.pagination.infinitescrolling.desc":
+      "그리드의 데이터 영역에서 마우스 휠을 이용해 가장 아래로 내리거나 스크롤 트랙바를 끝으로 내리면 다음 데이터를 조회해서 자동으로 추가해 주는 방식입니다.\n이 경우 계속해서 스크롤 시 데이터를 추가하기 때문에 너무 많은 데이터를 로드하는 경우 성능 저하를 야기시킬 수 있습니다.\n스크롤을 이용하지 않고 '더보기' 같은 버튼 클릭 시 데이터를 추가하는 방식도 적용할 수 있습니다.",
+    "inquiry.result": "조회 결과",
+    // 원본 Button00은 cssclass="btn_WF_inquiry"인 아이콘 전용 버튼이라 messageid가 없다 —
+    // React 쪽 접근성을 위해 새로 붙인 라벨(원본 대응 없음).
+    "pagination.search": "조회",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -185,6 +200,18 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.expression.desc":
       "When you enter numeric values in the A and B columns, the cell's expr property displays the A+B, A*B results in the next cell. A simple expression can be expressed directly in an expr property, if the expression is long or complicated.\nYou can call by defining a user function.\nIn addition to the displayed text values, you can also apply extpr to each cell's properties, such as displaytype or cssclass. Selecting a value from the combo in the C column converts the next column to Edit or Combo, depending on the selected value.",
     "grid.cell.head.display.type": "Head control display type",
+
+    "grid.pagination": "Pagination",
+    "grid.pagination.desc":
+      "The grid on the Nexacro can represent a lot of data at a time. However, there are many ways to express data when it is split into pages based on customer needs.\nYou can apply the desired method, such as unlimited scrolling to look up the next data when scrolling or using commonly used page navigation, and adding the next data when clicking the button, and this paging processing can be registered as a common module using the components provided by the Nexacro.",
+    "grid.pagination.buttonstyle": "Button style",
+    "grid.pagination.buttonstyle.desc":
+      "The most commonly used paging processing method is expressed with paging buttons. Click the button on the page number to view and express the data again.\nYou can choose the default number of cases (for example, 10 to 50) that can be expressed per page, and you can also apply shortcuts so that you can go straight to the page you want.",
+    "grid.pagination.infinitescrolling": "Infinite scrolling",
+    "grid.pagination.infinitescrolling.desc":
+      "In the data area of the grid, when you use the mouse wheel to lower the bottom or the end of the scroll trackbar, the next data is automatically added by looking up.\nThis can cause performance degradation if too much data is loaded, as it continues to add data when scrolling.\nYou can also apply the method of adding data when you click a button, such as 'Show more results' without scrolling.",
+    "inquiry.result": "Inquiry result",
+    "pagination.search": "Search",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

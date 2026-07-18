@@ -127,12 +127,36 @@
   - Radio 값을 문자열 "0"/"1"로 저장했다가 둘 다 truthy라 전부 checked로 보이는 버그도
     발견해 boolean으로 수정.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
-  **아직 커밋 전** — 사용자가 "다 된 것 같다"고 확인(2026-07-18), 커밋 여부는 다음에 확인.
+  **커밋·push 완료(2026-07-18, 커밋 `c7a99d6`, "[screen] menu_id 10200(다양한 표현) React
+  전환 완료").**
+- **검증 체크리스트 정리(2026-07-18).** 10200 화면에서 8라운드 피드백이 오간 걸 복기해
+  `conversion-playbook.md` 0번 섹션에 "화면 다 됐다고 보고하기 전 체크리스트"로 정리함
+  (정적 대조뿐 아니라 편집 가능 컬럼 전부 클릭 테스트, 상호작용 직후 콘솔 확인, 원본과
+  다른 부분 먼저 보고, UI 위젯은 네이티브부터 시작, 게이트웨이 토폴로지에서도 확인).
+  메모리(`feedback_screen_conversion_workflow`)에도 반영해 세션이 바뀌어도 유지되게 함.
+- **menu_id 10300("페이징", grid::pagination.xfdl) React 전환 완료(2026-07-18).**
+  `spring-nexacro-N24-react/src/routes/converted/Pagination.tsx` + `paginationRealData.ts`
+  (원본 ds_server 641행 도서 데이터를 파이썬 스크립트로 파싱해 전량 추출). 이 메뉴는 원래
+  `menu.ts`에 `serveDirect: true`(React를 거치지 않고 Nexacro가 직접 서빙하는 파일럿
+  전용 특수 케이스)로 표시돼 있었는데, 사용자 확인 후 다른 화면과 동일하게 전환 대상으로
+  전환하고 그 플래그를 제거함.
+  - 원본은 Tab 2개(버튼 스타일 10행/페이지, 무한 스크롤 20행/배치)가 같은 641행을 공유 —
+    Tabulator 내장 `pagination`/`progressiveLoad`가 이 둘과 거의 1:1 대응해서 그 기능을
+    그대로 썼다(단, `progressiveLoad`는 로컬 배열과 궁합이 안 좋아 `scrollVertical` 이벤트를
+    직접 구독하는 방식으로 대체).
+  - "조회 결과" 라벨이 조회 전에도 항상 보이는 고정 UI라는 걸 원본 스크린샷에서 발견,
+    조건부 렌더링으로 잘못 만들었던 걸 수정.
+  - 무한 스크롤 탭 검증 중 데이터가 나왔다 사라지는 것처럼 보이는 현상을 한참 조사하다,
+    실제로는 `<StrictMode>`의 개발 모드 이중 마운트와 테스트 스크립트의 타이밍 경합
+    때문이었음을 확인(라이브러리 버그 아님) — `conversion-playbook.md` 5-3번 참고.
+  - `target: "react"`로 전환 완료(`menu.ts`, `serveDirect` 제거), `App.tsx`의
+    `CONVERTED_SCREENS`에 등록. **아직 커밋 전.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
 1. ~~`spring-nexacro-N24/` 복사본 최종 검토~~ — 완료(빌드·실행 확인까지 마침).
 2. ~~`v2-hybrid-pilot` 커밋 및 태그~~ — 완료(2026-07-18, 커밋 `65489ef`, push까지 완료).
-3. menu_id 10200 화면 전환 완료(2/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 38개 남음.
+3. ~~menu_id 10200 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `c7a99d6`).
+4. menu_id 10300 화면 전환 완료(3/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 37개 남음.
 4. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
    저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
    커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고

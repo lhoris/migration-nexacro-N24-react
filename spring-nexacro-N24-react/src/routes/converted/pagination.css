@@ -1,0 +1,126 @@
+.work-card:has(.pg-card, .pg-section) {
+  max-width: 900px;
+}
+
+.pg-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.pg-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
+}
+
+.pg-tab {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 8px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.pg-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.pg-section {
+  margin-top: 4px;
+}
+
+.pg-search-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.pg-hint {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 12px 0 8px;
+}
+
+.pg-grid-mount {
+  margin-top: 8px;
+}
+
+/* Tabulator 페이지 네비게이션의 First/Prev/Next/Last 버튼 — 기본은 텍스트라 밋밋하다는
+   피드백을 반영해 화살표 아이콘으로 바꾼다. data-page 속성은 Tabulator가 항상 붙여주는
+   값이라 재렌더링에도 안정적으로 걸린다. */
+.pg-grid-mount .tabulator-page[data-page="first"],
+.pg-grid-mount .tabulator-page[data-page="prev"],
+.pg-grid-mount .tabulator-page[data-page="next"],
+.pg-grid-mount .tabulator-page[data-page="last"] {
+  font-size: 0;
+}
+
+.pg-grid-mount .tabulator-page[data-page="first"]::before,
+.pg-grid-mount .tabulator-page[data-page="prev"]::before,
+.pg-grid-mount .tabulator-page[data-page="next"]::before,
+.pg-grid-mount .tabulator-page[data-page="last"]::before {
+  font-size: 13px;
+  font-family: var(--font-mono);
+}
+
+.pg-grid-mount .tabulator-page[data-page="first"]::before {
+  content: "«";
+}
+
+.pg-grid-mount .tabulator-page[data-page="prev"]::before {
+  content: "‹";
+}
+
+.pg-grid-mount .tabulator-page[data-page="next"]::before {
+  content: "›";
+}
+
+.pg-grid-mount .tabulator-page[data-page="last"]::before {
+  content: "»";
+}
+
+.pg-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pg-desc-block:not(:first-child) {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.pg-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.pg-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

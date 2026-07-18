@@ -7,6 +7,7 @@ import { MegaMenu } from "./shell/MegaMenu";
 import { WorkArea } from "./routes/WorkArea";
 import { SortFilterFind } from "./routes/converted/SortFilterFind";
 import { Renderer } from "./routes/converted/Renderer";
+import { Pagination } from "./routes/converted/Pagination";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -15,6 +16,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   home: Home,
   "10100": SortFilterFind,
   "10200": Renderer,
+  "10300": Pagination,
 };
 
 export default function App() {

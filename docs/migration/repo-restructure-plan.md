@@ -415,7 +415,40 @@
     (`conversion-playbook.md` 7절 참고). 1200px/1600px 두 뷰포트에서 그리드 10개 전부
     재검증(콘솔 에러 0건), FreezePanes 행/열 고정 기능도 폭이 넓어진 상태에서 회귀
     테스트 완료.
-  **아직 커밋 전 — 사용자 최종 확인 대기 중.**
+  **커밋·push 완료(2026-07-18) — max-width 버그 수정은 `4417d68`로 분리 커밋,
+  화면 자체는 `8517feb`로 별도 커밋(사용자가 두 커밋으로 나눠 진행해달라고 요청).**
+
+- **menu_id 11000("내려받기 & 가져오기", grid::export.xfdl) React 전환 완료(2026-07-18).**
+  `ExportImport.tsx` + `exportImportRealData.ts`(dsList에서 그대로 추출한 실제 제품 데이터
+  11행). 원본은 `ExcelExportObject`/`ExcelImportObject`가 "xeni::XExportImport"라는
+  서버(Apache POI 기반)에 실제 엑셀 처리를 위임하는 구조.
+  - **원본 자체가 깨져 있음을 Playwright로 실측 확인** — Export 버튼 클릭 시
+    `alert("FAILED")`, "테스트 파일 다운로드" 버튼은 405 Not Allowed(`POST
+    /XExportImport`, `POST /download/import-sample` 둘 다 확인) — menu_id 10500(피벗)과
+    같은 "백엔드 없음" 케이스. 사용자에게 물어봐서 이번에도 "클라이언트 사이드에서 실제로
+    동작하게 만들자"를 선택받음(`conversion-playbook.md` 2절 참고).
+  - SheetJS(xlsx)로 브라우저 안에서 실제 Excel/CSV 내보내기·가져오기 구현 — 원본이
+    지원하는 한셀 형식과 비밀번호 보호는 브라우저 라이브러리로 구현하기 어려워 제외(사용자
+    사전 동의). Export 클릭 → 실제 .xlsx/.csv 다운로드, "테스트 파일 다운로드"로 받은
+    파일을 그대로 다시 "가져오기"하면 실제로 파싱되어 그리드에 표시되는 전체 왕복을
+    Playwright로 검증(Excel/CSV 둘 다, "헤더에 열 이름 포함" 체크박스 온/오프 둘 다).
+  - **npm 레지스트리의 `xlsx@0.18.5`는 패치 안 된 고위험 취약점(Prototype Pollution,
+    ReDoS)이 있어**(업로드 파일 파싱이라 공격 표면과 정확히 겹침) 설치를 되돌리고, 사용자
+    확인 후 SheetJS 자체 CDN의 패치된 빌드(`https://cdn.sheetjs.com/xlsx-latest/
+    xlsx-latest.tgz`)로 설치 — `npm audit` 0 vulnerabilities 확인.
+  - **`tsc --noEmit -p .`는 통과했지만 `npm run build`(`tsc -b`)가 별도로 미사용 변수
+    오류로 실패**한 걸 발견해 수정(`conversion-playbook.md` 2절 참고 — 두 명령이 갈릴 수
+    있다는 교훈).
+  - **사용자가 확인 후 요청**: "엑셀 임포트 할 때 첫 행이 헤더인지 레코드인지 판단해서
+    임포트하게 할 수는 없냐" — 원본에 없는 개선이지만(원본은 체크박스 수동 조작만 지원)
+    사용자가 명시적으로 요청. 컬럼별로 "1행을 제외한 나머지 행이 대부분 숫자인 컬럼"만
+    골라 그 컬럼들의 1행 값이 숫자가 아닌 비율이 절반 이상이면 헤더가 있다고 판단하는
+    휴리스틱(`detectHasHeader`)을 추가 — 시트를 새로 선택할 때마다 자동으로 재판단해
+    체크박스 초기값을 맞추되, 사용자가 그 뒤 수동으로 켜고 끄는 것도 그대로 가능.
+    헤더 있는 파일/헤더 없는 파일/CSV 전부 Playwright로 검증(자동 판단 정확, 수동
+    오버라이드 후에도 그리드가 올바르게 다시 그려짐), `npm run build`까지 재확인.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **아직 커밋 전.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
 1. ~~`spring-nexacro-N24/` 복사본 최종 검토~~ — 완료(빌드·실행 확인까지 마침).
@@ -428,9 +461,11 @@
 8. ~~menu_id 11300 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `f82b57e`).
 9. ~~menu_id 10700 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `3c96652`).
 10. ~~menu_id 10800 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `555dd4c`).
-11. menu_id 10900("스마트 스크롤", grid::smartscroll.xfdl) 화면 전환 완료(10/40) —
-    **커밋 여부 사용자 확인 대기.** 화면 전환 30개 남음.
-12. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+11. ~~menu_id 10900 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, max-width 버그
+    수정 `4417d68` + 화면 자체 `8517feb`, 두 커밋으로 분리).
+12. menu_id 11000("내려받기 & 가져오기", grid::export.xfdl) 화면 전환 완료(11/40) —
+    **커밋 여부 사용자 확인 대기.** 화면 전환 29개 남음.
+13. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
     저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
     커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
     README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

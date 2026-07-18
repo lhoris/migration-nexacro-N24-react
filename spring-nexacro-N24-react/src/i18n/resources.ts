@@ -202,6 +202,21 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.smartscroll.desc":
       "Grid 컴포넌트는 화면에 표시할 데이터 행이 많아지면 스크롤바가 표시됩니다. 이런 경우 스크롤바를 움직여서 데이터를 탐색하게 되는데 스크롤바를 움직이면서 화면에 표시되는 데이터를 계속 표시해 주어야 합니다. 브라우저 입장에서도 스크롤바를 움직이는 동안 데이터를 표시해 주는 작업이 부담이 될 수 있고 사용자 입장에서는 스크롤바를 움직이면서 원하는 데이터를 찾기가 쉽지 않습니다.\nSmart Scroll 기능은 이런 불편을 어느 정도 해소해 주는 팁 같은 기능입니다. Grid 컴포넌트에 'fastvscrolltype' 속성값을 설정하면 Smart Scroll 기능을 적용할 수 있습니다.\n(종류 : default, top display, center display, top&bottom display, top&center&bottom display, trackbar follow)",
 
+    // -- 실제 Nexacro stringresource (grid::export.xfdl / export_desc.xfdl) --
+    // "grid.export"/"inquiry.result"는 위쪽(그리드 목록/피벗 등)에 이미 있는 것과 같은
+    // messageid라 여기서 다시 선언하지 않는다 — 원본도 같은 messageid를 재사용한다.
+    "grid.export.import": "내보내기 & 가져오기",
+    "grid.export.type": "내보내기 유형",
+    "grid.import": "가져오기",
+    "grid.import.type": "가져오기 유형",
+    "grid.import.include.header": "헤더에 열 이름 포함",
+    "grid.import.password": "비밀번호",
+    "grid.import.download.testfile": "테스트 파일 다운로드",
+    "grid.export.desc":
+      "넥사크로에서는 엑셀의 익스포트와 임포트 처리를 위해 nexacro-xeni를 제공합니다. nexacro-xeni는 엑셀의 익스포트/임포트를 서버에서 처리한 후 그 결과를 돌려주는 기능을 수행하는 서버 애플리케이션입니다.\n엑셀 익스포트/임포트 기능을 자체적으로 처리하지 않고 번거롭게 서버 애플리케이션을 통해 처리하는 이유는 엑셀 파일을 처리하려면 로컬 시스템의 자원을 사용해야 하기 때문입니다. 이는 심각한 보안 문제를 야기할 수 있어 브라우저에서 막고 있습니다.\n\n(이 React 데모는 원본과 달리 서버 없이 브라우저 안에서 SheetJS 라이브러리로 실제 Excel/CSV 내보내기·가져오기를 수행합니다 — 한셀 형식과 비밀번호 보호는 지원하지 않습니다.)",
+    "grid.import.desc":
+      "임포트 유형을 선택하고 파일을 올리면 시트 목록이 표시되고, 시트를 선택하면 그 안의 데이터를 그리드에서 확인할 수 있습니다. \"헤더에 열 이름 포함\" 옵션을 켜면 첫 번째 행의 텍스트를 컬럼명으로 사용합니다.\n적당한 테스트 파일이 없다면 테스트 파일을 다운로드한 뒤 그대로 다시 가져오기 해보세요.",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -418,6 +433,18 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "grid.smartscroll.topcenterbottomdisplay": "Top & center & bottom display",
     "grid.smartscroll.desc":
       "The Grid component displays a scroll bar as there are more rows of data to display on the screen. In this case, you will navigate through the data by moving the scroll bar, and you will need to move the scroll bar and continue to display the data displayed on the screen. From a browser perspective, displaying data while moving the scrollbar can be a burden, and from the user's point of view, it's not easy to move the scrollbar and find the data they want.\nThe Smart Scroll feature is a tip-like feature that eliminates some of these inconveniences. The Smart Scroll function is applicable by setting the 'fastvscrolltype' property value on the Grid component.\n(Type : default, top display, center display, top&bottom display, top&center&bottom display, trackbar follow)",
+
+    "grid.export.import": "Export & Import",
+    "grid.export.type": "Export type",
+    "grid.import": "Import",
+    "grid.import.type": "Import type",
+    "grid.import.include.header": "Include Column Names as Header",
+    "grid.import.password": "Password",
+    "grid.import.download.testfile": "Download Test File",
+    "grid.export.desc":
+      "The Nexacro provides nexacro-xeni for Excel export and import processing. nexacro-xeni is a server application that processes Excel's exports/imports on the server and then returns the results.\nProcessing Excel files requires resources from the local system, which can cause serious security problems and is prevented by the browser.\n\n(Unlike the original, this React demo performs real Excel/CSV export and import inside the browser using the SheetJS library, with no server — the Hancell format and password protection are not supported.)",
+    "grid.import.desc":
+      'Select the import type and upload a file to see its sheet list; pick a sheet to view its data in the grid. Turning on "Include Column Names as Header" uses the first row\'s text as column names.\nIf you don\'t have a suitable test file, download the test file and import it right back.',
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

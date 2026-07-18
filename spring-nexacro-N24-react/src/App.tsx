@@ -12,6 +12,7 @@ import { Personalization } from "./routes/converted/Personalization";
 import { Pivot } from "./routes/converted/Pivot";
 import { LargeData } from "./routes/converted/LargeData";
 import { SplitLookup } from "./routes/converted/SplitLookup";
+import { QuantumGrid } from "./routes/converted/QuantumGrid";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -25,6 +26,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   "10500": Pivot,
   "10600": LargeData,
   "11300": SplitLookup,
+  "10700": QuantumGrid,
 };
 
 export default function App() {

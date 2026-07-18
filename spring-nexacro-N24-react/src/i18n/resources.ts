@@ -171,6 +171,12 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "splitlookup.status": "조회 건수 {loaded} / {total} 건",
     "splitlookup.search": "조회",
 
+    // -- 실제 Nexacro stringresource (grid::quantum.xfdl / quantum_desc.xfdl) --
+    "grid.quantum": "퀀텀 그리드",
+    "grid.quantum.area": "컬럼을 드래그하여 올려 놓으세요",
+    "grid.quantum.desc":
+      "퀀텀그리드란, 데이터를 행별로 그룹핑 하여 계층형태로 보여준다. 그리드에서 컬럼을 드래그하여 상단 영역에 위치하면 해당 컬럼으로 데이터가 그룹핑 된다. 반대로 상단 영역의 컬럼명을 드래그하여 하단 그리드에 드랍하면 데이터 그룹핑이 취소 된다.",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -359,6 +365,11 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
       "When searching for large amounts of data, Trying to load a large amount of data at once increases the likelihood of an out of memory (OOM) occurrence. To avoid this, you can split the data into rows by using the Progressload function.\nIn addition, the user's waiting time can be reduced by dividing the data.\n\n※ Even if data communication is established without OOM occurring in the server, When the required memory usage exceeds the browser limit while processing the data within the browser. Errors may occur.",
     "splitlookup.status": "Number of views {loaded} / {total} rows",
     "splitlookup.search": "Search",
+
+    "grid.quantum": "Quantum grid",
+    "grid.quantum.area": "Drag the column and drop it here",
+    "grid.quantum.desc":
+      "A quantum grid is a hierarchical view of data grouped by row. When a column is dragged from the grid and placed in the upper area, data is grouped into the corresponding column. Conversely, if you drag the column name in the upper area and drop it on the lower grid, data grouping is canceled.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

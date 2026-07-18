@@ -1,0 +1,81 @@
+.work-card:has(.qg-card) {
+  max-width: 1040px;
+}
+
+.qg-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.qg-category {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--paper-alt, rgba(127, 127, 127, 0.06));
+  margin-bottom: 12px;
+}
+
+.qg-category-hint {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 auto;
+}
+
+.qg-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: grab;
+}
+
+.qg-chip:active {
+  cursor: grabbing;
+}
+
+.qg-grid-mount {
+  margin-top: 4px;
+}
+
+.qg-col-header {
+  cursor: grab;
+  width: 100%;
+}
+
+.qg-col-header:active {
+  cursor: grabbing;
+}
+
+.qg-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.qg-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.qg-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

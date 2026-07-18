@@ -232,6 +232,29 @@
     근본적으로는 진행률 카운터는 배치마다 올리되 실제 `table.setData()`는 전체 데이터를 다
     모은 뒤 한 번만 호출하도록 바꿔 해결(`conversion-playbook.md` 5-8 참고).
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **커밋·push 완료(2026-07-18, 커밋 `f82b57e`).**
+- **menu_id 10700("퀀텀 그리드", grid::quantum.xfdl) React 전환 완료(2026-07-18).**
+  `spring-nexacro-N24-react/src/routes/converted/QuantumGrid.tsx` + `quantumEngine.ts`
+  (그룹핑 트리 엔진) + `quantumRealData.ts`(dsGrid Dataset에서 그대로 추출한 실제 데이터
+  500행). 10500/10600/11300과 달리 이 화면은 서버 트랜잭션이 필요 없다 — 데이터가 xfdl에
+  직접 임베딩돼 있어 원본이 실제로 완전히 동작한다(Playwright로 컬럼 헤더를 그리드에서
+  카테고리 영역으로 직접 드래그해보며 1단/2단 그룹핑, 재정렬, 그룹 해제까지 전부 실측).
+  - 컬럼 헤더를 드래그해서 상단 영역에 놓으면 그 컬럼으로 데이터가 트리 그룹핑되고
+    (`dsGrid.keystring`), 반대로 카테고리 칩을 그리드에 드래그하면 그룹핑이 풀린다 — 원본
+    이벤트 핸들러(`fnSetGroup`/`fnSetTree`/`fnTreeDrop`/`divCategory_ondrop`)를 그대로
+    읽고 재현: 그룹으로 뺀 컬럼은 그리드에서 사라지고, 칩끼리 드래그하면 순서가 바뀌며
+    (바로 앞 칩이면 서로 교환, 아니면 뽑아서 목표 칩 앞에 삽입), 그리드에서 바로 끌어온
+    컬럼을 기존 칩 위에 드랍하는 조합은 원본도 처리 안 하길래 그대로 무시하도록 재현.
+  - 그룹핑된 트리의 리프(실제 데이터) 행이 항상 "이름(0)"으로 표시되는 원본 특유의
+    동작(소스상 인덱스가 배열 범위를 벗어나 first_name으로 폴백)을 Playwright로 1단/2단
+    모두 실측 확인 후 버그로 판단해 고치지 않고 그대로 재현(`conversion-playbook.md`
+    5-10 참고).
+  - **버그 발견 및 수정**: Tabulator를 만드는 effect와 `setColumns`를 거는 effect를
+    분리했다가 React StrictMode 마운트→클린업→재마운트 사이에서 "Cannot read properties
+    of null (reading 'firstChild')" 에러가 났다 — 그룹 상태가 바뀔 때마다 테이블을 통째로
+    destroy 후 재생성(컬럼·데이터를 생성자에 바로 전달)하는 방식으로 바꿔 해결
+    (`conversion-playbook.md` 5-9 참고, 데이터가 500행뿐이라 매번 재생성해도 성능 문제 없음).
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
   **아직 커밋 전.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
@@ -242,12 +265,13 @@
 5. ~~menu_id 10400 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `b1a0c94`).
 6. ~~menu_id 10500 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `5f2cd30`).
 7. ~~menu_id 10600 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `de3396a`).
-8. menu_id 11300 화면 전환 완료(7/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 33개 남음.
-9. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
-   저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
-   커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
-   README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로
-   이식되지 않으므로(결정된 사항 참고) 이 독립 저장소가 유일한 보존처임에 유의.
+8. ~~menu_id 11300 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `f82b57e`).
+9. menu_id 10700 화면 전환 완료(8/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 32개 남음.
+10. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+    저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
+    커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
+    README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로
+    이식되지 않으므로(결정된 사항 참고) 이 독립 저장소가 유일한 보존처임에 유의.
 
 ## 결정된 사항 (과거엔 미결정이었던 것)
 

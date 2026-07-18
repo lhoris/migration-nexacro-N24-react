@@ -197,6 +197,25 @@
   - dev 서버(:5173)·프로덕션 게이트웨이 빌드(:3000) 양쪽에서 조회→집계→드래그드롭→축소/확장→
     초기화→내보내기까지 전 기능 Playwright로 검증, 콘솔 에러 0건.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  **커밋·push 완료(2026-07-18, 커밋 `5f2cd30`).**
+- **menu_id 10600("대용량 데이터", grid::largedata.xfdl) React 전환 완료(2026-07-18).**
+  `spring-nexacro-N24-react/src/routes/converted/LargeData.tsx` + `largeDataMock.ts`. 피벗과
+  같은 패턴 — `svc::largedata` 백엔드가 없어(원본에서 직접 조회해도 그리드가 계속 비어있음,
+  Playwright로 확인) 이미 정해둔 방침대로 클라이언트 목업 데이터 생성기를 만들었다.
+  - 탭 2개(일반 표현 = 읽기전용 그리드, 다양한 표현 = Gender 콤보/Married 체크박스(네이티브
+    `<input type="checkbox">`, 10200의 tickCross/toggle 반려 전례를 따름)/Date 에디터/Money
+    마스크/Number 프로그레스바 편집 가능) 모두 원본 Grid Format의 displaytype/edittype 그대로
+    재현. 행 갯수 1만/5만/10만 선택 가능, 10만행에서도 Tabulator 가상 렌더링으로 콘솔 에러 없이
+    빠르게 렌더링됨(실측: 렌더링 0.1~0.16초).
+  - **버그 발견 및 수정**: 처음엔 두 탭이 같은 `LargeDataTab` 컴포넌트를 조건부로 반환해 React가
+    탭 전환 시 리마운트하지 않고 상태를 재사용 → "다양한 표현" 탭이 계속 "일반 표현"의 읽기전용
+    컬럼 정의로 렌더링되는 버그였다(체크박스/콤보/프로그레스바가 전부 안 보임). `key="general"`/
+    `key="multi"`를 줘서 React가 별개 인스턴스로 취급하게 해 해결.
+  - 검증 중 dev 서버(:5173)에서만 "Event Target Lookup Error"/"Table Not Initialized" 경고가
+    떴는데, 프로덕션 게이트웨이 빌드(:3000)에서 같은 상호작용을 깨끗하게 재현해보니 경고가
+    전혀 없었다 — React StrictMode 이중 마운트 + 빠른 연속 클릭이 겹친 테스트 아티팩트였다
+    (`conversion-playbook.md` 5-3 참고), 실제 버그 아님.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
   **아직 커밋 전.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
@@ -205,8 +224,9 @@
 3. ~~menu_id 10200 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `c7a99d6`).
 4. ~~menu_id 10300 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `5b18c72`).
 5. ~~menu_id 10400 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `b1a0c94`).
-6. menu_id 10500 화면 전환 완료(5/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 35개 남음.
-7. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+6. ~~menu_id 10500 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `5f2cd30`).
+7. menu_id 10600 화면 전환 완료(6/40) — **커밋 여부 사용자 확인 대기.** 화면 전환 34개 남음.
+8. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
    저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
    커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
    README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

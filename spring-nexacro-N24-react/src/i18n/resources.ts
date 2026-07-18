@@ -150,6 +150,20 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "pivot.search": "조회",
     "pivot.status": "서버/네트워크시간 {network} 초, 렌더링시간 {render} 초, 조회건수 {rows} 건",
 
+    // -- 실제 Nexacro stringresource (grid::largedata.xfdl / largedata_desc.xfdl) --
+    "grid.largedata": "대용량 데이터",
+    "grid.largedata.general": "일반 표현",
+    "grid.largedata.multi": "다양한 표현",
+    "grid.largedata.desc":
+      "일반적인 웹페이지에서는 그리드에 한 번에 많은 데이터를 표현하지 않습니다. 메모리나 성능 상의 문제가 있어서 페이징 처리를 하게 됩니다.\n하지만 업무를 처리하는 실무자 입장에서는 엑셀이나 C/S기반의 시스템에서처럼 웹에서도 한 번에 많은 데이터를 로딩해서 업무를 처리하는게 편하기 때문에 많은 고객들이 요구하는 기능인데요.\n넥사크로에서는 데이타셋을 통해 데이터를 관리하고 그리드에 보여지는 영역만큼의 데이터만 렌더링하기 때문에 수 천, 수 만 건의 데이터를 조회하더라도 빠르게 렌더링할 수 있습니다.",
+    "grid.largedata.query": "대용량 데이터 조회",
+    "grid.largedata.query.desc":
+      "검색조건에서 데이터 건수(1만/5만/10만건)를 선택하고 '조회' 버튼을 클릭합니다. 조회가 끝나면 데이터가 그리드에 렌더링 되고 서버/네트워크 구간과 렌더링 시간을 구분하여 화면에 표시됩니다.",
+    // 원본 messageid="grid.largedata.networktime"의 값 그대로(0으로 초기화된 상태) — 실제
+    // 조회 후에는 fnCallback이 숫자만 바꿔치기하므로, 우리도 같은 템플릿을 값만 갈아끼운다.
+    "largedata.status": "서버/네트워크시간 {network} 초, 렌더링시간 {render} 초, 조회건수 {rows} 건",
+    "largedata.search": "조회",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -321,6 +335,17 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "pivot.total": "Total",
     "pivot.search": "Search",
     "pivot.status": "Server/Network {network} sec, UI Rendering {render} sec, {rows} rows",
+
+    "grid.largedata": "Large Data",
+    "grid.largedata.general": "General Expression",
+    "grid.largedata.multi": "Multi Expression",
+    "grid.largedata.desc":
+      "A typical web page does not represent a lot of data in the grid at a time. There is a problem with memory or performance, so it will be paged.\nBut from the point of view of business people, it's easy to load a lot of data on the web at once, just like Excel or C/S-based systems, so it's a feature that many customers require.\nBecause the Nexacro manages data through datasets and renders only as much data as is shown in the grid, thousands or tens of thousands of data can be viewed quickly.",
+    "grid.largedata.query": "Large data query",
+    "grid.largedata.query.desc":
+      "Under Search Criteria, select the number of data (10,000/50,000/100,000) and click the Inquiry button. At the end of the query, the data is rendered in the grid and displayed on the screen, separating the server/network interval and the rendering time.",
+    "largedata.status": "Server/Network {network} sec, UI Rendering {render} sec, {rows} rows",
+    "largedata.search": "Search",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

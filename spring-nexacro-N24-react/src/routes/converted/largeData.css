@@ -1,0 +1,135 @@
+.work-card:has(.ld-card) {
+  max-width: 1000px;
+}
+
+.ld-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.ld-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
+}
+
+.ld-tab {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 8px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.ld-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.ld-section {
+  margin-top: 4px;
+}
+
+.ld-search-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--paper-alt, rgba(127, 127, 127, 0.06));
+}
+
+.ld-search-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.ld-search-select {
+  appearance: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.ld-search-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.ld-hint {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 16px 0 8px;
+}
+
+.ld-grid-mount {
+  margin-top: 4px;
+}
+
+.ld-cell-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--muted);
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
+.ld-status {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 10px 0 0;
+}
+
+.ld-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ld-desc-block:not(:first-child) {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.ld-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.ld-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

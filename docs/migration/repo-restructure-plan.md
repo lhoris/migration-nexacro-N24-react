@@ -553,9 +553,56 @@
     3. Groupbox를 `width: fit-content`(작은 박스)로 만들었다가, 실측(368×94px, 카드
        폭 거의 전체) 후 크기 수정.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
-  15/40 완료. 컴포넌트 카테고리 11개 중 1개 완료, 10개 남음 — **다음은 menu_id 20200
-  ("모바일 퍼스트 컴포넌트", comp::mobilecomponents.xfdl)**, 아직 시작 안 함.
-  **아직 커밋 전 — 문서 정리(11200/11400 상태 기록) 커밋과 함께 진행 예정(사용자 지시).**
+  15/40 완료. 컴포넌트 카테고리 11개 중 1개 완료, 10개 남음.
+  **커밋·push 완료(2026-07-19, 커밋 `c1b5bb4` — 11200/11400 문서 정리와 함께 한 커밋으로 처리).**
+
+- **menu_id 20200("모바일 퍼스트 컴포넌트", comp::mobilecomponents.xfdl) React 전환
+  완료(2026-07-19).** 원본 소스엔 이 화면 전용 Dataset이 없다(라디오 3개가 각자 만드는
+  NormalDataset만 있음). `MobileComponents.tsx` + `mobileComponentsRealData.ts`.
+  - TextField 4개(Outside/Inside/Overlap/e-mail) — 라벨 텍스트가 실제로는 그 필드의
+    labelposition 값과 우연히 같은 이름일 뿐임을 소스로 확인(`TF_overlap`엔
+    `set_labelposition` 호출 자체가 없다 — Nexacro TextField의 기본값이 이미 "overlap"
+    스타일이라 데모 작성자가 필드 이름을 그렇게 지은 것). 포지션별 실제 동작(빈 상태에선
+    라벨이 플레이스홀더처럼 보이다가 포커스/값 입력 시 outside=박스 위/inside=박스 안
+    상단/overlap=테두리를 가로지르는 형태로 뜬다)은 Playwright로 직접 타이핑해보고 실측.
+  - DateField의 inputtype(date/datetime/time)별 placeholder 포맷("YYYY. M. D." /
+    "YYYY. M. D. aa h:mm:ss" / "aa h:mm:ss")도 각 라디오를 실제로 클릭해 실측.
+  - **DateRangePicker는 원본을 직접 두 번 클릭해보고서야 실제 동작을 확인했다**(스크린샷
+    한 장으로는 알 수 없었음): 시작일 클릭 → 종료일 클릭 → 그 사이 모든 날짜가 연보라색
+    밴드로 하이라이트되고 시작/종료일 자체는 진보라색 원으로 표시되며, 헤더의 "Start
+    Date"/"End Date" 라벨이 실제 선택한 날짜로 바뀐다. 3개월을 한 번에 보여주고
+    prev/next로 한 달씩 이동하는 방식으로 재현(원본은 내부적으로 앞뒤 버퍼 월도 미리
+    렌더링해두지만 사용자에게 보이는 동작은 동일).
+  - PopupRangePicker는 Start/End Date 필드 중 아무 아이콘이나 누르면 공유 팝업 달력이
+    뜨고, 시작일→종료일 순으로 두 번 클릭하면 팝업이 닫히며 두 입력 모두 채워진다.
+  - 자체 검증 중 발견한 버그: `.mc-field-label`에 `z-index`가 없어서 "Outside" 라벨이 실제
+    로는 정상 렌더링되고 있었는데, Playwright의 `locator.screenshot()`이 요소 자기 자신의
+    bounding box에 딱 맞춰 잘라내는 바람에(오버플로우로 튀어나온 라벨은 그 크롭에서
+    잘림) 마치 안 보이는 버그처럼 오인할 뻔했다 — `page.screenshot({fullPage/clip})`로
+    다시 확인해 실제로는 정상 렌더링됨을 확인(그래도 이후 안전하게 `z-index:2` 추가).
+  - **1차 보고 후 사용자 피드백으로 6개 버그 발견·수정**:
+    1. TextField "Outside" 라벨이 위 카드 제목 영역을 침범 — `.mc-field-outside`에
+       `margin-top:22px`를 항상 예약해두는 방식으로 수정(플로팅 여부와 무관하게 공간은
+       항상 확보, opacity만 토글).
+    2. "Inside" 값이 박스 밑에서 잘림 — 라벨 줄(고정 높이)+값 줄을 항상 flex column으로
+       예약해두는 방식으로 재구성.
+    3. e-mail 필드에 예시 텍스트가 없음 — 원본의 `displaynulltext="abc@abc.com"`을
+       재현(항상 플로팅 라벨 + 항상 보이는 placeholder 예시).
+    4. MultiLineTextField를 "outside"로 바꾸면 같은 침범 문제 — 3번과 같은 클래스라 1번
+       수정으로 같이 해결.
+    5. **DateField/DateRangePicker의 datetime·time 모드에 실제 시간 지정 UI가 없었음**
+       (1차 구현은 포맷 텍스트만 바꿨을 뿐 실제 시:분:초를 고를 방법이 없었다) — 원본을
+       실측(datetime 모드에서 아이콘 클릭 → 달력/시계 탭 + "CLOSE" 버튼이 있는 팝업,
+       time 모드는 탭 없이 바로 시:분:초 선택 UI, DateRangePicker는 Start/End 양쪽에
+       각각 탭이 있지만 클릭하면 양쪽 다 같은 뷰로 전환됨)한 뒤 그대로 재현 — 단 원본의
+       3열 무한스크롤 휠 UI 자체는 네이티브 `<select>` 3~4개(오전/오후, 시, 분, 초)로
+       대체했다(정보는 동일, 실제 시간 지정이 가능한 것이 이번 수정의 핵심이라 판단).
+    6. DateField는 CLOSE 버튼으로 날짜(캘린더 탭에서 고른 값)와 시간(시계 탭에서 고른
+       값)을 합쳐 한 번에 커밋하도록 재구성(`combineDateTime`/`timeOfDayFromDate` 헬퍼).
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  16/40 완료. 컴포넌트 카테고리 11개 중 2개 완료, 9개 남음 — **다음은 menu_id 20300
+  ("파일 전송", comp::filetransfer.xfdl)**, 아직 시작 안 함.
+  **아직 커밋 전 — 사용자 확인 대기.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
 1. ~~`spring-nexacro-N24/` 복사본 최종 검토~~ — 완료(빌드·실행 확인까지 마침).
@@ -575,10 +622,11 @@
 14. ~~menu_id 11200 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `8d42541`).
 15. ~~menu_id 11400 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `0bea281`).
     그리드 카테고리(14개) 전체 완료.
-16. ~~menu_id 20100 화면 전환~~ — 완료, **커밋 전**(문서 정리 커밋과 함께 진행 예정).
-    15/40 완료. 컴포넌트 카테고리 11개 중 1개 완료 — **다음은 menu_id 20200("모바일 퍼스트
-    컴포넌트", comp::mobilecomponents.xfdl)**, 아직 시작 안 함.
-17. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+16. ~~menu_id 20100 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `c1b5bb4`).
+17. ~~menu_id 20200 화면 전환~~ — 완료, **커밋 전**(사용자 확인 대기).
+    16/40 완료. 컴포넌트 카테고리 11개 중 2개 완료 — **다음은 menu_id 20300("파일 전송",
+    comp::filetransfer.xfdl)**, 아직 시작 안 함.
+18. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
     저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
     커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
     README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

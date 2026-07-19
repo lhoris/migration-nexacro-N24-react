@@ -259,6 +259,9 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.components": "기본 컴포넌트",
     "comp.components.desc":
       "웹 어플리케이션에 있어 가장 중요한 요소 중 하나는 사용자와 시스템을 연결해주는 UI 컨트롤입니다.\n넥사크로는 80여가지 이상의 UI 컴포넌트를 제공하고 있으며 버튼, 에디트박스, 그리드, 체크박스, 콤보 등의 기본 컴포넌트를 통해 사용자에게 효과적으로 데이터를 표현하거나 조작하게 하여 업무 생산성을 제고합니다.\n\n또한 기본 컴포넌트 내에 Sketch, Video, Graphic, MAP 등의 컴포넌트가 포함되어 있어 업무 시스템 구축 시 기능에 대한 확장성을 제공합니다.\n\n모든 컴포넌트는 멀티 플랫폼, 멀티 브라우저를 기본 지원하여 웹 호환성을 위한 별도 작업이 불필요하므로 시스템 구축에 대한 비용을 절감시킵니다.",
+    "comp.mobilecomponents": "모바일 퍼스트 컴포넌트",
+    "comp.mobilecomponents.desc":
+      "Nexacro N v24 신규 기능 중 하나로, 기존의 기본 컴포넌트 이외에 모바일 환경에서 시각적 요소와 상호작용에서 더욱 개선된 사용자 경험을 제공하는 컴포넌트입니다. 모바일 퍼스트 컴포넌트는 하위 버전 프로젝트 설정을 변경하지 않아도 다양한 버전과 호환성을 보장하고 있습니다.\n모바일 퍼스트 컴포넌트는 TextField, MultiLineTextField, DateField, DateRangePicker, PopupDateRangePicker 5가지로 모바일 화면을 보다 쉽게 디자인할 수 있습니다.",
 
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
@@ -528,6 +531,9 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.components": "Components",
     "comp.components.desc":
       "One of the most important elements in a web application is the UI control that connects the user and the system.\nNexacro provides more than 60 UI components and improves work productivity by manipulating data to users through basic components such as buttons, edit boxes, grids, check boxes, and combos.\n\nIn addition, basic components such as sketches, videos, graphics, and MAP are included, providing extensions to the functionality when building a business system.\n\nAll components support multi-platform, multi-browser, and support web system to improve the cost of system construction",
+    "comp.mobilecomponents": "Mobile First Components",
+    "comp.mobilecomponents.desc":
+      "As one of the new features of Nexacro N v24, it is a component that provides an improved user experience in visual elements and interactions in a mobile environment in addition to the existing basic components.\nMobile-first components ensure compatibility with various versions without changing project settings for lower versions.\nThere are five mobile-first components: TextField, MultiLineTextField, DateField, DateRangePicker, and PopupDateRangePicker, making it easier to design mobile screens.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

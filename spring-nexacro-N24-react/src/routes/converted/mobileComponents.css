@@ -1,0 +1,572 @@
+/* 컴포넌트 카드가 여러 개 늘어서므로 .work-card의 640px 캡을 없앤다(largeData.css 상단
+   주석/메모리 참고 — 마커 클래스가 work-card 자기 자신에 있으므로 :has() 대신 그냥 붙여쓴다). */
+.work-card.mc-card {
+  max-width: none;
+}
+
+.mc-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.mc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.mc-card-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: 16px 18px;
+  margin-top: 20px;
+}
+
+.mc-row > .mc-card-item {
+  margin-top: 0;
+}
+
+.mc-card-item:first-of-type {
+  margin-top: 0;
+}
+
+.mc-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.mc-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---- TextField row ---- */
+.mc-textfield-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* ---- Floating label field (shared: TextField / MultiLineTextField / DateField / PopupRangePicker) ----
+   .mc-field-wrap는 "outside" 라벨이 뜨는 자리를 모든 포지션에 동일하게(빈 자리라도) 예약해둬서
+   같은 줄에 있는 다른 포지션 필드들과 박스 상단이 항상 나란히 맞게 한다. */
+.mc-field-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.mc-field-outside-slot {
+  height: 18px;
+  font-size: 11px;
+  line-height: 18px;
+  color: var(--muted);
+}
+
+.mc-field {
+  position: relative;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  padding: 0 12px;
+  height: 56px;
+  cursor: text;
+}
+
+.mc-field input,
+.mc-field textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  padding: 0;
+}
+
+.mc-field.has-icon input {
+  width: calc(100% - 26px);
+}
+
+.mc-field-label {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  font-size: 13px;
+  color: var(--muted);
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.12s ease;
+  opacity: 0;
+}
+
+/* overlap: 포커스/값 있을 때 라벨이 테두리를 가로지르는 위치로 뜬다 */
+.mc-field-overlap.floating {
+  overflow: visible;
+}
+
+.mc-field-overlap.floating .mc-field-label {
+  opacity: 1;
+  top: 0;
+  font-size: 11px;
+  background: var(--paper);
+  padding: 0 4px;
+  color: #6954e1;
+}
+
+.mc-field-overlap.floating {
+  border-color: #6954e1;
+}
+
+.mc-field-overlap.floating input,
+.mc-field-overlap.floating textarea {
+  align-self: flex-end;
+}
+
+/* outside: 실제 라벨 텍스트는 .mc-field-outside-slot(모든 포지션에 항상 예약된 자리)에
+   렌더링된다 — 여기 있는 내부 .mc-field-label은 그냥 숨겨둔다(overlap/inside와 마크업을
+   공유하기 위해 남겨둠). */
+.mc-field-outside .mc-field-label {
+  display: none;
+}
+
+.mc-field-outside.floating {
+  border-color: #6954e1;
+}
+
+/* inside: 라벨 줄(고정 높이)+값 줄을 flex column으로 나누되, 다른 포지션과 같은 56px
+   높이 안에 맞도록 여백을 좁혀서(opacity로만 토글) 값이 잘리지 않게 한다. */
+.mc-field-inside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 12px 5px;
+}
+
+.mc-field-inside .mc-field-label {
+  position: static;
+  transform: none;
+  height: 12px;
+  line-height: 12px;
+  font-size: 10px;
+  opacity: 0;
+}
+
+.mc-field-inside.floating .mc-field-label {
+  opacity: 1;
+}
+
+.mc-field-inside.floating {
+  border-color: #6954e1;
+  align-items: stretch;
+}
+
+.mc-field-inside input {
+  flex: 1;
+  min-height: 0;
+}
+
+.mc-field-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.mc-field.has-icon input {
+  padding-left: 26px;
+}
+
+.mc-field.has-icon .mc-field-label {
+  left: 12px;
+}
+
+/* Textarea variant */
+.mc-textarea-field {
+  height: 140px;
+  padding: 10px 12px;
+}
+
+.mc-textarea-field textarea {
+  resize: vertical;
+  line-height: 1.5;
+  padding-top: 4px;
+}
+
+.mc-textarea-field.mc-field-overlap.floating .mc-field-label {
+  position: absolute;
+  top: 0;
+  left: 12px;
+}
+
+/* ---- Radio row ---- */
+.mc-radio-row {
+  display: flex;
+  gap: 24px;
+}
+
+.mc-radio-row-end {
+  justify-content: flex-end;
+}
+
+.mc-radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.mc-radio input {
+  accent-color: #ff5f6d;
+  width: 16px;
+  height: 16px;
+}
+
+/* ---- DateField / PopupRangePicker wrappers + calendar icon ---- */
+.mc-datefield,
+.mc-poprange {
+  position: relative;
+}
+
+.mc-poprange {
+  display: flex;
+  gap: 14px;
+}
+
+.mc-poprange .mc-field {
+  flex: 1;
+}
+
+.mc-cal-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* ---- Popup calendar (single month, shared) ---- */
+.mc-popup {
+  position: absolute;
+  z-index: 6;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 260px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* ---- Calendar bar (title + nav), reused single + triple ---- */
+.mc-cal-bar {
+  background: #6954e1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mc-cal-bar button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.mc-cal-bar-triple {
+  justify-content: space-between;
+  border-radius: 6px 6px 0 0;
+}
+
+.mc-cal-bar-triple span {
+  flex: 1;
+  text-align: center;
+}
+
+/* ---- Popup tabs (date/time, datetime 모드) + CLOSE 버튼 ---- */
+.mc-popup-tabs {
+  display: flex;
+}
+
+.mc-popup-tabs button {
+  flex: 1;
+  border: none;
+  background: var(--paper);
+  color: var(--muted);
+  cursor: pointer;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.mc-popup-tabs button.active {
+  background: #6954e1;
+  color: #fff;
+}
+
+.mc-popup-close {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--muted);
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+/* ---- Time-of-day wheels (DateField datetime/time, DateRangePicker datetime/time) ----
+   원본처럼 세로 스크롤 + snap으로 가운데 행을 고르는 휠 UI. 각 열은 5행이 보이는 고정
+   높이 창이고, 위아래 여백행(WHEEL_PAD_ROWS)을 둬서 첫/마지막 값도 가운데까지 스크롤될
+   수 있게 한다. */
+.mc-time-wheels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 10px;
+}
+
+.mc-wheel-colon {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.mc-wheel-col {
+  position: relative;
+  width: 52px;
+  height: 160px;
+}
+
+.mc-wheel-highlight {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 32px;
+  transform: translateY(-50%);
+  background: rgba(105, 84, 225, 0.1);
+  border-top: 1px solid #6954e1;
+  border-bottom: 1px solid #6954e1;
+  pointer-events: none;
+}
+
+.mc-wheel-scroll {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.mc-wheel-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.mc-wheel-row {
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.mc-wheel-row.selected {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.mc-range-tabs {
+  padding: 0;
+  background: var(--surface);
+  border-radius: 0;
+}
+
+.mc-range-tabs button {
+  width: 100%;
+  border: none;
+  background: #e4e6ea;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.mc-range-tabs button.active {
+  background: #6954e1;
+  color: #fff;
+}
+
+.mc-range-time-grids {
+  display: flex;
+  border: 1px solid var(--line);
+  border-top: none;
+}
+
+.mc-range-time-grids .mc-time-wheels {
+  flex: 1;
+  border-right: 1px solid var(--line);
+}
+
+.mc-range-time-grids .mc-time-wheels:last-child {
+  border-right: none;
+}
+
+/* ---- Month grid (weekday header + day cells) ---- */
+.mc-month-grid {
+  border-right: 1px solid var(--line);
+}
+
+.mc-range-grids {
+  display: flex;
+  border: 1px solid var(--line);
+  border-top: none;
+}
+
+.mc-range-grids .mc-month-grid:last-child {
+  border-right: none;
+}
+
+.mc-range-grids .mc-month-grid {
+  flex: 1;
+}
+
+.mc-cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #6954e1;
+  font-size: 11px;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.mc-cal-weekdays .sun {
+  color: #ff7986;
+}
+
+.mc-cal-weekdays .sat {
+  color: #48afff;
+}
+
+.mc-cal-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  padding: 6px;
+}
+
+.mc-cal-day {
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  height: 28px;
+  font-size: 12px;
+  color: var(--ink);
+  cursor: pointer;
+  position: relative;
+}
+
+.mc-cal-day.sun {
+  color: #ff4c5e;
+}
+
+.mc-cal-day.sat {
+  color: #269bee;
+}
+
+.mc-cal-day.today {
+  background: #e5453f;
+  color: #fff;
+  font-weight: 700;
+}
+
+.mc-cal-day.in-range {
+  background: #e3ddfb;
+  border-radius: 0;
+}
+
+.mc-cal-day.endpoint {
+  background: #6954e1;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+/* ---- DateRangePicker header (Start/End Date labels) ---- */
+.mc-range-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--line);
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+}
+
+.mc-range-header-cell {
+  padding: 14px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink);
+  background: #e4e6ea;
+}
+
+/* ---- Description ---- */
+.mc-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.mc-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.mc-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}
+
+@media (max-width: 900px) {
+  .mc-row,
+  .mc-textfield-row {
+    grid-template-columns: 1fr;
+  }
+  .mc-range-grids {
+    flex-direction: column;
+  }
+}

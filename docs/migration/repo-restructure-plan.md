@@ -600,8 +600,45 @@
     6. DateField는 CLOSE 버튼으로 날짜(캘린더 탭에서 고른 값)와 시간(시계 탭에서 고른
        값)을 합쳐 한 번에 커밋하도록 재구성(`combineDateTime`/`timeOfDayFromDate` 헬퍼).
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
-  16/40 완료. 컴포넌트 카테고리 11개 중 2개 완료, 9개 남음 — **다음은 menu_id 20300
-  ("파일 전송", comp::filetransfer.xfdl)**, 아직 시작 안 함.
+  16/40 완료. 컴포넌트 카테고리 11개 중 2개 완료, 9개 남음.
+  **커밋·push 완료(2026-07-19, 커밋 `beeec26`).**
+
+- **menu_id 20300("파일 전송", comp::filetransfer.xfdl) React 전환 완료(2026-07-19).**
+  `FileTransfer.tsx` + `fileTransferStore.ts`. 원본은 `ExcelExportObject`류와 달리 실제
+  서버 트랜잭션(업로드/다운로드 API)에 의존하는데 이 프로젝트엔 그 백엔드가 없다(10500/
+  11000과 같은 "백엔드 없음" 케이스, Playwright로 404 확인) — 사용자에게 물어봤고
+  AskUserQuestion으로 "브라우저 저장소(IndexedDB)로 실제 동작하게 구현"을 선택받아 진행.
+  - `fileTransferStore.ts`: `indexedDB.open()`을 프라미스로 감싸 `listStoredFiles`/
+    `addStoredFile`/`deleteStoredFile`을 제공, `{id, name, size, blob}` 레코드로 실제
+    파일 Blob을 저장 — mock이 아니라 새로고침 후에도 남는 실제 영속 저장소.
+  - FileUpload 섹션: Add 버튼/드래그앤드롭 둘 다로 파일 추가, 중복 이름·최대 용량(2MB,
+    원본 `nMaxFileSize` 그대로) 검사, 체크박스 선택 삭제/전체 삭제/포커스 행 삭제, Transfer
+    버튼으로 IndexedDB에 실제 저장.
+  - FileDownload 섹션: 조회(search) 버튼으로 IndexedDB 목록을 그리드에 채움, 체크박스+
+    Download 버튼 또는 DEL 아이콘/행 더블클릭으로 개별 다운로드(`URL.createObjectURL`+
+    합성 anchor 클릭) — 실제로 받은 파일을 `cat`으로 열어 원본과 바이트 단위 동일함까지
+    확인.
+  - Tabulator 두 그리드 모두 `tableBuilt` 이벤트로 준비 상태를 확인한 뒤에만 `setData`를
+    호출하도록 해 "Cannot read properties of null (reading 'firstChild')" 에러를 예방(기존
+    화면들에서 이미 겪은 패턴, `conversion-playbook.md` 5-9 참고).
+  - **버그 1: 같은 이름 파일을 중복 추가하면 경고 알럿이 두 번 뜸** — `setRows(prev => {...})`
+    업데이터 함수 안에서 `window.alert()`를 호출했는데, React 18 StrictMode가 개발 모드에서
+    순수성 검증을 위해 업데이터 함수를 일부러 두 번 호출한다는 게 원인이었다. 알럿 같은
+    부수효과는 업데이터 밖에서(현재 상태를 담은 ref를 읽어) 계산하고, `setState`에는 순수
+    함수만 넘기도록 수정.
+  - **버그 2: 체크된 항목 없이 포커스만 된 행을 삭제해도 실제로 안 지워짐** — `setRows(prev =>
+    prev.filter(r => r.id !== focusedIdRef.current))` 바로 다음 줄에서
+    `focusedIdRef.current = null`을 실행했는데, React가 업데이터 콜백 실행을 커밋 시점까지
+    미루는 경우가 있어 그 시점엔 이미 ref가 null이 된 뒤라 필터가 아무 것도 안 걸러내는
+    무한(no-op) 상태였다. `window.__ftDebugXxx` 형태로 내부 ref/state 값을 임시로
+    `window`에 노출해 `page.evaluate()`로 단계별 확인하며 원인을 좁혔다 — ref 값을 setState
+    호출 *전에* 로컬 상수로 캡처해 클로저 안에서는 그 상수만 참조하도록 수정(디버그 코드는
+    이후 전부 제거).
+  - dev 서버(:5173)·프로덕션 게이트웨이(:3000) 양쪽에서 추가/중복거부/용량초과/전체삭제/
+    부분삭제/포커스삭제/전송/조회/개별다운로드(버튼·더블클릭·DEL아이콘)/전체선택 체크박스
+    동기화/드래그앤드롭까지 전부 재검증, 한국어/영어 렌더링 둘 다 확인, 콘솔 에러 0건.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  17/40 완료. 컴포넌트 카테고리 11개 중 3개 완료, 8개 남음.
   **아직 커밋 전 — 사용자 확인 대기.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
@@ -623,10 +660,11 @@
 15. ~~menu_id 11400 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `0bea281`).
     그리드 카테고리(14개) 전체 완료.
 16. ~~menu_id 20100 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `c1b5bb4`).
-17. ~~menu_id 20200 화면 전환~~ — 완료, **커밋 전**(사용자 확인 대기).
-    16/40 완료. 컴포넌트 카테고리 11개 중 2개 완료 — **다음은 menu_id 20300("파일 전송",
-    comp::filetransfer.xfdl)**, 아직 시작 안 함.
-18. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+17. ~~menu_id 20200 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `beeec26`).
+18. menu_id 20300 화면 전환 — 완료, **커밋 전**(사용자 확인 대기).
+    17/40 완료. 컴포넌트 카테고리 11개 중 3개 완료 — **다음은 menu_id 20400(List View)**,
+    아직 시작 안 함.
+19. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
     저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
     커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
     README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

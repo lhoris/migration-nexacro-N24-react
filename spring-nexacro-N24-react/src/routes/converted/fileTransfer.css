@@ -1,0 +1,100 @@
+/* 그리드 화면은 .work-card의 max-width 캡을 없애 원본처럼 폭을 넓게 쓴다(largeData.css 상단
+   주석/메모리 참고 — 마커 클래스가 work-card 자기 자신에 있으므로 :has() 대신 그냥 붙여쓴다). */
+.work-card.ft-card {
+  max-width: none;
+}
+
+.ft-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.ft-section {
+  margin-top: 20px;
+}
+
+.ft-section:first-of-type {
+  margin-top: 0;
+}
+
+.ft-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.ft-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.ft-btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.ft-btn {
+  height: 32px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ft-btn-primary {
+  background: #ff5f6d;
+}
+
+.ft-btn-secondary {
+  background: #5b6cf0;
+}
+
+.ft-file-input {
+  display: none;
+}
+
+.ft-grid-mount {
+  margin-top: 2px;
+}
+
+.ft-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #ff5f6d;
+  cursor: pointer;
+}
+
+.ft-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.ft-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 14px 0 6px;
+  color: var(--ink);
+}
+
+.ft-desc-title:first-child {
+  margin-top: 0;
+}
+
+.ft-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

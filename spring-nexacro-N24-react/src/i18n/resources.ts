@@ -262,6 +262,18 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.mobilecomponents": "모바일 퍼스트 컴포넌트",
     "comp.mobilecomponents.desc":
       "Nexacro N v24 신규 기능 중 하나로, 기존의 기본 컴포넌트 이외에 모바일 환경에서 시각적 요소와 상호작용에서 더욱 개선된 사용자 경험을 제공하는 컴포넌트입니다. 모바일 퍼스트 컴포넌트는 하위 버전 프로젝트 설정을 변경하지 않아도 다양한 버전과 호환성을 보장하고 있습니다.\n모바일 퍼스트 컴포넌트는 TextField, MultiLineTextField, DateField, DateRangePicker, PopupDateRangePicker 5가지로 모바일 화면을 보다 쉽게 디자인할 수 있습니다.",
+    "comp.filetransfer": "파일 전송",
+    "comp.filetransfer.delete": "삭제",
+    "comp.filetransfer.transfer": "전송",
+    "comp.filetransfer.downloadBtn": "다운로드",
+    "comp.filetransfer.desc": "넥사크로 에서 기본으로 제공되는 컴포넌트와 오브젝트를 이용해서 파일을 서버에 업로드 및 다운로드 할 수 있습니다.",
+    "comp.filetransfer.upload": "파일 업로드",
+    "comp.filetransfer.upload.desc":
+      "상단 그리드의 추가 버튼을 클릭하면 파일 탐색기가 실행됩니다. 업로드 하고자 하는 파일을 선택하여 ( 컨트롤 키를 이용해 다중 선택 가능 ) 업로드 하고자 하는 파일을 리스트에 올려줍니다. 또는 운영체제에서 기본으로 제공해주는 탐색기에서 파일을 드래그하여 화면에 드랍하는 방식으로도 파일을 선택할 수 있습니다. 잘못 선택된 파일은 리스트에서 파일을 선택하고 삭제 버튼을 클릭해 서버에 올라갈 리스트에서 제외 시킵니다. 파일 선택이 완료 되면 전송 버튼을 눌러 파일을 서버에 업로드 합니다.",
+    "comp.filetransfer.download": "파일 다운로드",
+    "comp.filetransfer.download.desc": "하단 그리드의 조회 버튼을 클릭하면 서버에 업로드된 파일 리스트를 조회할 수 있습니다. 리스트에서 다운받고자 하는 파일을 선택하고 다운로드 버튼을 이용하여 파일을 내려받습니다.",
+    "filetransfer.search": "조회",
+    "filetransfer.add": "추가",
 
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
@@ -534,6 +546,18 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.mobilecomponents": "Mobile First Components",
     "comp.mobilecomponents.desc":
       "As one of the new features of Nexacro N v24, it is a component that provides an improved user experience in visual elements and interactions in a mobile environment in addition to the existing basic components.\nMobile-first components ensure compatibility with various versions without changing project settings for lower versions.\nThere are five mobile-first components: TextField, MultiLineTextField, DateField, DateRangePicker, and PopupDateRangePicker, making it easier to design mobile screens.",
+    "comp.filetransfer": "File Transfer",
+    "comp.filetransfer.delete": "Delete",
+    "comp.filetransfer.transfer": "Transfer",
+    "comp.filetransfer.downloadBtn": "Download",
+    "comp.filetransfer.desc": "You can upload and download files to the server using components and objects provided by the Nexacro.",
+    "comp.filetransfer.upload": "File Upload",
+    "comp.filetransfer.upload.desc":
+      "Click the Add button on the top grid to open the file explorer. Select a file to upload (multiple selection using the control key) and upload the file to be uploaded on the list. Alternatively, you can select a file by dragging the file from the explorer provided by the operating system and dropping it on the screen.Incorrectly selected files are excluded from the list to be uploaded to the server by selecting the file from the list and clicking the Delete button.When the file selection is complete, click the Submit button to upload the file to the server.",
+    "comp.filetransfer.download": "File Download",
+    "comp.filetransfer.download.desc": "Click the search button in the lower grid to search the list of files uploaded to the server. Select the file you want to download from the list and download the file using the download button.",
+    "filetransfer.search": "search",
+    "filetransfer.add": "Add",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

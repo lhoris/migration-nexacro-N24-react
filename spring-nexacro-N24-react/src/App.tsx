@@ -23,6 +23,7 @@ import { Components } from "./routes/converted/Components";
 import { MobileComponents } from "./routes/converted/MobileComponents";
 import { FileTransfer } from "./routes/converted/FileTransfer";
 import { ListView } from "./routes/converted/ListView";
+import { FitToContents } from "./routes/converted/FitToContents";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -47,6 +48,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   "20200": MobileComponents,
   "20300": FileTransfer,
   "20500": ListView,
+  "20600": FitToContents,
 };
 
 export default function App() {

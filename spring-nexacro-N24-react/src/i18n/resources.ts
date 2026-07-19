@@ -284,6 +284,12 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
       "Large, Medium, Small 또는 Device (PC, Tablet, Mobile)와 같은 크기별로 화면을 구성하기 위해 여러 형식을 구성 할 수 있습니다.",
     "comp.listview.menutype2": "상세정보 구조를 지원합니다.",
 
+    // -- 실제 Nexacro stringresource (comp::fittocontents.xfdl / fittocontents_desc.xfdl) --
+    "comp.fittocontents": "컴포넌트 사이즈 자동 조정",
+    "comp.fittocontents.top.desc":
+      "텍스트의 사이즈에 맞춰 컴포넌트의 넓이, 높이가 자동 설정되며 상대좌표로 설정된 컴포넌트의 위치가 따라 이동합니다.\nArrangement와 FitToContents 속성이 적용되었습니다.",
+    "comp.fittocontents.desc": "컴포넌트의 fittocontents 속성을 조정하면 텍스트 길이에 맞춰 자동으로 컴포넌트의 사이즈가 반영됩니다.",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -575,6 +581,12 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.listview2.desc":
       "You can configure multiple formats to configure screens by size, such as Large, Medium, Small, or Device (PC, Tablet, Mobile).",
     "comp.listview.menutype2": "Supports detailed structure.",
+
+    "comp.fittocontents": "Component size autofit",
+    "comp.fittocontents.top.desc":
+      "The width and height of the component are automatically set according to the size of the text, and the position of the component set in relative coordinates moves accordingly.\nArrangement and FitToContents properties have been applied.",
+    "comp.fittocontents.desc":
+      "Adjusting the fittocontents property of a component reflects the size of the component according to the text length automatically.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

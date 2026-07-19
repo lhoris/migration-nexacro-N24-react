@@ -344,6 +344,19 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.graphics.desc":
       "Graphics 컴포넌트는 선이나 도형을 그릴 수 있는 기능을 제공합니다. Graphics 컴포넌트는 HTML5 Canvas 요소를 마치 다른 컴포넌트처럼 개발자가 익숙하게 사용할 수 있습니다. 컴포넌트의 속성, 메소드, 이벤트를 사용해 스크립트 상에서 쉽게 원하는 이미지를 만들 수 있습니다.\n\n넥사크로 스튜디오 설치 시 Graphics 컴포넌트는 기본 설정되지 않은 상태입니다. 프로젝트 TypeDefinition 에서 Graphics.json를 등록하고 Graphics 컴포넌트를 오브젝트로 설정해주어야 합니다.",
 
+    // -- 실제 Nexacro stringresource (comp::animation.xfdl / animation_desc.xfdl) --
+    "comp.animation": "애니메이션",
+    "comp.animation.circlemenu": "원형 메뉴",
+    "comp.animation.imageslide": "이미지 슬라이드",
+    // 원본 소스가 이 섹션 제목에 comp.animation 키를 잘못 재사용해(폴백만 "Easing", 실제
+    // 리소스 값은 "애니메이션") 원본에서도 "이징"이 아니라 "애니메이션"이라고 뜬다 —
+    // 오타로 판단해 이 화면 전용 새 키로 분리해 의도된 제목("이징")으로 수정.
+    "comp.animation.easing": "이징",
+    "comp.animation.desc":
+      "애니메이션 기능은 데이터를 돋보이게 하거나 특정 기능을 강조하기 위해 사용합니다. 예를 들어 Edit 컴포넌트에 잘못된 값을 입력했을때 살짝 흔드는 효과를 추가하거나 데이터가 업데이트되는 것을 강조할 수 있습니다.\n\n화면에 표시되는 데이터를 강조하기 위해 카운터 효과를 내는 것도 애니메이션 기능을 활용하는 것입니다.",
+    "comp.animation.easing.desc":
+      "애니메이션 효과가 처리되는 속도를 지정합니다. easing 속성값을 지정하는 값은 \"linear\"을 제외하고 3가지로 구분할 수 있습니다. 가장 앞 부분에는 \"ease\"라는 문자열이 붙습니다. 그 다음에는 \"In\", \"Out\", \"InOut\" 3가지 중 하나의 문자열이 붙습니다. 두 개의 문자열을 합치면 \"ease in\"이라는 문자열이 되는데, 이 표현은 전통적인 애니메이션 업계에서 사용하는 용어입니다. 물체의 움직임이 서서히 시작해서 점점 빨라지는 것을 의미합니다. \"ease out\"은 반대로 빠르게 시작해서 점점 속도를 줄이는 것이지요. \"slow in\", \"slow out\"이라고 표현하기도 합니다. \"ease in out\"은 마치 자동차처럼 점점 속도를 올려서 중간 지점에서 가장 빠른 속도를 내고 중간 지점을 지나면서 점점 느려집니다. 마지막에 붙는 문자열은 속도의 세세한 변화 시점을 정하는 것입니다.",
+
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
     // 실제 footer.xfdl.js의 copyright.short 원문 (TOBESOFT 데모사이트 문구 그대로)
@@ -689,6 +702,15 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.graphics.draw": "Draw",
     "comp.graphics.desc":
       "Graphics components provide the ability to draw lines or shapes. Graphics components allow developers to use HTML5 Canvas elements as if they were other components. Use the properties, methods, and events of the component to easily create the desired image on the script.\n\nGraphics components are not set by default when installing the Nexacro studio. You must register Graphics.json in the Project TypeDefinition and set the Graphics component as an object.",
+
+    "comp.animation": "Animation",
+    "comp.animation.circlemenu": "Circle Menu",
+    "comp.animation.imageslide": "Image Slide",
+    "comp.animation.easing": "Easing",
+    "comp.animation.desc":
+      "Animation features are used to highlight data or highlight specific features. For example, if you enter an incorrect value in the Edit component, you may want to add a slight shaking effect or emphasize that the data is updated.\n\nTo highlight the data displayed on the screen, the counter effect is also used by animation.",
+    "comp.animation.easing.desc":
+      "Specifies the rate at which animation effects are processed. There are three distinct values that specify the value of the easing property, except for \"linear\". The first part is accompanied by the string \"ease\". It is followed by a string of one of three strings: \"In\", \"Out\", and \"InOut\". Combining the two strings is a string called \"ease in\", which is a term used in the traditional animation industry. It means that the movement of an object begins slowly and becomes faster and faster. \"ease out\" is, on the contrary, starting fast and slowing down. They are also called \"slow in\" and \"slow out\". \"ease in out\" speeds up like a car, giving it the fastest speed at midpoint and slowing down as it passes through midpoint. The last string is to determine the timing of the change in detail.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

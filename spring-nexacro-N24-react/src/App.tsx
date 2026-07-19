@@ -29,6 +29,7 @@ import { GoogleMap } from "./routes/converted/GoogleMap";
 import { Menu } from "./routes/converted/Menu";
 import { TwoWayBinding } from "./routes/converted/TwoWayBinding";
 import { Graphics } from "./routes/converted/Graphics";
+import { Animation } from "./routes/converted/Animation";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -59,6 +60,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   "20900": Menu,
   "21000": TwoWayBinding,
   "21100": Graphics,
+  "21200": Animation,
 };
 
 export default function App() {

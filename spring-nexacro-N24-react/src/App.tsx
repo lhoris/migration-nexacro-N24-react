@@ -27,6 +27,7 @@ import { FitToContents } from "./routes/converted/FitToContents";
 import { DynamicGenerate } from "./routes/converted/DynamicGenerate";
 import { GoogleMap } from "./routes/converted/GoogleMap";
 import { Menu } from "./routes/converted/Menu";
+import { TwoWayBinding } from "./routes/converted/TwoWayBinding";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -55,6 +56,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   "20700": DynamicGenerate,
   "20800": GoogleMap,
   "20900": Menu,
+  "21000": TwoWayBinding,
 };
 
 export default function App() {

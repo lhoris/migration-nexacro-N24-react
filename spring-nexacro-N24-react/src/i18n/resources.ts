@@ -326,6 +326,16 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.menu.menutype.desc":
       "각 메뉴 구성을 확인하세요.\n다양한 계층적 메뉴 구성을 확인할 수 있습니다.\n이 외에도 원하는 형태의 메뉴 구성을 유연하게 표현할 수 있습니다.",
 
+    // -- 실제 Nexacro stringresource (comp::binding.xfdl / binding_desc.xfdl) --
+    "comp.binding": "데이터 양방향 바인딩",
+    "comp.binding.desc":
+      "그리드의 선택된 행이 변경될 때 해당 행의 데이터로 상세정보에 반영됩니다. 또한 그리드 또는 상세정보의 내용을 수정하면 변경된 내용이 실시간으로 바인딩된 컴포넌트에 적용됩니다. 컴포넌트에 데이터셋 명과 컬럼명을 명시하면 별도의 스크립트 없이 양방향 데이터 바인딩이 가능합니다. \n데이터 바인딩이란, view(화면)와 model(데이터)을 하나로 연결하는 것을 의미합니다. 모델의 데이터가 변경 될 때 화면의 데이터를 바꿔주고, 화면의 데이터가 변경될때 모델의 데이터를 변경해주는 것을 양방향 바인딩이라고 합니다.",
+    "comp.binding.information": "상세정보",
+    "comp.binding.gender": "성별",
+    "comp.binding.birthday": "생년월일",
+    "comp.binding.marriage": "결혼여부",
+    "comp.binding.remark": "비고",
+
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
     // 실제 footer.xfdl.js의 copyright.short 원문 (TOBESOFT 데모사이트 문구 그대로)
@@ -655,6 +665,15 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.menu.menutype": "Check out the various menus",
     "comp.menu.menutype.desc":
       "Please check each menu configuration.\nYou can see a variety of menu configurations.\nIn addition, you have the flexibility to express your desired menu configuration.",
+
+    "comp.binding": "Data two-way binding",
+    "comp.binding.desc":
+      "Data binding means connecting the view and model together. Changing the data on the screen when the data in the model changes, and changing the data in the model when the data on the screen changes is called two-way binding.",
+    "comp.binding.information": "More Information",
+    "comp.binding.gender": "Gender",
+    "comp.binding.birthday": "Birthday",
+    "comp.binding.marriage": "Marital Status",
+    "comp.binding.remark": "Remark",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

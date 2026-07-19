@@ -304,6 +304,15 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.generate.lineamount": "라인 수",
     "comp.generate.total": "총 컴포넌트 갯수",
     "comp.generate.create": "생성",
+
+    // -- 실제 Nexacro stringresource (comp::googlemap.xfdl / googlemap_desc.xfdl) --
+    "comp.googlemap": "구글 지도",
+    "comp.googlemap.showmap": "지도 보기",
+    "comp.googlemap.addmaker": "마커 추가",
+    "comp.googlemap.delmaker": "마커 삭제",
+    "comp.googlemap.desc":
+      "GoogleMap은 구글에서 제공하는 지도를 화면에 출력할 때 사용하는 컴포넌트입니다. 구글 지도를 사용하려면 HTML 페이지를 만들고 구글에서 제공하는 API를 사용해서 로딩하는 과정이 필요하지만 GoogleMap 컴포넌트를 사용하면 좀 더 손쉽게 구글 지도를 제어할 수 있습니다.\n\n'지도 보기' 버튼을 눌러보세요. 화면의 GoogleMap 컴포넌트에 지도가 표시됩니다. '마커 추가' 버튼을 누르면 투비소프트 회사 위치에 마커가 표시됩니다. '마커 삭제' 버튼을 누르면 다시 마커를 없앨 수 있습니다.",
+
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
     // 실제 footer.xfdl.js의 copyright.short 원문 (TOBESOFT 데모사이트 문구 그대로)
@@ -614,6 +623,14 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.generate.lineamount": "Lines",
     "comp.generate.total": "Total components",
     "comp.generate.create": "Generate",
+
+    "comp.googlemap": "Google Map",
+    "comp.googlemap.showmap": "Show Map",
+    "comp.googlemap.addmaker": "Add Marker",
+    "comp.googlemap.delmaker": "Delete Marker",
+    "comp.googlemap.desc":
+      "GoogleMap is a component that you use to print maps that Google provides on-screen. Google Maps requires creating HTML pages and loading them using Google-supplied APIs, but GoogleMap components make Google Maps easier to control.\n\nClick the 'Show Map' button. The GoogleMap component on the screen displays a map. Pressing the 'Add Marker' button will display the markers at the company position of TOBESOFT. Press the 'Delete Marker' button to remove the marker again.",
+
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",
     "shell.footerCopyright":

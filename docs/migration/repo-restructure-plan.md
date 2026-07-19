@@ -848,3 +848,46 @@
   - ImageViewer 샘플 이미지(`img_WF_sample02.png`)를 React public asset으로 복사했다.
   - 메뉴 라우팅은 `/m/generate`, `target: "react"`로 전환했다.
 - 현재 화면 전환 진행률은 menu_id 20700 기준 19/40 완료로 본다. 컴포넌트 카테고리는 11개 중 5개 완료, 6개 남음이다.
+
+- **menu_id 20800("구글 지도", comp::googlemap.xfdl) React 전환 완료(2026-07-19).**
+  `GoogleMap.tsx` + `googlemap.css`. 원본 `GoogleMap` 컴포넌트는 Dataset도 `svc::` 호출도
+  전혀 없는 순수 클라이언트 위젯 — 실제 Google Maps JS API를 그대로 감싼다.
+  - **원본에 실제 Google Maps API 키가 없음을 확인**: `Application.xadl.js`의
+    `this.googlemap = ""`(빈 문자열 기본값)가 `key.json`(항상 빈 객체 `{}`)에서 채워지길
+    기다리지만 실제 값이 없다. 원본을 Playwright로 직접 열어 실측: 지도 타일은 정상
+    렌더링(여의도 중심)되지만 "For development purposes only" 워터마크가 타일 전체에
+    깔리고, "Google 지도를 제대로 로드할 수 없습니다" 경고 모달이 뜬다(콘솔:
+    `ApiProjectMapError` 1건 + `NoApiKeys` 경고). 사용자에게 (1) 키 없는 임베드 그대로
+    재현 (2) 나중에 키를 넣을 수 있게 환경변수로 구성 (3) 정적 이미지로 대체 중 선택지를
+    물었고, "원본과 동일하게 키 없는 임베드로 그대로 재현"을 선택받음.
+  - 실제 Google Maps JS 스크립트(`maps.googleapis.com/maps/api/js`)를 원본과 동일하게
+    키 파라미터 없이 로드(`import.meta.env.VITE_GOOGLE_MAPS_API_KEY`가 설정되면 자동으로
+    실제 키로 업그레이드되는 구조만 남겨둠). 중심 좌표(37.524022, 126.926594, 여의도)·줌
+    15·줌 컨트롤 표시, "마커 추가" 클릭 시 삼성동(투비소프트 실제 위치,
+    37.5148693/127.0607522) 좌표에 "TOBESOFT" 마커 표시 + 지도 자동 이동(panTo), "마커
+    삭제" 클릭 시 마커만 제거되고 지도는 재중심화되지 않는 것(원본 소스 그대로의 동작)까지
+    Playwright로 원본과 나란히 클릭해 검증.
+  - Add Marker 버튼은 지도의 `idle` 이벤트(원본 `GoogleMap00_onload`에 대응)가 뜨기 전까진
+    비활성 상태.
+  - dev(:5173)·게이트웨이(:3000) 양쪽에서 원본과 동일한 콘솔 출력(에러 1건: `ApiProjectMapError`,
+    경고 2건: `NoApiKeys`/`loading=async`)임을 직접 대조 확인 — 이 화면은 "콘솔 에러 0건"이
+    아니라 "원본과 동일한 콘솔 상태"가 검증 기준이다(사용자가 키 없는 임베드를 그대로
+    재현하기로 선택했으므로).
+  - **원본 자체의 문구 불일치를 발견, 그대로 재현**: `comp::googlemap.xfdl`의 설명 패널
+    텍스트가 "'지도 보기' 버튼을 눌러보세요"라고 안내하지만 실제 화면엔 그런 버튼이 없다
+    (지도는 폼 로드 시 자동 표시되고, 버튼은 마커 추가/삭제 2개뿐 — `comp.googlemap.showmap`
+    i18n 키 자체는 존재하지만 어느 화면에서도 실제로 안 쓰임). 원본 소스 자체의 구버전
+    설계 잔재로 판단, 임의로 "고치지" 않고 설명 문구를 원문 그대로 옮김.
+  - `@types/google.maps`를 devDependency로 추가(`npm audit` 0 vulnerabilities), `tsconfig.app.json`의
+    `"types"` 배열에 `"google.maps"` 추가.
+  - **`tsc --noEmit -p .`(루트 tsconfig)이 실제로는 아무 파일도 검사하지 않는다는 걸
+    발견**: 루트 `tsconfig.json`은 `"files": []`에 `references`만 있는 솔루션 스타일
+    설정이라, `-p .`로 직접 돌리면 대상 파일이 0개라 뭘 잘못 써도 항상 통과(exit 0)한다 —
+    `google` 네임스페이스가 없는 채로 코드를 짜도 에러가 안 났던 이유. `tsc --noEmit -p
+    tsconfig.app.json`(실제 앱 설정)으로 직접 돌려야 진짜 검사가 된다 — 이전 화면들에서
+    반복됐던 "`tsc --noEmit`은 통과했는데 `npm run build`는 실패" 현상의 근본 원인이
+    이거였다(`conversion-playbook.md` 5-42 참고). 이후부터는 `tsc --noEmit -p
+    tsconfig.app.json`을 중간 점검용으로 쓴다.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  20/40 완료. 컴포넌트 카테고리 11개 중 6개 완료, 5개 남음.
+  **아직 커밋 전 — 사용자 확인 대기.**

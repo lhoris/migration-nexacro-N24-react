@@ -1,0 +1,66 @@
+.work-card.gm-card {
+  max-width: none;
+}
+
+.gm-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.gm-btn-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.gm-btn {
+  height: 36px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: #6954e1;
+  cursor: pointer;
+}
+
+.gm-btn:disabled {
+  background: #c7c7cc;
+  cursor: not-allowed;
+}
+
+.gm-map-mount {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #e8e8e8;
+}
+
+.gm-desc {
+  margin-top: 28px;
+  max-width: 900px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.gm-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.gm-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

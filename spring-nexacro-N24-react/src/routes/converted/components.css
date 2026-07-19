@@ -67,19 +67,51 @@
   font-weight: 600;
   cursor: pointer;
   color: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+  transition:
+    background-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 80ms ease,
+    filter 140ms ease;
 }
 
 .c2-btn-primary {
   background: #ff5f6d;
 }
 
+.c2-btn.c2-btn-primary:hover:not(:disabled) {
+  background-color: #f04d5e;
+  box-shadow: 0 5px 12px rgba(255, 95, 109, 0.28);
+}
+
 .c2-btn-secondary {
   background: #5b6cf0;
+}
+
+.c2-btn.c2-btn-secondary:hover:not(:disabled) {
+  background-color: #4c5de5;
+  box-shadow: 0 5px 12px rgba(91, 108, 240, 0.28);
+}
+
+.c2-btn:not(:disabled):active {
+  transform: translate3d(0, 1px, 0) scale(0.99);
+  filter: brightness(0.94);
+  box-shadow: inset 0 2px 5px rgba(15, 23, 42, 0.22);
+}
+
+.c2-btn:focus-visible,
+.c2-btn-icon:focus-visible,
+.c2-btn-round:focus-visible,
+.c2-calendar-header button:focus-visible,
+.c2-calendar-day:focus-visible {
+  outline: 2px solid rgba(38, 155, 238, 0.72);
+  outline-offset: 2px;
 }
 
 .c2-btn:disabled {
   opacity: 0.45;
   cursor: default;
+  box-shadow: none;
 }
 
 .c2-btn-icon {
@@ -91,6 +123,23 @@
   color: #fff;
   cursor: pointer;
   font-size: 15px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+  transition:
+    background-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 80ms ease,
+    filter 140ms ease;
+}
+
+.c2-btn-icon:hover {
+  background-color: #f04d5e;
+  box-shadow: 0 5px 12px rgba(255, 95, 109, 0.28);
+}
+
+.c2-btn-icon:active {
+  transform: translate3d(0, 1px, 0) scale(0.98);
+  filter: brightness(0.94);
+  box-shadow: inset 0 2px 5px rgba(15, 23, 42, 0.22);
 }
 
 .c2-btn-round-group {
@@ -109,6 +158,25 @@
   cursor: pointer;
   font-size: 15px;
   line-height: 1;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    color 140ms ease,
+    transform 80ms ease;
+}
+
+.c2-btn-round:hover {
+  border-color: #5b6cf0;
+  background: rgba(91, 108, 240, 0.1);
+  color: #3f50d5;
+  box-shadow: 0 3px 8px rgba(91, 108, 240, 0.16);
+}
+
+.c2-btn-round:active {
+  transform: translate3d(0, 1px, 0) scale(0.96);
+  background: rgba(91, 108, 240, 0.18);
+  box-shadow: inset 0 1px 4px rgba(15, 23, 42, 0.16);
 }
 
 /* ---- Radio / Toggle ---- */
@@ -448,6 +516,23 @@
   cursor: pointer;
   font-size: 15px;
   color: #fff;
+  width: 26px;
+  height: 24px;
+  border-radius: 5px;
+  transition:
+    background-color 140ms ease,
+    transform 80ms ease,
+    box-shadow 140ms ease;
+}
+
+.c2-calendar-header button:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.c2-calendar-header button:active {
+  transform: translate3d(0, 1px, 0) scale(0.96);
+  background-color: rgba(0, 0, 0, 0.16);
 }
 
 .c2-calendar-weekdays {
@@ -480,6 +565,23 @@
   font-size: 12px;
   color: var(--ink);
   cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    box-shadow 120ms ease,
+    color 120ms ease,
+    transform 80ms ease;
+}
+
+.c2-calendar-day:hover {
+  background-color: rgba(105, 84, 225, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(105, 84, 225, 0.24);
+  color: #5740d2;
+}
+
+.c2-calendar-day:active {
+  transform: translate3d(0, 1px, 0) scale(0.94);
+  background-color: rgba(105, 84, 225, 0.18);
+  box-shadow: inset 0 1px 4px rgba(15, 23, 42, 0.18);
 }
 
 .c2-calendar-day.sun {
@@ -494,6 +596,12 @@
   background: #6954e1;
   color: #fff;
   font-weight: 700;
+}
+
+.c2-calendar-day.today:hover {
+  background-color: #5c46d4;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(105, 84, 225, 0.28);
 }
 
 /* ---- Static ---- */
@@ -573,14 +681,29 @@
 
 /* ---- Progressbar ---- */
 .c2-progressbar-track {
+  position: relative;
   height: 24px;
   border-radius: 999px;
   background: var(--paper);
   border: 1px solid var(--line);
-  overflow: hidden;
+  cursor: pointer;
+  overflow: visible;
+  user-select: none;
+  touch-action: none;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    background-color 140ms ease;
+}
+
+.c2-progressbar-track:hover,
+.c2-progressbar-track:focus-visible {
+  border-color: rgba(105, 84, 225, 0.58);
+  box-shadow: 0 0 0 3px rgba(105, 84, 225, 0.12);
 }
 
 .c2-progressbar-fill {
+  position: relative;
   height: 100%;
   background: linear-gradient(to right, #6a5cf5, #8f7bf7);
   color: #fff;
@@ -590,6 +713,40 @@
   align-items: center;
   padding-left: 10px;
   border-radius: 999px 0 0 999px;
+  min-width: 32px;
+  transition:
+    width 90ms ease,
+    filter 140ms ease;
+}
+
+.c2-progressbar-track:hover .c2-progressbar-fill {
+  filter: saturate(1.08) brightness(1.02);
+}
+
+.c2-progressbar-track:active .c2-progressbar-fill {
+  transition: none;
+  filter: brightness(0.96);
+}
+
+.c2-progressbar-thumb {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #fff;
+  border: 2px solid #6954e1;
+  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.24);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.c2-progressbar-track:hover .c2-progressbar-thumb,
+.c2-progressbar-track:focus-visible .c2-progressbar-thumb {
+  box-shadow:
+    0 2px 7px rgba(15, 23, 42, 0.24),
+    0 0 0 4px rgba(105, 84, 225, 0.14);
 }
 
 /* ---- Tab ---- */

@@ -641,11 +641,49 @@ function ImageViewerCard() {
 }
 
 function ProgressbarCard() {
+  const [value, setValue] = useState(60);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+
+  const updateValue = (clientX: number) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const rect = track.getBoundingClientRect();
+    const next = Math.round(((clientX - rect.left) / rect.width) * 100);
+    setValue(Math.min(100, Math.max(0, next)));
+  };
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    updateValue(e.clientX);
+  };
+
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!e.currentTarget.hasPointerCapture(e.pointerId)) return;
+    updateValue(e.clientX);
+  };
+
   return (
     <Card title="Progressbar">
-      <div className="c2-progressbar-track">
-        <div className="c2-progressbar-fill" style={{ width: "60%" }}>
-          60%
+      <div
+        ref={trackRef}
+        className="c2-progressbar-track"
+        role="slider"
+        tabIndex={0}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={value}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onKeyDown={(e) => {
+          if (e.key === "ArrowLeft" || e.key === "ArrowDown") setValue((v) => Math.max(0, v - 1));
+          if (e.key === "ArrowRight" || e.key === "ArrowUp") setValue((v) => Math.min(100, v + 1));
+          if (e.key === "Home") setValue(0);
+          if (e.key === "End") setValue(100);
+        }}
+      >
+        <div className="c2-progressbar-fill" style={{ width: `${value}%` }}>
+          {value}%
+          <span className="c2-progressbar-thumb" />
         </div>
       </div>
     </Card>

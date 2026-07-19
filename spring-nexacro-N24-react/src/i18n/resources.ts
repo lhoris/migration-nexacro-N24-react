@@ -291,6 +291,19 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.fittocontents.desc": "컴포넌트의 fittocontents 속성을 조정하면 텍스트 길이에 맞춰 자동으로 컴포넌트의 사이즈가 반영됩니다.",
 
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
+    "comp.generate": "컴포넌트 동적 생성",
+    "comp.generate.sec": "초",
+    "comp.generate.desc":
+      "자사 기존 버전 대비 최적화된 컴포넌트 구조 및 렌더링 기술을 통해 화면을 더욱 신속하게 표현합니다.\n본 데모를 통해 많은 양의 컴포넌트도 빠르게 표현하는 넥사크로의 렌더링 성능을 직접 확인하세요.",
+    "comp.generate.guide": "생성 할 구성 요소를 선택하고 옵션을 변경 한 후 '생성'버튼을 클릭하세요.",
+    "comp.generate.select": "컴포넌트 선택",
+    "comp.generate.option": "컴포넌트 생성 옵션",
+    "comp.generate.gaptime": "생성 소요시간",
+    "comp.generate.componentsamount": "컴포넌트 수",
+    "comp.generate.amountperline": "한 라인 표시 갯수",
+    "comp.generate.lineamount": "라인 수",
+    "comp.generate.total": "총 컴포넌트 갯수",
+    "comp.generate.create": "생성",
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
     // 실제 footer.xfdl.js의 copyright.short 원문 (TOBESOFT 데모사이트 문구 그대로)
@@ -588,6 +601,19 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.fittocontents.desc":
       "Adjusting the fittocontents property of a component reflects the size of the component according to the text length automatically.",
 
+    "comp.generate": "Dynamic Component Generate",
+    "comp.generate.sec": "sec",
+    "comp.generate.desc":
+      "It expresses the screen more quickly through the optimized component structure and rendering technology compared to the company's previous version.\nCheck out the rendering performance of Nexacro which quickly expresses a large amount of components through this demo.",
+    "comp.generate.guide": "Select the components to create, change the options and click the  'Create' button.",
+    "comp.generate.select": "Components",
+    "comp.generate.option": "Options",
+    "comp.generate.gaptime": "Time",
+    "comp.generate.componentsamount": "Selected",
+    "comp.generate.amountperline": "Display per lines",
+    "comp.generate.lineamount": "Lines",
+    "comp.generate.total": "Total components",
+    "comp.generate.create": "Generate",
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",
     "shell.footerCopyright":

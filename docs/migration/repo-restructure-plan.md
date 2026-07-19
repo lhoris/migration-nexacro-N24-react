@@ -837,3 +837,14 @@
   및 관련 파일)을 참고 삼아 동일 수준의 기능·텍스트 충실도를 유지할 것.
 - **절대 사용자 확인 없이 `git commit`/`git push`/`git tag`/기존 저장소 삭제를 실행하지 말 것.**
   지금까지 이 프로젝트 전체에서 일관되게 지켜온 원칙이다.
+
+## 2026-07-19 추가 진행 상태
+
+- menu_id 20500("리스트뷰")는 React 전환, 테스트, 커밋 및 push까지 완료됐다(커밋 `99f68ed`).
+- menu_id 20600("Fit to Contents")는 다른 워크트리에서 작업 중이므로 이번 작업 범위에서 제외했다.
+- menu_id 20700("컴포넌트 동적 생성", `comp::generate.xfdl`)은 React 전환 작업을 진행했다.
+  - 원본의 Button, Calendar, Static, ImageViewer, Edit 선택 옵션과 생성 개수/라인 옵션을 React 상태로 옮겼다.
+  - 생성 버튼 실행 시 원본과 같은 120x30 컴포넌트 배치 규칙과 생성 소요 시간 표시를 구현했다.
+  - ImageViewer 샘플 이미지(`img_WF_sample02.png`)를 React public asset으로 복사했다.
+  - 메뉴 라우팅은 `/m/generate`, `target: "react"`로 전환했다.
+- 현재 화면 전환 진행률은 menu_id 20700 기준 19/40 완료로 본다. 컴포넌트 카테고리는 11개 중 5개 완료, 6개 남음이다.

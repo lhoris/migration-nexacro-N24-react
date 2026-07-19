@@ -1,0 +1,405 @@
+.work-card.mn-card {
+  max-width: none;
+}
+
+.mn-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.mn-section {
+  margin-top: 28px;
+}
+
+.mn-section:first-of-type {
+  margin-top: 0;
+}
+
+.mn-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fe5252;
+  margin: 0 0 12px;
+}
+
+/* -- (1) 캐스케이딩 상단 메뉴 -- */
+.mn-cascade {
+  display: flex;
+  gap: 2px;
+  position: relative;
+}
+
+.mn-cascade-item {
+  position: relative;
+}
+
+.mn-cascade-toplink {
+  height: 40px;
+  padding: 0 18px;
+  border: none;
+  background: #6954e1;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+}
+
+.mn-cascade-toplink:hover {
+  background: #5a46d6;
+}
+
+.mn-cascade-toplink-active {
+  background: #4f3ec2;
+}
+
+.mn-cascade-toplink-active:hover {
+  background: #4f3ec2;
+}
+
+.mn-cascade-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 5;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.mn-cascade-mid-wrap {
+  position: relative;
+}
+
+.mn-cascade-mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+}
+
+.mn-cascade-mid:hover {
+  background: rgba(105, 84, 225, 0.08);
+}
+
+.mn-cascade-arrow {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.mn-cascade-flyout {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  min-width: 140px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.mn-cascade-leaf {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+}
+
+.mn-cascade-leaf:hover {
+  background: rgba(105, 84, 225, 0.08);
+}
+
+/* -- (2) 메가메뉴 -- */
+.mn-mega-wrap {
+  position: relative;
+}
+
+.mn-mega-btn {
+  height: 40px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 5px;
+  background: #fe5252;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+}
+
+.mn-mega-btn:hover {
+  background: #e64545;
+}
+
+.mn-mega-panel {
+  margin-top: 12px;
+  display: flex;
+  gap: 1px;
+  background: #a598ef;
+  border: 1px solid #a598ef;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 900px;
+}
+
+.mn-mega-col {
+  flex: 1;
+  min-width: 0;
+  background: #f5f7fc;
+  display: flex;
+  flex-direction: column;
+}
+
+.mn-mega-col-head {
+  background: #6954e1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 4px;
+}
+
+.mn-mega-leaf {
+  border: none;
+  background: transparent;
+  color: #111;
+  font-size: 13px;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.mn-mega-leaf:hover {
+  background: rgba(105, 84, 225, 0.12);
+}
+
+/* -- (3)/(4)/(5) 3열 배치 -- */
+.mn-triple-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* -- (3) 트리 그리드("Menu List") -- */
+.mn-tree-card {
+  width: 220px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mn-tree-head {
+  background: #6954e1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 12px;
+}
+
+.mn-tree-body {
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.mn-tree-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+  border-bottom: 1px solid var(--line);
+}
+
+.mn-tree-row:hover {
+  background: rgba(105, 84, 225, 0.06);
+}
+
+.mn-tree-row-selected {
+  background: rgba(105, 84, 225, 0.14);
+}
+
+.mn-tree-toggle {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.mn-tree-toggle-spacer {
+  width: 16px;
+  flex-shrink: 0;
+}
+
+/* -- (4) 오토메뉴 -- */
+.mn-auto-card {
+  width: 200px;
+  flex-shrink: 0;
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.mn-auto-head {
+  background: #6954e1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 12px;
+}
+
+.mn-auto-body {
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.mn-auto-row {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 13px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  cursor: default;
+}
+
+.mn-auto-row-active {
+  background: rgba(105, 84, 225, 0.12);
+}
+
+.mn-auto-popup {
+  position: absolute;
+  left: 100%;
+  z-index: 5;
+  width: 176px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.mn-auto-popup-item {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.mn-auto-popup-item:hover {
+  background: rgba(105, 84, 225, 0.08);
+}
+
+/* -- (5) 아코디언 메뉴 -- */
+.mn-accordion {
+  flex: 1;
+  min-width: 220px;
+}
+
+.mn-accordion-item {
+  margin-bottom: 4px;
+}
+
+.mn-accordion-btn {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: #6954e1;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  padding: 0 14px;
+  transition: background-color 0.12s ease;
+}
+
+.mn-accordion-btn:hover {
+  background: #5a46d6;
+}
+
+.mn-accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+.mn-accordion-panel-open {
+  max-height: 200px;
+}
+
+.mn-accordion-panel-inner {
+  padding: 4px 0;
+}
+
+.mn-accordion-leaf {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 13px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+/* -- 설명 패널 -- */
+.mn-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.mn-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.mn-desc-subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 20px 0 6px;
+  color: #fe5252;
+}
+
+.mn-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

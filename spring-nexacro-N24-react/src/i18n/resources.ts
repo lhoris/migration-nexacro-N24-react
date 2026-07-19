@@ -313,6 +313,19 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.googlemap.desc":
       "GoogleMap은 구글에서 제공하는 지도를 화면에 출력할 때 사용하는 컴포넌트입니다. 구글 지도를 사용하려면 HTML 페이지를 만들고 구글에서 제공하는 API를 사용해서 로딩하는 과정이 필요하지만 GoogleMap 컴포넌트를 사용하면 좀 더 손쉽게 구글 지도를 제어할 수 있습니다.\n\n'지도 보기' 버튼을 눌러보세요. 화면의 GoogleMap 컴포넌트에 지도가 표시됩니다. '마커 추가' 버튼을 누르면 투비소프트 회사 위치에 마커가 표시됩니다. '마커 삭제' 버튼을 누르면 다시 마커를 없앨 수 있습니다.",
 
+    // -- 실제 Nexacro stringresource (comp::menu.xfdl / menu_desc.xfdl) --
+    "comp.menu": "메뉴",
+    "various.menu": "트리메뉴, 자동메뉴, 아코디언메뉴",
+    "menu.component": "메뉴 컴포넌트",
+    "mega.menu": "메가메뉴",
+    "comp.menu.callMenu": "메뉴 호출",
+    "comp.menu.closeMenu": "메뉴 닫기",
+    "comp.menu.call": "호출 !",
+    "comp.menu.desc": "다양한 메뉴 표현으로 시스템 구성과 사용자 편의성을 고려하여 유연하게 구성할 수 있습니다.",
+    "comp.menu.menutype": "다양한 메뉴 확인",
+    "comp.menu.menutype.desc":
+      "각 메뉴 구성을 확인하세요.\n다양한 계층적 메뉴 구성을 확인할 수 있습니다.\n이 외에도 원하는 형태의 메뉴 구성을 유연하게 표현할 수 있습니다.",
+
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
     // 실제 footer.xfdl.js의 copyright.short 원문 (TOBESOFT 데모사이트 문구 그대로)
@@ -630,6 +643,18 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.googlemap.delmaker": "Delete Marker",
     "comp.googlemap.desc":
       "GoogleMap is a component that you use to print maps that Google provides on-screen. Google Maps requires creating HTML pages and loading them using Google-supplied APIs, but GoogleMap components make Google Maps easier to control.\n\nClick the 'Show Map' button. The GoogleMap component on the screen displays a map. Pressing the 'Add Marker' button will display the markers at the company position of TOBESOFT. Press the 'Delete Marker' button to remove the marker again.",
+
+    "comp.menu": "Menu",
+    "various.menu": "TreeMenu, AutoMenu, AccordionMenu",
+    "menu.component": "Menu Component",
+    "mega.menu": "MegaMenu",
+    "comp.menu.callMenu": "Call Menu",
+    "comp.menu.closeMenu": "Close Menu",
+    "comp.menu.call": "Call !",
+    "comp.menu.desc": "Various menu expressions provide flexibility for system configuration and user convenience.",
+    "comp.menu.menutype": "Check out the various menus",
+    "comp.menu.menutype.desc":
+      "Please check each menu configuration.\nYou can see a variety of menu configurations.\nIn addition, you have the flexibility to express your desired menu configuration.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

@@ -52,7 +52,7 @@ export const MENU_ITEMS: MenuItem[] = [
 
   // 컴포넌트 (grp 2, 실제 menu_id 20000)
   { id: "20000", parentId: null, label: "컴포넌트", labelEn: "Components" },
-  { id: "20100", parentId: "20000", label: "기본 컴포넌트", labelEn: "Basic Components", path: "/m/components", nexacroMenuId: "20100", xfdlFile: "comp::components.xfdl", target: "nexacro", tooltip: "다양한 기본 컴포넌트가 제공 됩니다.", tooltipEn: "Various basic components are provided." },
+  { id: "20100", parentId: "20000", label: "기본 컴포넌트", labelEn: "Basic Components", path: "/m/components", nexacroMenuId: "20100", xfdlFile: "comp::components.xfdl", target: "react", tooltip: "다양한 기본 컴포넌트가 제공 됩니다.", tooltipEn: "Various basic components are provided." },
   { id: "20200", parentId: "20000", label: "모바일 퍼스트 컴포넌트", labelEn: "Mobile First Components", path: "/m/mobilecomponents", nexacroMenuId: "20200", xfdlFile: "comp::mobilecomponents.xfdl", target: "nexacro", tooltip: "모바일 퍼스트 컴포넌트가 제공 됩니다.", tooltipEn: "Mobile-first components are provided." },
   { id: "20300", parentId: "20000", label: "파일 전송", labelEn: "File Transfer", path: "/m/filetransfer", nexacroMenuId: "20300", xfdlFile: "comp::filetransfer.xfdl", target: "nexacro", tooltip: "파일을 서버에 업로드/ 다운로드 할 수 있습니다.", tooltipEn: "You can upload/download files to/from the server." },
   { id: "20500", parentId: "20000", label: "리스트뷰", labelEn: "List View", path: "/m/listview", nexacroMenuId: "20500", xfdlFile: "comp::listview.xfdl", target: "nexacro", tooltip: "비 정형화된 형식으로 데이터 표현이 가능 합니다.", tooltipEn: "Data can be expressed in an informal format." },

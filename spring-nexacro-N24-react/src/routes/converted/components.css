@@ -1,0 +1,772 @@
+/* 컴포넌트 쇼케이스 화면은 카드가 20개 넘게 늘어서므로 .work-card의 640px 캡을 없애
+   원본처럼 폭을 넓게 쓴다 — 마커 클래스가 work-card 자기 자신에 있으므로 :has() 대신
+   그냥 붙여쓴다(largeData.css 상단 주석/메모리 참고). */
+.work-card.c2-card {
+  max-width: none;
+}
+
+.c2-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.c2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.c2-full {
+  grid-column: 1 / -1;
+}
+
+.c2-card-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: 16px 18px;
+}
+
+.c2-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.c2-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.c2-subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* ---- Button ---- */
+.c2-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.c2-btn {
+  min-width: 90px;
+  height: 40px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+}
+
+.c2-btn-primary {
+  background: #ff5f6d;
+}
+
+.c2-btn-secondary {
+  background: #5b6cf0;
+}
+
+.c2-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.c2-btn-icon {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #ff5f6d;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.c2-btn-round-group {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.c2-btn-round {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* ---- Radio / Toggle ---- */
+.c2-radio-toggle-row {
+  display: flex;
+  gap: 48px;
+}
+
+.c2-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.c2-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.c2-radio input {
+  accent-color: #ff5f6d;
+  width: 18px;
+  height: 18px;
+}
+
+.c2-toggle {
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.c2-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.c2-toggle-track {
+  width: 46px;
+  height: 24px;
+  border-radius: 999px;
+  background: #d8dee6;
+  position: relative;
+  transition: background 0.15s;
+}
+
+.c2-toggle-track::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #fff;
+  transition: transform 0.15s;
+}
+
+.c2-toggle input:checked + .c2-toggle-track {
+  background: #5b3df5;
+}
+
+.c2-toggle input:checked + .c2-toggle-track::before {
+  transform: translateX(22px);
+}
+
+/* ---- Listbox ---- */
+.c2-listbox {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.c2-listbox-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 12px;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.c2-listbox-item.selected {
+  background: #6a5cf5;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---- Checkbox / CheckboxSet ---- */
+.c2-checkbox-set-row {
+  display: flex;
+  gap: 48px;
+}
+
+.c2-checkbox-pair {
+  display: flex;
+  gap: 10px;
+}
+
+.c2-checkboxset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+}
+
+.c2-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff5f6d;
+}
+
+.c2-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.c2-checkbox-label.disabled {
+  color: var(--muted);
+  cursor: default;
+}
+
+/* ---- Combo / Edit / MaskEdit shared field states ---- */
+.c2-combo-grid,
+.c2-edit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+}
+
+.c2-select,
+.c2-input {
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.c2-select:disabled,
+.c2-input:disabled {
+  opacity: 0.5;
+}
+
+.c2-select-readonly,
+.c2-input-readonly {
+  background: var(--paper);
+  opacity: 1;
+}
+
+.c2-select-essential,
+.c2-input-essential {
+  border-color: #e0454f;
+  background: #fff6f6;
+}
+
+/* ---- MultiCombo ---- */
+.c2-multicombo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.c2-multicombo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.c2-multicombo {
+  position: relative;
+}
+
+.c2-multicombo-trigger {
+  width: 100%;
+  min-height: 38px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.c2-multicombo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.c2-multicombo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 2px 4px 2px 10px;
+  font-size: 12px;
+}
+
+.c2-multicombo-tag button {
+  border: none;
+  background: transparent;
+  color: #e0454f;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0 4px;
+}
+
+.c2-multicombo-caret {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.c2-multicombo-menu {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px 12px;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ---- Grid ---- */
+.c2-grid-mount {
+  margin-top: 2px;
+}
+
+/* ---- Textarea ---- */
+.c2-textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.6;
+  font-family: inherit;
+}
+
+/* ---- Calendar ----
+   원본 실측(Playwright getBoundingClientRect/getComputedStyle):
+   - 입력+아이콘(왼쪽)과 상시 노출 월간 달력(오른쪽)이 나란히 배치된다(세로 스택 아님).
+   - 아이콘 클릭 시 입력 아래에 같은 모양의 팝업 달력이 뜨고, 날짜 클릭 시 입력에
+     "YYYY-MM-DD"를 채우고 팝업이 닫힌다.
+   - 헤더(월 이동)+요일 줄이 같은 보라색 바(#6954E1) 안에 있고, 일요일은 #FF7986(요일)/
+     #FF4C5E(날짜), 토요일은 #48AFFF(요일)/#269BEE(날짜), 오늘은 #6954E1 원형 배경. */
+.c2-calendar-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.c2-calendar-picker {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.c2-calendar-picker .c2-input {
+  flex: 1;
+}
+
+.c2-calendar-popup {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  border-radius: 8px;
+}
+
+.c2-calendar {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.c2-calendar-bar {
+  background: #6954e1;
+  color: #fff;
+  padding: 8px 10px 6px;
+}
+
+.c2-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.c2-calendar-header button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+}
+
+.c2-calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 11px;
+  text-align: center;
+}
+
+.c2-calendar-weekdays .sun {
+  color: #ff7986;
+}
+
+.c2-calendar-weekdays .sat {
+  color: #48afff;
+}
+
+.c2-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  padding: 8px;
+}
+
+.c2-calendar-day {
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  height: 26px;
+  font-size: 12px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.c2-calendar-day.sun {
+  color: #ff4c5e;
+}
+
+.c2-calendar-day.sat {
+  color: #269bee;
+}
+
+.c2-calendar-day.today {
+  background: #6954e1;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ---- Static ---- */
+.c2-static-block {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.c2-static-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.c2-static-red {
+  color: #e0454f;
+  font-size: 13px;
+}
+
+.c2-static-gradient {
+  padding: 10px 16px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #a598ef, #ff9fa6);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+/* ---- Groupbox ---- */
+/* 원본 실측(getBoundingClientRect): 368x94px, 카드 폭을 거의 그대로 채운다. */
+.c2-groupbox {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 14px;
+  width: 100%;
+  height: 94px;
+  box-sizing: border-box;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.c2-groupbox legend {
+  padding: 0 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ---- ImageViewer ---- */
+.c2-imageviewer-row {
+  display: flex;
+  gap: 16px;
+}
+
+.c2-imageviewer {
+  flex: 1;
+  margin: 0;
+}
+
+.c2-imageviewer figcaption {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.c2-imageviewer-box {
+  height: 130px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.c2-imageviewer-box img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Progressbar ---- */
+.c2-progressbar-track {
+  height: 24px;
+  border-radius: 999px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.c2-progressbar-fill {
+  height: 100%;
+  background: linear-gradient(to right, #6a5cf5, #8f7bf7);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  border-radius: 999px 0 0 999px;
+}
+
+/* ---- Tab ---- */
+.c2-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.c2-tab-btn {
+  height: 34px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.c2-tab-btn.active {
+  background: #8f7bf7;
+  border-color: #8f7bf7;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ---- ListView ---- */
+.c2-listview {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.c2-listview li {
+  border-bottom: 1px solid var(--line);
+}
+
+.c2-listview li:last-child {
+  border-bottom: none;
+}
+
+.c2-listview-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 13px;
+  text-align: left;
+}
+
+.c2-listview li.open .c2-listview-header {
+  background: var(--paper);
+}
+
+.c2-listview-org {
+  font-weight: 700;
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.c2-listview-name {
+  flex: 1;
+}
+
+.c2-listview-chevron {
+  color: var(--muted);
+}
+
+.c2-listview-detail {
+  display: flex;
+  gap: 16px;
+  padding: 12px 14px 16px;
+}
+
+.c2-listview-detail img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.c2-listview-detail dl {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.c2-listview-detail dl > div {
+  display: flex;
+  gap: 8px;
+  font-size: 12.5px;
+}
+
+.c2-listview-detail dt {
+  color: var(--muted);
+  width: 66px;
+  flex-shrink: 0;
+}
+
+.c2-listview-detail dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+/* ---- Sketch ---- */
+.c2-sketch {
+  width: 100%;
+  max-width: 380px;
+  height: 190px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+/* ---- VideoPlayer ---- */
+.c2-video {
+  width: 100%;
+  max-height: 220px;
+  border-radius: 6px;
+  background: #000;
+}
+
+/* ---- Graphic ---- */
+.c2-graphic {
+  width: 100%;
+  max-width: 300px;
+  height: 190px;
+}
+
+/* ---- WebBrowser ---- */
+.c2-webbrowser {
+  width: 100%;
+  height: 220px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+/* ---- Description ---- */
+.c2-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.c2-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.c2-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}
+
+@media (max-width: 900px) {
+  .c2-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -503,7 +503,59 @@
   - 그리드 메뉴 마지막 화면까지 구현했으므로 다음 공통화 논의 때 Tabulator 공통화(생성/해제
     훅, placeholder/header 정렬/rowHeight, tableBuilt 타이밍, 경량 컬럼 이동)와 커스텀 그리드
     공통화(병합 셀 모델, 영역 선택, 우클릭 메뉴, drag payload, 저장/복원)를 분리해서 검토한다.
-  **아직 커밋 전.**
+  **커밋·push 완료(2026-07-19, 커밋 `0bea281`).**
+
+- **menu_id 20100("기본 컴포넌트", comp::components.xfdl) React 전환 완료(2026-07-19).**
+  그리드 카테고리 완료 후 첫 컴포넌트 카테고리 화면. 원본은 ~20개 기본 UI 컴포넌트
+  (Button/Radio/Listbox/CheckBox(Set)/Combo/MultiCombo/Edit/MaskEdit/Grid/Textarea/
+  Calendar/Static/Groupbox/ImageViewer/Progressbar/Tab/ListView/Sketch/VideoPlayer/
+  Graphic/WebBrowser)를 카드 하나씩 나열해 보여주는 쇼케이스 화면이라, 그동안의 그리드
+  화면들과 달리 개별 위젯 대부분을 "native-first" 원칙대로 순수 HTML 엘리먼트(select/
+  input/textarea 등)로 구현했다(Grid만 기존 컨벤션대로 Tabulator 재사용).
+  `Components.tsx` + `componentsRealData.ts` + `sketchPreload.ts`(ds_sketch의 실제
+  base64 필기 이미지 그대로 추출).
+  - 섹션 제목("Button","Radio" 등)은 전부 원본에 messageid 없이 하드코딩된 영문 리터럴이라
+    언어 전환과 무관하게 항상 영문 그대로 두었다 — 페이지 제목/설명만 진짜 messageid
+    (`comp.components`/`.desc`)를 써서 `resources.ts`에 추가했다.
+  - MaskEdit(`format="###-{####}-####"`, value="00123456789")는 초기값만 실측해 정적
+    문자열로 박아뒀다가(1차 보고), 사용자가 "전화번호 새로 입력해봤는데 마스킹 안 됨"을
+    지적 — 원본에 직접 타이핑해보고 실제 마스킹 규칙(빈 자리 `_`, `{}` 구간은 채운
+    자리수만큼 항상 `*`, 나머지는 실제 숫자, 최대 11자리)을 실측해 `formatMaskEdit()` +
+    `onKeyDown` 기반으로 실시간 마스킹을 구현했다.
+  - **VideoPlayer가 로드하는 원본 영상(`NexacroNv24.mp4`)이 이 프로젝트에 리소스 자체가
+    없음을 확인**(Playwright network 탭에서 404) — Pivot/Export&Import와 같은 "리소스가
+    아예 없음" 케이스. 원본도 실제로는 검은 화면만 나온다. 사용자에게 물어봤고, 프로젝트에
+    이미 있는 다른 데모 영상(`dCnP.mp4` → `public/nexacro-video/components-demo.mp4`로 복사)
+    으로 대체해 실제로 재생되는 화면을 보여주기로 결정.
+  - **Graphic 컴포넌트의 GraphicsImage(`img_WF_sample02.png`)는 원본 자체도 렌더링하지
+    않는다**(Playwright network 탭에 요청 자체가 없음, 원본 스크린샷에도 이미지 없음) —
+    이미지 없이 사각형/텍스트/선/곡선만 있는 원본 그대로의 모습을 SVG로 재현했다(추측이
+    아니라 실측 확인 후 반영).
+  - WebBrowser는 실제 `<iframe src="https://www.tobesoft.com/">`로 구현 — 원본도 실제
+    투비소프트 홈페이지를 그대로 띄우는 컴포넌트라 그대로 재현(외부 사이트 자체의
+    Cloudflare Turnstile 콘솔 노이즈가 항상 같이 잡히는데, 우리 코드와 무관한 제3자
+    사이트의 로그임을 확인).
+  - 첫 빌드에서 Tabulator `ColumnDefinition`에 `editor:false`가 타입 에러(boolean은
+    Editor 타입에 없음)를 내서 제거, MultiCombo 트리거를 `<button>`으로 만들었다가 내부
+    태그 삭제 버튼(`<button>`)과 중첩되어 "cannot contain a nested button" 콘솔 에러가
+    나서 트리거를 `role="button"` `<div>`로 교체 — Definition-of-Done 점검 중 발견해
+    즉시 수정.
+  - **1차 보고 후 사용자 피드백으로 4개 버그 발견·수정**(`conversion-playbook.md`
+    5-29~5-32에 상세 기록):
+    1. Grid 체크박스 컬럼이 `tickCross` 포매터 → `<input type="checkbox" disabled>`로
+       만들어져 있어 클릭이 전혀 안 먹었다(disabled 폼 엘리먼트는 click 이벤트 자체가
+       안 남) — 원본이 실제로 클릭 토글 가능함을 실측 확인 후 `disabled` 제거 +
+       `cellClick`으로 `row.update()` 하는 방식으로 교체.
+    2. Calendar를 스크린샷 한 장만 보고 세로로 쌓고 아이콘 버튼에 아무 기능도 안
+       달았다가, 실측(`getBoundingClientRect`/`getComputedStyle`/실제 클릭) 후 좌우
+       배치 + 아이콘 클릭 시 팝업 달력 + 날짜 선택 시 입력창 채움 + 보라색 헤더바/
+       일요일·토요일 색상/오늘 하이라이트까지 전부 다시 구현.
+    3. Groupbox를 `width: fit-content`(작은 박스)로 만들었다가, 실측(368×94px, 카드
+       폭 거의 전체) 후 크기 수정.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  15/40 완료. 컴포넌트 카테고리 11개 중 1개 완료, 10개 남음 — **다음은 menu_id 20200
+  ("모바일 퍼스트 컴포넌트", comp::mobilecomponents.xfdl)**, 아직 시작 안 함.
+  **아직 커밋 전 — 문서 정리(11200/11400 상태 기록) 커밋과 함께 진행 예정(사용자 지시).**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
 1. ~~`spring-nexacro-N24/` 복사본 최종 검토~~ — 완료(빌드·실행 확인까지 마침).
@@ -521,8 +573,12 @@
 12. ~~menu_id 11000 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `14e4654`).
 13. ~~menu_id 11100 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-18, 커밋 `a6163ae`).
 14. ~~menu_id 11200 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `8d42541`).
-15. menu_id 11400("동적 그리드", grid::dynamic.xfdl) 화면 전환 완료 — **커밋 예정.**
-16. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+15. ~~menu_id 11400 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `0bea281`).
+    그리드 카테고리(14개) 전체 완료.
+16. ~~menu_id 20100 화면 전환~~ — 완료, **커밋 전**(문서 정리 커밋과 함께 진행 예정).
+    15/40 완료. 컴포넌트 카테고리 11개 중 1개 완료 — **다음은 menu_id 20200("모바일 퍼스트
+    컴포넌트", comp::mobilecomponents.xfdl)**, 아직 시작 안 함.
+17. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
     저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
     커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
     README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

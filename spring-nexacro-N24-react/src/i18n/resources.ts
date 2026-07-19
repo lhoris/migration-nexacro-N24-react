@@ -357,6 +357,11 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.animation.easing.desc":
       "애니메이션 효과가 처리되는 속도를 지정합니다. easing 속성값을 지정하는 값은 \"linear\"을 제외하고 3가지로 구분할 수 있습니다. 가장 앞 부분에는 \"ease\"라는 문자열이 붙습니다. 그 다음에는 \"In\", \"Out\", \"InOut\" 3가지 중 하나의 문자열이 붙습니다. 두 개의 문자열을 합치면 \"ease in\"이라는 문자열이 되는데, 이 표현은 전통적인 애니메이션 업계에서 사용하는 용어입니다. 물체의 움직임이 서서히 시작해서 점점 빨라지는 것을 의미합니다. \"ease out\"은 반대로 빠르게 시작해서 점점 속도를 줄이는 것이지요. \"slow in\", \"slow out\"이라고 표현하기도 합니다. \"ease in out\"은 마치 자동차처럼 점점 속도를 올려서 중간 지점에서 가장 빠른 속도를 내고 중간 지점을 지나면서 점점 느려집니다. 마지막에 붙는 문자열은 속도의 세세한 변화 시점을 정하는 것입니다.",
 
+    // -- 실제 Nexacro stringresource (comp::arrangement.xfdl / arrangement_desc.xfdl) --
+    "comp.arrangement.title": "편리한 컴포넌트 정렬",
+    "comp.arrangement.desc":
+      "컴포넌트의 좌표를 Form 기준이 아닌 특정 컴포넌트의 상대좌표로 설정하는 기능입니다.\n기준이 되는 컴포넌트의 위치가 조정될 경우 설정한 사이즈 만큼 상대좌표로 자동으로 이동합니다.\n컴포넌트의 동적 처리가 많은 경우 효과적으로 사용될 수 있습니다. \n더 자세한 설명은 메뉴얼을 참고하세요!",
+
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
     // 실제 footer.xfdl.js의 copyright.short 원문 (TOBESOFT 데모사이트 문구 그대로)
@@ -709,6 +714,9 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.animation.easing": "Easing",
     "comp.animation.desc":
       "Animation features are used to highlight data or highlight specific features. For example, if you enter an incorrect value in the Edit component, you may want to add a slight shaking effect or emphasize that the data is updated.\n\nTo highlight the data displayed on the screen, the counter effect is also used by animation.",
+    "comp.arrangement.title": "Convenient component arrangement",
+    "comp.arrangement.desc":
+      "This is a function to set the position of the component to the relative position of a specific component rather than form-based. When the position of the reference component is moved, it automatically moves to the relative position as much as the set size. \nIt can be used effectively when there is a lot of dynamic handling of components. \nFor more detailed explanation, please refer to the manual!",
     "comp.animation.easing.desc":
       "Specifies the rate at which animation effects are processed. There are three distinct values that specify the value of the easing property, except for \"linear\". The first part is accompanied by the string \"ease\". It is followed by a string of one of three strings: \"In\", \"Out\", and \"InOut\". Combining the two strings is a string called \"ease in\", which is a term used in the traditional animation industry. It means that the movement of an object begins slowly and becomes faster and faster. \"ease out\" is, on the contrary, starting fast and slowing down. They are also called \"slow in\" and \"slow out\". \"ease in out\" speeds up like a car, giving it the fastest speed at midpoint and slowing down as it passes through midpoint. The last string is to determine the timing of the change in detail.",
 

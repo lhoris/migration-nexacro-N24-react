@@ -1,0 +1,146 @@
+.work-card.ar-card {
+  max-width: none;
+}
+
+.ar-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.ar-panel {
+  background: #f5f3fe;
+  border-radius: 6px;
+  padding: 20px 24px 24px;
+  margin-bottom: 20px;
+}
+
+.ar-panel-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fe5252;
+  margin: 0 0 16px;
+}
+
+.ar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.ar-row:last-of-type {
+  margin-bottom: 0;
+}
+
+.ar-label {
+  width: 110px;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: #111;
+}
+
+.ar-input,
+.ar-select {
+  height: 36px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 14px;
+  padding: 0 10px;
+  min-width: 0;
+}
+
+.ar-input {
+  flex: 1;
+}
+
+.ar-input-name {
+  max-width: 520px;
+}
+
+.ar-input-family-name {
+  max-width: 520px;
+}
+
+.ar-select-country {
+  width: 150px;
+  max-width: 100%;
+}
+
+.ar-select-relationship {
+  width: 250px;
+  max-width: 100%;
+}
+
+.ar-select-relationship.ar-select-placeholder {
+  color: #9a9a9a;
+}
+
+.ar-btn {
+  flex-shrink: 0;
+  width: 72px;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ar-btn-add {
+  background: #fe5252;
+}
+
+.ar-btn-add:hover {
+  background: #e64545;
+}
+
+.ar-btn-delete {
+  background: #6954e1;
+}
+
+.ar-btn-delete:hover {
+  background: #5a46c9;
+}
+
+.ar-family-entry {
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px dashed #a598ef;
+}
+
+.ar-family-entry:last-child {
+  margin-bottom: 0;
+}
+
+/* -- 설명 패널 -- */
+.ar-desc {
+  margin-top: 8px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.ar-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.ar-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}
+
+.ar-desc-link {
+  color: #2693d1;
+  text-decoration: underline;
+}

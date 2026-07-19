@@ -1,0 +1,179 @@
+.work-card.gx-card {
+  max-width: none;
+}
+
+.gx-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.gx-tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0;
+}
+
+.gx-tab {
+  height: 40px;
+  padding: 0 20px;
+  border: none;
+  background: #e8e8ec;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px 6px 0 0;
+}
+
+.gx-tab-active {
+  background: #8547fe;
+  color: #fff;
+}
+
+.gx-tab-body {
+  border: 1px solid var(--line);
+  border-radius: 0 6px 6px 6px;
+  overflow: hidden;
+}
+
+.gx-canvas {
+  width: 100%;
+  height: 620px;
+  background: #eeeeee;
+  cursor: grab;
+  overflow: hidden;
+  user-select: none;
+}
+
+.gx-canvas:active {
+  cursor: grabbing;
+}
+
+.gx-line {
+  fill: none;
+  stroke: #8547fe;
+  stroke-width: 1;
+}
+
+.gx-cap {
+  fill: #8547fe;
+}
+
+.gx-node-fill {
+  fill: #8547fe;
+}
+
+.gx-node-text {
+  font: bold 9px Arial, "Malgun Gothic", sans-serif;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+}
+
+.gx-node-text-light {
+  fill: #ffffff;
+}
+
+.gx-node-text-dark {
+  fill: #000000;
+}
+
+/* -- 조직도 탭 -- */
+.gx-orgchart-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.gx-org-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.gx-btn {
+  height: 30px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.gx-btn:hover {
+  background: #f2f2f5;
+}
+
+.gx-radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.gx-radio-caption {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.gx-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.gx-org-line {
+  fill: none;
+  stroke: #8547fe;
+  stroke-width: 1;
+}
+
+.gx-org-node {
+  fill: #8547fe;
+  stroke: #8547fe;
+  stroke-width: 1;
+}
+
+.gx-org-text {
+  font: bold 10px Arial, "Malgun Gothic", sans-serif;
+  fill: #ffffff;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.gx-org-toggle {
+  cursor: pointer;
+}
+
+/* -- 설명 패널 -- */
+.gx-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.gx-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.gx-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}

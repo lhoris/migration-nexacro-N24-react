@@ -965,4 +965,39 @@
     상세정보 반영까지 재검증.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
   22/40 완료. 컴포넌트 카테고리 11개 중 8개 완료, 3개 남음.
+  **커밋·push 완료(2026-07-19, 커밋 `8c9e16c`).**
+
+- **menu_id 21100("그래픽스"/Graphics, comp::graphics.xfdl) React 전환 완료(2026-07-19).**
+  `Graphics.tsx` + `graphicsWorkflowData.ts` + `graphicsOrgData.ts`. 원본 `Graphics`
+  컴포넌트는 HTML5 Canvas를 감싸는 저수준 드로잉 위젯이고, 실제 그리기 로직은 두 include
+  스크립트(`lib::Workflow.xjs`, `lib::OrganizationChart.xjs`)에 있다. Dataset도 `svc::`
+  호출도 없는 순수 클라이언트 데모.
+  - **이 화면은 이 프로젝트의 현재 개발 환경에서 원본 자체가 로드되지 않는다**: Playwright로
+    직접 열어보면 로딩 스피너에서 멈추고 "Cannot set properties of undefined (setting
+    'bcache')" 콘솔 에러가 반복된다(Graphics 컴포넌트 런타임 자체의 문제로 보이며, 이
+    마이그레이션 작업과 무관한 기존 버그 — 실측 확인). 시각적으로 대조할 실제 렌더링이
+    없는 상황이라 사용자에게 범위를 물었고, "원본 소스(xfdl.js + 두 xjs 라이브러리) 분석
+    기반으로 전체 인터랙티브 기능까지 구현"을 선택받아 진행 — 눈으로 검증 못 했다는 점을
+    리포트에 명시.
+  - **탭 1(Workflow)**: dsItems(44개 노드)/dsLines(32개 연결선) 실제 데이터 그대로 흐름도를
+    SVG로 그린다. 노드 타입 3종(type01=사각형, type02=둥근 사각형/알약형, type03=배경 없는
+    텍스트 라벨), 연결선은 축이 맞으면 직선, 아니면 ㄱ자/ㄷ자 꺾임 경로(원본
+    `gfnDrawGraphicPath` 로직 그대로 이식)로 라우팅하고 `startCap`/`endCap` 플래그에 따라
+    화살표 캡을 선택적으로 그린다. 배경 드래그로 패닝(줌은 없음, 원본도 이 탭엔 줌 없음).
+  - **탭 2(Organization Chart)**: dsOrg(42행, 실제로는 3개 루트 트리)를 계층 구조로 엮어
+    조직도를 그린다. 가로/세로 정렬 라디오(원본처럼 "가로정렬" 캡션은 비지역화 한글
+    그대로 유지 — 영어 모드에서도 한글로 남음), Zoom In/Out 버튼, 마우스 휠 줌(캔버스
+    중심이 아니라 커서 위치를 고정점으로 확대/축소), 노드별 펼치기/접기(원본 아이콘
+    `btn_pvGrd_TreeExpand.png`/`btn_pvGrd_TreeCollapse.png` 재사용) — 접었다 펴도 클릭한
+    노드가 화면상 같은 위치에 남도록 델타를 보정하는 원본의 "앵커 유지" 동작까지 재현.
+  - **자체 발견한 버그**: 마우스 휠로 줌하는 동안 콘솔에 "Unable to preventDefault
+    inside passive event listener invocation" 에러가 났다 — React의 합성 `onWheel`
+    이벤트는 스크롤 성능을 위해 기본적으로 passive 리스너로 등록돼 `e.preventDefault()`가
+    씹힌다. `useEffect`로 네이티브 `wheel` 리스너를 `{ passive: false }`로 직접 등록해
+    해결.
+  - Playwright로 탭 전환, 배경 드래그 패닝(두 탭 모두), 줌 인/아웃 버튼, 마우스 휠 줌,
+    가로/세로 정렬 전환, 노드 펼치기/접기(앵커 유지 확인) 전부 클릭 테스트 완료.
+    dev(:5173)·게이트웨이(:3000) 양쪽 콘솔 에러 0건, 한국어/영어 렌더링 확인.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  23/40 완료. 컴포넌트 카테고리 11개 중 9개 완료, 2개 남음.
   **아직 커밋 전 — 사용자 확인 대기.**

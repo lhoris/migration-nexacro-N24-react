@@ -336,6 +336,14 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.binding.marriage": "결혼여부",
     "comp.binding.remark": "비고",
 
+    // -- 실제 Nexacro stringresource (comp::graphics.xfdl / graphics_desc.xfdl) --
+    "comp.graphics": "그래픽스",
+    "comp.graphics.workflow": "워크플로우",
+    "comp.graphics.organizationchart": "조직도",
+    "comp.graphics.draw": "그리기",
+    "comp.graphics.desc":
+      "Graphics 컴포넌트는 선이나 도형을 그릴 수 있는 기능을 제공합니다. Graphics 컴포넌트는 HTML5 Canvas 요소를 마치 다른 컴포넌트처럼 개발자가 익숙하게 사용할 수 있습니다. 컴포넌트의 속성, 메소드, 이벤트를 사용해 스크립트 상에서 쉽게 원하는 이미지를 만들 수 있습니다.\n\n넥사크로 스튜디오 설치 시 Graphics 컴포넌트는 기본 설정되지 않은 상태입니다. 프로젝트 TypeDefinition 에서 Graphics.json를 등록하고 Graphics 컴포넌트를 오브젝트로 설정해주어야 합니다.",
+
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
     // 실제 footer.xfdl.js의 copyright.short 원문 (TOBESOFT 데모사이트 문구 그대로)
@@ -674,6 +682,13 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.binding.birthday": "Birthday",
     "comp.binding.marriage": "Marital Status",
     "comp.binding.remark": "Remark",
+
+    "comp.graphics": "Graphics",
+    "comp.graphics.workflow": "Workflow",
+    "comp.graphics.organizationchart": "Organization Chart",
+    "comp.graphics.draw": "Draw",
+    "comp.graphics.desc":
+      "Graphics components provide the ability to draw lines or shapes. Graphics components allow developers to use HTML5 Canvas elements as if they were other components. Use the properties, methods, and events of the component to easily create the desired image on the script.\n\nGraphics components are not set by default when installing the Nexacro studio. You must register Graphics.json in the Project TypeDefinition and set the Graphics component as an object.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

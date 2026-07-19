@@ -275,6 +275,15 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "filetransfer.search": "조회",
     "filetransfer.add": "추가",
 
+    // -- 실제 Nexacro stringresource (comp::listview.xfdl / listview_desc.xfdl) --
+    "comp.listview": "리스트뷰",
+    "comp.listview1.desc":
+      "비 정형화된 형식으로 데이터를 표현할 수 있습니다.\n모바일과 같은 작은 화면에 콘텐츠를 배치하거나 각 콘텐츠에 대한 정보를 수집하는 데 사용됩니다.",
+    "comp.listview.menutype1": "다양한 형식을 표현할 수 있습니다.",
+    "comp.listview2.desc":
+      "Large, Medium, Small 또는 Device (PC, Tablet, Mobile)와 같은 크기별로 화면을 구성하기 위해 여러 형식을 구성 할 수 있습니다.",
+    "comp.listview.menutype2": "상세정보 구조를 지원합니다.",
+
     // -- Shell 크롬 (React Host Shell 자체 문구, 원본 대응 없음) --
     "shell.noSubmenu": "하위 메뉴 없음",
     "shell.directScreenTitle": "이 화면은 Nexacro가 직접 서빙한다 (풀 페이지 이동)",
@@ -558,6 +567,14 @@ export const RESOURCES: Record<LangCode, Record<string, string>> = {
     "comp.filetransfer.download.desc": "Click the search button in the lower grid to search the list of files uploaded to the server. Select the file you want to download from the list and download the file using the download button.",
     "filetransfer.search": "search",
     "filetransfer.add": "Add",
+
+    "comp.listview": "ListView",
+    "comp.listview1.desc":
+      "A component that represents data in unstructured format.\nIt is used to place content on a small screen, such as mobile, or to collect information about each content.",
+    "comp.listview.menutype1": "You can express different formats.",
+    "comp.listview2.desc":
+      "You can configure multiple formats to configure screens by size, such as Large, Medium, Small, or Device (PC, Tablet, Mobile).",
+    "comp.listview.menutype2": "Supports detailed structure.",
 
     "shell.noSubmenu": "No submenu items",
     "shell.directScreenTitle": "This screen is served directly by Nexacro (full page navigation)",

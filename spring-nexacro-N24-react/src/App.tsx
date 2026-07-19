@@ -22,6 +22,7 @@ import { DynamicGrid } from "./routes/converted/DynamicGrid";
 import { Components } from "./routes/converted/Components";
 import { MobileComponents } from "./routes/converted/MobileComponents";
 import { FileTransfer } from "./routes/converted/FileTransfer";
+import { ListView } from "./routes/converted/ListView";
 import { Home } from "./routes/home/Home";
 import { MENU_ITEMS, getChildren, getLeaves, getTopGroups, isLeaf, type MenuTarget } from "./data/menu";
 
@@ -45,6 +46,7 @@ const CONVERTED_SCREENS: Record<string, ComponentType> = {
   "20100": Components,
   "20200": MobileComponents,
   "20300": FileTransfer,
+  "20500": ListView,
 };
 
 export default function App() {

@@ -639,6 +639,38 @@
     동기화/드래그앤드롭까지 전부 재검증, 한국어/영어 렌더링 둘 다 확인, 콘솔 에러 0건.
   - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
   17/40 완료. 컴포넌트 카테고리 11개 중 3개 완료, 8개 남음.
+  **커밋·push 완료(2026-07-19, 커밋 `27f93f4`).**
+
+- **menu_id 20500("리스트뷰", comp::listview.xfdl) React 전환 완료(2026-07-19).** 사용자가
+  "20400"이라 불렀으나 `menu.ts`/원본 메뉴 데이터셋 어디에도 20400은 존재하지 않음을 확인
+  (순서가 20300→20500→20600으로 건너뜀) — 레이블("List View")로 명확히 매칭되는 20500으로
+  진행. `ListView.tsx` + `listviewRealData.ts`(dsList 3행 그대로: Avengers: Infinity War/
+  Black Panther/Deadpool 2, 영화 포스터 이미지 9장 + 설명 일러스트 2장을
+  `public/nexacro-movies/`로 복사). 서버 트랜잭션 없는 순수 정적 데모(백엔드 확인 불필요
+  케이스).
+  - 원본은 반응형 Format 2개(Mobile_screen 440 = "default": 제목+대형 커버를 세로로 쌓고
+    펼치면 Year/Rating/Running Time/Summary 전부 표시 / Desktop_screen 920 = "large": 썸네일+
+    제목+메타 가로 배치, 펼치면 Summary만 표시)를 자동 전환하는데, 이 프로젝트의 레거시
+    Nexacro 임베드는 브라우저를 좁혀도 내부 캔버스가 고정 폭이라 실제로는 "large" 포맷만
+    관찰됨(1400px/480px 두 뷰포트에서 Playwright로 직접 실측 확인, `body0` 컨테이너 폭이
+    안 바뀜). 그래도 소스에 정의된 두 포맷 모두 구현하고 `ResizeObserver`로 실제 카드 폭
+    기준(700px 기준점) 전환하도록 만들었다 — 원본 설명 자체("다양한 형식을 표현할 수
+    있습니다")가 반응형 전환을 이 화면의 핵심 기능으로 명시하기 때문.
+  - `bandexpandtype="accordion"`이지만 실제 이벤트 핸들러(`ListView00_onbandstatuschanged`)가
+    각 행의 펼침 상태를 독립적으로 합산하는 방식이라 "한 번에 하나만 펼침"이 아니라 행별
+    독립 토글 — 원본 그대로 재현(`expanded: Record<number, boolean>` 상태).
+    실측(`getBoundingClientRect`/`getComputedStyle`, 확대해서 chevron 좌표 찾아 실제 마우스
+    클릭)으로 카드 테두리색(#A598EF)/배경(#EBECEE)/썸네일 크기(112×162)/제목·메타 폰트 등을
+    그대로 반영.
+  - 설명 패널(`listview_desc.xfdl`)의 두 일러스트 이미지(`img_listview.png`/`img_listview2.png`)는
+    원본이 880×398 고정 박스에 `background:no-repeat center center`로 넣는데, 두 번째 이미지는
+    실제 세로 632px라 그 박스를 통해 중앙 부분만 잘려 보인다 — CSS `background-image`+고정
+    height로 원본의 크롭까지 그대로 재현.
+  - dev(:5173)·게이트웨이(:3000) 양쪽에서 아코디언 펼침/접힘, 반응형 포맷 전환(리사이즈),
+    한국어/영어 렌더링 전부 재검증, 콘솔 에러 0건. `npm run build` 결과물에서 새 CSS
+    클래스와 `public/nexacro-movies/` 정적 자산이 정상 포함됨을 확인.
+  - `target: "react"`로 전환 완료(`menu.ts`), `App.tsx`의 `CONVERTED_SCREENS`에 등록.
+  18/40 완료. 컴포넌트 카테고리 11개 중 4개 완료, 7개 남음.
   **아직 커밋 전 — 사용자 확인 대기.**
 
 **아직 안 한 것 (다음에 이어서 할 일, 순서대로):**
@@ -661,10 +693,12 @@
     그리드 카테고리(14개) 전체 완료.
 16. ~~menu_id 20100 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `c1b5bb4`).
 17. ~~menu_id 20200 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `beeec26`).
-18. menu_id 20300 화면 전환 — 완료, **커밋 전**(사용자 확인 대기).
-    17/40 완료. 컴포넌트 카테고리 11개 중 3개 완료 — **다음은 menu_id 20400(List View)**,
-    아직 시작 안 함.
-19. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
+18. ~~menu_id 20300 화면 전환~~ — 완료, 커밋·push까지 완료(2026-07-19, 커밋 `27f93f4`).
+19. menu_id 20500 화면 전환 — 완료, **커밋 전**(사용자 확인 대기). 참고: "20400"은 존재하지
+    않는 menu_id(20300→20500→20600으로 건너뜀), 실제로는 20500("리스트뷰"/List View)이었음.
+    18/40 완료. 컴포넌트 카테고리 11개 중 4개 완료 — **다음은 menu_id 20600(Fit to
+    Contents)**, 아직 시작 안 함.
+20. 기존 독립 저장소 2개(`spring-nexacro-N24/`, `spring-nexacro-N24-react/`) 처리 방침 — 우산
     저장소로 이관 완료 후 판단하기로 결정(아래 "미결정 사항" 참고). `spring-nexacro-N24`는 로컬
     커밋 1개가 origin에 push 안 된 상태(`8bc4bd3`가 최신, 4개 커밋 `01da3a1`~`8bc4bd3`)이고
     README/xadl/xfdl 등 6개 파일이 unstaged 상태로 남아있음 — 이 히스토리는 우산 저장소로

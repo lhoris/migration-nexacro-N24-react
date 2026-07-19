@@ -1,0 +1,203 @@
+/* 컴포넌트 쇼케이스 카드 폭 캡을 없앤다(components.css/mobileComponents.css와 동일 패턴 —
+   마커 클래스가 work-card 자기 자신에 있으므로 :has() 대신 그냥 붙여쓴다). */
+.work-card.lv-card {
+  max-width: none;
+}
+
+.lv-page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+/* 원본 ListView 컨테이너: 보라색 테두리 + 둥근 모서리 + 옅은 회색 배경(실측:
+   border 1px solid #A598EF, border-radius 20px, background #EBECEE). */
+.lv-panel {
+  max-width: 900px;
+  border: 1px solid #a598ef;
+  border-radius: 20px;
+  background: #ebecee;
+  overflow: hidden;
+}
+
+.lv-row {
+  border-bottom: 1px solid #dcdde0;
+}
+
+.lv-row:last-child {
+  border-bottom: none;
+}
+
+.lv-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px 20px;
+  background: var(--paper);
+}
+
+/* -- large(데스크톱) 포맷: 썸네일 + 제목 + Year/Rating/Running Time 가로 배치 -- */
+.lv-cover-medium {
+  width: 112px;
+  height: 162px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.lv-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.lv-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #666;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.lv-metaline {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.lv-metalabel {
+  width: 100px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.lv-metavalue {
+  font-weight: 400;
+}
+
+.lv-expandbtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.lv-expandbtn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.lv-expandbtn svg {
+  transition: transform 0.15s ease;
+}
+
+.lv-expandbtn-open svg {
+  transform: rotate(180deg);
+}
+
+/* -- 펼침 상세 영역: 원본은 detail 밴드 자체 배경이 없어 컨테이너의 옅은 회색이 비쳐 보인다 -- */
+.lv-detail {
+  padding: 16px 20px 20px;
+  background: transparent;
+}
+
+.lv-summary-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.lv-summary-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* -- default(모바일) 포맷: 제목 위 + 대형 커버 이미지 아래로 세로 쌓기 -- */
+.lv-panel-mobile .lv-body {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lv-body-mobile-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.lv-panel-mobile .lv-title {
+  margin-bottom: 0;
+}
+
+.lv-cover-large {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.lv-panel-mobile .lv-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.lv-panel-mobile .lv-metaline {
+  border-bottom: 1px solid #dcdde0;
+}
+
+.lv-panel-mobile .lv-summary-label {
+  margin-top: 12px;
+}
+
+/* -- 설명 패널 (listview_desc.xfdl) -- */
+.lv-desc {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.lv-desc-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.lv-desc-subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 20px 0 6px;
+  color: #c0392b;
+}
+
+.lv-desc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  white-space: pre-line;
+}
+
+.lv-desc-image {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 880px;
+  height: 398px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  border-radius: 6px;
+}
